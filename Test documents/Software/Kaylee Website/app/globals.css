@@ -1,0 +1,180 @@
+/* Google Fonts are loaded via <link> tags in app/layout.tsx */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Custom Properties ─────────────────────────────────────────────────── */
+:root {
+  --font-bebas: 'Bebas Neue', Impact, sans-serif;
+  --font-space: 'Space Grotesk', system-ui, sans-serif;
+
+  --electric: #00d4ff;
+  --electric-glow: rgba(0, 212, 255, 0.3);
+  --yellow: #ffe500;
+  --yellow-glow: rgba(255, 229, 0, 0.3);
+  --uk-blue: #0033a0;
+  --bg: #0a0a0a;
+  --bg-2: #111111;
+  --bg-card: #161616;
+  --border: #222222;
+  --text-muted: #888888;
+}
+
+/* ── Base Reset & Body ─────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* offset for sticky nav */
+}
+
+body {
+  background-color: var(--bg);
+  color: #ffffff;
+  font-family: var(--font-space);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── Typography ─────────────────────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-bebas), Impact, sans-serif;
+  letter-spacing: 0.02em;
+}
+
+/* ── Selection color ────────────────────────────────────────────────────────── */
+::selection {
+  background-color: var(--electric);
+  color: #000000;
+}
+
+/* ── Scrollbar ──────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--electric);
+  border-radius: 2px;
+}
+
+/* ── Custom utilities ────────────────────────────────────────────────────────── */
+@layer utilities {
+  .text-gradient-electric {
+    background: linear-gradient(135deg, #00d4ff 0%, #ffffff 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-uk {
+    background: linear-gradient(135deg, #0033a0 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-electric {
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.5), 0 0 80px rgba(0, 212, 255, 0.2);
+  }
+
+  .glow-yellow {
+    text-shadow: 0 0 40px rgba(255, 229, 0, 0.5), 0 0 80px rgba(255, 229, 0, 0.2);
+  }
+
+  .card-glass {
+    background: rgba(22, 22, 22, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .card-glass-hover {
+    transition: all 0.3s ease;
+  }
+
+  .card-glass-hover:hover {
+    background: rgba(30, 30, 30, 0.9);
+    border-color: rgba(0, 212, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1);
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--electric), transparent);
+    opacity: 0.3;
+  }
+
+  .noise-overlay {
+    position: relative;
+  }
+
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Masonry gallery */
+  .masonry-grid {
+    columns: 1;
+    column-gap: 12px;
+  }
+
+  @media (min-width: 640px) {
+    .masonry-grid {
+      columns: 2;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .masonry-grid {
+      columns: 3;
+    }
+  }
+
+  .masonry-item {
+    break-inside: avoid;
+    margin-bottom: 12px;
+  }
+
+  /* Grid line decorations */
+  .grid-lines {
+    background-image:
+      linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+}
+
+/* ── Lightbox overrides ──────────────────────────────────────────────────────── */
+.yarl__root {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.95);
+}
+
+/* ── Loading skeleton ────────────────────────────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #222222 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 4px;
+}

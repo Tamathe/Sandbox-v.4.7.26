@@ -1,0 +1,57 @@
+{
+  "id": "written-thesis",
+  "title": "Written Analysis Rubric (Clinical Informatics)",
+  "description": "For module capstones and the final implementation proposal. The point is defensibility under examiner-style scrutiny, not polish.",
+  "criteria": [
+    {
+      "name": "Clinical and informatics accuracy",
+      "weight": 0.30,
+      "levels": [
+        { "score": 1, "descriptor": "Factual errors about standards, workflows, regulations, or clinical reasoning that would fail a board question." },
+        { "score": 2, "descriptor": "Mostly accurate but with imprecisions a careful examiner would catch (e.g., conflating SNOMED with LOINC)." },
+        { "score": 3, "descriptor": "Accurate. Standards, regulations, and clinical claims would survive a fellowship-level read." },
+        { "score": 4, "descriptor": "Accurate AND the writer flags the contested or evolving parts of the field rather than presenting them as settled." }
+      ]
+    },
+    {
+      "name": "Quality of reasoning",
+      "weight": 0.25,
+      "levels": [
+        { "score": 1, "descriptor": "Assertions without support. Recommendations do not follow from the analysis." },
+        { "score": 2, "descriptor": "Some reasoning, but key steps are skipped or rest on undefended assumptions." },
+        { "score": 3, "descriptor": "The argument follows. A skeptical reader can trace each step from problem to recommendation." },
+        { "score": 4, "descriptor": "The argument follows AND the writer flags its weakest link before a critic has to." }
+      ]
+    },
+    {
+      "name": "Engagement with the strongest counter-argument",
+      "weight": 0.20,
+      "levels": [
+        { "score": 1, "descriptor": "No counter-argument considered. Or only a strawman version." },
+        { "score": 2, "descriptor": "A counter-argument appears but is dismissed without being taken seriously." },
+        { "score": 3, "descriptor": "A real counter-argument — the one a skeptical CMIO would actually raise — is engaged and answered." },
+        { "score": 4, "descriptor": "The strongest version is steel-manned, and the response either holds or the writer updates the recommendation." }
+      ]
+    },
+    {
+      "name": "Use of frameworks and vocabulary",
+      "weight": 0.15,
+      "levels": [
+        { "score": 1, "descriptor": "Avoids the field's frameworks (CDS Five Rights, Sittig-Singh, SAFER, etc.) or uses them as labels." },
+        { "score": 2, "descriptor": "Frameworks named but not load-bearing in the analysis." },
+        { "score": 3, "descriptor": "Frameworks are doing real work — the analysis would be visibly weaker without them." },
+        { "score": 4, "descriptor": "Frameworks are doing real work AND the writer notes where the framework itself fits the case poorly." }
+      ]
+    },
+    {
+      "name": "Voice and honesty",
+      "weight": 0.10,
+      "levels": [
+        { "score": 1, "descriptor": "Generic, hedged, or AI-flavored prose. Reader cannot tell who wrote it or what they think." },
+        { "score": 2, "descriptor": "Some personal stake visible but mostly safe and recycled." },
+        { "score": 3, "descriptor": "Clear voice. The writer is in the room." },
+        { "score": 4, "descriptor": "Clear voice AND visible intellectual honesty about uncertainty or change of mind." }
+      ]
+    }
+  ]
+}

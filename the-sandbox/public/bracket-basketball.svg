@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 72" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="72" rx="10" fill="url(#bg)"/>
+
+  <!-- LEFT SIDE ─────────────── -->
+  <!-- R1 top: teams 1 & 2 -->
+  <line x1="5"  y1="14" x2="24" y2="14" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="5"  y1="25" x2="24" y2="25" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="24" y1="14" x2="24" y2="25" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="24" y1="19.5" x2="38" y2="19.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- R1 bottom: teams 3 & 4 -->
+  <line x1="5"  y1="47" x2="24" y2="47" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="5"  y1="58" x2="24" y2="58" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="24" y1="47" x2="24" y2="58" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="24" y1="52.5" x2="38" y2="52.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- R2 left: connect two winners -->
+  <line x1="38" y1="19.5" x2="38" y2="52.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="38" y1="36"   x2="50" y2="36"   stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- RIGHT SIDE ────────────── -->
+  <!-- R1 top: teams 5 & 6 -->
+  <line x1="95" y1="14" x2="76" y2="14" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="95" y1="25" x2="76" y2="25" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="76" y1="14" x2="76" y2="25" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="76" y1="19.5" x2="62" y2="19.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- R1 bottom: teams 7 & 8 -->
+  <line x1="95" y1="47" x2="76" y2="47" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="95" y1="58" x2="76" y2="58" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="76" y1="47" x2="76" y2="58" stroke="white" stroke-width="2"   stroke-linecap="round"/>
+  <line x1="76" y1="52.5" x2="62" y2="52.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- R2 right: connect two winners -->
+  <line x1="62" y1="19.5" x2="62" y2="52.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <line x1="62" y1="36"   x2="50" y2="36"   stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- CENTER: Basketball ──────── -->
+  <circle cx="50" cy="36" r="11" stroke="white" stroke-width="2"/>
+  <!-- Vertical seam -->
+  <line x1="50" y1="25" x2="50" y2="47" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Upper arc seam -->
+  <path d="M39.5 36 C43 29 57 29 60.5 36" stroke="white" stroke-width="1.5" fill="none"/>
+  <!-- Lower arc seam -->
+  <path d="M39.5 36 C43 43 57 43 60.5 36" stroke="white" stroke-width="1.5" fill="none"/>
+
+  <!-- Trophy dot at center of ball -->
+  <circle cx="50" cy="36" r="2" fill="white" opacity="0.9"/>
+</svg>

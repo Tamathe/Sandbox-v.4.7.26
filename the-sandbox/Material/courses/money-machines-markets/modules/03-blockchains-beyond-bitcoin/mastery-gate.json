@@ -1,0 +1,139 @@
+{
+  "id": "mg-03-blockchains-beyond-bitcoin",
+  "moduleId": "03-blockchains-beyond-bitcoin",
+  "title": "Module 3 Mastery Gate — Blockchains Beyond Bitcoin",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions. The point is the explanations, not the score. Read every rationale, even on questions you got right. Retake until passing — there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "world-computer-thesis",
+      "prompt": "Which of the following best describes how the 'world computer' framing for Ethereum has held up over time?",
+      "options": [
+        "Ethereum became exactly the world computer the original white paper described.",
+        "Ethereum became a world settlement layer, with most actual execution happening on layer-2 rollups built above it.",
+        "The world computer thesis was abandoned entirely and Ethereum is now just a payments network.",
+        "Ethereum is still the world computer, but only for AI workloads."
+      ],
+      "correct": 1,
+      "rationale": "The original 2014 framing pictured arbitrary general-purpose computation happening on Ethereum mainnet. In practice, gas costs pushed almost all execution to L2s, and mainnet became a place where final settlement and high-value financial actions happen. The thesis didn't fail, exactly — it shifted. The honest version is that the world-computer pitch was a useful lie that recruited the developers and capital that built something different and real."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "the-dao",
+      "prompt": "What is the most important thing the 2016 DAO hack and the subsequent Ethereum hard-fork rollback teach us?",
+      "options": [
+        "That smart contracts are completely useless.",
+        "That reentrancy bugs are unfixable.",
+        "That the immutability promise was sacrificed early, and that sacrifice was load-bearing for the ecosystem that came after.",
+        "That Ethereum Classic was always going to win."
+      ],
+      "correct": 2,
+      "rationale": "The DAO bailout is uncomfortable because it worked. The Ethereum community traded the 'code is law' principle for the survival of the early ecosystem, and that trade enabled the years of growth that followed. The same kind of rollback would not be coordinable today, which means the early sacrifice of the principle bought time for an ecosystem that has since become un-bailable. People who use The DAO to dismiss the entire category miss this; people who pretend the rollback was costless also miss it."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "oracle-problem",
+      "prompt": "A DeFi lending protocol uses an on-chain DEX as its price oracle. An attacker uses a flash loan to push the DEX price of a thinly traded token up by 5x for one block, borrows against the inflated collateral, and walks away. The smart contract code worked exactly as written. Which framing is most honest about what went wrong?",
+      "options": [
+        "There was a bug in the contract code.",
+        "The protocol was trustless but the user was careless.",
+        "The protocol's trustlessness leaked out through the oracle layer; it was trust-shifted, not trust-removed.",
+        "Flash loans should be illegal."
+      ],
+      "correct": 2,
+      "rationale": "This is the Mango Markets pattern (and many others). Every step of the attack was exactly what the contract was written to allow. There was no code bug. The system as a whole had a bug, which was that its trust assumption about the oracle did not hold under sufficient capital pressure. 'Trustless DeFi' that relies on a manipulable oracle is trust-shifted DeFi — the trust moved from a custodian to the price feed, which is a real change but not the absence of trust the marketing describes."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "proof-of-stake",
+      "prompt": "Which of the following is the strongest *honest* advantage of proof-of-stake over proof-of-work?",
+      "options": [
+        "It uses less energy.",
+        "It is impossible to attack.",
+        "Misbehaving validators can have their stake slashed by the protocol, so the attacker pays an in-protocol penalty in addition to the cost of acquiring the stake.",
+        "It is required by international climate agreements."
+      ],
+      "correct": 2,
+      "rationale": "Energy is a real but secondary consideration. The deeper structural advantage of PoS is that the protocol can punish a misbehaving validator directly by destroying their stake — there is an in-protocol penalty that PoW does not have. PoW can only respond to a 51% attack by waiting it out or social-coordination forking. The flip side is that slashing requires the system to know what counts as misbehavior, which introduces a politics layer PoW does not have. Both mechanisms have real costs; this is the honest pro-PoS point."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "liveness-vs-safety",
+      "prompt": "Bitcoin keeps producing blocks during bad network conditions and lets users wait for confirmations. Ethereum's PoS prefers to halt finality during bad conditions rather than finalize an inconsistent state. Which of these is the right design choice?",
+      "options": [
+        "Bitcoin's, because a global money should never go offline.",
+        "Ethereum's, because a programmable substrate cannot risk inconsistent state across applications.",
+        "Both are defensible because they serve different jobs; the choice reflects what the chain is for.",
+        "Neither — both are broken and should be replaced with hybrid consensus."
+      ],
+      "correct": 2,
+      "rationale": "The FLP impossibility result tells us you cannot have both perfect liveness and perfect safety under unreliable network conditions — you have to pick. Bitcoin picks liveness (keep going, let safety be probabilistic) because it is trying to be a base monetary layer that should never stop. Ethereum's PoS picks safety (halt finality if anything is wrong) because it is trying to be a programmable substrate where an inconsistent state would be more damaging than a temporary halt. Both are defensible. People who insist there is one right answer are usually trying to win a tribal argument rather than answer an engineering question."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "depeg",
+      "prompt": "In March 2023, USDC briefly traded at about 88 cents. What was the underlying cause, and what does it teach us?",
+      "options": [
+        "The smart contracts were hacked; it teaches that DeFi is fragile.",
+        "Approximately 8% of Circle's reserves were stuck in Silicon Valley Bank during its failure; it teaches that the most regulated stablecoin is also the most exposed to traditional banking failures.",
+        "Tether attacked USDC; it teaches that stablecoins compete by sabotage.",
+        "Coinbase paused withdrawals; it teaches that exchanges are the real risk."
+      ],
+      "correct": 1,
+      "rationale": "The USDC depeg happened because Circle held a portion of its reserves in Silicon Valley Bank, which failed during a banking crisis. The peg recovered within days when the FDIC made depositors whole, but the lesson is uncomfortable: USDC, the 'compliance' stablecoin, took the biggest depeg of any major stablecoin in 2023, and it took it for the most boring possible reason. Compliance and stability are not the same property. This is one of the cleanest examples of why the 'best' stablecoin depends entirely on what you are optimizing against."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "data-availability",
+      "prompt": "Why is data availability the load-bearing concept for rollup security, not just an implementation detail?",
+      "options": [
+        "Because faster data access lowers gas fees.",
+        "Because if the rollup's transaction data is not available for download, nobody can independently verify the rollup's state, and the proof system alone is insufficient.",
+        "Because Ethereum requires all data to be stored on mainnet forever.",
+        "Because zero-knowledge proofs only work when data is highly available."
+      ],
+      "correct": 1,
+      "rationale": "A rollup posts a proof that some computation was done correctly, but a proof of correctness is only useful if you can also see *what* was computed. If the data is unavailable, the rollup operator could in principle produce a valid-looking proof for a state that nobody else can reconstruct. This is why rollups post the full transaction data (or, since EIP-4844, blobs that are verifiably published) to L1, even though storing it is expensive. The cheaper data-availability lane introduced by 4844 is what made rollup costs drop by an order of magnitude."
+    },
+    {
+      "id": "q8",
+      "type": "short",
+      "concept": "nakamoto-coefficient",
+      "prompt": "In your own words, explain the Nakamoto coefficient. Then estimate or recall it for two different chains and say which one is more decentralized by this measure. Two or three sentences.",
+      "expectedKeywords": ["minimum", "entities", "compromise", "decentraliz"],
+      "rationale": "A complete answer says the Nakamoto coefficient is the minimum number of independent entities you would need to compromise (or get to collude) to break some critical property of the system, with higher being better. A good comparison might note that Bitcoin's mining coefficient is around 2–4 (a real weakness), Ethereum's validator coefficient is single digits if you count Lido as one entity, and most rollups are at 1 because they have a single sequencer. The point of the question is to make you put numbers on a property the marketing prefers to keep vibey."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "validator-concentration",
+      "prompt": "Lido holds roughly a third of all staked ETH on Ethereum. Why does this matter for decentralization, even though Lido is itself a DAO with many internal participants?",
+      "options": [
+        "It doesn't matter; Lido is decentralized internally.",
+        "Because the entity with control of staking infrastructure has the same power to censor or vote regardless of its internal governance, and concentration in one protocol gives that entity the leverage of a major validator block.",
+        "Because Lido is a US company subject to US regulation.",
+        "Because Lido refuses to participate in Ethereum upgrades."
+      ],
+      "correct": 1,
+      "rationale": "This is the largest unresolved problem in Ethereum's decentralization story. From the protocol's point of view, Lido is a single entity that controls a single validator block, regardless of how its internal governance is structured. If Lido were pressured (legally, politically, or by capture of its DAO), the leverage would be enormous. Internal DAO structure mitigates this somewhat but does not eliminate it. The Ethereum community is aware of the problem and has been working on it for years; the fact that it remains unsolved tells you something about how hard the problem is."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "admin-multisig",
+      "prompt": "A new layer-2 chain claims to be 'secured by Ethereum.' On inspection, it has a 4-of-7 multisig that can upgrade any contract on the rollup, and a single sequencer run by the founding team. In two or three sentences, defend or attack the chain's claim to being decentralized. Use specific language from the lesson.",
+      "expectedKeywords": ["multisig", "sequencer", "Nakamoto", "theater"],
+      "rationale": "A strong answer notes that the Nakamoto coefficient of the rollup as a system is effectively 1 (single sequencer) or at most 4 (the multisig threshold), and that 'secured by Ethereum' is true only in the limit — Ethereum's security does not currently constrain what the sequencer or multisig can do today. The chain is centralized in the present and decentralized in the marketing. This is decentralization theater unless there is a credible, dated path to retiring the multisig and decentralizing the sequencer, *and* that path has begun executing in a verifiable way. 'We will decentralize over time' is not a path; it is a vibe."
+    }
+  ]
+}

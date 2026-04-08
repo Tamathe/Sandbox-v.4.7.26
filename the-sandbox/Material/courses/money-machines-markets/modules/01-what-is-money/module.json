@@ -1,0 +1,29 @@
+{
+  "id": "01-what-is-money",
+  "slug": "what-is-money",
+  "order": 1,
+  "title": "First Principles: What Is Money, Really?",
+  "summary": "Before we touch a blockchain or a neural net, we need a shared definition of the thing they are all competing to redefine. A short history of money, the three functions, the modern banking stack, inflation as policy, and what 'hard' money means.",
+  "learningOutcomes": [
+    "Tell the short history of money from shells to pixels and explain why each transition happened.",
+    "State the three functions of money and explain why they don't always live in the same object.",
+    "Describe the modern fiat-and-credit banking stack at a level that would survive a skeptical follow-up question.",
+    "Explain inflation as a policy choice rather than a natural phenomenon.",
+    "Define 'hard money' precisely and explain why anyone cares."
+  ],
+  "prerequisites": [],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-history-of-money",
+    "02-three-functions",
+    "03-fiat-and-credit",
+    "04-inflation-as-policy",
+    "05-hard-money"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

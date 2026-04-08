@@ -1,0 +1,28 @@
+{
+  "policies": [
+    {
+      "id": "academic-integrity",
+      "title": "Academic Integrity",
+      "file": "academic-integrity.md",
+      "required": true,
+      "ackBefore": "first-mastery-gate",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ai-use-policy",
+      "title": "AI Use Policy",
+      "file": "ai-use-policy.md",
+      "required": true,
+      "ackBefore": "first-mastery-gate",
+      "version": "1.0.0"
+    },
+    {
+      "id": "phi-handling",
+      "title": "PHI Handling Policy",
+      "file": "phi-handling.md",
+      "required": true,
+      "ackBefore": "first-discussion",
+      "version": "1.0.0"
+    }
+  ]
+}

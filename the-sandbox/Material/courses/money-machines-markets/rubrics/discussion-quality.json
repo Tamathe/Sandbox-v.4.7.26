@@ -1,0 +1,37 @@
+{
+  "id": "discussion-quality",
+  "title": "Discussion Quality Rubric",
+  "description": "For threaded discussion participation. Volume is not the metric. Whether your posts move the thread forward is the metric.",
+  "criteria": [
+    {
+      "name": "Substance",
+      "weight": 0.40,
+      "levels": [
+        { "score": 1, "descriptor": "Agreement, disagreement, or restatement with no added content." },
+        { "score": 2, "descriptor": "Adds an example, a citation, or a clarification." },
+        { "score": 3, "descriptor": "Advances the argument: a new framing, a counter-example, or a question the thread had not yet asked." },
+        { "score": 4, "descriptor": "Reframes the disagreement so participants who held opposite views recognize the actual crux." }
+      ]
+    },
+    {
+      "name": "Engagement with peers",
+      "weight": 0.30,
+      "levels": [
+        { "score": 1, "descriptor": "Only top-level posts. No replies." },
+        { "score": 2, "descriptor": "Replies that signal agreement or disagreement." },
+        { "score": 3, "descriptor": "Replies that quote what was said and respond to its strongest version." },
+        { "score": 4, "descriptor": "Replies that change the original poster's mind, or that publicly update the responder's own." }
+      ]
+    },
+    {
+      "name": "Tone",
+      "weight": 0.30,
+      "levels": [
+        { "score": 1, "descriptor": "Dismissive, sneering, or performatively certain." },
+        { "score": 2, "descriptor": "Civil but defensive." },
+        { "score": 3, "descriptor": "Curious. Asks rather than tells." },
+        { "score": 4, "descriptor": "Curious AND willing to be wrong in public." }
+      ]
+    }
+  ]
+}

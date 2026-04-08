@@ -1,0 +1,185 @@
+{
+  "moduleId": "02-clinical-data-standards",
+  "concepts": [
+    {
+      "id": "interoperability-four-levels",
+      "label": "Four Levels of Interoperability",
+      "summary": "Foundational (bytes arrive), structural (parses into a known format), semantic (codes mean the same thing on both sides), organizational (governed, trusted, legal, sustainable). Each fails differently."
+    },
+    {
+      "id": "content-vs-transport",
+      "label": "Content vs Transport Standards",
+      "summary": "Content standards govern message structure (HL7 v2 ADT, FHIR resources, CDA). Transport standards govern how bytes move (MLLP, HTTP REST, S/MIME-over-SMTP). Two systems can agree on one and disagree on the other."
+    },
+    {
+      "id": "vocabulary-vs-format",
+      "label": "Vocabulary vs Format",
+      "summary": "Vocabularies (SNOMED, LOINC, RxNorm, ICD, UCUM) define what values *mean*. Formats (HL7 v2, FHIR, CDA) define how messages are *structured*. Both are required for semantic interoperability."
+    },
+    {
+      "id": "semantic-interoperability",
+      "label": "Semantic Interoperability",
+      "summary": "The level at which both sender and receiver interpret the data identically. The hardest level to achieve and the most common silent failure mode."
+    },
+    {
+      "id": "implementation-guide",
+      "label": "Implementation Guide",
+      "summary": "A specification that constrains how a flexible standard must be used for a specific use case (e.g., US Core for U.S. clinical FHIR). Without an IG, 'standard-compliant' systems often cannot interoperate."
+    },
+    {
+      "id": "hl7-v2",
+      "label": "HL7 v2",
+      "summary": "Pipe-delimited, segment-based messaging standard from 1987. Still moves most U.S. hospital interface traffic. Message types: ADT, ORM, ORU, MDM, SIU, DFT. Transport via MLLP."
+    },
+    {
+      "id": "hl7-v3",
+      "label": "HL7 v3",
+      "summary": "RIM-based, XML, theoretically beautiful, practically failed. Lost to FHIR because of vertical learning curve, inadequate tooling, and lack of incremental migration incentives. CDA is the surviving piece."
+    },
+    {
+      "id": "rim-reference-information-model",
+      "label": "RIM (Reference Information Model)",
+      "summary": "The object model underlying HL7 v3. Built on Act, Entity, Role, Participation primitives. Conceptually elegant; took weeks of study to use; killed v3 adoption."
+    },
+    {
+      "id": "mllp-transport",
+      "label": "MLLP",
+      "summary": "Minimal Lower Layer Protocol. Thin TCP-based framing for HL7 v2 messages. No built-in encryption. Standard transport for intra-hospital v2 traffic."
+    },
+    {
+      "id": "adt-orm-oru",
+      "label": "ADT / ORM / ORU",
+      "summary": "ADT: patient movement (admit/discharge/transfer). ORM: orders. ORU: results. The three highest-volume v2 message types in most hospitals."
+    },
+    {
+      "id": "mdm-siu-dft",
+      "label": "MDM / SIU / DFT",
+      "summary": "MDM: medical document management. SIU: scheduling information. DFT: detailed financial transaction (charges). The next tier of v2 message types worth knowing."
+    },
+    {
+      "id": "delimiters-pipe-hat",
+      "label": "v2 Delimiters",
+      "summary": "MSH|^~\\&| defines: | field separator, ^ component, ~ repetition, \\ escape, & sub-component. Recognize the opening delimiters on sight."
+    },
+    {
+      "id": "fhir",
+      "label": "FHIR",
+      "summary": "Fast Healthcare Interoperability Resources. REST-based, JSON or XML, resource-oriented. The modern HL7 standard that won where v3 lost. Required by the Cures Act API rule for certified EHRs."
+    },
+    {
+      "id": "fhir-resources",
+      "label": "FHIR Resources",
+      "summary": "The unit of FHIR. Categories: Foundation, Base (Patient, Practitioner, Encounter), Clinical (Observation, Condition, MedicationRequest), Financial, Specialized. Observation is the most over-tested resource."
+    },
+    {
+      "id": "fhir-rest-api",
+      "label": "FHIR REST API",
+      "summary": "Standard HTTP verbs against resource URLs. GET /Patient/123, POST /Patient, PUT /Patient/123, DELETE /Patient/123, GET /Patient?gender=female. Search parameters are part of the spec."
+    },
+    {
+      "id": "smart-on-fhir",
+      "label": "SMART on FHIR",
+      "summary": "Substitutable Medical Apps, Reusable Technologies. OAuth 2.0 + OpenID Connect + scopes layered on FHIR. Defines how third-party apps launch from inside an EHR. Required by Cures Act."
+    },
+    {
+      "id": "cds-hooks",
+      "label": "CDS Hooks",
+      "summary": "FHIR-based specification for externalized CDS. EHR fires hooks at workflow points (chart open, order start), CDS service returns cards rendered in EHR. Modern alternative to embedded CDS rules."
+    },
+    {
+      "id": "us-core",
+      "label": "US Core",
+      "summary": "The implementation guide standardized for U.S. clinical FHIR. Defines required profiles, fields, and value set bindings for USCDI data classes. The contract Cures-Act-certified EHRs must meet."
+    },
+    {
+      "id": "profiles-and-extensions",
+      "label": "Profiles and Extensions",
+      "summary": "Profiles constrain a FHIR resource for a specific use case (required fields, bound value sets). Extensions add structured fields the base resource does not define. Both are how FHIR turns flexibility into interoperability."
+    },
+    {
+      "id": "snomed-ct",
+      "label": "SNOMED CT",
+      "summary": "350,000+ clinical concepts. Polyhierarchical. Right vocabulary for problem lists, clinical findings, body sites, procedures (clinical, not billing). Free in U.S. via NLM national license."
+    },
+    {
+      "id": "loinc",
+      "label": "LOINC",
+      "summary": "Vocabulary for what is being *measured* — lab tests, vital sign types, document types. Six-axis structure. Free worldwide. Developed at Regenstrief Institute."
+    },
+    {
+      "id": "rxnorm",
+      "label": "RxNorm",
+      "summary": "U.S. standard medication vocabulary. Levels: ingredient, clinical drug, branded drug, pack. Free from NLM. Used for ePrescribing, drug-drug interaction checking, medication reconciliation."
+    },
+    {
+      "id": "vocabulary-granularity",
+      "label": "Vocabulary Granularity",
+      "summary": "Different vocabularies operate at different levels of detail. Choosing the wrong granularity (e.g., recording medications at the ingredient level when CDS needs clinical-drug level) is a common project failure."
+    },
+    {
+      "id": "value-set-binding",
+      "label": "Value Set Binding",
+      "summary": "The act of constraining a field to a specific subset of codes from a vocabulary. Implementation guides bind value sets so that conforming systems use the same codes for the same concepts."
+    },
+    {
+      "id": "umls",
+      "label": "UMLS",
+      "summary": "Unified Medical Language System. Meta-thesaurus from NLM that maps concepts across 200+ source vocabularies. Used for cross-vocabulary translation (e.g., SNOMED to ICD-10)."
+    },
+    {
+      "id": "icd-10-cm",
+      "label": "ICD-10-CM",
+      "summary": "U.S. diagnosis coding for claims and administrative data. ~70,000 codes. Smaller and less expressive than SNOMED but enumerable, exhaustive, and stable across years. Transitioned from ICD-9-CM in October 2015."
+    },
+    {
+      "id": "icd-10-pcs",
+      "label": "ICD-10-PCS",
+      "summary": "U.S. inpatient procedure coding. Seven-character alphanumeric, axis-based. Used only by hospitals for inpatient procedures. Owned by CMS."
+    },
+    {
+      "id": "cpt",
+      "label": "CPT",
+      "summary": "Current Procedural Terminology. Owned and maintained by the AMA as a proprietary standard. Five-digit numeric codes for outpatient procedures and physician services. Categories I, II, III."
+    },
+    {
+      "id": "hcpcs",
+      "label": "HCPCS",
+      "summary": "Healthcare Common Procedure Coding System. Level I = CPT. Level II = alphanumeric codes for items and services beyond CPT (DME, ambulance, drugs administered in non-self-administered ways)."
+    },
+    {
+      "id": "drg-msdrg",
+      "label": "DRG / MS-DRG",
+      "summary": "Medicare Severity Diagnosis-Related Groups. ~750 groups. Computed from principal diagnosis, secondary diagnoses, procedures, age, sex, disposition. Foundation of inpatient prospective payment system."
+    },
+    {
+      "id": "billing-vs-clinical-coding",
+      "label": "Billing vs Clinical Coding",
+      "summary": "Billing vocabularies (ICD, CPT, HCPCS) and clinical vocabularies (SNOMED, LOINC, RxNorm) coexist by design. The seam is where most clinical informatics projects integrate, and where most semantic failures hide. CDI is the dedicated translation function."
+    },
+    {
+      "id": "ucum",
+      "label": "UCUM",
+      "summary": "Unified Code for Units of Measure. Case-sensitive. Square brackets for special units, curly braces for annotations. Adopted by FHIR, HL7, LOINC. Solves expression of units, not correctness of values."
+    },
+    {
+      "id": "units-of-measure",
+      "label": "Units of Measure",
+      "summary": "An axis of the data separate from value and identity. Same number can mean different things with different units. Most hospitals still produce non-UCUM-conformant unit strings on legacy interfaces."
+    },
+    {
+      "id": "unit-conversion-errors",
+      "label": "Unit Conversion Errors",
+      "summary": "The classic creatinine example: mg/dL vs umol/L differ by ~88. CDS rules that ignore units fire incorrectly. The discipline of unit-aware CDS is what separates working CDS teams from ignored ones."
+    },
+    {
+      "id": "drug-dosing-unit-errors",
+      "label": "Drug Dosing Unit Errors",
+      "summary": "Insulin and heparin dosed in units. Pediatric dosing in mg/kg. Methotrexate weekly vs daily. The Quaid twins case (2007) is the canonical illustration of unit-related medication harm."
+    },
+    {
+      "id": "traditional-vs-si-units",
+      "label": "Traditional vs SI Units",
+      "summary": "U.S. uses traditional units (mg/dL for creatinine, glucose); most of the world uses SI (umol/L, mmol/L). Conversion factors are different per analyte. UCUM expresses both unambiguously."
+    }
+  ]
+}

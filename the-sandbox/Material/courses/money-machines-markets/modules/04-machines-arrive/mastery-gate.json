@@ -1,0 +1,139 @@
+{
+  "id": "mg-04-machines-arrive",
+  "moduleId": "04-machines-arrive",
+  "title": "Module 4 Mastery Gate — The Machines Arrive",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions. Read every rationale, including the ones on questions you got right — the rationales are where the real teaching is. Retake until passing. There is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "transformer",
+      "prompt": "Why is the transformer architecture (2017) considered an inflection point in AI history rather than just a refinement of earlier deep learning?",
+      "options": [
+        "It introduced GPUs to neural network training for the first time.",
+        "It discovered that one architecture, trained on enough data, learned to do many tasks no one had explicitly designed it to do, and that this scaled predictably with size.",
+        "It replaced symbolic AI with statistical learning.",
+        "It was the first neural network to recognize images."
+      ],
+      "correct": 1,
+      "rationale": "GPUs predate the transformer by years (AlexNet 2012). Statistical learning replaced symbolic AI in the 1990s. Image recognition was solved by earlier convolutional networks. The genuinely new thing about the transformer is the combination of self-attention with the discovery that scaling it up produced general-purpose capabilities — translate, summarize, code, reason — without anyone designing those capabilities into it. Every modern frontier model is downstream of this single observation."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "next-token-prediction",
+      "prompt": "Mechanically, what does a large language model do when you send it a prompt?",
+      "options": [
+        "It searches a database of known facts and constructs an answer.",
+        "It tokenizes your prompt, runs the tokens through a fixed neural network to produce a probability distribution over the next token, samples one, appends it, and repeats.",
+        "It looks up similar prompts it has seen before and returns the most popular response.",
+        "It runs a planning algorithm to decide what to say, then generates the words."
+      ],
+      "correct": 1,
+      "rationale": "There is no separate fact database, no example lookup, no internal planner producing a structured response. Mechanically, an LLM is a function from a token sequence to a probability distribution, sampled in a loop. Every word you read in a model's response was produced one token at a time by repeatedly running this same function. The 'understanding' that appears to be there is encoded in the relationships between weights, learned during training. Knowing this is the difference between forming intuitions about what models can and can't do and making things up."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "context-window",
+      "prompt": "A user has a long-running conversation with a chatbot over several days. Which of the following is the most accurate description of what the model 'remembers' about the conversation?",
+      "options": [
+        "The model gradually builds up a memory of the user during the conversation, like a human learning.",
+        "The model retrains itself on the conversation each night so it improves over time.",
+        "The model has no memory of its own. The system feeds the entire prior conversation back into the model's context window each turn, and anything older than the window cutoff is invisible to the model.",
+        "The model stores the conversation in a separate vector database that it queries automatically."
+      ],
+      "correct": 2,
+      "rationale": "A trained model's weights are static at inference time. The model does not learn anything from your conversation. What looks like 'remembering' is the system re-feeding the conversation history into the context window each turn. The instant the conversation grows past the window size, the oldest parts fall off and become invisible. Some products bolt on a separate retrieval-based memory, but that is a feature of the application, not the model. Confusing model and application is one of the most common sources of mistaken intuitions about what AI 'knows.'"
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "rlhf",
+      "prompt": "Which training stage is most directly responsible for the way a frontier model handles refusals, follows instructions, and exhibits a recognizable 'personality' in conversation?",
+      "options": [
+        "Pretraining, because that's where the model learns language.",
+        "Tokenization, because that's where the input format is decided.",
+        "RLHF (and its variants), because that's where humans rank model outputs and the model is trained to maximize the rankings.",
+        "The context window, because longer windows allow more personality to emerge."
+      ],
+      "correct": 2,
+      "rationale": "Pretraining gives the model raw language and world knowledge. Fine-tuning gives it the format of a useful assistant. RLHF — and its newer variants like Constitutional AI, RLAIF, DPO — is the stage where the model's behavior is most directly shaped to match what the lab wants: when to refuse, when to clarify, when to push back, when to be terse, when to be expansive. The slightly different feel of Claude vs GPT vs Gemini is mostly a downstream consequence of different RLHF setups, not different base architectures."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "compounding-error",
+      "prompt": "A model gets a single step right 95% of the time. You build an agent that needs to chain ten of these steps together to complete a task. Approximately what fraction of tasks will the naive agent complete successfully end-to-end?",
+      "options": [
+        "About 95%, because each step is 95% reliable.",
+        "About 60%, because errors compound multiplicatively (0.95^10 ≈ 0.60).",
+        "About 50%, because longer tasks are always around a coin flip.",
+        "About 99%, because the model learns from its earlier mistakes within the run."
+      ],
+      "correct": 1,
+      "rationale": "This is the central math of agent reliability. A 95% step rate gives 0.95^10 ≈ 0.60 end-to-end. A 99% step rate gives ~0.90 over ten steps, ~0.60 over fifty. Per-step reliability has to climb dramatically faster than naive intuition suggests for long agent runs to be reliable. Almost every engineering technique used in real-world agents (retries, critics, restricted tool surfaces, human checkpoints) is some way of fighting this math. It does not go away with bigger models alone — it gets pushed back."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "tsmc",
+      "prompt": "Which statement most accurately describes the supply-chain bottleneck behind frontier AI training in 2026?",
+      "options": [
+        "The bottleneck is the algorithms — labs are running out of new ideas.",
+        "The bottleneck is open-source data, because high-quality text has been exhausted.",
+        "The bottleneck is a stack of physical chokepoints: ASML makes the only EUV lithography machines, TSMC runs the only leading-edge fabs at scale, Nvidia designs the dominant accelerators, and regional power grids increasingly cannot supply the wattage clusters need in one place.",
+        "The bottleneck is consumer demand — most people don't want AI products."
+      ],
+      "correct": 2,
+      "rationale": "Algorithms travel through papers, weights, and people — they are not the binding constraint. Data is a real concern but not the primary one in 2026. Demand is enormous. The actual bottleneck is the physical stack: one Dutch company makes the EUV machines, one Taiwanese company makes the leading-edge chips, one American company designs the accelerators, and the US grid can't deliver multi-gigawatt clusters quickly. Every credible forecast about the next five years of AI is, downstream, a forecast about these physical constraints. Anyone discussing AI's trajectory without mentioning any of them is ignoring the binding variable."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "hallucination",
+      "prompt": "Why are model hallucinations described in the lesson as a structural feature of LLMs rather than a bug to be patched?",
+      "options": [
+        "Because the labs haven't tried hard enough to fix them.",
+        "Because the model has no internal mechanism for distinguishing 'I have this information' from 'I produce a plausible completion.' It always outputs the highest-probability next token, and plausibility is uncorrelated with truth.",
+        "Because hallucinations only happen in specific languages.",
+        "Because the training data itself contains lies that the model memorizes."
+      ],
+      "correct": 1,
+      "rationale": "The architecture has no token that means 'I don't actually know.' The model produces the most probable next token given its training; sometimes that completion is true, sometimes it isn't, and the model has no way to tell the difference internally. Memorized lies are a tiny fraction of the issue. The mitigation that works is grounding — wrapping the model in retrieval so its outputs are constrained to be supported by external sources. Grounded models hallucinate much less; ungrounded ones cannot be trusted on facts. Knowing this lets you use models well instead of being repeatedly surprised by their failures."
+    },
+    {
+      "id": "q8",
+      "type": "short",
+      "concept": "scaling-laws",
+      "prompt": "In your own words, explain why the empirical scaling laws are an unusual fact for an R&D field, and what they mean for the structure of the AI industry. Two or three sentences.",
+      "expectedKeywords": ["compute", "predictable", "capex", "concentration"],
+      "rationale": "There is no single right answer, but a complete one should observe that most R&D is a guess — you spend more and you don't know what you'll get. Scaling laws are unusual because they tell you, in advance and within known margins, what spending 10x more compute will produce. That is what makes nine-figure capex commitments rational rather than reckless. The downstream consequence is that the labs that can write those checks pull away from the ones that can't, and frontier model training becomes a few-companies sport. A weaker answer just restates 'bigger models work better' without connecting the predictability to the capital structure."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "out-of-distribution",
+      "prompt": "A frontier model perfectly solves thousands of standard physics problems but consistently fails on a physics problem with a setup nobody has written before, even though the underlying principles are identical. Which observation does this best illustrate?",
+      "options": [
+        "Hallucination — the model is making up facts.",
+        "Out-of-distribution generalization is weak: the model has learned the patterns of physics problems, not the underlying physics, so it falters when the patterns don't match.",
+        "Compounding error — the model is losing the thread across long reasoning chains.",
+        "Eval gaming — the standard problems were in the training data."
+      ],
+      "correct": 1,
+      "rationale": "Hallucination is about plausible-but-wrong factual claims. Compounding error is about reliability over many steps. Eval gaming is about benchmark contamination. The phenomenon described — strong on familiar patterns, weak on structurally novel ones with the same underlying principles — is the canonical signature of weak out-of-distribution generalization. It shows up everywhere if you look: coding models flawless on Stack Overflow patterns and clueless on novel libraries, medical models acing exams and missing edge cases, legal models citing cases confidently and inventing them when the situation is unfamiliar. The mechanism is the same: the model has learned the surface patterns, not the underlying structure."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "agent",
+      "prompt": "Explain in two or three sentences why the most useful agents in 2026 tend to be cooperative (human-in-the-loop) rather than fully autonomous, and what that tells you about the relative weight of marketing claims versus shipped products in this field.",
+      "expectedKeywords": ["compounding", "checkpoint", "autonomous", "irreversible"],
+      "rationale": "There is no single right answer. A complete one should note that the compounding-error math means long autonomous runs become unreliable quickly, so practical agents add human checkpoints — especially on irreversible actions — to fight that math. The result is that the products which actually ship and get used (Claude Code, Cursor, deep research features) are cooperative, while the 'fully autonomous AI worker' framing has been the louder marketing claim and the less successful product. The meta-lesson is that what gets marketed in this field and what gets shipped are not the same list, and tracking the gap is more useful than tracking the announcements. A weak answer just restates that agents are unreliable without connecting that fact to the cooperative-vs-autonomous design choice."
+    }
+  ]
+}

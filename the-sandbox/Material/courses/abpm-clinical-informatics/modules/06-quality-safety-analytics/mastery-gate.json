@@ -1,0 +1,209 @@
+{
+  "id": "mg-06-quality-safety-analytics",
+  "moduleId": "06-quality-safety-analytics",
+  "title": "Module 6 Mastery Gate — Quality, Safety, and Analytics",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on measure specification literacy, registries vs warehouses, dashboard critique, statistical traps, and population/public health reporting. The statistical-trap questions reward you for naming the trap. Memorize the eight traps from lesson 4 cold.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "numerator-denominator",
+      "prompt": "Which of the following BEST distinguishes a denominator exclusion from a denominator exception in a clinical quality measure specification?",
+      "options": [
+        "An exclusion is removed from the numerator; an exception is removed from the denominator.",
+        "An exclusion removes the patient from the denominator entirely (the patient was never eligible); an exception keeps the patient in the denominator but pulls them out of the failing count when there is a documented clinical reason.",
+        "Exclusions and exceptions are synonyms used in different measure stewardship organizations.",
+        "Exclusions apply to outcome measures; exceptions apply to process measures."
+      ],
+      "correct": 1,
+      "rationale": "Exclusions remove the patient from the denominator — they were never eligible (e.g., a patient excluded from a colonoscopy measure because of a prior total colectomy). Exceptions keep the patient in the denominator but allow a documented clinical reason (refusal, contraindication, system reason) to pull them out of the failing count. The distinction is testable directly. The other options invert or confuse the definitions; the boards use this exact disambiguation in stems."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "process-vs-outcome-measure",
+      "prompt": "An ICU dashboard tracks the percentage of mechanically ventilated patients receiving daily sedation interruptions per the institution's sedation protocol. This is BEST classified as which type of measure?",
+      "options": [
+        "Outcome measure",
+        "Process measure",
+        "Structure measure",
+        "Balancing measure"
+      ],
+      "correct": 1,
+      "rationale": "It is a process measure — it counts whether a recommended action (the sedation interruption) was performed. The outcome measure would be ventilator-free days, ICU mortality, or delirium incidence. The structure measure would be whether the unit has a sedation protocol on the wall at all. A balancing measure for this same intervention would be unplanned extubations — the thing that could go wrong if you push sedation interruptions hard. The boards reward you for placing each measure into Donabedian's structure-process-outcome framework correctly."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "balancing-measure",
+      "prompt": "A hospital pushes its inpatient sepsis bundle compliance hard and successfully drives the bundle compliance rate from 60% to 92% over a year. Which of the following would be the MOST appropriate balancing measure to track alongside bundle compliance?",
+      "options": [
+        "Bundle compliance rate by service line",
+        "Hospital-acquired Clostridioides difficile rate and broad-spectrum antibiotic days of therapy",
+        "Sepsis mortality rate",
+        "Number of CDS alerts fired for the sepsis bundle"
+      ],
+      "correct": 1,
+      "rationale": "C. difficile rate and broad-spectrum antibiotic days are exactly the kind of harms a hard-driven sepsis bundle could create — empiric broad-spectrum antibiotics in patients who do not actually have sepsis, with downstream C. diff and resistance. That is what a balancing measure is: something that tracks the harm the intervention could create. Bundle compliance by service line is a stratification of the same measure; sepsis mortality is the outcome the bundle is trying to improve (not a balancing measure); the alert count is a vanity metric. The boards specifically test whether you understand the *purpose* of a balancing measure."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "donabedian",
+      "prompt": "Which of the following is the BEST example of a structural quality measure in Donabedian's framework?",
+      "options": [
+        "30-day risk-adjusted mortality after CABG",
+        "Percentage of MI patients receiving aspirin within 24 hours of arrival",
+        "Whether the hospital is a designated primary stroke center with 24/7 neurology coverage",
+        "Hospital-acquired pressure injury rate"
+      ],
+      "correct": 2,
+      "rationale": "Designation as a primary stroke center with 24/7 neurology coverage describes what the institution *is* — staffing, capability, certification — which is the definition of a structural measure. 30-day mortality is an outcome measure. Aspirin within 24 hours is a process measure. Pressure injury rate is an outcome (or, depending on framing, an adverse event rate, but still an outcome). The boards test the trio with stems that require placing a measure into the right bucket. Memorize Donabedian's three terms cold."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "ecqm",
+      "prompt": "An eCQM (electronic clinical quality measure) specification published by CMS is written in which language, and what is the rationale for that choice?",
+      "options": [
+        "SQL, because all EHRs use relational databases.",
+        "Clinical Quality Language (CQL), the same HL7 language used to express CDS Knowledge Artifacts, on the rationale that quality measures and decision logic are operations on the same underlying clinical data.",
+        "Java, because eCQMs run inside the EHR as compiled code.",
+        "Plain English, with each EHR vendor implementing its own translation."
+      ],
+      "correct": 1,
+      "rationale": "eCQMs are written in CQL (Clinical Quality Language), the same HL7 language used in CDS Knowledge Artifacts (Module 4 lesson 5). CQL was deliberately designed as a single language for both decision logic and quality measure logic so that the same engineering discipline and the same value sets serve both. SQL is too vendor-specific; Java is implementation, not specification; plain English is the marketing brochure but not the contract. The cross-reference between Module 4 (CDS) and Module 6 (eCQMs) via CQL is a small piece of literacy the boards reward."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "clinical-registry",
+      "prompt": "Which of the following BEST distinguishes a clinical registry from a data warehouse?",
+      "options": [
+        "A registry contains only structured data; a warehouse contains both structured and unstructured data.",
+        "A registry is purpose-built around case-finding logic for a specific condition or population, with a fixed set of tracked data elements; a warehouse is a general-purpose analytical store fed periodically from operational sources, designed to answer many questions across many patients.",
+        "A registry is operated by the institution; a warehouse is operated by an external vendor.",
+        "A registry runs in real time against the CDR; a warehouse is offline."
+      ],
+      "correct": 1,
+      "rationale": "A registry is defined by its purpose-built case-finding logic and its fixed set of tracked elements (e.g., a diabetes registry tracks A1c, BP, foot exam, eye exam). A warehouse is general-purpose — it is fed by ETL/ELT from operational sources, modeled for analytical queries, and designed to answer questions across many domains. The other options are wrong: registries can include unstructured fields, both can be institutional, and registries are typically built on top of warehouses or CDRs, not necessarily real-time. The boards test this disambiguation directly."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "fitness-for-use",
+      "prompt": "An analyst proposes to use the EHR's race and ethnicity field to study disparities in cardiovascular outcomes. The data was originally captured by registration clerks at the front desk based on patient self-report or, when the patient was unavailable, on visual assessment. Which concept BEST describes the question the analyst should ask before proceeding?",
+      "options": [
+        "Data freshness",
+        "Fitness-for-use",
+        "Schema-on-read",
+        "Multiple comparisons"
+      ],
+      "correct": 1,
+      "rationale": "Fitness-for-use is the formal name for the discipline of asking whether data captured for one purpose is appropriate for another. Race and ethnicity captured by registration clerks for billing/demographic purposes — sometimes by visual assessment — is not fit for a rigorous disparities analysis without acknowledging the capture process and its biases. Freshness is about timeliness, not appropriateness. Schema-on-read describes data lakes. Multiple comparisons is a different statistical issue. The boards have started testing the term 'fitness-for-use' explicitly."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "denominator-drift",
+      "prompt": "A primary care practice's HbA1c poor-control measure has been improving steadily for three quarters. On closer inspection, the analyst notices that the total number of patients with diabetes in the practice's denominator has dropped from 4,200 to 3,400 over the same period, while the numerator (patients with A1c > 9%) has dropped only modestly. What is this phenomenon called and what is the appropriate analytical defense?",
+      "options": [
+        "Regression to the mean; defended by a control group.",
+        "Denominator drift; defended by charting numerator and denominator separately over time so the audience can see whether a moving score reflects clinical change or population change.",
+        "Selection bias; defended by randomization.",
+        "Confounding by indication; defended by propensity matching."
+      ],
+      "correct": 1,
+      "rationale": "Denominator drift — the denominator changes over time and the trend in the ratio is partly real and partly an artifact of the changing denominator. The defense is exactly what the option says: chart the numerator and denominator separately so the audience can see what is moving. This is the single most common analytic failure in operational quality measurement and the boards test it directly. Regression to the mean is a different trap (extreme values reverting on remeasurement). Selection bias and confounding by indication are different traps with different defenses."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "simpsons-paradox",
+      "prompt": "A health system is comparing two surgical techniques for a procedure. Within Hospital A, technique 1 has a higher success rate than technique 2. Within Hospital B, technique 1 also has a higher success rate than technique 2. When the data is pooled across both hospitals, technique 2 has the higher overall success rate. What is this phenomenon called?",
+      "options": [
+        "Immortal-time bias",
+        "Simpson's paradox",
+        "Regression to the mean",
+        "Confounding by indication"
+      ],
+      "correct": 1,
+      "rationale": "Simpson's paradox: a trend that holds within several groups can disappear or reverse when the groups are pooled, because the pooled comparison reflects the case mix rather than the within-group effect. The defense is stratification — report results within each meaningful subgroup before pooling, or use a regression model that adjusts for the stratification variable. The boards love this trap; expect at least one stem on it. Immortal-time bias involves time windows; regression to the mean involves remeasurement of extremes; confounding by indication involves treatment selected by severity."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "immortal-time-bias",
+      "prompt": "A study compares survival between hospital discharge and one year for cardiac patients who enrolled in cardiac rehabilitation versus those who did not. Follow-up starts at hospital discharge for both groups. The 'enrollee' group has dramatically better survival. Which trap is MOST likely contributing to the magnitude of the observed difference?",
+      "options": [
+        "Regression to the mean",
+        "Immortal-time bias — patients who enrolled had to survive long enough between discharge and enrollment to be classified as enrollees, giving the enrollee group a guaranteed survival head-start that has nothing to do with the rehab itself.",
+        "Multiple-comparisons inflation",
+        "Denominator drift"
+      ],
+      "correct": 1,
+      "rationale": "Immortal-time bias is exactly this scenario — the period between discharge and enrollment is 'immortal' time for the enrollee group because any patient who died during it is automatically classified as a non-enroller. The defense is to start the time clock at the moment of exposure, or to use a time-varying covariate analysis. Cardiac rehab probably does help, but the magnitude in studies that ignore immortal time is overstated. The boards test this trap directly with delayed-exposure intervention stems (transplant studies, drug initiation studies, registry enrollment studies). If the stem describes a survival advantage and the exposure is something the patient had to survive long enough to receive, immortal-time bias is the answer."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "low-prevalence-trap",
+      "prompt": "A novel screening test has 99% sensitivity and 99% specificity. It is deployed in a population with a true disease prevalence of 0.1%. Approximately what is the positive predictive value of a positive screen?",
+      "options": [
+        "About 99%",
+        "About 50%",
+        "About 9%",
+        "About 0.1%"
+      ],
+      "correct": 2,
+      "rationale": "Out of 100,000 screened, 100 have the disease and 99,900 do not. The test catches 99 of the 100 (sensitivity 99%) and produces 999 false positives among the 99,900 healthy (specificity 99% means 1% false-positive rate, so 999 false positives). Total positives: 1,098. PPV = 99 / 1,098 ≈ 9%. A 99% accurate test produces a positive that is wrong 91% of the time at this prevalence — because the prevalence is low. This is the canonical low-prevalence trap and the dominant fact about screening at low base rates. The boards test this calculation directly. Every CDS rule with a low base rate of true positives runs into this."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "syndromic-surveillance",
+      "prompt": "Which of the following BEST describes the difference between syndromic surveillance and electronic case reporting (eCR)?",
+      "options": [
+        "They are two names for the same federal reporting program.",
+        "Syndromic surveillance is near-real-time aggregated reporting (chief complaints, ICD codes) from EDs and hospitals to public health for early signal detection across institutions; eCR is automated case-by-case reporting of individual reportable conditions from the EHR to public health using a standardized trigger code list.",
+        "Syndromic surveillance reports individual cases; eCR reports aggregates.",
+        "Syndromic surveillance is voluntary; eCR is paper-based."
+      ],
+      "correct": 1,
+      "rationale": "Syndromic surveillance is *aggregated* near-real-time monitoring across institutions for population-level signal detection (chief complaints, ICD codes, demographics). eCR is *case-by-case* automated reporting of individual reportable conditions (TB, measles, pertussis, etc.) using the Reportable Condition Trigger Codes value set, sent as an eICR message (CDA or FHIR) through routing services like AIMS Platform to the appropriate jurisdictional health department. The two are complementary, not redundant: syndromic catches early aggregate signals; eCR captures the individual confirmed cases. The boards test the disambiguation directly."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "panel-management",
+      "prompt": "A primary care practice has built a risk stratification model that identifies its top 5% highest-risk patients. Six months later, the practice's outcomes for those patients have not improved. Which of the following is the MOST likely explanation, in light of this module's framing?",
+      "options": [
+        "The risk stratification model is invalid and should be replaced.",
+        "Stratification only matters if the panel management discipline — the operational work to act on the stratification — is staffed, governed, and measured. The analytics are necessary but not sufficient; most institutions fail at population health in the operational layer, not the analytic layer.",
+        "The risk stratification window was too short.",
+        "The practice should switch from a custom model to LACE."
+      ],
+      "correct": 1,
+      "rationale": "The honest answer for most institutions is that the analytics ran ahead of the operational discipline. A working risk model identifies the right patients, but if no panel management work follows — outreach, gap-closure, coordinated care — the outcomes do not move. The lesson from Module 6 lesson 4 reappears: a working classifier is necessary but not sufficient. Switching models or shortening windows are reflexive technical answers to what is actually a workflow and staffing problem. The boards reward the operational framing."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "ppv-npv",
+      "prompt": "Define sensitivity, specificity, positive predictive value (PPV), and negative predictive value (NPV) in one sentence each. State which two of the four depend on disease prevalence.",
+      "expectedKeywords": ["sensitivity", "specificity", "ppv", "npv", "prevalence", "predictive"],
+      "rationale": "Sensitivity = P(positive | disease) — the fraction of people with the disease who test positive (a property of the test). Specificity = P(negative | no disease) — the fraction of people without the disease who test negative (a property of the test). PPV = P(disease | positive) — among people who test positive, the fraction who actually have the disease. NPV = P(no disease | negative) — among people who test negative, the fraction who actually do not have the disease. PPV and NPV depend on prevalence; sensitivity and specificity do not. This is the foundation of the low-prevalence trap and the boards expect you to recite the definitions cold."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "vanity-metrics",
+      "prompt": "Pick a metric you have seen on a healthcare dashboard that you would classify as a vanity metric. In two or three sentences, identify the metric, explain why it is a vanity metric, and propose an outcome-linked alternative the dashboard should show instead.",
+      "expectedKeywords": ["vanity", "outcome", "alternative", "dashboard"],
+      "rationale": "A complete answer names a specific metric (e.g., 'number of CDS rules deployed,' 'orders signed in under 60 seconds,' 'training modules completed'), identifies why it is a vanity metric (it goes up over time and feels good but does not predict any outcome anyone actually cares about), and proposes an outcome-linked replacement (e.g., 'percentage of CDS rules with documented appropriate-override rates below 50%' or 'rate of overdue critical lab follow-up'). The point of the question is to make you treat dashboards critically and to push back against feel-good metrics that produce the appearance of monitoring without the substance — a Sittig-Singh dimension-8 failure dressed up as success."
+    }
+  ]
+}

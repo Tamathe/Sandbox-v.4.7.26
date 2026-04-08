@@ -1,0 +1,1 @@
+ALTER TYPE "ToolDeploymentMode" ADD VALUE 'DEPARTMENT';

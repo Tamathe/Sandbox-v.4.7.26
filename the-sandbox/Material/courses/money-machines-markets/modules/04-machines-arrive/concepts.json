@@ -1,0 +1,235 @@
+{
+  "moduleId": "04-machines-arrive",
+  "concepts": [
+    {
+      "id": "symbolic-ai",
+      "name": "Symbolic AI (GOFAI)",
+      "definition": "The first paradigm of AI research, which assumed intelligence was symbol manipulation governed by hand-coded rules and formal logic. Powered narrow systems, failed at perception and language.",
+      "appearsInLessons": ["01-from-symbolic-to-transformers"]
+    },
+    {
+      "id": "connectionism",
+      "name": "Connectionism / statistical learning",
+      "definition": "The paradigm that replaced symbolic AI from roughly 1990 onward. Instead of writing rules, learn statistical patterns from data. Powered most pre-2012 'invisible' AI systems.",
+      "appearsInLessons": ["01-from-symbolic-to-transformers"]
+    },
+    {
+      "id": "deep-learning",
+      "name": "Deep learning",
+      "definition": "Multi-layer neural networks trained on large datasets with GPUs. Took over the field in 2012 because it learned its own features instead of needing humans to design them.",
+      "appearsInLessons": ["01-from-symbolic-to-transformers"]
+    },
+    {
+      "id": "transformer",
+      "name": "Transformer",
+      "definition": "The 2017 architecture that introduced self-attention. Scales unusually well with size and data and is the substrate of every modern frontier language model.",
+      "appearsInLessons": ["01-from-symbolic-to-transformers", "02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "scaling-hypothesis",
+      "name": "Scaling hypothesis",
+      "definition": "The empirical observation that, across multiple orders of magnitude, transformer model loss falls on smooth power laws as you scale model size, data, and compute, and that capabilities emerge predictably at thresholds.",
+      "appearsInLessons": ["01-from-symbolic-to-transformers", "03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "llm",
+      "name": "Large language model",
+      "definition": "A function from a sequence of tokens to a probability distribution over the next token. Built by training a transformer on a very large text corpus. Everything you experience as a chatbot is built on this loop.",
+      "appearsInLessons": ["02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "tokens",
+      "name": "Tokens",
+      "definition": "The chunks of text a model treats as indivisible units. Not characters, not words. Produced by a subword tokenizer. The reason models miscount letters and mishandle some numbers.",
+      "appearsInLessons": ["02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "weights",
+      "name": "Weights",
+      "definition": "The billions or trillions of numerical parameters that define a trained model's function. Static during inference. Adjusted during training. The 'model' is, mechanically, the weights.",
+      "appearsInLessons": ["02-what-an-llm-actually-is", "03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "embeddings",
+      "name": "Embeddings",
+      "definition": "High-dimensional vector representations of tokens (or sequences) where geometric proximity reflects learned semantic similarity. The way the model represents 'meaning' internally.",
+      "appearsInLessons": ["02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "context-window",
+      "name": "Context window",
+      "definition": "The maximum number of tokens a model can attend to in a single forward pass. The model's 'memory' is exactly the size of its context window — anything outside it is invisible.",
+      "appearsInLessons": ["02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "next-token-prediction",
+      "name": "Next-token prediction",
+      "definition": "The training objective that powers all modern LLMs: given a sequence, predict the most likely next token. Mechanically simple; behaviorally produces representations that look like understanding.",
+      "appearsInLessons": ["02-what-an-llm-actually-is"]
+    },
+    {
+      "id": "pretraining",
+      "name": "Pretraining",
+      "definition": "The first and most expensive stage of model training. The model's weights are adjusted billions of times as it learns to predict the next token across a massive text corpus. Where the bulk of capability comes from.",
+      "appearsInLessons": ["03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "fine-tuning",
+      "name": "Fine-tuning (SFT)",
+      "definition": "A second training stage in which the pretrained model is shown examples of the format you want (e.g., good question-answer pairs) and nudged to behave that way. Cheap relative to pretraining.",
+      "appearsInLessons": ["03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "rlhf",
+      "name": "RLHF (and variants)",
+      "definition": "Reinforcement learning from human feedback. Humans rank model outputs; a reward model learns the rankings; the main model is trained to maximize reward. Where most of an assistant's apparent personality and refusal behavior is shaped.",
+      "appearsInLessons": ["03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "scaling-laws",
+      "name": "Scaling laws",
+      "definition": "Empirical curves that predict how a model's loss falls as you increase parameters, data, and compute. The reason labs can confidently spend nine figures on a single training run and know roughly what they will get.",
+      "appearsInLessons": ["03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "capex",
+      "name": "AI capex curve",
+      "definition": "The roughly 6-to-10-month doubling of frontier training-run costs since 2020. From ~$5M (GPT-3) to ~$100M (GPT-4) to north of $1B (2026 frontier). Reshapes the industry by determining who can afford to play at the top.",
+      "appearsInLessons": ["03-training-and-the-cost-curve"]
+    },
+    {
+      "id": "agent",
+      "name": "Agent",
+      "definition": "A model running in a perceive-plan-act-observe loop with access to tools that let it affect the world (read files, run code, search, click, send). The shift from 'producing text' to 'taking actions.'",
+      "appearsInLessons": ["04-agents"]
+    },
+    {
+      "id": "tool-use",
+      "name": "Tool use / function calling",
+      "definition": "The mechanism by which an agent invokes external functions. The model emits a specially-formatted token sequence; the surrounding system executes the call and returns the result back into the model's context.",
+      "appearsInLessons": ["04-agents"]
+    },
+    {
+      "id": "agent-loop",
+      "name": "Agent loop (perceive-plan-act-observe)",
+      "definition": "The control structure that turns a stateless model into something that can complete multi-step tasks. The same model is invoked over and over with the accumulating context until it decides it is done.",
+      "appearsInLessons": ["04-agents"]
+    },
+    {
+      "id": "compounding-error",
+      "name": "Compounding error",
+      "definition": "The mathematical fact that an agent's per-task reliability falls geometrically with task length. A 95% reliable single step becomes a ~60% reliable ten-step task. Sets a hard ceiling on naive long-horizon agents.",
+      "appearsInLessons": ["04-agents"]
+    },
+    {
+      "id": "long-horizon-task",
+      "name": "Long-horizon task",
+      "definition": "A task that requires many sequential steps, internal coherence, and self-correction over time. The hardest open problem for current architectures because each step's errors feed the next step.",
+      "appearsInLessons": ["04-agents", "06-what-models-cannot-do"]
+    },
+    {
+      "id": "tsmc",
+      "name": "TSMC",
+      "definition": "Taiwan Semiconductor Manufacturing Company. The single fab on earth that produces leading-edge chips at scale, including Nvidia's AI accelerators. The most concentrated bottleneck in the AI supply chain.",
+      "appearsInLessons": ["05-the-compute-supply-chain"]
+    },
+    {
+      "id": "nvidia",
+      "name": "Nvidia",
+      "definition": "The dominant designer of AI training and inference accelerators. Its H100, H200, B-series, and Rubin-series GPUs define what 'frontier compute' means. Briefly the most valuable company on earth in 2024–2025.",
+      "appearsInLessons": ["05-the-compute-supply-chain"]
+    },
+    {
+      "id": "asml",
+      "name": "ASML",
+      "definition": "The Dutch company that makes the only EUV lithography machines on earth capable of producing sub-7nm chips. The bottleneck behind the bottleneck behind the bottleneck.",
+      "appearsInLessons": ["05-the-compute-supply-chain"]
+    },
+    {
+      "id": "data-center-power",
+      "name": "Data-center power constraints",
+      "definition": "The bottleneck that gates AI cluster expansion as much as chip supply does. Frontier clusters require hundreds of megawatts to multiple gigawatts of stable, dedicated power, which most of the existing grid cannot deliver in one place quickly.",
+      "appearsInLessons": ["05-the-compute-supply-chain"]
+    },
+    {
+      "id": "export-controls",
+      "name": "AI chip export controls",
+      "definition": "US-led restrictions (since October 2022) on exporting top-end Nvidia chips and ASML EUV machines to China. The central lever in the slow trade war over frontier AI capability.",
+      "appearsInLessons": ["05-the-compute-supply-chain"]
+    },
+    {
+      "id": "hallucination",
+      "name": "Hallucination",
+      "definition": "A model producing a confident, well-formed, factually wrong output. A structural feature of next-token-prediction architecture, not a patchable bug. Mitigated by grounding, not eliminated.",
+      "appearsInLessons": ["06-what-models-cannot-do"]
+    },
+    {
+      "id": "out-of-distribution",
+      "name": "Out-of-distribution generalization",
+      "definition": "The (usually limited) ability of a model to perform well on inputs structurally unlike anything in its training data. Where most observed failures cluster.",
+      "appearsInLessons": ["06-what-models-cannot-do"]
+    },
+    {
+      "id": "long-horizon-reasoning",
+      "name": "Long-horizon reasoning",
+      "definition": "The ability to maintain coherent goals, plans, and self-correction across many internal steps. Has improved sharply in 2024–2026 reasoning models on verifiable tasks; remains weak on open-ended ones.",
+      "appearsInLessons": ["06-what-models-cannot-do"]
+    },
+    {
+      "id": "grounding",
+      "name": "Grounding (RAG)",
+      "definition": "The architectural workaround for hallucination: hook the model up to an external source of truth (search, database, document store), retrieve relevant material, and constrain generation to be supported by what was retrieved.",
+      "appearsInLessons": ["06-what-models-cannot-do"]
+    },
+    {
+      "id": "eval-gaming",
+      "name": "Eval gaming",
+      "definition": "The practice (intentional or accidental) of training models on data that overlaps with public benchmarks, inflating reported scores in ways that don't transfer to real-world use.",
+      "appearsInLessons": ["06-what-models-cannot-do"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "next-token-prediction",
+      "wrongBelief": "An LLM is 'just predicting the next word,' so it cannot really be doing anything intelligent.",
+      "correctView": "The mechanical description is correct. The implication does not follow. Predicting the next token across the diversity of human-written text forces the model to internalize representations that look indistinguishable from understanding when probed. Whether they constitute understanding is a philosophical question nobody has settled. Treating the mechanical description as a dismissal is intellectually lazy.",
+      "watchFor": "Students who use 'just autocomplete' as a thought-stopping phrase. Push them to say what their definition of 'real' intelligence requires that current models demonstrably lack. Most can't articulate it without circularity."
+    },
+    {
+      "id": "misc-2",
+      "concept": "scaling-hypothesis",
+      "wrongBelief": "The scaling hypothesis says that if you spend enough compute, you reach AGI.",
+      "correctView": "The scaling hypothesis is the empirical observation that loss has fallen on smooth power laws across the orders of magnitude we have explored so far. It is not a guarantee that the curve continues, and it is not a claim about AGI. It is a claim about an experiment whose next data point hasn't come in. Some 2024–2026 evidence suggests pretraining returns may be diminishing; some evidence from reasoning models suggests a fresh scaling axis may have opened. Both are live.",
+      "watchFor": "Students treating the scaling hypothesis as either a religious commitment or an obvious falsehood. Both are wrong. It is an empirical regularity with edges that haven't been fully mapped."
+    },
+    {
+      "id": "misc-3",
+      "concept": "agent",
+      "wrongBelief": "Agents are just chatbots with extra steps; once the underlying model is good enough, agents will work.",
+      "correctView": "Agents are subject to compounding error: a 95% reliable single step becomes a ~60% reliable ten-step task. The math is structural, not a bug to be patched. Better single-step models help and the curve is rising fast, but every published 'fully autonomous agent' that works has a layer of human checkpointing or tool constraints fighting that math underneath.",
+      "watchFor": "Students who slide between 'this model is impressive' and 'so we will have autonomous agents soon' without noticing they have made an extrapolation that the math does not entitle them to."
+    },
+    {
+      "id": "misc-4",
+      "concept": "data-center-power",
+      "wrongBelief": "AI is fundamentally a software industry; the main things to track are algorithms and benchmarks.",
+      "correctView": "AI in 2026 is gated by chips, power, water, and a small number of physical chokepoints (TSMC, ASML, Nvidia, regional grid capacity). The most consequential constraints on the next five years are infrastructure timelines, not algorithmic breakthroughs. Most public commentary on AI is downstream of marketing because it never mentions any of those four words.",
+      "watchFor": "Students who form opinions about AI's trajectory entirely from model releases and never think about substations, fab capacity, or export controls. Their forecasts will be confidently wrong."
+    },
+    {
+      "id": "misc-5",
+      "concept": "hallucination",
+      "wrongBelief": "Hallucinations are bugs that the next training run will fix.",
+      "correctView": "Hallucination is structural: the model has no internal mechanism for representing 'I don't know' separately from 'I produce a plausible completion.' It cannot be eliminated by training alone. The mitigation that works is grounding — wrapping the model in retrieval so its outputs are constrained to be supported by external sources. Grounded models hallucinate much less. Ungrounded ones still cannot be trusted on facts.",
+      "watchFor": "Students who assume each model release will 'fix hallucinations.' It will not. The architecture of next-token prediction has a fixed behavior here. The improvements come from the surrounding system."
+    },
+    {
+      "id": "misc-6",
+      "concept": "eval-gaming",
+      "wrongBelief": "Benchmark scores are a reliable measure of how smart a model is.",
+      "correctView": "Public benchmarks are partially gamed — models are sometimes trained on benchmark-adjacent data, intentionally or accidentally — and they measure narrow things in ways that don't generalize to the user's actual tasks. The only ground truth is your own honest use of the model on your own work. The published numbers are a starting point, not an answer.",
+      "watchFor": "Students forming strong rankings between models from leaderboard scores. Ask them when they last tested any of those models on a task they actually cared about."
+    }
+  ]
+}

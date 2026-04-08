@@ -1,0 +1,180 @@
+{
+  "moduleId": "03-ehr-and-his-architecture",
+  "concepts": [
+    {
+      "id": "ehr-components",
+      "label": "EHR Components",
+      "summary": "Registration/ADT, MPI, CPOE, CDR, documentation, results review, CDS, medication module/eMAR, scheduling, patient portal, reporting, billing. The textbook anatomy that breaks down at real hospitals."
+    },
+    {
+      "id": "clinical-data-repository",
+      "label": "Clinical Data Repository (CDR)",
+      "summary": "The database where structured clinical data persists. Distinct from the EHR application that reads and writes to it. Most reporting and integration work eventually has to go through the CDR layer."
+    },
+    {
+      "id": "ehr-application-layer",
+      "label": "EHR Application Layer",
+      "summary": "The user-facing software clinicians interact with. Sits on top of the CDR. Can be down for maintenance while the CDR remains up. Distinct from the data layer in ways that matter for downtime and integration."
+    },
+    {
+      "id": "master-patient-index",
+      "label": "Master Patient Index (MPI / EMPI)",
+      "summary": "The component responsible for ensuring one human maps to one identity across systems. Uses demographic matching with deterministic and probabilistic algorithms. EMPI is the cross-organization version. Source of most duplicate-record safety events."
+    },
+    {
+      "id": "ancillary-systems",
+      "label": "Ancillary Systems",
+      "summary": "Specialty systems connected to the main EHR: lab (LIS), radiology (RIS+PACS), pharmacy, perioperative, ED, perinatal, oncology, dental, ophthalmology, etc. Each is a potential best-of-breed component."
+    },
+    {
+      "id": "registration-adt",
+      "label": "Registration / ADT Module",
+      "summary": "Where the patient enters the system. Captures demographics, assigns or reuses MRN, creates encounter records. Generates ADT messages every other system subscribes to."
+    },
+    {
+      "id": "documentation-module",
+      "label": "Documentation Module",
+      "summary": "Where clinicians write notes. Templates, smart phrases, dictation, increasingly ambient capture. The component clinicians complain about most because the workflow burden falls hardest on the user and the value is most diffuse."
+    },
+    {
+      "id": "cpoe",
+      "label": "CPOE",
+      "summary": "Computerized Provider Order Entry. The physician places orders directly into the computer with structured fields and built-in validation. The headline change of the EHR era. Safety gains depend on combination with appropriate decision support."
+    },
+    {
+      "id": "cpoe-unintended-consequences",
+      "label": "CPOE Unintended Consequences",
+      "summary": "Koppel-Ash-Harrison taxonomy: more work, workflow issues, never-ending demands for change, paper persistence, communication changes, emotion, new kinds of errors, power structure shifts, overdependence."
+    },
+    {
+      "id": "structured-vs-narrative-orders",
+      "label": "Structured vs Narrative Orders",
+      "summary": "CPOE orders are structured (drug, dose, route, frequency in discrete fields with validation). Paper orders were narrative (free text). The structure enables validation and CDS but constrains expressiveness."
+    },
+    {
+      "id": "order-sets",
+      "label": "Order Sets",
+      "summary": "Pre-built collections of orders for common clinical scenarios. Reduce variability, embed best practice, save time. Embed assumptions; require active maintenance and retirement; a poorly maintained library is a reliable cause of low-value care and alert fatigue."
+    },
+    {
+      "id": "koppel-paper",
+      "label": "Koppel et al. 2005",
+      "summary": "JAMA paper identifying twenty-two ways a CPOE system facilitated medication errors. The canonical paper on CPOE unintended consequences. Required board knowledge."
+    },
+    {
+      "id": "integration-engine",
+      "label": "Integration Engine",
+      "summary": "Middleware that handles message exchange between systems. Implements routing, transformation, queueing, error handling, monitoring, acknowledgment, audit. Examples: InterSystems, Lyniate Rhapsody/Corepoint, NextGen Mirth Connect."
+    },
+    {
+      "id": "interface-engine",
+      "label": "Interface Engine",
+      "summary": "Older synonym for integration engine. The terms are interchangeable on the boards."
+    },
+    {
+      "id": "routing-and-transformation",
+      "label": "Routing and Transformation",
+      "summary": "The two core functions of the integration engine. Routing decides which messages go to which destinations. Transformation translates between formats and field mappings. Most debugging time lives in transformation."
+    },
+    {
+      "id": "message-queueing",
+      "label": "Message Queueing",
+      "summary": "The engine holds messages when receivers are unavailable so data is not lost during routine downtimes. Provides resilience without requiring synchronous availability."
+    },
+    {
+      "id": "mirth-rhapsody-cloverleaf",
+      "label": "Engine Products",
+      "summary": "NextGen Mirth Connect (open-source, most common starter), Lyniate Rhapsody and Corepoint (commercial), InterSystems Ensemble/HealthShare. Cloverleaf is an older name now part of Lyniate."
+    },
+    {
+      "id": "interface-monitoring",
+      "label": "Interface Monitoring",
+      "summary": "Volume, latency, error rates, last-message timestamps. Most useful single alert: 'interface produced no traffic for longer than expected,' because absence of traffic is the failure mode that does not announce itself."
+    },
+    {
+      "id": "dead-letter-queue",
+      "label": "Dead-Letter Queue (DLQ)",
+      "summary": "Where messages go after retry-with-backoff fails. Requires a daily human review process. A DLQ that nobody is watching is the most reliable failure mode in interface operations."
+    },
+    {
+      "id": "hie-architecture",
+      "label": "HIE Architecture",
+      "summary": "Centralized (data in central repo), federated (record locator + real-time query), or hybrid. Each pattern trades latency, governance burden, and freshness differently."
+    },
+    {
+      "id": "centralized-hie",
+      "label": "Centralized HIE",
+      "summary": "Member organizations push data into a central repository the HIE operates. Fast queries, simpler MPI, but central custodian carries the privacy and governance burden."
+    },
+    {
+      "id": "federated-hie",
+      "label": "Federated HIE",
+      "summary": "Data stays at member organizations. The HIE maintains a record locator service and queries holding orgs in real time. No central data store but slower queries and higher per-member integration burden."
+    },
+    {
+      "id": "hybrid-hie",
+      "label": "Hybrid HIE",
+      "summary": "Some data centralized (often C-CDA summaries indexed centrally), the rest federated. Most large U.S. HIEs in production use a hybrid pattern in some form."
+    },
+    {
+      "id": "ehealth-exchange",
+      "label": "eHealth Exchange",
+      "summary": "Longest-running U.S. national exchange network. Origin in federal NwHIN initiative (~2008–2009), spun out into the Sequoia Project. Connects federal agencies (VA, DoD, SSA, IHS), large health systems, and HIEs."
+    },
+    {
+      "id": "carequality",
+      "label": "Carequality",
+      "summary": "Trust framework founded in 2014 by the Sequoia Project. A 'network of networks' that lets eHealth Exchange, CommonWell, EHR vendor networks, and regional HIEs interoperate with each other. Epic joined in 2014."
+    },
+    {
+      "id": "commonwell",
+      "label": "CommonWell Health Alliance",
+      "summary": "Founded 2013 by EHR vendors led by Cerner. Provides patient identification, record location, and query/retrieve services across member EHRs. Federated, vendor-consortium-operated."
+    },
+    {
+      "id": "tefca",
+      "label": "TEFCA",
+      "summary": "Trusted Exchange Framework and Common Agreement. Authorized by the 21st Century Cures Act, developed by ONC with the Sequoia Project as recognized coordinating entity. Live in 2023. Adds federally-recognized framework above existing networks rather than replacing them."
+    },
+    {
+      "id": "qhin",
+      "label": "QHIN",
+      "summary": "Qualified Health Information Network. The networks designated by ONC under TEFCA. First cohort in 2023 includes eHealth Exchange, CommonWell, Epic's Carequality-affiliated network, Health Gorilla, Kno2, MedAllies, KONZA, others."
+    },
+    {
+      "id": "record-locator-service",
+      "label": "Record Locator Service (RLS)",
+      "summary": "An index that knows which patients have records at which organizations, used by federated HIEs to route real-time queries. Privacy-sensitive component."
+    },
+    {
+      "id": "best-of-breed",
+      "label": "Best-of-Breed Strategy",
+      "summary": "Buy each functional component from the vendor that is best at it. Connect through the integration engine. Trade-offs: more functional depth, more integration burden, faster specialty innovation, fragmented clinician experience."
+    },
+    {
+      "id": "integrated-platform",
+      "label": "Integrated Platform Strategy",
+      "summary": "Buy as many functions as possible from a single vendor. Trade-offs: more consistent experience, fewer interfaces, easier compliance, slower specialty innovation, concentrated vendor lock-in."
+    },
+    {
+      "id": "vendor-consolidation",
+      "label": "Vendor Consolidation",
+      "summary": "The post-Meaningful-Use trend toward integrated platforms in the U.S. large-hospital market, leaving Epic and Cerner (Oracle Health) as the dominant vendors. Recent (post-2010) and reshaped the field."
+    },
+    {
+      "id": "epic-cerner-duopoly",
+      "label": "Epic / Oracle Health Duopoly",
+      "summary": "Epic dominant in academic medical centers and large IDNs; Oracle Health (Cerner) dominant in community hospitals and the federal sector. Cerner acquired by Oracle in 2022 and rebranded."
+    },
+    {
+      "id": "total-cost-of-ownership",
+      "label": "Total Cost of Ownership (TCO)",
+      "summary": "The full lifecycle cost of an EHR strategy including licensing, implementation, training, integration, support, upgrades, and migration. Integrated has lower TCO at scale; small environments may find the opposite."
+    },
+    {
+      "id": "vendor-lock-in",
+      "label": "Vendor Lock-in",
+      "summary": "Both best-of-breed and integrated strategies have lock-in; they lock in different things. Migration cost from an integrated platform is enormous and includes workflow re-engineering, data migration, and retraining."
+    }
+  ]
+}

@@ -23,7 +23,6 @@
     "07-umls-and-the-meta-vocabulary"
   ],
   "masteryGate": "mastery-gate.json",
-  "masteryGateExtended": "mastery-gate-extended.json",
   "assignment": "assignment.md",
   "studyGroup": "study-group-brief.md",
   "concepts": "concepts.json"

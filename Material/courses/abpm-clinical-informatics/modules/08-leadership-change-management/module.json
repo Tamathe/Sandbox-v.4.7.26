@@ -21,7 +21,6 @@
     "05-healthcare-financing-and-the-payment-environment"
   ],
   "masteryGate": "mastery-gate.json",
-  "masteryGateExtended": "mastery-gate-extended.json",
   "assignment": "assignment.md",
   "voiceSession": "voice-session.json",
   "concepts": "concepts.json"

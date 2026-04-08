@@ -1,0 +1,27 @@
+{
+  "id": "01-foundations-of-informatics",
+  "slug": "foundations-of-informatics",
+  "order": 1,
+  "title": "Foundations of Clinical Informatics",
+  "summary": "What clinical informatics is, where it sits next to the other informatics subfields, the data → information → knowledge → wisdom hierarchy, the short history of how we got here, and Friedman's fundamental theorem.",
+  "learningOutcomes": [
+    "Define clinical informatics and locate it precisely against bioinformatics, public health informatics, and consumer health informatics.",
+    "Walk the data-information-knowledge-wisdom hierarchy with a clinical example at each level.",
+    "Tell the short history of clinical informatics from the Lockheed Hospital Information System to the post-Meaningful-Use era.",
+    "State and apply Friedman's fundamental theorem of biomedical informatics.",
+    "Explain why informatics is not just 'IT in healthcare' in a way a CMO would accept."
+  ],
+  "prerequisites": [],
+  "estimatedHours": 5,
+  "lessons": [
+    "01-what-is-clinical-informatics",
+    "02-dikw-hierarchy",
+    "03-short-history-of-clinical-informatics",
+    "04-friedmans-fundamental-theorem",
+    "05-informatics-vs-it"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "concepts": "concepts.json"
+}

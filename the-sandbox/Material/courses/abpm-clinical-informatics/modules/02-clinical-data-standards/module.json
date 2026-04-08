@@ -1,0 +1,28 @@
+{
+  "id": "02-clinical-data-standards",
+  "slug": "clinical-data-standards",
+  "order": 2,
+  "title": "Clinical Data Standards",
+  "summary": "The standards stack the boards love: HL7 v2 and v3, FHIR, SNOMED CT, LOINC, RxNorm, ICD-10-CM, CPT, and UCUM. What each is for, what granularity it operates at, and which one wins for which use case.",
+  "learningOutcomes": [
+    "Read an HL7 v2 message and identify the segments, fields, and message type.",
+    "Read a FHIR resource (Patient, Observation, MedicationRequest) and explain what each element does.",
+    "Choose the right terminology (SNOMED, LOINC, RxNorm, ICD-10) for a given clinical use case and defend the choice.",
+    "Explain why HL7 v3 lost to FHIR in plain language.",
+    "Recognize a UCUM unit string and explain why we standardize units at all."
+  ],
+  "prerequisites": ["01-foundations-of-informatics"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-why-we-need-standards",
+    "02-hl7-v2-and-v3",
+    "03-fhir",
+    "04-snomed-loinc-rxnorm",
+    "05-icd-cpt-billing-codes",
+    "06-ucum-and-units"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "studyGroup": "study-group-brief.md",
+  "concepts": "concepts.json"
+}

@@ -1,0 +1,7 @@
+[theme]
+# University of Kentucky official brand colors
+primaryColor        = "#003F7F"   # UK Blue — buttons, sliders, checkboxes, active tabs
+backgroundColor     = "#FFFFFF"   # Clean white main canvas
+secondaryBackgroundColor = "#EDF2F7"  # Light blue-gray — sidebar, expanded cards, code blocks
+textColor           = "#1A2B3C"   # Dark navy — readable, not harsh black
+font                = "sans serif"

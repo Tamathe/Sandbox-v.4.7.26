@@ -1,0 +1,91 @@
+/* ── Personal Site Styles ─────────────────────────────────────────────────── */
+/* Scoped to personal site pages via CSS custom properties + prefixed classes */
+
+.ps-text-gradient-accent {
+  background: linear-gradient(135deg, var(--ps-accent) 0%, #ffffff 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ps-glow-accent {
+  text-shadow: 0 0 40px color-mix(in srgb, var(--ps-accent) 50%, transparent),
+               0 0 80px color-mix(in srgb, var(--ps-accent) 20%, transparent);
+}
+
+.ps-card-glass {
+  background: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ps-card-glass-hover {
+  transition: all 0.3s ease;
+}
+
+.ps-card-glass-hover:hover {
+  background: rgba(30, 30, 30, 0.9);
+  border-color: color-mix(in srgb, var(--ps-accent) 30%, transparent);
+  transform: translateY(-2px);
+  box-shadow: 0 20px 60px color-mix(in srgb, var(--ps-accent) 10%, transparent);
+}
+
+.ps-section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ps-accent), transparent);
+  opacity: 0.3;
+}
+
+.ps-grid-lines {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--ps-accent) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--ps-accent) 3%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Masonry gallery */
+.ps-masonry-grid {
+  columns: 1;
+  column-gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .ps-masonry-grid {
+    columns: 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ps-masonry-grid {
+    columns: 3;
+  }
+}
+
+.ps-masonry-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+}
+
+/* Lightbox overrides */
+.ps-site .yarl__root {
+  --yarl__color_backdrop: rgba(0, 0, 0, 0.95);
+}
+
+/* Selection color */
+.ps-site ::selection {
+  background-color: var(--ps-accent);
+  color: #000000;
+}
+
+/* Scrollbar */
+.ps-site::-webkit-scrollbar {
+  width: 4px;
+}
+.ps-site::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+.ps-site::-webkit-scrollbar-thumb {
+  background: var(--ps-accent);
+  border-radius: 2px;
+}

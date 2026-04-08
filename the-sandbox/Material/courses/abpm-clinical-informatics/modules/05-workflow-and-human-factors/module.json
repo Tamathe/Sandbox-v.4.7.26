@@ -1,0 +1,26 @@
+{
+  "id": "05-workflow-and-human-factors",
+  "slug": "workflow-and-human-factors",
+  "order": 5,
+  "title": "Workflow and Human Factors",
+  "summary": "Workflow analysis, usability heuristics, the Sittig-Singh sociotechnical model, and why the same EHR build fails one clinic and succeeds in another. The module that explains everything the previous modules can't.",
+  "learningOutcomes": [
+    "Map a clinical workflow using a recognized notation and identify rework loops.",
+    "Apply Nielsen's heuristics and the SAFER guides to a given EHR screen.",
+    "Name the eight dimensions of the Sittig-Singh sociotechnical model and use them to diagnose a real failure.",
+    "Distinguish workflow problems from training problems from configuration problems.",
+    "Explain why a usability complaint is almost never just a usability complaint."
+  ],
+  "prerequisites": ["03-ehr-and-his-architecture"],
+  "estimatedHours": 5,
+  "lessons": [
+    "01-workflow-analysis",
+    "02-usability-heuristics",
+    "03-sittig-singh-sociotechnical",
+    "04-safer-guides-and-ehr-safety"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "concepts": "concepts.json"
+}

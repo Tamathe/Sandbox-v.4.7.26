@@ -265,3 +265,71 @@ CONSTRAINTS
 DO NOT touch any files outside the scope above.
 ```
 
+## Sprint 11 — CLOSED (2026-04-07)
+
+**Scope delivered:**
+- New M9 lesson: `modules/09-imaging-virtual-care-pgd/lessons/02-telemedicine-and-virtual-care.md` (modalities, Ryan Haight, IMLC, parity, originating site, BAA, equity).
+- New M9 lesson: `modules/09-imaging-virtual-care-pgd/lessons/03-rpm-wearables-and-pghd.md` (RPM CPT family + 16-day threshold, PGHD provenance/attestation, FDA general wellness, alarm fatigue, equity).
+- M9 `concepts.json`: 10 new concept entries appended — `telemedicine-modalities`, `store-and-forward`, `ryan-haight-act`, `imlc-licensure-compact`, `telehealth-parity`, `originating-site`, `rpm-cpt-family`, `pghd-definition`, `pghd-provenance`, `fda-general-wellness`. Concept count: 14 → 24.
+- M9 `mastery-gate.json`: 10 new items appended (q11–q15 telemedicine, q16–q20 RPM/PGHD). Same vignette + full-rationale style as Sprint 10 items. Instructions updated; q-count 10 → 20.
+- Root `concepts.json`: `totalConcepts: 321 → 331`. 10 new ID rows appended.
+
+**Open question resolved — masteryGateExtended loader (Q4 from architecture doc):**
+- Searched `the-sandbox/app/**` for any reference to `masteryGateExtended`. No platform code reads the field. Loader does NOT support the sibling-file pattern.
+- Resolution: **fall back (option b)**. Merged the extended bank items into the canonical `mastery-gate.json` for both M2 and M8 with `"set": "extended"` tags, renumbered to q16–q25 to avoid collisions with the existing q1–q15. Removed the `masteryGateExtended` field from both `module.json` files and deleted the standalone `mastery-gate-extended.json` files.
+- Implication for V2: extended-bank items will continue to live inside the canonical `mastery-gate.json` array tagged with `set: "extended"`. No platform changes required. Sprint 12+ should follow this pattern, not the sibling-file pattern.
+
+**Cumulative state after Sprint 11:**
+- Modules: 9. Lessons: 42 (target 60). Mastery items: 170 (target 400). Concepts: 331 (target ~360).
+- M2 mastery gate: 25 items (15 canonical + 10 UMLS extended). M8 mastery gate: 25 items (15 canonical + 10 financing extended). M9 mastery gate: 20 items (10 imaging + 5 telemedicine + 5 RPM/PGHD).
+- Critical gaps closed: imaging (L1), telemedicine (L2), RPM/PGHD (L3), UMLS, healthcare financing.
+- Critical gaps remaining: FHIR Bulk Data + patient-facing APIs, AI-CDS / FDA SaMD / Cures CDS exemption / ONC HTI-1 DSI.
+
+## Sprint 12 — Handoff Prompt
+
+Copy everything in the fenced block below into a fresh Claude Code instance.
+
+```
+You are continuing the V2 expansion of the ABPM Clinical Informatics board-prep course. Course root: `c:/Users/tsthe2/Desktop/Educator marketplace BACKUP 2026-04-07/Material/courses/abpm-clinical-informatics/`.
+
+CONTEXT
+- The V1 course is complete; V2 is closing audit-identified gaps across Sprints 10–17. After Sprint 11: 9 modules, 42 lessons, 170 mastery items, 331 concepts. Sprint 11 delivered M9 lessons 2 (telemedicine) and 3 (RPM/PGHD), 10 new concepts, and 10 new M9 mastery items. See SPRINT_RUNBOOK.md "Sprint 11 — CLOSED" for the full state.
+- IMPORTANT — extended mastery banks: the platform loader does NOT read a `masteryGateExtended` sibling field. Sprint 11 fell back: extended items now live inside the canonical `mastery-gate.json` array with `"set": "extended"` tags and IDs continuing from where the canonical bank ends (q16 onward for M2 and M8). Use this pattern for any new extended items in Sprint 12+. Do not reintroduce the sibling-file pattern.
+- Architecture: AUDIT_V2_ARCHITECTURE.md in the course root.
+- House style: read `modules/09-imaging-virtual-care-pgd/lessons/02-telemedicine-and-virtual-care.md` and `lessons/03-rpm-wearables-and-pghd.md` as the latest canonical examples. Lesson structure: YAML frontmatter (id, title, order, estimatedMinutes, learningOutcomes, concepts) → ## Reading (dense prose, ~80–150 lines) → ## Concrete example → ## Uncomfortable question. Mastery items: full wrong-answer rationales, ABPM-style vignettes, no telegraphing.
+
+YOUR GOAL — execute the Sprint 12 task list below, then STOP and generate the Sprint 13 handoff prompt:
+
+TASK 1 — M9 lesson 4: FHIR Bulk Data and patient-facing APIs
+Author `modules/09-imaging-virtual-care-pgd/lessons/04-fhir-bulk-data-and-patient-facing-apis.md`. Cover: the FHIR `$export` Bulk Data operation (Group/Patient/system level), why it exists (population-level export of large cohorts is impractical via per-patient API calls), the async kickoff → status poll → file download flow with NDJSON output, SMART Backend Services authentication for trusted server-to-server clients, and the use cases (research data extraction, ACO population analytics, payer-to-payer exchange). Then patient-facing APIs: the Cures Act API rule, the SMART on FHIR launch profile for patient apps, the USCDI (United States Core Data for Interoperability) data classes the API must expose, the difference between the certified API endpoint and the broader Patient Access API. Cross-reference Module 2 (FHIR/SMART), Module 3 (CDR/EHR architecture), and Module 7 (information blocking — patient access is the canonical case).
+
+TASK 2 — M9 lesson 5: Digital therapeutics, FDA SaMD, Cures CDS exemption, ONC HTI-1 DSI
+Author `modules/09-imaging-virtual-care-pgd/lessons/05-digital-therapeutics-fda-samd-cures-cds-exemption.md`. Cover: digital therapeutics (DTx) as a category and the named cleared products at the conceptual level; FDA Software as a Medical Device (SaMD) framework — IMDRF risk categories, 510(k) vs De Novo vs PMA pathways for software; the 21st Century Cures Act CDS exemption — the four criteria a CDS tool must meet to be NOT regulated as a device (drives a clinician review, makes the basis transparent, is not for time-critical decisions, is not for image processing/signal analysis), and how each AI-CDS product is evaluated against those criteria; ONC HTI-1 final rule (2024) Decision Support Intervention (DSI) requirements — predictive DSI source attributes ("nutrition label" / model card), the bias and fairness disclosures, and what certified EHRs must surface to clinicians. This is the most regulatorily current lesson in the course; cross-reference Module 4 (CDS) and Module 7 (Cures Act).
+
+TASK 3 — M9 capstone assignment
+Author `modules/09-imaging-virtual-care-pgd/assignment.md`: 1,200–1,600 word capstone. Scenario: the candidate is asked to design or evaluate a real or hypothetical AI-enabled clinical software product (e.g., a sepsis prediction model, a diabetic retinopathy screening tool, a radiology triage AI). Must address: which modality the product fits (imaging, virtual care, RPM, or pure CDS), where it sits on the FDA SaMD vs. Cures CDS exemption line, what HTI-1 DSI source attributes the EHR would need to surface, the data flow including any FHIR Bulk Data or patient-facing API touchpoints, the privacy/security envelope (cross-reference Module 7), and the change-management plan to deploy it (cross-reference Module 8). Graded by `written-thesis` rubric. Standard PHI/AI bans.
+
+TASK 4 — M9 voice session
+Author `modules/09-imaging-virtual-care-pgd/voice-session.json`. Skeptical persona: an FDA reviewer who has seen too many vendors claim the Cures CDS exemption when their product clearly should be SaMD. 5 guided turns mapped to voice-defense rubric criteria. Use `modules/04-clinical-decision-support/voice-session.json` as the structural template.
+
+TASK 5 — M4 lesson 5 forward-reference paragraph
+Edit `modules/04-clinical-decision-support/lessons/05-cds-knowledge-representation.md` (or whichever M4 lesson is the current closing lesson on CDS knowledge representation — check the actual filename) to add a brief forward-reference paragraph at the END of the Reading section pointing the candidate to M9 lesson 5 for the FDA SaMD / Cures CDS exemption / ONC HTI-1 DSI regulatory framework that applies when the CDS tool is AI-enabled. Do NOT modify existing M4 lesson prose; add only a single closing forward-reference paragraph clearly bracketed as such.
+
+TASK 6 — 20 more mastery items
+Append 20 new items to `modules/09-imaging-virtual-care-pgd/mastery-gate.json` (q21–q40): 10 covering FHIR Bulk Data and patient-facing APIs, 10 covering DTx/SaMD/Cures CDS exemption/HTI-1 DSI. Same vignette + full-rationale style. Update the gate's `instructions` field to reflect the expanded scope. M9 gate will then have 40 items total.
+
+TASK 7 — Concept and root updates
+Add new concept entries to `modules/09-imaging-virtual-care-pgd/concepts.json` for every new concept ID used in lessons 4–5 and the new mastery items (expect ~15–20 new). Update root `concepts.json` `totalConcepts` count and append rows for each new ID following the existing kebab-case pattern.
+
+TASK 8 — Closeout and handoff
+Append a "Sprint 12 — CLOSED" section to SPRINT_RUNBOOK.md in the same shape as Sprint 11. Then generate a Sprint 13 handoff prompt covering Module 02 standards completion (snippet-reading items, the deferred Q1 from the architecture doc, and any remaining gaps in M2 mastery coverage). STOP after writing the handoff prompt — do not begin Sprint 13 work.
+
+CONSTRAINTS
+- Do NOT renumber existing concept IDs or existing mastery items.
+- Do NOT modify existing lesson prose except for the single forward-reference paragraph at the end of M4 lesson 5.
+- Use the `"set": "extended"` tag pattern for any items beyond the canonical 15 — do NOT create sibling `mastery-gate-extended.json` files.
+- Reuse concept IDs from prior modules where the concept already exists (e.g., `fhir`, `smart-on-fhir`, `us-core`, `cures-act`, `information-blocking` from M2/M7).
+
+DO NOT touch any files outside the scope above.
+```
+

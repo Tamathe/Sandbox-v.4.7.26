@@ -1,0 +1,154 @@
+<h2>Course Timeline — Layout Options</h2>
+<p class="subtitle">Where does the timeline sit within the Course Overview tab?</p>
+
+<div class="cards">
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px;font-family:system-ui">
+        <!-- Option A: Top banner -->
+        <div style="background:#0033A0;color:white;padding:8px 16px;border-radius:8px 8px 0 0;font-size:13px;font-weight:600">TEK-100 — Technology in Education</div>
+        <div style="background:white;border:2px solid #e2e8f0;border-top:none;border-radius:0 0 8px 8px;padding:16px">
+          <!-- Timeline -->
+          <div style="position:relative;height:80px;margin-bottom:16px">
+            <div style="position:absolute;top:35px;left:0;right:0;height:3px;background:#e2e8f0;border-radius:2px"></div>
+            <!-- Today marker -->
+            <div style="position:absolute;top:18px;left:38%;display:flex;flex-direction:column;align-items:center">
+              <span style="font-size:9px;color:#0033A0;font-weight:700">TODAY</span>
+              <div style="width:2px;height:40px;background:#0033A0"></div>
+            </div>
+            <!-- Week labels -->
+            <div style="position:absolute;bottom:0;left:5%;font-size:9px;color:#94a3b8">W1</div>
+            <div style="position:absolute;bottom:0;left:18%;font-size:9px;color:#94a3b8">W4</div>
+            <div style="position:absolute;bottom:0;left:31%;font-size:9px;color:#94a3b8">W6</div>
+            <div style="position:absolute;bottom:0;left:50%;font-size:9px;color:#94a3b8">W9</div>
+            <div style="position:absolute;bottom:0;left:70%;font-size:9px;color:#94a3b8">W12</div>
+            <div style="position:absolute;bottom:0;left:88%;font-size:9px;color:#94a3b8">W15</div>
+            <!-- Items -->
+            <div style="position:absolute;top:30px;left:5%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+            <div style="position:absolute;top:30px;left:18%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+            <div style="position:absolute;top:30px;left:31%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+            <div style="position:absolute;top:30px;left:44%;width:12px;height:12px;border-radius:50%;background:#f59e0b;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2);animation:pulse 2s infinite"></div>
+            <div style="position:absolute;top:30px;left:56%;width:12px;height:12px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+            <div style="position:absolute;top:30px;left:70%;width:12px;height:12px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+            <div style="position:absolute;top:30px;left:88%;width:14px;height:14px;border-radius:50%;background:#94a3b8;border:3px solid #ef4444;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+          </div>
+          <!-- Rest of overview content placeholder -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:60px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">THIS WEEK</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Week 8: Data Ethics</div>
+            </div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:60px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">NEXT DUE</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Midterm — 2 days</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Top Banner</h3>
+      <p>Timeline lives at the very top of Overview, always visible. Compact ~80px strip. The first thing students see when they open a course.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px;font-family:system-ui">
+        <div style="background:#0033A0;color:white;padding:8px 16px;border-radius:8px 8px 0 0;font-size:13px;font-weight:600">TEK-100 — Technology in Education</div>
+        <div style="background:white;border:2px solid #e2e8f0;border-top:none;border-radius:0 0 8px 8px;padding:16px">
+          <!-- This Week card first -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:50px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">THIS WEEK</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Week 8: Data Ethics</div>
+            </div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:50px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">NEXT DUE</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Midterm — 2 days</div>
+            </div>
+          </div>
+          <!-- Timeline as card -->
+          <div style="border:2px solid #e2e8f0;border-radius:12px;padding:16px;position:relative">
+            <div style="font-size:11px;font-weight:700;color:#1e293b;margin-bottom:12px">COURSE TIMELINE</div>
+            <div style="position:relative;height:70px;overflow-x:auto">
+              <div style="position:absolute;top:25px;left:0;right:0;height:3px;background:#e2e8f0;border-radius:2px"></div>
+              <div style="position:absolute;top:8px;left:38%;display:flex;flex-direction:column;align-items:center">
+                <span style="font-size:9px;color:#0033A0;font-weight:700">TODAY</span>
+                <div style="width:2px;height:35px;background:#0033A0"></div>
+              </div>
+              <div style="position:absolute;top:20px;left:5%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:18%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:31%;width:12px;height:12px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:44%;width:12px;height:12px;border-radius:50%;background:#f59e0b;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:56%;width:12px;height:12px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:70%;width:12px;height:12px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,.2)"></div>
+              <div style="position:absolute;top:20px;left:88%;width:14px;height:14px;border-radius:50%;background:#94a3b8;border:3px solid #ef4444"></div>
+              <!-- Week bands -->
+              <div style="position:absolute;bottom:0;left:0;right:50%;height:16px;background:rgba(0,51,160,0.04);border-radius:4px"></div>
+              <div style="position:absolute;bottom:0;left:50%;right:0;height:16px;background:rgba(0,51,160,0.08);border-radius:4px"></div>
+              <div style="position:absolute;bottom:2px;left:5%;font-size:8px;color:#94a3b8">Weeks 1-8</div>
+              <div style="position:absolute;bottom:2px;left:55%;font-size:8px;color:#94a3b8">Weeks 9-15</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Card Section</h3>
+      <p>Timeline lives as a dedicated card within the overview flow, below the "This Week" summary. Feels like a distinct section with its own header and border.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div style="background:#f8fafc;border-radius:8px;padding:20px;font-family:system-ui">
+        <div style="background:#0033A0;color:white;padding:8px 16px;border-radius:8px 8px 0 0;font-size:13px;font-weight:600">TEK-100 — Technology in Education</div>
+        <div style="background:white;border:2px solid #e2e8f0;border-top:none;border-radius:0 0 8px 8px;padding:16px">
+          <!-- Sticky timeline -->
+          <div style="background:white;border-bottom:2px solid #e2e8f0;padding:8px 0 12px 0;margin:-16px -16px 16px -16px;padding-left:16px;padding-right:16px;position:sticky;top:0">
+            <div style="position:relative;height:50px">
+              <div style="position:absolute;top:22px;left:0;right:0;height:3px;background:#e2e8f0;border-radius:2px"></div>
+              <div style="position:absolute;top:6px;left:38%;display:flex;flex-direction:column;align-items:center">
+                <span style="font-size:8px;color:#0033A0;font-weight:700">TODAY</span>
+                <div style="width:2px;height:28px;background:#0033A0"></div>
+              </div>
+              <div style="position:absolute;top:18px;left:5%;width:10px;height:10px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:18%;width:10px;height:10px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:31%;width:10px;height:10px;border-radius:50%;background:#22c55e;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:44%;width:10px;height:10px;border-radius:50%;background:#f59e0b;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:56%;width:10px;height:10px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:70%;width:10px;height:10px;border-radius:50%;background:#94a3b8;border:2px solid white;box-shadow:0 1px 2px rgba(0,0,0,.15)"></div>
+              <div style="position:absolute;top:18px;left:88%;width:12px;height:12px;border-radius:50%;background:#94a3b8;border:2px solid #ef4444"></div>
+            </div>
+          </div>
+          <!-- Content below -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:50px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">THIS WEEK</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Week 8: Data Ethics</div>
+            </div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:50px">
+              <div style="font-size:10px;color:#64748b;font-weight:600">NEXT DUE</div>
+              <div style="font-size:11px;color:#1e293b;margin-top:4px">Midterm — 2 days</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:12px;height:40px">
+            <div style="font-size:10px;color:#64748b">More content scrolls below...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Sticky Header</h3>
+      <p>Compact timeline sticks to the top of the Overview tab as you scroll. Always visible, ultra-compact (~50px). Acts as a persistent navigation rail.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4); }
+  50% { box-shadow: 0 0 0 6px rgba(245, 158, 11, 0); }
+}
+</style>

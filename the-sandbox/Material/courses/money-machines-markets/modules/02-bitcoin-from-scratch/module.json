@@ -1,0 +1,31 @@
+{
+  "id": "02-bitcoin-from-scratch",
+  "slug": "bitcoin-from-scratch",
+  "order": 2,
+  "title": "Bitcoin from Scratch",
+  "summary": "Bitcoin treated as a system, not a ticker. The 2008 white paper read section by section, proof-of-work as energy-as-truth, the UTXO model and self-custody, the supply schedule and what halvings actually change, why Lightning exists and what it doesn't fix, and Bitcoin as a political artifact as much as a technical one.",
+  "learningOutcomes": [
+    "Read the Bitcoin white paper end to end and explain what each section is doing and why.",
+    "Describe proof-of-work in terms of energy expenditure, difficulty adjustment, and the kind of finality it produces.",
+    "Explain the UTXO model, contrast it with an account model, and articulate the trade-offs of each.",
+    "Describe the supply schedule, what a halving is, and what halvings do and do not change about the system.",
+    "Explain why the Lightning Network exists, what it solves, and the costs and limits it introduces.",
+    "Defend or critique the claim that Bitcoin is a political object as much as a technical one, and steel-man the side you disagree with."
+  ],
+  "prerequisites": ["01-what-is-money"],
+  "estimatedHours": 7,
+  "lessons": [
+    "01-the-white-paper",
+    "02-proof-of-work",
+    "03-utxos-and-keys",
+    "04-supply-schedule",
+    "05-lightning",
+    "06-political-object"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

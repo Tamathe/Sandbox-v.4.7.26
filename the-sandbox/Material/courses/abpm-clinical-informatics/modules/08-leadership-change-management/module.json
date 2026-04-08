@@ -1,0 +1,21 @@
+{
+  "id": "08-leadership-change-management",
+  "slug": "leadership-change-management",
+  "order": 8,
+  "title": "Leadership and Change Management",
+  "summary": "Project management, governance, ROI, named change-management frameworks (Kotter, ADKAR, Lewin), and the ethics of telling clinicians what to do. The module that turns a fellow into a CMIO.",
+  "learningOutcomes": [
+    "Run a clinical informatics project through a recognized PM framework and explain the choice.",
+    "Design an informatics governance structure for a real organization and defend the trade-offs.",
+    "Build an ROI case for an informatics intervention without lying with numbers.",
+    "Compare Kotter, ADKAR, and Lewin's change models and pick the right one for a scenario.",
+    "Articulate the ethical responsibilities of an informaticist who is also a clinician."
+  ],
+  "prerequisites": ["05-workflow-and-human-factors", "06-quality-safety-analytics"],
+  "estimatedHours": 6,
+  "lessons": [],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

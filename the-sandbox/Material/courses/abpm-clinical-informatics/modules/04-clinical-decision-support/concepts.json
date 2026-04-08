@@ -1,0 +1,185 @@
+{
+  "moduleId": "04-clinical-decision-support",
+  "concepts": [
+    {
+      "id": "cds-definition",
+      "label": "CDS Definition (Osheroff)",
+      "summary": "Knowledge and person-specific information, intelligently filtered or presented at appropriate times, delivered to clinicians, staff, patients, or other individuals to enhance health and health care."
+    },
+    {
+      "id": "active-vs-passive-cds",
+      "label": "Active vs Passive CDS",
+      "summary": "Active pushes information without being asked (alerts, reminders). Passive waits to be invoked (infobuttons, references). Different design principles, different failure modes."
+    },
+    {
+      "id": "interruptive-vs-noninterruptive",
+      "label": "Interruptive vs Non-interruptive",
+      "summary": "Interruptive blocks workflow until acknowledged. Non-interruptive appears in periphery and lets the user continue. Reserve interruptive for high-cost-of-missing situations."
+    },
+    {
+      "id": "cds-modalities",
+      "label": "CDS Modalities",
+      "summary": "Alerts, order sets, documentation templates, infobuttons, dashboards/registries, order checks, predictive scores, diagnostic decision support, reference delivery, workflow support. Each has its own design principles and failure modes."
+    },
+    {
+      "id": "infobutton",
+      "label": "Infobutton",
+      "summary": "Context-sensitive link from EHR to external knowledge resources. Passive CDS. The HL7 Infobutton standard governs how the link is constructed for context-aware launch."
+    },
+    {
+      "id": "order-set-as-cds",
+      "label": "Order Set as CDS",
+      "summary": "Order sets embed knowledge about what should be ordered for a clinical scenario. Default selections, suggested doses, embedded rationales are all CDS even though they don't look like alerts."
+    },
+    {
+      "id": "predictive-cds",
+      "label": "Predictive CDS",
+      "summary": "Risk scores and predictive models that surface in the chart (sepsis early-warning, readmission risk). The fact that the model is statistical or ML-based does not change the CDS category."
+    },
+    {
+      "id": "cds-five-rights",
+      "label": "CDS Five Rights",
+      "summary": "Right information, right person, right format, right channel, right time/right point in workflow. The Osheroff framework. Almost every CDS failure traces to violating at least one. Required board knowledge."
+    },
+    {
+      "id": "right-information",
+      "label": "Right Information",
+      "summary": "Accurate, evidence-based, current, specific enough to be actionable. Most common failures: stale knowledge, poor specificity, wrong patient (missing exclusions)."
+    },
+    {
+      "id": "right-person",
+      "label": "Right Person",
+      "summary": "Delivered to the team member whose role makes them responsible for the action. Most-violated Right in practice. Right answer often: route to pharmacist, nurse, MA, or patient rather than physician."
+    },
+    {
+      "id": "right-format",
+      "label": "Right Format",
+      "summary": "Presented in a form the person can use in the time they have. Lead with the action; put reasoning in collapsible. Format failures are visible and frequent on the boards."
+    },
+    {
+      "id": "right-channel",
+      "label": "Right Channel",
+      "summary": "The communication medium matches the urgency and the role. Critical results need active notification, not passive secure messaging. Channel mismatch is a common patient-safety pattern."
+    },
+    {
+      "id": "right-time",
+      "label": "Right Time / Right Point in Workflow",
+      "summary": "The intervention arrives when the person can act on it. The Right that distinguishes good CDS from bad CDS most reliably. Same information at the wrong time is noise; at the right time it changes the decision."
+    },
+    {
+      "id": "cds-design-framework",
+      "label": "CDS Design Framework",
+      "summary": "Use the Five Rights as a checklist before deploying any CDS intervention. If any Right is unanswered or unsatisfactory, the intervention is not ready."
+    },
+    {
+      "id": "alert-fatigue",
+      "label": "Alert Fatigue",
+      "summary": "Behavioral state of dismissing alerts without engagement after exposure to too many low-value alerts. Downstream of alert burden but not synonymous. Includes the alerts that would have changed care."
+    },
+    {
+      "id": "alert-burden",
+      "label": "Alert Burden",
+      "summary": "The cognitive and time cost imposed on the clinician by alerts. Property of the system, not of the clinician. High burden produces fatigue in most clinicians."
+    },
+    {
+      "id": "override-rate",
+      "label": "Override Rate",
+      "summary": "Percentage of alerts dismissed without taking the recommended action. Most-tracked alert metric. Most-misinterpreted alert metric. Useless without the appropriate-override-rate distinction."
+    },
+    {
+      "id": "tiered-alerts",
+      "label": "Tiered Alerts",
+      "summary": "Alerts categorized by severity. Top tier interruptive; middle tier non-interruptive; bottom tier silent and only logged. The discipline of categorization forces the team to ask 'is this actually the highest tier?'"
+    },
+    {
+      "id": "alert-tuning",
+      "label": "Alert Tuning",
+      "summary": "Audit-driven narrowing of alert rules. Read a sample of overrides, classify as appropriate or inappropriate, use the classification to narrow the trigger. The slow ongoing work of CDS quality."
+    },
+    {
+      "id": "desensitization",
+      "label": "Desensitization",
+      "summary": "The cognitive mechanism behind alert fatigue. The clinician's response to a repeated low-value stimulus is to suppress engagement. Once present, it generalizes to high-value stimuli of the same form."
+    },
+    {
+      "id": "clinically-significant-alerts",
+      "label": "Clinically Significant Alerts",
+      "summary": "Alerts whose underlying recommendation, if followed, would change care in a way that matters. Drug-drug interaction libraries flag many interactions that do not meet this bar. Filtering to clinically significant subsets is a major fatigue mitigation."
+    },
+    {
+      "id": "knowledge-representation",
+      "label": "Knowledge Representation",
+      "summary": "Encoding clinical knowledge in a form a computer can apply to a specific patient. The hard part has always been data binding, not the logic itself."
+    },
+    {
+      "id": "arden-syntax",
+      "label": "Arden Syntax",
+      "summary": "Oldest standardized clinical rule language. HL7 standard since 1992. Encodes rules as Medical Logic Modules. Limited by the curly-braces problem."
+    },
+    {
+      "id": "mlm-medical-logic-module",
+      "label": "Medical Logic Module (MLM)",
+      "summary": "The unit of knowledge in Arden Syntax. Self-contained rule with maintenance, library, knowledge (data, evoke, logic, action), and resources sections."
+    },
+    {
+      "id": "curly-braces-problem",
+      "label": "Curly Braces Problem",
+      "summary": "Arden left the binding from data placeholders ({like-this}) to local data sources unspecified. Each implementing site re-implemented the bindings, and the bindings were the hard part. The canonical illustration of why KR portability is harder than it looks."
+    },
+    {
+      "id": "glif",
+      "label": "GLIF",
+      "summary": "Guideline Interchange Format. Mid-1990s. Represented entire clinical guidelines as graphs of action, decision, and branch nodes. Joined by GEM, PROforma, EON, Asbru. None became universal."
+    },
+    {
+      "id": "guideline-modeling",
+      "label": "Guideline Modeling",
+      "summary": "The problem of representing multi-step clinical guidelines as computable artifacts. Distinct from single-rule representation. Joined the same data-binding and vocabulary-instability problems as single-rule KR."
+    },
+    {
+      "id": "kr-vs-cds-hooks",
+      "label": "KR vs CDS Hooks",
+      "summary": "The historical KR efforts standardized the rule language and ran into the data binding problem. The modern approach standardizes the data (FHIR), trigger (CDS Hooks), and output (cards) and lets the rule language be whatever the service author wants."
+    },
+    {
+      "id": "cds-hooks",
+      "label": "CDS Hooks",
+      "summary": "HL7 specification for externalized CDS. EHR fires hooks at workflow events, posts FHIR context to a CDS service over HTTPS, the service evaluates rules and returns cards, the EHR renders them. The modern externalized-CDS architecture."
+    },
+    {
+      "id": "hook-events",
+      "label": "Hook Events",
+      "summary": "Named workflow events at which the EHR fires CDS Hooks: patient-view, order-select, order-sign, order-dispatch, encounter-start, encounter-discharge. Match the event to the workflow point where the action makes sense."
+    },
+    {
+      "id": "cds-cards",
+      "label": "CDS Cards",
+      "summary": "The unit of CDS Hooks output. JSON object with summary, detail, indicator (info/warning/critical), source, suggestions, links, override reasons. Renderable by any EHR with a one-time integration."
+    },
+    {
+      "id": "externalized-cds",
+      "label": "Externalized CDS",
+      "summary": "Architecture in which CDS rules live outside the EHR in services that the EHR calls. Enables specialty CDS by specialty experts, faster updates, smaller blast radius, lower vendor lock-in."
+    },
+    {
+      "id": "smart-on-fhir-cds",
+      "label": "SMART on FHIR + CDS",
+      "summary": "The combination of SMART on FHIR (third-party app launch with OAuth) and CDS Hooks (workflow event integration). A CDS Hooks card can include a SMART app launch link for richer interactions."
+    },
+    {
+      "id": "cqi-and-cql",
+      "label": "CQL (Clinical Quality Language)",
+      "summary": "HL7 standard for expressing clinical logic over FHIR. Modern descendant of the Arden/GLIF lineage. The language CMS eCQMs are written in. Increasingly the standard for portable CDS rules."
+    },
+    {
+      "id": "patient-view-hook",
+      "label": "patient-view Hook",
+      "summary": "CDS Hooks event that fires when the user opens a patient chart. Used for chart-level alerts, preventive care reminders, risk score displays. The most general-purpose hook."
+    },
+    {
+      "id": "order-sign-hook",
+      "label": "order-sign Hook",
+      "summary": "CDS Hooks event that fires when the user is about to sign one or more orders. The point at which interactive checks (drug-drug, dose range, allergy) make sense. Most analogous to the classical interruptive medication alert."
+    }
+  ]
+}

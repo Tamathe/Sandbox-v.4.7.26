@@ -1,0 +1,139 @@
+{
+  "id": "mg-05-ai-meets-crypto",
+  "moduleId": "05-ai-meets-crypto",
+  "title": "Module 5 Mastery Gate — Where AI Meets Crypto",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions. The point is the explanations, not the score. Read every rationale, even on questions you got right. Retake until passing — there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "does-it-need-a-blockchain",
+      "prompt": "What is the single best test for sorting an 'AI + crypto' pitch into bucket 1/2 (real) versus bucket 3 (marketing layer)?",
+      "options": [
+        "Whether the project has raised more than $50M.",
+        "Whether the founding team has crypto-native or AI-native backgrounds.",
+        "Whether removing the chain and replacing it with a normal company-operated database would break the product, not merely make it modestly worse.",
+        "Whether the token has appreciated in the last six months."
+      ],
+      "correct": 2,
+      "rationale": "The whole module turns on this test. 'Mildly worse without the chain' is bucket 3. 'Impossible or incoherent without the chain' is bucket 1 or 2. Funding amount and team background are not signals; the test is structural. If the database substitution leaves the product functioning, the chain is doing fundraising work, not technical work, and you should be honest with yourself and others about that."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "zkml",
+      "prompt": "A zkML proof of inference proves which of the following?",
+      "options": [
+        "That the model's output is true.",
+        "That the model is unbiased.",
+        "That a specific committed model, run on a specific committed input, produced a specific output, under standard arithmetic.",
+        "That the model is the most recent version released by the provider."
+      ],
+      "correct": 2,
+      "rationale": "This is the single most-conflated point in the whole module. zkML proves an arithmetic claim — the computation was performed correctly, with these weights, on this input, producing this output. It says nothing about truth, bias, recency, or quality. You need separate commitments (to the weights, to the input) to assemble a fuller human-meaningful claim, and even then the proof relocates trust rather than eliminating it. People who say zkML 'makes AI trustworthy' have not understood what the proof actually proves."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "prover-overhead",
+      "prompt": "In 2026, the cost of producing a zkML proof of inference for a model is roughly how much greater than the cost of the inference itself?",
+      "options": [
+        "About 2x.",
+        "About 100x.",
+        "Between 10,000x and 1,000,000x, depending on the model and proof system.",
+        "Approximately equal."
+      ],
+      "correct": 2,
+      "rationale": "The asymmetry is the whole point of the technology — proofs are expensive to produce and cheap to verify. But the cost ratio for a useful model in 2026 is enormous: between 10,000x and 1,000,000x. This is the reason zkML cannot currently verify frontier LLMs and is limited to small classifiers and narrow models. The cost is dropping by roughly an order of magnitude every couple of years; whether it drops fast enough to ever catch frontier models is an open empirical question, not a foregone conclusion."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "decentralized-compute",
+      "prompt": "Which workload shape is decentralized GPU compute genuinely competitive with hyperscalers on?",
+      "options": [
+        "Frontier model training requiring high-bandwidth gradient sync.",
+        "Real-time chat inference for end users.",
+        "Embarrassingly parallel batch jobs with low latency sensitivity, and compute in jurisdictions where hyperscalers can't or won't operate.",
+        "All AI workloads, equally."
+      ],
+      "correct": 2,
+      "rationale": "Frontier training fails on physics — gradient sync needs interconnect speeds that geographically distributed networks cannot match. Real-time inference fails on latency and reliability guarantees. The genuine wedges are batch jobs (preprocessing, embeddings, scientific simulation) where the customer doesn't care whether the result comes back in an hour or six, and jurisdictional cases where customers can't use AWS at all. These are real, durable markets — and they are much smaller than the original pitch decks claimed."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "supply-subsidy",
+      "prompt": "A new decentralized compute network proudly announces it onboarded 10,000 GPUs in its first month. Why is this metric, by itself, almost meaningless?",
+      "options": [
+        "Because 10,000 GPUs is too small to matter.",
+        "Because token-incentivized supply is easy to attract regardless of demand; the metric measures how attractive the subsidy is, not whether the service is actually being used.",
+        "Because GPUs depreciate quickly.",
+        "Because GPU specs vary too widely."
+      ],
+      "correct": 1,
+      "rationale": "Supply-side onboarding is the easiest thing in tokenized markets because anyone with idle hardware would rather mine your token than nothing. The number that matters is utilization — how much of the onboarded supply is actually being rented and used by paying customers who chose this network for reasons other than the token subsidy. Without a utilization figure, the GPU count tells you only how generous the inflation schedule is."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "agent-wallet",
+      "prompt": "Which of the following is the strongest, most defensible use case for agent wallets in 2026?",
+      "options": [
+        "Autonomous AI corporations operating without human owners.",
+        "AI agents legally signing contracts on their own behalf.",
+        "Software agents making sub-cent payments across many API and inference providers, governed by smart-contract-enforced spending limits.",
+        "AI replacing the role of CFO."
+      ],
+      "correct": 2,
+      "rationale": "Agent wallets do not confer legal personhood, contract capacity, or any of the other things the 'autonomous AI corporation' fantasy requires — and that fantasy is not coming, because legal personhood is a structural fact, not an engineering problem. The real, defensible use case is much narrower and much more useful: software-to-software micropayments at granularities credit cards cannot reach, with permissioned spend constraints that protect the owner from prompt injection and runaway spend. This is bucket 2 done well."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "watermarking",
+      "prompt": "Why is watermarking a fundamentally weaker primitive than C2PA-style content provenance?",
+      "options": [
+        "Watermarks are more expensive to compute.",
+        "Watermarking perturbs the content in ways that can be removed by re-encoding or adversarial filters; provenance asserts origin via cryptographic signatures that are not embedded in the content's pixels.",
+        "Watermarks only work on text.",
+        "C2PA is required by law in most countries."
+      ],
+      "correct": 1,
+      "rationale": "Watermarks live inside the content as a perturbation. Anything that modifies the content (re-encoding, light editing, deliberate scrubbing) can damage or remove them. They work against casual use and fail against motivated bad actors. C2PA-style provenance, by contrast, attaches a cryptographic signature describing origin and edit history; verification doesn't depend on the content being unmodified, only on the chain of signatures being intact. Different threat models, different reliability."
+    },
+    {
+      "id": "q8",
+      "type": "short",
+      "concept": "determinism",
+      "prompt": "In your own words, explain why you cannot run an LLM 'natively on a blockchain' the way you can run a smart contract. What is the structural problem and which architectural patterns work around it?",
+      "expectedKeywords": ["determinism", "consensus", "oracle", "zkML"],
+      "rationale": "A complete answer should observe: blockchains require every node to compute the same byte-identical result, but LLM inference is non-deterministic across hardware, batch composition, and floating-point order. So you can't replicate the inference across nodes. The three patterns that work around this are: (1) trusted single oracle posting signed results — chain does nothing trust-related, (2) multi-oracle consensus on heavily constrained outputs — LLM forced to a tiny output space, (3) zk-verified inference run once off-chain — proof is verified deterministically. There is no fourth option. Anything that promises one is a marketing claim that has not survived contact with the determinism requirement."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "proof-of-human",
+      "prompt": "Which of the following is the strongest critique of the 'just trust government IDs' approach to proof-of-human verification?",
+      "options": [
+        "Government IDs are too expensive to produce.",
+        "Government IDs are not cryptographically secure.",
+        "Government-ID-based proof of human transfers all the trust to the issuing government, fails for stateless people, and creates a centralized chokepoint for surveillance — fine in some contexts, deeply wrong in others.",
+        "Government IDs are slower than CAPTCHAs."
+      ],
+      "correct": 2,
+      "rationale": "The technical objection is uninteresting; the structural one is everything. ID-based proof of human works fine for banking (where you're already KYC'd) and badly for free speech, anti-censorship, or contexts where the issuing government is the adversary. World ID and web-of-trust are alternatives with different trade-offs — biometric uniqueness shifts trust to the verification operator; web-of-trust is hard to bootstrap. There is no clean answer. The honest position is: pick the trade-off you can defend, and don't pretend one of the options is free."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "marketing-layer",
+      "prompt": "Pick any 'AI + crypto' product you have heard of in the last year. Apply the database substitution test honestly. Which bucket does it fall into, and what is the strongest counter-argument someone defending the product would make? Three to four sentences.",
+      "expectedKeywords": ["database", "bucket", "chain"],
+      "rationale": "There is no single right answer, but a complete response will (a) name a specific product, (b) describe what would happen if the chain were replaced by a normal company-run database, (c) honestly state which bucket the product falls into, and (d) steel-man the strongest counter-argument from a defender — usually some form of 'censorship resistance,' 'permissionless access,' or 'verifiable settlement.' Sometimes that counter-argument is genuinely strong and the product is bucket 2. Often it isn't and the product is bucket 3. The test is whether you can tell which case you're in — and whether you'd say so out loud to someone who funded the project."
+    }
+  ]
+}

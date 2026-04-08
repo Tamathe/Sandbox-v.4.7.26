@@ -1,0 +1,780 @@
+{
+  "lastRun": "2026-04-04",
+  "buildStatus": "pass",
+  "batches": {
+    "core": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "pass",
+          "issues": []
+        },
+        "/today": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": []
+        },
+        "/login": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": []
+        },
+        "/signup": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": []
+        },
+        "/onboard": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": []
+        },
+        "/onboard/complete": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": []
+        },
+        "/settings": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": []
+        },
+        "/settings/privacy": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/notifications": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/my-profile/journey": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/privacy": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": []
+        },
+        "/terms": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": []
+        },
+        "/profile/[id]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": [
+            "low: /api/xp/badges returns 404 — expected removal (gamification system deleted)"
+          ]
+        }
+      }
+    },
+    "courses-learning": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/courses": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: missing font-extrabold on empty-state h3 heading"
+          ]
+        },
+        "/academy": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": [
+            "info: redirects to /courses"
+          ]
+        },
+        "/study": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/practice": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/study-match": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: suggestion cards lack full border rounded-2xl shadow-sm pattern"
+          ]
+        },
+        "/courses/[id]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "n/a",
+          "structure": "exempt",
+          "data": "n/a",
+          "issues": [
+            "info: redirects to /courses?course={id}"
+          ]
+        },
+        "/courses/[id]/syllabus": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: uses max-w-2xl instead of max-w-6xl",
+            "low: missing font-extrabold on section headings"
+          ]
+        },
+        "/courses/[id]/course-map": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "pass",
+          "issues": [
+            "info: full-screen SVG canvas, no standard page layout"
+          ]
+        },
+        "/courses/[id]/course-map/embed": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "pass",
+          "issues": [
+            "info: 100vh embed canvas, no platform layout"
+          ]
+        },
+        "/courses/[id]/assignments": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/courses/[id]/assignments/new": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": []
+        },
+        "/courses/[id]/assessment-canvas": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/courses/share/[token]": {
+          "http": "skip",
+          "consoleErrors": "n/a",
+          "apiDeps": "n/a",
+          "structure": "n/a",
+          "data": "n/a",
+          "issues": [
+            "skip: no test token available (share tokens are ephemeral)"
+          ]
+        },
+        "/assignments/[id]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/assignments/[id]/workspace": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "pass",
+          "issues": [
+            "info: delegates to AssignmentWorkspace component (header managed by component)"
+          ]
+        },
+        "/assignments/[id]/mei": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: missing font-extrabold on main heading"
+          ]
+        },
+        "/teach-back/[sessionId]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: error card missing shadow-sm"
+          ]
+        }
+      }
+    },
+    "ai-literacy": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/ai-literacy": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/advising": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/advising/practice": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/assignments": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/cohort": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": ["info: /api/ai-literacy/cohort returns 403 for EDUCATOR (admin-only data, expected)"] },
+        "/ai-literacy/discipline": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/output-eval": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/pedagogy": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/policy": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/process": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/prompt-lab": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/pulse": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/stance": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/syllabus-drop": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/citing-ai": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/critical-evaluation": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/judgment-calls": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/judgment-calls/[scenarioId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/output-detective": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/policies": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/prompt-craft": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/responsible-use": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/student/study-coach": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": ["info: no study-coach sessions exist for test student"] },
+        "/ai-literacy/student/study-coach/[sessionId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "n/a", "issues": ["low: missing PageHeader component (only AI Literacy page without it)", "info: no test session available"] },
+        "/ai-literacy/student/when-not-to-use": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/starter-packs": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/starter-packs/browse": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/starter-packs/builder": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/starter-packs/analytics": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/ai-literacy/starter-packs/[packId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] }
+      }
+    },
+    "admin-compliance": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/admin": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/users": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: no PageHeader component — uses manual h1 + back link instead",
+            "low: uses max-w-6xl but rounded-3xl on table container (convention is rounded-2xl)"
+          ]
+        },
+        "/admin/integrations": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: no PageHeader component — uses manual h1 + breadcrumb instead",
+            "low: uses max-w-7xl instead of max-w-6xl",
+            "low: integration cards use rounded-3xl instead of rounded-2xl"
+          ]
+        },
+        "/admin/news-sources": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: no PageHeader component — uses manual h1 + breadcrumb instead",
+            "low: uses max-w-7xl instead of max-w-6xl"
+          ]
+        },
+        "/admin/sandy-traces": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "n/a",
+          "issues": [
+            "low: no PageHeader component — uses manual h1 + breadcrumb instead",
+            "low: uses max-w-7xl instead of max-w-6xl",
+            "info: 0 traces in demo data (expected — traces are generated by Sandy agent runs)"
+          ]
+        },
+        "/admin/campus-pulse": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": [
+            "info: 0 pulse events in demo data (expected — events are generated by cron/detection)"
+          ]
+        },
+        "/admin/curriculum-intelligence": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": [
+            "info: 0 curriculum graph nodes in demo data (expected — graph is built by cron refresh)"
+          ]
+        },
+        "/admin/policy-blast": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": [
+            "info: 0 impact reports in demo data (expected — reports are generated on demand)"
+          ]
+        },
+        "/admin/compliance-dashboard": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": [
+            "low: uses border-2 border-gray-200 on cards instead of border rounded-2xl shadow-sm (cosmetic)"
+          ]
+        },
+        "/admin/compliance-portal": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-summary": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-reports": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-trends": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-actions": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": []
+        },
+        "/admin/compliance-calendar": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-exports": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-maturity": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/admin/compliance-readiness": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/compliance": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "fail",
+          "structure": "pass",
+          "data": "pass",
+          "issues": [
+            "medium: GET /api/users/compliance returns 405 — route only exports PATCH, no GET handler; page calls it with GET to fetch consent status"
+          ]
+        },
+        "/registrar/compliance": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/ada-tool": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "partial",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": [
+            "medium: Compliance Dashboard tab calls /api/accessibility/compliance which requires EDUCATOR/ADMIN — students get 403"
+          ]
+        }
+      }
+    },
+    "registrar": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/registrar": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/academic-standing": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/analytics": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/articulation": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/degree-audit": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/enrollment-forecast": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "n/a",
+          "issues": [
+            "info: 0 forecasts in demo data (expected — cron job generates predictions)"
+          ]
+        },
+        "/registrar/holds": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/petitions": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/programs": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/registrar/reports": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/degree-plan": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: no PageHeader component — uses manual h1 with GraduationCap icon"
+          ]
+        },
+        "/explore-majors": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        }
+      }
+    },
+    "staff": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/staff/actions": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: SummaryTile uses rounded-xl instead of rounded-2xl, no shadow-sm"
+          ]
+        },
+        "/staff/committees": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/staff/committees/[id]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "partial",
+          "data": "pass",
+          "issues": [
+            "low: no PageHeader — uses manual breadcrumb + h1 (detail page pattern)"
+          ]
+        },
+        "/staff/communications": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/staff/policies": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/staff/survey-intelligence": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "pass",
+          "data": "pass",
+          "issues": []
+        },
+        "/staff/survey-intelligence/[projectId]": {
+          "http": 200,
+          "consoleErrors": 0,
+          "apiDeps": "pass",
+          "structure": "exempt",
+          "data": "pass",
+          "issues": [
+            "info: workspace layout with split panels — no standard page pattern (exempt)"
+          ]
+        }
+      }
+    },
+    "tools-write-room": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/build": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/build/collaborator": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/build/refiner": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/builder": { "http": 200, "consoleErrors": 0, "apiDeps": "n/a", "structure": "exempt", "data": "n/a", "issues": ["info: redirects to /hub via client-side router.replace"] },
+        "/hub": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/browse": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/departments": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/s/[slug]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/s/[slug]/[collectionSlug]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/s/[slug]/settings": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/s/[slug]/settings/analytics": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/hub/s/[slug]/settings/collections": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/tools": { "http": 200, "consoleErrors": 0, "apiDeps": "n/a", "structure": "exempt", "data": "n/a", "issues": ["info: redirects to /hub via client-side router.replace"] },
+        "/tools/[id]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/ai-registrar-flashcards": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/book-recommender": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/file-cleaner": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/transfer-credit-articulator": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/uk-in-the-news": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/tools/uk-now": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/write-room/ai-policy-builder": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/contract-drafter": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/cover-letter": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/email-rewriter": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/institutional-resume": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/linkedin-optimizer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/write-room/resume-builder": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/data-desk/chart-explainer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk/presentation-outliner": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk/report-summarizer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk/sentiment-analyzer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk/survey-analyzer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/data-desk/team-analyzer": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/research-hub": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/research-hub/[slug]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "exempt", "data": "pass", "issues": ["info: client-rendered chat interface, slow initial SSR (~15s) but returns 200"] },
+        "/playground": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: no STORAGE_JWT_SECRET errors detected; shows empty state (expected — no apps seeded)"] },
+        "/playground-templates": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] }
+      }
+    },
+    "social-collaboration": {
+      "status": "completed",
+      "lastChecked": "2026-04-04",
+      "pages": {
+        "/messages": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/messages/[groupId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/sandcastle/new": { "http": 200, "consoleErrors": 0, "apiDeps": "partial", "structure": "partial", "data": "n/a", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "medium: /api/sandcastle/rooms returns 405 — no GET handler (POST only)"] },
+        "/sandcastle/[roomId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": ["info: requires WebSocket for full functionality — initial shell renders correctly"] },
+        "/sandcastle/[roomId]/participate": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/sandcastle/[roomId]/report": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": [] },
+        "/sandcastle/experience/[slug]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: no experience slugs seeded — empty state renders correctly"] },
+        "/sandcastle/join/[joinCode]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: synthetic join code — graceful error handling"] },
+        "/community": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/debate": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "info: 0 debate rooms seeded — empty state renders correctly"] },
+        "/debate/new": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": [] },
+        "/debate/join": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": [] },
+        "/debate/[roomId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: synthetic room ID — graceful error handling (no debate rooms seeded)"] },
+        "/debate/[roomId]/argue": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: synthetic room ID — graceful error handling (no debate rooms seeded)"] },
+        "/rooms": { "http": 200, "consoleErrors": 0, "apiDeps": "partial", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "info: /api/rooms returns 404 — no list endpoint (rooms come from community-pulse)"] },
+        "/join-room/[roomId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "pass", "issues": ["info: tested with real room ID from community-pulse"] },
+        "/together": { "http": 200, "consoleErrors": 0, "apiDeps": "partial", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "info: /api/commons returns 405 — POST only, /api/collab/sessions returns 405 — POST only"] },
+        "/pitch": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "info: 0 pitch rooms seeded — empty state renders correctly"] },
+        "/pitch/new": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": [] },
+        "/pitch/[roomId]": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: synthetic room ID — graceful error handling (no pitch rooms seeded)"] },
+        "/pitch/[roomId]/submit": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "pass", "data": "n/a", "issues": ["info: synthetic room ID — graceful error handling (no pitch rooms seeded)"] },
+        "/office-hours": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl"] },
+        "/office-hours/faculty": { "http": 200, "consoleErrors": 0, "apiDeps": "pass", "structure": "partial", "data": "pass", "issues": ["low: uses max-w-7xl instead of max-w-6xl", "info: educator API returns 0 questions (expected — questions come from students)"] },
+        "/studio": { "http": 200, "consoleErrors": 0, "apiDeps": "n/a", "structure": "exempt", "data": "n/a", "issues": ["info: redirects to /build per CLAUDE.md navigation table"] }
+      }
+    },
+    "analytics": { "status": "pending", "lastChecked": null, "pages": {} },
+    "content-publishing": { "status": "pending", "lastChecked": null, "pages": {} },
+    "wellness-campus": { "status": "pending", "lastChecked": null, "pages": {} },
+    "specialized-tools": { "status": "pending", "lastChecked": null, "pages": {} },
+    "misc-edge": { "status": "pending", "lastChecked": null, "pages": {} }
+  },
+  "summary": {
+    "totalPages": 280,
+    "checked": 164,
+    "passed": 164,
+    "issues": 56
+  }
+}

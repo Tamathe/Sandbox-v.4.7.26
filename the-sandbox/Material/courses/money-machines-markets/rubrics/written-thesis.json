@@ -1,0 +1,47 @@
+{
+  "id": "written-thesis",
+  "title": "Written Thesis Rubric",
+  "description": "For short-form written capstones and the final 1500-word thesis. The point is defensibility, not polish.",
+  "criteria": [
+    {
+      "name": "Clarity of claim",
+      "weight": 0.25,
+      "levels": [
+        { "score": 1, "descriptor": "No identifiable claim. Reader cannot summarize the position in one sentence." },
+        { "score": 2, "descriptor": "Claim is present but vague, hedged into meaninglessness, or buried." },
+        { "score": 3, "descriptor": "Claim is stated plainly and a reader could repeat it back accurately." },
+        { "score": 4, "descriptor": "Claim is sharp, falsifiable, and the writer signals exactly how confident they are." }
+      ]
+    },
+    {
+      "name": "Quality of reasoning",
+      "weight": 0.30,
+      "levels": [
+        { "score": 1, "descriptor": "Assertions without support. Conclusions do not follow from premises." },
+        { "score": 2, "descriptor": "Some reasoning, but key steps are skipped or rest on undefended assumptions." },
+        { "score": 3, "descriptor": "The argument follows. A skeptical reader can trace each step." },
+        { "score": 4, "descriptor": "The argument follows AND the writer flags its weakest link before a critic has to." }
+      ]
+    },
+    {
+      "name": "Engagement with the strongest counter-argument",
+      "weight": 0.25,
+      "levels": [
+        { "score": 1, "descriptor": "No counter-argument considered. Or only a strawman version." },
+        { "score": 2, "descriptor": "A counter-argument appears but is dismissed without being taken seriously." },
+        { "score": 3, "descriptor": "A real counter-argument is engaged and answered." },
+        { "score": 4, "descriptor": "The strongest version of the counter-argument is steel-manned, and the response either holds or the writer updates." }
+      ]
+    },
+    {
+      "name": "Voice and honesty",
+      "weight": 0.20,
+      "levels": [
+        { "score": 1, "descriptor": "Generic, hedged, or AI-flavored prose. Reader cannot tell who wrote it or why they care." },
+        { "score": 2, "descriptor": "Some personal stake visible but mostly safe and recycled." },
+        { "score": 3, "descriptor": "Clear voice. The writer is in the room." },
+        { "score": 4, "descriptor": "Clear voice AND visible intellectual honesty about uncertainty, change of mind, or what would change the writer's view." }
+      ]
+    }
+  ]
+}

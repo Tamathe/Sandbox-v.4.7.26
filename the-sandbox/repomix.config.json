@@ -1,0 +1,17 @@
+{
+  "output": {
+    "filePath": "repomix-output.md",
+    "style": "markdown"
+  },
+  "ignore": {
+    "useGitignore": true,
+    "patterns": [
+      "node_modules",
+      ".next",
+      "app/generated/prisma",
+      "prisma/seed-starter-courses.ts",
+      "prisma/seed.ts",
+      "repomix-output.*"
+    ]
+  }
+}

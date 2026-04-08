@@ -1,0 +1,139 @@
+{
+  "id": "mg-08-synthesis",
+  "moduleId": "08-synthesis",
+  "title": "Module 8 Mastery Gate — Synthesis",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions on the synthesis module. As always, the rationales are doing more work than the answer keys — read every one, even on questions you got right. This is the last gate before the final project. There is no penalty for retaking it; the bar is whether you can explain, not whether you can guess.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "framework-vs-worldview",
+      "prompt": "Which of the following best describes the difference between a framework and a worldview as the lesson uses the terms?",
+      "options": [
+        "A framework is more sophisticated than a worldview, but both produce the same beliefs.",
+        "A worldview is a set of answers; a framework is a set of questions you ask before letting a claim into your model.",
+        "A framework is what experts have; a worldview is what laypeople have.",
+        "They are synonyms — the lesson uses two words for the same thing."
+      ],
+      "correct": 1,
+      "rationale": "The whole module rests on this distinction. A worldview comes pre-packaged from a tribe and tells you what is true. A framework is a routine you build yourself for evaluating any new claim. The diagnostic difference is in how they update: frameworks pivot incrementally in response to evidence; worldviews flip wholesale when the social environment flips. If you have ever 'been converted' on a topic in this domain, you were running a worldview, not a framework."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "tribal-epistemics",
+      "prompt": "Why does the lesson argue that tribes are particularly seductive in this specific domain (money, blockchains, AI, macro)?",
+      "options": [
+        "Because the topics are inherently political.",
+        "Because the topics are high-stakes, high-uncertainty, and high-status-volatile, which makes 'I don't know' socially expensive — and tribes offer certainty in exchange for loyalty.",
+        "Because the people in this field are unusually tribal compared to other fields.",
+        "Because most of the claims are false and tribes are needed to defend them."
+      ],
+      "correct": 1,
+      "rationale": "The argument is about incentives, not personalities. In any domain where uncertainty is high and visible status depends on appearing to be 'in the trade,' the cheapest way to defuse the discomfort is to pick a side and outsource your thinking to it. The exchange is certainty-for-loyalty, and it is a fair trade if you want certainty more than you want to be right. Recognizing the trade is the first step in declining it."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "calibration",
+      "prompt": "A forecaster says '70%' on a series of 100 independent claims. Roughly how many should turn out to be correct if the forecaster is well-calibrated?",
+      "options": [
+        "All 100 — anything less means they were wrong.",
+        "Roughly 70 — the percentage matches the long-run hit rate.",
+        "Exactly 50 — anything else is overconfidence.",
+        "It cannot be measured."
+      ],
+      "correct": 1,
+      "rationale": "Calibration means the stated probability matches the long-run hit rate. A 70% forecaster who is right 90% of the time is *under*-confident; a 70% forecaster who is right 50% of the time is *over*-confident; both are errors and both are correctable with practice. The Brier score formalizes this. The point of using numbers at all is that they are checkable — and a belief system that cannot be checked cannot be improved."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "epistemic-position-sizing",
+      "prompt": "What is 'epistemic position sizing' as the lesson uses the term?",
+      "options": [
+        "A trading strategy for crypto markets.",
+        "Allocating your conviction in a claim proportional to evidence, with hard limits on how confident you let yourself get on any one claim — borrowed from portfolio risk management applied to beliefs.",
+        "A way of sizing how much you read about a topic.",
+        "A way of deciding which scenarios to exclude from a forecast."
+      ],
+      "correct": 1,
+      "rationale": "The analogy is: you do not put 100% of your money into the trade you are most confident in, because the cost of being wrong is wiping out. Same with beliefs — you do not put 100% of your epistemic weight into any single claim about the future, because the cost of being wrong is having your model invalidated by a single observation. You hold beliefs in proportion to evidence. The discipline is the same as portfolio sizing, transferred to ideas."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "false-humility",
+      "prompt": "The lesson identifies two failure modes in calibration. One is overconfidence (everything at 95%). What is the other, and what is wrong with it?",
+      "options": [
+        "Pessimism — assuming the future will be worse than it is.",
+        "False humility — hedging every claim to 50% — which the lesson calls 'cowardice with vocabulary' because it avoids commitment and is just as badly Brier-scored as overconfidence.",
+        "Recency bias — overweighting recent news.",
+        "Confirmation bias — only reading sources you agree with."
+      ],
+      "correct": 1,
+      "rationale": "False humility is the quieter failure mode and the harder one to spot in yourself. Refusing to commit to any number looks like intellectual virtue but is actually a way of staying off the hook. The Brier score punishes the all-50%-forecaster just as harshly as the all-95%-forecaster, because real evidence pushes real numbers around — and a person whose beliefs cluster at 50% is refusing to engage with the evidence. Real humility is committing to a calibrated number and being willing to be wrong out loud."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "information-diet",
+      "prompt": "Which of the following best describes a healthy information diet for a fast-moving field, according to the lesson?",
+      "options": [
+        "Read as much as possible across as many sources as possible to maximize coverage.",
+        "Read only sources you agree with, since they are the most likely to be correct.",
+        "A small, deliberate stack of primary sources, scored analytical sources, one or two contrarian sources whose reasoning you cannot dismiss, and an explicit mute list — read at deliberate cadences.",
+        "Subscribe to real-time feeds and alerts for everything important."
+      ],
+      "correct": 2,
+      "rationale": "Volume is the trap. The goal is not coverage; it is calibration. The stack: a few primary sources (Fed statements, BIPs, system cards) read upstream of commentary, two or three analytical sources whose track records you can score, one or two contrarian sources to protect against confirmation bias, and a mute list of high-volume voices that move your emotional state without giving you new information. Reassess quarterly. Real-time alerts are almost always counter-productive — the noise-to-signal ratio is brutal at minute-scale."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "update-whiplash",
+      "prompt": "You read a convincing piece on Monday and swing your view 30 points. You read a convincing rebuttal on Wednesday and swing it back 35 points. What does the lesson call this, and what does it diagnose?",
+      "options": [
+        "Open-mindedness — exactly the behavior the course is trying to teach.",
+        "Update whiplash — usually a sign that your information diet is too fast and too emotionally charged, with sources thin on actual evidence.",
+        "Bayesian updating — the formally correct response to new evidence.",
+        "Healthy skepticism — refusing to commit to either piece."
+      ],
+      "correct": 1,
+      "rationale": "Healthy updating produces small, slow movements as evidence accumulates. Large swings on the basis of single pieces of commentary are a symptom, not a virtue. They almost always reflect that the new piece was *better written* than the old one rather than that it brought decisively new evidence. The fix is to slow the cadence down and to ask, of any large swing: did the evidence really justify this, or did the rhetoric? Any week with more than a 10-point swing on a major view is worth examining."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "residual-uncertainty",
+      "prompt": "Why does the three-futures lesson deliberately leave 5% probability for a 'weird' residual scenario rather than letting the three named scenarios sum to 100%?",
+      "options": [
+        "Because the lesson is hedging to avoid being wrong.",
+        "Because every decade in living memory has had at least one event that was in nobody's scenario set at the start of it, and pretending you can enumerate all the possibilities is a bigger error than admitting you cannot.",
+        "Because 5% is a standard p-value in academic forecasting.",
+        "Because three scenarios are not enough to cover the future."
+      ],
+      "correct": 1,
+      "rationale": "Residual uncertainty is the explicit refusal to claim your scenario set is complete. A scenario set summing to exactly 100% is either lucky or hiding overconfidence in its own enumeration. Leaving 5% for 'none of the above' is not hedging — it is a structural acknowledgement that the world has produced surprises in every decade we have records of, and the probability of *no* surprise in the next decade is much smaller than the probability of *some* surprise we cannot currently name."
+    },
+    {
+      "id": "q9",
+      "type": "short",
+      "concept": "epistemic-trust-debt",
+      "prompt": "In your own words, explain what 'epistemic trust debt' is and why the lesson argues it is more dangerous than being wrong outright. Two or three sentences.",
+      "expectedKeywords": ["confidence", "trust", "uncertainty", "listener"],
+      "rationale": "A complete answer should observe that epistemic trust debt is incurred whenever you express more confidence in conversation than you actually hold privately, and that the listener walks away holding a *higher-confidence* version of the belief than you actually do. It is more dangerous than being wrong outright because the listener has no framework for updating it — they did not know the original confidence was lower, so they cannot recalibrate when the future falsifies the prediction. The damage compounds across many conversations and is invisible to both parties in the moment. The fix is to never round your numbers up for the comfort of the room, even when the room finds the lower number unsatisfying."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "the-recommend-test",
+      "prompt": "State the 'recommend test' from lesson 5 in your own words, then describe one specific situation in your own life where applying it would have changed what you said. Three or four sentences.",
+      "expectedKeywords": ["recommendation", "scenario", "five years", "defend"],
+      "rationale": "There is no single right answer here; the question is meant to land the abstract idea on a real situation. A complete answer states the test (before giving a specific recommendation about money, jobs, or technology, ask yourself: if the worst plausible scenario plays out and you are looking the person in the eye in five years, can you defend why you gave the advice?) and then identifies a real moment where the answer would have been 'no' — and what you would have said instead. The point of the test is not to make you stop giving advice; it is to make sure that the advice you do give can be defended on its own terms, not on the assumption that things would work out. People who cannot find a single moment in their own life where this would have changed what they said have probably not been recommending anything specific, which is also a defensible posture but worth knowing about themselves."
+    }
+  ]
+}

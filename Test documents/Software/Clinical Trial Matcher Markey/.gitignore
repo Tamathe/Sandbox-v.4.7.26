@@ -1,0 +1,39 @@
+# ── Secrets (NEVER commit) ────────────────────────────────────────────────
+.env
+*.env
+.env.*
+!.env.example
+
+# ── Python ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+.Python
+
+# ── Virtual environments ───────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+
+# ── Pipeline outputs (patient data — keep off VCS) ────────────────────────
+/output/
+
+# ── OS / editor ───────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# ── Streamlit ─────────────────────────────────────────────────────────────
+.streamlit/secrets.toml
+
+# ── Temp / test artefacts ─────────────────────────────────────────────────
+*.log
+tmp/
+temp/

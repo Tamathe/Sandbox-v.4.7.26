@@ -1,7 +1,7 @@
 {
   "courseId": "abpm-clinical-informatics",
   "description": "Cross-module concept aggregator. Lists every concept ID used anywhere in the course with its canonical home module and the modules it appears in. Used by the platform's concept-bridging surface.",
-  "totalConcepts": 321,
+  "totalConcepts": 331,
   "concepts": [
     {
       "id": "clinical-informatics-definition",
@@ -2067,6 +2067,16 @@
     { "id": "ihe-pix-pdq", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
     { "id": "ihe-atna", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
     { "id": "ihe-xua", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
-    { "id": "wado-rs", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] }
+    { "id": "wado-rs", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "telemedicine-modalities", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "store-and-forward", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ryan-haight-act", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "imlc-licensure-compact", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "telehealth-parity", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "originating-site", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "rpm-cpt-family", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "pghd-definition", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "pghd-provenance", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "fda-general-wellness", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] }
   ]
 }

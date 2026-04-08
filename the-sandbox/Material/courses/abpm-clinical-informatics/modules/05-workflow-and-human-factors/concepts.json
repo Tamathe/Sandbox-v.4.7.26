@@ -1,0 +1,180 @@
+{
+  "moduleId": "05-workflow-and-human-factors",
+  "concepts": [
+    {
+      "id": "clinical-workflow",
+      "label": "Clinical Workflow",
+      "summary": "The actual sequence of tasks, decisions, and information exchanges that humans and systems perform to accomplish a clinical purpose. Distinct from process (broader), procedure (a single action), and protocol (the codified intended version)."
+    },
+    {
+      "id": "workflow-analysis",
+      "label": "Workflow Analysis",
+      "summary": "The discipline of mapping what actually happens in clinical work — observing first, asking second, mapping the actual workflow rather than the intended one. Most informatics complaints have workflow underneath."
+    },
+    {
+      "id": "swimlane-diagram",
+      "label": "Swimlane Diagram",
+      "summary": "Flowchart with horizontal lanes for actors and tasks placed in the lane of the actor performing them. Makes handoffs visible. Most common notation in clinical informatics analyses."
+    },
+    {
+      "id": "bpmn",
+      "label": "BPMN",
+      "summary": "Business Process Model and Notation. Formal standard for process modeling with rich vocabulary (events, gateways, tasks, pools). Use when the analysis must be precise and shareable; overkill for most clinical conversations."
+    },
+    {
+      "id": "value-stream-mapping",
+      "label": "Value-Stream Mapping",
+      "summary": "Lean / Toyota Production System notation that shows value flow with explicit annotations for time, waste, inventory, and waiting. Right notation when the question is 'where is the time going.'"
+    },
+    {
+      "id": "rework-loops",
+      "label": "Rework Loops",
+      "summary": "Places where work is redone because of an upstream gap. One of three high-yield workflow failure patterns to look for. Often invisible to participants because they have learned to compensate."
+    },
+    {
+      "id": "handoffs",
+      "label": "Handoffs",
+      "summary": "Transitions between actors in a workflow. Each handoff is an opportunity for information loss or distortion. Number of handoffs is one of the strongest predictors of error rate."
+    },
+    {
+      "id": "workflow-vs-process",
+      "label": "Workflow vs Process",
+      "summary": "Process is the broader system-level sequence; workflow is the specific sequence to accomplish a clinical purpose. Procedure is a single action within the workflow. Protocol is the codified intended version."
+    },
+    {
+      "id": "workarounds",
+      "label": "Workarounds",
+      "summary": "Deviations from the intended workflow that users invent to get work done despite system gaps, frictions, or mismatches. Should be treated as design feedback, not as discipline failures."
+    },
+    {
+      "id": "usability",
+      "label": "Usability (ISO 9241-11)",
+      "summary": "The extent to which a system can be used by specified users to achieve specified goals with effectiveness, efficiency, and satisfaction in a specified context of use. All three components matter."
+    },
+    {
+      "id": "nielsen-heuristics",
+      "label": "Nielsen's Ten Heuristics",
+      "summary": "Visibility of system status; match to real world; user control and freedom; consistency and standards; error prevention; recognition rather than recall; flexibility and efficiency of use; aesthetic and minimalist design; help users recover from errors; help and documentation."
+    },
+    {
+      "id": "cognitive-load",
+      "label": "Cognitive Load",
+      "summary": "Three types: intrinsic (inherent task difficulty), extraneous (unnecessary mental effort imposed by system), germane (productive effort that contributes to learning). Reducing extraneous load is the highest-yield intervention for clinician burden."
+    },
+    {
+      "id": "heuristic-evaluation",
+      "label": "Heuristic Evaluation",
+      "summary": "Usability inspection method where 3–5 evaluators independently walk through a system against defined heuristics, then combine findings. Cheaper than usability testing; catches a substantial fraction of major problems."
+    },
+    {
+      "id": "usability-vs-satisfaction",
+      "label": "Usability vs Satisfaction",
+      "summary": "Satisfaction is one component of usability. A clinician who reports being satisfied may have adapted to poor usability rather than experiencing genuine usability. Objective task metrics matter alongside self-report."
+    },
+    {
+      "id": "user-centered-design",
+      "label": "User-Centered Design (UCD)",
+      "summary": "The design philosophy that puts users at the center of every decision — observation, prototyping, testing, iteration, contextual inquiry. Opposite of design-and-ship-to-users-who-will-adapt."
+    },
+    {
+      "id": "usability-testing",
+      "label": "Usability Testing",
+      "summary": "Real users completing real tasks while the researcher observes and measures. More expensive and more diagnostic than heuristic evaluation. Tells you whether a fix actually worked."
+    },
+    {
+      "id": "sociotechnical-model",
+      "label": "Sociotechnical Model",
+      "summary": "The framing that health IT is determined jointly by technology and by the humans, processes, organizations, and incentives wrapped around it. The unit of analysis is the system-in-context."
+    },
+    {
+      "id": "sittig-singh",
+      "label": "Sittig-Singh",
+      "summary": "Dean Sittig and Hardeep Singh, authors of the eight-dimension sociotechnical model (2010, Quality and Safety in Health Care) and the SAFER Guides. The most-cited authors in clinical informatics safety."
+    },
+    {
+      "id": "eight-dimensions",
+      "label": "Eight Sittig-Singh Dimensions",
+      "summary": "(1) hardware/software; (2) clinical content; (3) human-computer interface; (4) people; (5) workflow and communication; (6) internal organizational policies/procedures/culture; (7) external rules/regulations/pressures; (8) system measurement and monitoring. Required board recall."
+    },
+    {
+      "id": "hardware-and-software",
+      "label": "Dim 1 — Hardware and Software",
+      "summary": "Servers, storage, network, OS, database, application code. Failures look like outages, slow response, capacity, bugs."
+    },
+    {
+      "id": "clinical-content",
+      "label": "Dim 2 — Clinical Content",
+      "summary": "Order sets, CDS rules, drug databases, problem lists, allergy dictionaries, templates, formulary, antibiograms. Where knowledge maintenance burden lives."
+    },
+    {
+      "id": "human-computer-interface",
+      "label": "Dim 3 — Human-Computer Interface",
+      "summary": "The screens and interactions through which users interact with the system. The usability dimension."
+    },
+    {
+      "id": "people-dimension",
+      "label": "Dim 4 — People",
+      "summary": "The humans who use, operate, support, and govern the system. Training, role mismatches, governance, key-person risk, vendor staffing."
+    },
+    {
+      "id": "workflow-and-communication",
+      "label": "Dim 5 — Workflow and Communication",
+      "summary": "The sequence of tasks, handoffs, and information exchanges. The most consistently underweighted dimension and the one most often the actual cause of 'technical' failures."
+    },
+    {
+      "id": "internal-policies",
+      "label": "Dim 6 — Internal Organizational Policies, Procedures, Culture",
+      "summary": "Institution's rules, governance, decision-making, change management, risk tolerance, vendor relationship, history with prior projects."
+    },
+    {
+      "id": "external-rules",
+      "label": "Dim 7 — External Rules, Regulations, Pressures",
+      "summary": "HIPAA, HITECH, Cures Act, ONC certification, Joint Commission, CMS measures, state laws, payer requirements."
+    },
+    {
+      "id": "measurement-and-monitoring",
+      "label": "Dim 8 — System Measurement and Monitoring",
+      "summary": "Whether the institution actually looks at how the system is performing. Metrics, dashboards, audits, post-deployment evaluation. The dimension that distinguishes mature programs from immature ones."
+    },
+    {
+      "id": "safer-guides",
+      "label": "SAFER Guides",
+      "summary": "Nine voluntary self-assessment guides from ONC, developed by Sittig, Singh, and colleagues. First released 2014. Three categories (foundational, infrastructure, clinical process). Voluntary by design."
+    },
+    {
+      "id": "ehr-safety-self-assessment",
+      "label": "EHR Safety Self-Assessment",
+      "summary": "The practice of running structured assessments (like SAFER) to identify gaps in EHR safety. Done internally rather than by external auditors."
+    },
+    {
+      "id": "high-priority-practices",
+      "label": "High Priority Practices Guide",
+      "summary": "The most important SAFER guide. Covers patient identification, communication of test results, electronic ordering, downtime planning, and organizational governance."
+    },
+    {
+      "id": "organizational-responsibilities",
+      "label": "Organizational Responsibilities Guide",
+      "summary": "SAFER guide on the leadership and governance structures for EHR safety. Who owns it. How decisions get made. How issues get escalated."
+    },
+    {
+      "id": "patient-identification-safer",
+      "label": "Patient Identification (SAFER)",
+      "summary": "Practices ensuring each clinical action is associated with the correct patient: two-identifier verification, photo display, distinct visual treatment for active patient context, MPI hygiene."
+    },
+    {
+      "id": "cpoe-safer",
+      "label": "CPOE with Decision Support (SAFER)",
+      "summary": "SAFER guide on order entry and CDS practices: order set governance, alert tuning, override audits, content maintenance. Aligns with Module 4 content."
+    },
+    {
+      "id": "test-results-safer",
+      "label": "Test Results Reporting and Follow-up (SAFER)",
+      "summary": "SAFER guide on the closed-loop reporting workflow, critical value notification, missed result tracking. The right channel for critical results is active notification, not passive secure messaging."
+    },
+    {
+      "id": "downtime-planning",
+      "label": "Downtime Planning",
+      "summary": "Paper backup procedures, downtime training and drills, recovery protocols. The cyberattack scenario has become much more important since 2020 and SAFER guidance has been updated accordingly."
+    }
+  ]
+}

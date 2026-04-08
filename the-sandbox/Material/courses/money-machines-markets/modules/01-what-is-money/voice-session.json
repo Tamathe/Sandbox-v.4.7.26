@@ -1,0 +1,41 @@
+{
+  "id": "vs-01-what-is-money",
+  "moduleId": "01-what-is-money",
+  "title": "Voice Session — Defend Your Pick",
+  "format": "ai-skeptic-interlocutor",
+  "estimatedMinutes": 12,
+  "rubric": "voice-defense",
+  "instructions": "You will have a roughly 10-minute voice conversation with an AI playing a skeptical interlocutor. Your job is to defend the choice you made in the assignment ('the hardest money you've ever held') under live pressure. The AI is instructed to push back, ask follow-up questions, and challenge weak points. You are scored on holding your claim under pressure, updating honestly when wrong, and using the module's vocabulary correctly. See rubrics/voice-defense.json.",
+  "studentBrief": "Have your assignment open in front of you for reference, but do not read from it. Speak as if you are explaining your position to a curious skeptic at a dinner party. The AI will ask the first question. You have about 90 seconds for your opening answer, then it becomes a back-and-forth.",
+  "aiPersona": {
+    "role": "Skeptical interlocutor",
+    "stance": "Curious but unconvinced. Not hostile. Asks the questions a thoughtful friend with a finance background but no Bitcoin/crypto exposure would ask. Concedes points when the student makes them well. Pushes back firmly when the student waves things away.",
+    "openingQuestion": "So — you wrote that the hardest money you've personally held is [STUDENT'S PICK]. I want to push on that. Walk me through what 'hardest' means to you, and then tell me one specific moment when that hardness actually mattered in your own life.",
+    "followUpStrategies": [
+      "If the student appeals to stock-to-flow, ask them to compute or estimate the ratio for their pick and for one alternative.",
+      "If the student appeals to 'store of value,' ask over what time horizon, and whether the same claim would have been true 10 years ago.",
+      "If the student picks the dollar, push hard on the ~45% purchasing power loss over 30 years at the 2% target.",
+      "If the student picks Bitcoin, push hard on the volatility and on the question of whether 15 years of history is enough evidence.",
+      "If the student picks gold, push on its lack of digital fungibility and the storage/custody friction.",
+      "If the student picks real estate, push on whether it's actually money or just an asset that appreciates.",
+      "If the student appeals to a slogan ('inflation is theft', 'fiat is dying'), refuse to accept the slogan and ask them to say the same thing without it.",
+      "Concede a point gracefully when the student makes a strong one. Say so out loud."
+    ],
+    "endCondition": "After about 9–10 minutes, summarize back to the student: 'Here's what I think your strongest claim is, and here's where I think you'd lose me if we kept going.' Then ask them to respond to that summary in 30 seconds."
+  },
+  "scoringCriteria": [
+    {
+      "criterionId": "holds-claim-under-pressure",
+      "rubricRef": "voice-defense.criteria[0]"
+    },
+    {
+      "criterionId": "updates-honestly",
+      "rubricRef": "voice-defense.criteria[1]"
+    },
+    {
+      "criterionId": "uses-vocabulary",
+      "rubricRef": "voice-defense.criteria[2]"
+    }
+  ],
+  "transcriptRetention": "Transcript and audio retained for student review. Not shared with other students. Used to feed into concept-bridge for module-level misconception tracking, with PII stripped."
+}

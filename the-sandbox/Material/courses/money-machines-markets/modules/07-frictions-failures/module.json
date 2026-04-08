@@ -1,0 +1,31 @@
+{
+  "id": "07-frictions-failures",
+  "slug": "frictions-failures",
+  "order": 7,
+  "title": "Frictions, Failures, and Open Questions",
+  "summary": "The honest module. Where the narratives break. Fraud, model collapse, regulatory capture, privacy, the moral arithmetic of energy, and the things we genuinely don't know.",
+  "learningOutcomes": [
+    "Describe the recurring patterns of crypto fraud and why they keep working.",
+    "Explain model collapse and the limits of synthetic data.",
+    "Describe how regulatory capture works in emerging tech and who it benefits.",
+    "Articulate what privacy means in a world of perfect memory.",
+    "Lay out the energy and climate trade-offs honestly without picking a side first.",
+    "List five things in this domain we genuinely do not know."
+  ],
+  "prerequisites": ["02-bitcoin-from-scratch", "04-machines-arrive"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-fraud-and-the-bezzle",
+    "02-model-collapse",
+    "03-regulatory-capture",
+    "04-privacy-and-perfect-memory",
+    "05-energy-and-moral-arithmetic",
+    "06-what-we-dont-know"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

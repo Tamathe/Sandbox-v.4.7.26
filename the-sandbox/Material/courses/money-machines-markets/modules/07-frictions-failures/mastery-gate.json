@@ -1,0 +1,139 @@
+{
+  "id": "mg-07-frictions-failures",
+  "moduleId": "07-frictions-failures",
+  "title": "Module 7 Mastery Gate — Frictions, Failures, and Open Questions",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions. The point is the explanations, not the score. Read every rationale, even on questions you got right. Retake until passing — there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "bezzle",
+      "prompt": "Which of the following best captures Galbraith's concept of the 'bezzle'?",
+      "options": [
+        "The total dollar value of all known fraud in the economy.",
+        "The interval during which embezzled wealth is gone but the victim does not yet know it is gone.",
+        "The fraction of any market that is held by criminal actors.",
+        "The penalty that regulators impose on convicted fraudsters."
+      ],
+      "correct": 1,
+      "rationale": "The bezzle is the *temporary paper surplus* — the gap between what people believe they own and what they actually own, during the window before discovery. It expands in bull markets (nobody checks) and contracts in bear markets (everyone checks at once). This is why crypto blowups cluster: the same falling-tide moment forces everyone to check at the same time."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "proof-of-reserves",
+      "prompt": "An exchange publishes a cryptographic proof-of-reserves attestation showing it holds $10B of customer assets on-chain. What does this NOT tell you?",
+      "options": [
+        "Whether the exchange controls the private keys to those addresses.",
+        "Whether the exchange has $12B in undisclosed liabilities against those assets.",
+        "The current market value of the assets.",
+        "Whether the addresses contain Bitcoin."
+      ],
+      "correct": 1,
+      "rationale": "Proof-of-reserves is proof of *assets*, not proof of solvency. An entity with $10B in verifiable assets and $12B in undisclosed liabilities is insolvent, and the attestation will not catch it. The honest version is proof-of-solvency, which requires also proving liabilities, which is much harder and which almost no exchange has implemented well. When you hear 'proof-of-reserves,' the next question should always be 'and the liabilities?'"
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "model-collapse",
+      "prompt": "Model collapse, in the strict technical sense, refers to:",
+      "options": [
+        "A trained model crashing under heavy inference load.",
+        "A model losing accuracy when the world changes after training.",
+        "Progressive loss of distributional tails when a model is repeatedly trained on its own outputs with no fresh data injection.",
+        "A model developing consciousness and refusing to answer."
+      ],
+      "correct": 2,
+      "rationale": "Model collapse is the degenerative loss of the *tails* of the data distribution when each generation of a model is trained only on outputs from the previous generation. It is a real phenomenon in clean self-loop experiments. It is *not* the same as distribution shift (the world changing), mode collapse in GANs (a different mechanism), or capability plateaus. Frontier labs in 2026 are not running pure self-loops — they curate — so the strict version of collapse is not what's happening, but the quality of curation is doing all the work and we don't have great theory on how much is enough."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "regulatory-capture",
+      "prompt": "Which of these is the strongest indicator that a proposed regulation has been shaped by regulatory capture?",
+      "options": [
+        "The largest firms in the affected industry publicly oppose it.",
+        "The largest firms publicly support it while small competitors say it will put them out of business.",
+        "The regulation was drafted by an independent agency with no industry consultation.",
+        "The regulation is technically complex."
+      ],
+      "correct": 1,
+      "rationale": "The signature of capture is not bribery — it is the alignment of incumbent interests with the rule, often expressed publicly as support framed in safety or consumer-protection language. Compliance is a moat: a 50-page paperwork burden is a rounding error for a $10B firm and an extinction event for a 5-person startup. When the largest firms ask for more regulation, watch what they do, not what they say. (Caveat: 'incumbents support it' is not by itself proof the rule is wrong. It's a flag that asks you to look carefully at who benefits and who pays.)"
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "contextual-integrity",
+      "prompt": "A boss reads a public post their employee made on a fishing forum at 2 AM. Under the 'contextual integrity' view of privacy, why is this a privacy violation even though the post was technically public?",
+      "options": [
+        "Because the boss did not have the employee's permission to read it.",
+        "Because public posts on niche forums are protected by copyright.",
+        "Because information shared in one context flowed into another context with very different norms, violating the implicit norms of the original setting.",
+        "It is not a privacy violation, because the post was public."
+      ],
+      "correct": 2,
+      "rationale": "Helen Nissenbaum's 'contextual integrity' framing says privacy is not just about secrecy or access control. Information has *norms of flow* attached to the context in which it was shared. Things you say on a fishing forum at 2 AM operate under different norms than your LinkedIn. The harm in recontextualization is real even when the original information was public, and the older privacy frameworks (which only saw a violation when a fence was breached) cannot describe it."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "marginal-emissions",
+      "prompt": "Why is 'marginal emissions per kWh' a more honest metric than 'average emissions per kWh' when evaluating the climate impact of a new data center or Bitcoin mine?",
+      "options": [
+        "Because marginal emissions are always lower than average emissions.",
+        "Because new electricity demand is met by whatever generation the grid spins up to meet it, which is typically the dirtiest sources, not the average mix.",
+        "Because average emissions ignore renewables.",
+        "Because marginal emissions are easier to measure."
+      ],
+      "correct": 1,
+      "rationale": "When you add a new gigawatt of demand to a grid, the grid does not run it on the average mix. It runs it on whatever can be ramped up to meet the new load — usually natural gas peakers, sometimes coal. The marginal carbon intensity is therefore much higher than the average. This applies to both Bitcoin and AI. It is one of the most important and least understood points in the energy debate, and it cuts against rhetorical defenses of *both* technologies that use the average grid mix."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "knightian-uncertainty",
+      "prompt": "Which of the following is an example of *Knightian uncertainty* rather than experts-disagree or I-haven't-read-enough?",
+      "options": [
+        "The exact carbon intensity of a particular Texas data center this quarter.",
+        "Whether Bitcoin's transaction-fee market will sustain network security after the block reward asymptotes to zero in the 2100s.",
+        "The current US M2 money supply.",
+        "Whether the Federal Reserve raised rates at its last meeting."
+      ],
+      "correct": 1,
+      "rationale": "Knightian uncertainty applies when the data is genuinely insufficient and any confident prediction is bluffing. Bitcoin's long-run security budget transition has no precedent — there is no comparable network that has gone through it — and the question cannot be resolved by reading more, only by waiting. The other options are knowable facts that can be looked up or calculated. This distinction matters because the mistake people make is treating Knightian questions as if they were experts-disagree questions, where the right move is to pick the side with more credentialed people. That move fails when nobody knows."
+    },
+    {
+      "id": "q8",
+      "type": "short",
+      "concept": "structural-fraud-pattern",
+      "prompt": "Mt. Gox, Celsius, Terra/Luna, and FTX look very different on the surface. Name the three structural features they share that the lesson identifies as the recurring pattern of crypto fraud.",
+      "expectedKeywords": ["custody", "yield", "reflexive"],
+      "rationale": "The three features are: (1) custody you cannot independently verify — you are trusting a promise; (2) a yield that exceeds the risk-free rate by a margin nobody can explain in one sentence — the answer is almost always 'from the next deposit'; (3) a reflexive feedback loop in which the price of the asset and the solvency of the entity holding it are coupled, so a price drop is not bad news, it is the whole story. If you can name a new platform that has none of these three, you have found something interesting. If you cannot, you should treat it as the same scam in different clothes."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "training-corpus-leakage",
+      "prompt": "Why is the 'right to be forgotten' difficult to enforce against a trained large language model, in a way that it is not difficult to enforce against a traditional database?",
+      "options": [
+        "Because language models are protected by free-speech laws that don't apply to databases.",
+        "Because language models are stored on blockchains that cannot be edited.",
+        "Because the information about a person is distributed across hundreds of billions of weights and is not stored as a discrete row that can be located and deleted.",
+        "Because labs refuse to comply with the law."
+      ],
+      "correct": 2,
+      "rationale": "A traditional database has rows. You find the row, you delete the row. A trained model has *weights* — billions of numbers in which information about any given training example is distributed, blended, and partially memorized in ways that are not retrievable as a single object. You cannot reach into the weight matrix and delete 'embarrassing 2009 forum post.' This is not a question of will or law; it is a question of how the artifact works. Existing privacy law was designed for databases and needs reconstruction for an artifact that learns rather than stores."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "epistemic-humility",
+      "prompt": "Pick ONE of the five open questions from Lesson 6. Write 2–3 sentences distinguishing what we DO know about it from what is genuinely uncertain. Resist the urge to give your own prediction — focus on the boundary of knowledge.",
+      "expectedKeywords": ["evidence", "uncertain", "know"],
+      "rationale": "There is no single right answer. A good answer separates what is settled (e.g., 'Bitcoin's block reward halves on a fixed schedule and asymptotes to zero') from what is genuinely open (e.g., 'whether transaction fees alone will fund a sufficient security budget — this has no precedent and cannot be resolved by reading more'). The point of the question is to practice the boundary between *known*, *experts disagree*, and *Knightian*. If you wrote a confident prediction instead of a description of the boundary, re-read the rationale on Q7 and try again. Holding the uncertainty cleanly is harder than picking a side, and it is the actual skill the module is trying to build."
+    }
+  ]
+}

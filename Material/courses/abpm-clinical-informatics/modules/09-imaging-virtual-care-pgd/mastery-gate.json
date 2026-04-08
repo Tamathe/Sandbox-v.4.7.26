@@ -140,6 +140,140 @@
       "prompt": "In three or four sentences, explain why a vendor-neutral archive (VNA) is the architectural answer to PACS vendor lock-in, and name one risk the VNA pattern does NOT solve.",
       "expectedKeywords": ["VNA", "PACS", "lock-in", "DICOM", "viewer", "migration"],
       "rationale": "A complete answer should observe that historically a PACS stored images in a vendor-proprietary database such that replacing the PACS required a multi-month image-migration project, often with metadata loss, which gave the incumbent vendor enormous renewal leverage. A VNA stores DICOM objects in a standards-based archive (DICOM-conformant storage with preserved metadata) that is independent of any one PACS, so the PACS becomes a viewer/workflow layer over a shared archive and can be replaced without moving the underlying images. The risk a VNA does NOT solve is universal viewer parity (different viewers render and tool studies differently), cross-enterprise sharing (which still requires IHE XDS-I or similar), or identity reconciliation across departments (still a PIX-style problem), or governance of non-DICOM imaging acquisition. Credit any one of these as the named unsolved risk."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "telemedicine-modalities",
+      "prompt": "A primary care clinician wants to send a photograph of a suspicious skin lesion, along with a brief history, to a dermatologist who will review and reply within 48 hours. No real-time interaction is required. Which telemedicine modality is described?",
+      "options": [
+        "Synchronous video",
+        "Store-and-forward",
+        "Remote patient monitoring",
+        "E-consult"
+      ],
+      "correct": 1,
+      "rationale": "Asynchronous transmission of clinical information (in this case, a photograph plus history) for later specialist review is the textbook definition of store-and-forward telemedicine. Teledermatology is the canonical example. Synchronous video would require real-time interaction, which the stem explicitly excludes. RPM is the asynchronous collection of physiologic data from home devices over time, not a one-shot specialist consultation. E-consult is clinician-to-clinician (PCP asks a specialist a question without a patient encounter), and while the stem is close to e-consult in feel, the clinical artifact being transmitted (a lesion photo for diagnosis) makes it store-and-forward teledermatology — the patient is the subject of the consultation, not just the topic."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "ryan-haight-act",
+      "prompt": "A psychiatrist wants to start a new patient on a Schedule II stimulant for ADHD via a synchronous video visit, without any prior in-person evaluation. Which federal statute most directly governs whether this is permissible, and what was its historical default rule?",
+      "options": [
+        "HIPAA Privacy Rule; controlled substance prescribing requires written patient authorization",
+        "21st Century Cures Act; controlled substance prescribing is allowed under the information-blocking exceptions",
+        "Ryan Haight Online Pharmacy Consumer Protection Act of 2008; historically required at least one in-person evaluation by a DEA-registered prescriber before any controlled substance could be prescribed via telemedicine, with COVID-era flexibilities and a still-evolving permanent DEA framework",
+        "MACRA; the Quality Payment Program rules govern controlled substance prescribing"
+      ],
+      "correct": 2,
+      "rationale": "Ryan Haight is the named federal statute governing controlled substance prescribing via telemedicine. Its historical default required at least one in-person evaluation by a DEA-registered prescriber before any controlled substance could be telemedically prescribed. The COVID PHE waived that requirement; DEA has since proposed and partially finalized a more permanent framework, with buprenorphine for opioid use disorder treated more permissively. HIPAA governs privacy and security, not controlled substances. The Cures Act governs information blocking and APIs. MACRA governs payment, not prescribing authority. The stem is the canonical Ryan Haight question and the boards reuse it nearly verbatim."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "imlc-licensure-compact",
+      "prompt": "A physician licensed in Pennsylvania wants to provide synchronous video visits to her established patients who have moved to Florida, Arizona, and Colorado. Which of the following is the MOST accurate statement about her licensing requirements?",
+      "options": [
+        "A federal license issued by HHS now permits cross-state telemedicine without additional state licensure.",
+        "She must be licensed in each state where her patients are physically located at the time of the encounter; the Interstate Medical Licensure Compact (IMLC) offers an expedited pathway for physicians who hold a full unrestricted license in their state of principal license to obtain additional state licenses, but does not create a single national license.",
+        "If the patients were originally established in Pennsylvania, her Pennsylvania license follows them to any state.",
+        "The Ryan Haight Act preempts state licensure for telemedicine encounters."
+      ],
+      "correct": 1,
+      "rationale": "U.S. physicians are licensed by state, and to practice medicine via telemedicine you must be licensed in the state where the patient is physically located at the time of the encounter, not the state where the clinician sits. The IMLC is the structural workaround — an expedited multi-state pathway for qualifying physicians — but it is not a single federal license, and it requires the physician to actually obtain the additional state licenses, not merely to be eligible. There is no federal medical license in the U.S. The 'license follows the patient' notion is a common misconception with no legal basis. Ryan Haight governs controlled substances, not licensure preemption."
+    },
+    {
+      "id": "q14",
+      "type": "mcq",
+      "concept": "telehealth-parity",
+      "prompt": "A state legislature passes a law requiring all commercial insurers to cover telehealth services as a benefit if the same service would be covered when delivered in person, but the law is silent on the rate at which telehealth services must be paid. Which type of telehealth parity has been enacted, and what is the practical implication?",
+      "options": [
+        "Payment parity — telehealth must be paid at the in-person rate.",
+        "Coverage parity only — the service must be a covered benefit if delivered via telehealth, but insurers may pay a lower rate, which often determines whether telemedicine programs are financially sustainable.",
+        "Both coverage and payment parity, by federal preemption.",
+        "Neither — silence on rate means the law is unenforceable."
+      ],
+      "correct": 1,
+      "rationale": "Telehealth parity laws come in two distinct forms — coverage parity (the service must be a covered benefit if delivered via telehealth) and payment parity (the rate must equal the in-person rate). A state can mandate one without the other, and the absence of payment parity often determines whether a telemedicine program is financially sustainable: a program may be 'covered' but reimbursed at 60–70% of the in-person rate, which can collapse the business case. The boards reward you for distinguishing the two and for understanding the financial consequence. Federal preemption is not the mechanism here, and a coverage-parity-only law is fully enforceable as a coverage requirement."
+    },
+    {
+      "id": "q15",
+      "type": "mcq",
+      "concept": "originating-site",
+      "prompt": "Before the COVID public health emergency, traditional Medicare generally required a beneficiary to be physically located at a specific qualified site (such as a rural health clinic or a physician office in a Health Professional Shortage Area) to receive Medicare-covered telehealth. What is this requirement called?",
+      "options": [
+        "The Ryan Haight in-person requirement",
+        "The originating site rule",
+        "The IMLC restriction",
+        "The HIPAA covered-entity rule"
+      ],
+      "correct": 1,
+      "rationale": "The originating site rule is the historical Medicare requirement that the beneficiary be physically located at a qualified originating site — typically rural health clinics, hospitals, or physician offices in HPSAs — to receive Medicare-covered telehealth. The rule effectively excluded the patient's home and most urban areas from Medicare telehealth coverage before 2020. The COVID PHE waived the originating site restrictions and allowed the home as an originating site; subsequent legislation has extended those waivers. Ryan Haight is the controlled-substance statute. IMLC is the licensure compact. The HIPAA covered-entity rule is unrelated. The boards expect you to recognize 'originating site' as the named concept."
+    },
+    {
+      "id": "q16",
+      "type": "mcq",
+      "concept": "rpm-cpt-family",
+      "prompt": "A heart failure RPM program is billing CPT 99454 (the monthly device-supply and data-transmission code) and a compliance audit flags a recurring issue: in many months the program billed 99454 for patients who had transmitted readings on only 12 of the 30 days. Which threshold has the program failed to meet, and what is the correct response?",
+      "options": [
+        "There is no minimum-readings threshold for 99454; the audit is incorrect.",
+        "99454 requires at least 16 days of readings in the 30-day period; the program must either re-engage patients before day 20 to reach the threshold or not bill 99454 in months when the threshold is not met.",
+        "99454 requires 30 consecutive days of readings without exception.",
+        "99454 requires only that the device be supplied; transmission days are not counted."
+      ],
+      "correct": 1,
+      "rationale": "CPT 99454 requires at least 16 days of physiologic data transmissions in a 30-day period. It is the most common RPM compliance failure in audits, and well-run programs build a vendor-side report that flags any patient at risk of falling below the threshold by day 20 so the team can re-engage the patient before the billing window closes. Billing 99454 in a month where the patient transmitted 12 days exposes the program to recoupment. The boards do not test the four-digit code itself but they do test the 16-day threshold concept."
+    },
+    {
+      "id": "q17",
+      "type": "mcq",
+      "concept": "rpm-cpt-family",
+      "prompt": "Which of the following is a true statement about CPT 99457?",
+      "options": [
+        "It pays for the first 20 minutes per calendar month of clinical staff time spent reviewing RPM data and managing the patient, and requires at least one interactive (typically synchronous) communication with the patient during the month.",
+        "It pays for the device supply only.",
+        "It is a one-time setup code billed at program enrollment.",
+        "It may be billed without any patient interaction."
+      ],
+      "correct": 0,
+      "rationale": "99457 is the base management-time code for RPM — the first 20 minutes per calendar month of clinical staff time spent reviewing data, managing the patient, and communicating with them — and it requires at least one interactive communication (typically a phone or video call) with the patient during the month. 99458 is the add-on for each additional 20 minutes. 99453 is the one-time setup code, and 99454 is the monthly device-supply code. The interactive-communication requirement is the second most common RPM compliance failure after the 99454 16-day threshold and is something the boards reuse."
+    },
+    {
+      "id": "q18",
+      "type": "mcq",
+      "concept": "pghd-provenance",
+      "prompt": "An EHR ingests patient-generated blood pressure readings from a home Bluetooth cuff and displays them in the same column as clinic-measured readings, with no visible distinction. A clinician acts on a single elevated home reading by escalating an antihypertensive, and the patient subsequently develops symptomatic hypotension. Which structural failure of the program is MOST responsible?",
+      "options": [
+        "The home device was not FDA-cleared.",
+        "The program lacked a provenance and attestation framework — the EHR did not surface the source of each reading or the conditions under which it was taken, so the clinician could not distinguish a calibrated clinic measurement from a single home reading of unknown technique, body position, and time of day.",
+        "FHIR does not support blood pressure observations.",
+        "The clinician should never act on home blood pressure readings under any circumstances."
+      ],
+      "correct": 1,
+      "rationale": "The governing problems of patient-generated health data are provenance (where the data point came from — what device, what conditions, what technique) and attestation (whether the patient took the reading themselves, correctly). FHIR carries device and performer reference fields exactly for this purpose, but the EHR must surface them and the clinician must use them. A program that streams PGHD into the chart with no visible distinction from clinic-measured data is the canonical PGHD failure mode. FDA clearance is not the relevant question (many home cuffs are cleared); FHIR fully supports blood pressure observations; and 'never act on home readings' is wrong — the right answer is to act on them with the right interpretation framework, not to ignore them."
+    },
+    {
+      "id": "q19",
+      "type": "mcq",
+      "concept": "fda-general-wellness",
+      "prompt": "Which of the following products is MOST LIKELY to be regulated by FDA as a medical device rather than treated as a general wellness product?",
+      "options": [
+        "A smartphone step counter that encourages users to walk 10,000 steps per day",
+        "A consumer fitness tracker that estimates calories burned",
+        "A continuous glucose monitor (CGM) intended for use by people with diabetes to inform insulin dosing decisions",
+        "A meditation app that tracks self-reported mood"
+      ],
+      "correct": 2,
+      "rationale": "Under FDA's 2016 General Wellness Policy, products intended for general wellness — promoting healthy lifestyle, weight management, fitness, sleep — that present a low risk to user safety are not regulated as medical devices. The first, second, and fourth options fit that description. A continuous glucose monitor intended to inform insulin dosing crosses both lines: its intended use is to support a clinical decision (insulin dosing) and the risk of inaccurate readings is high (insulin dosing errors can be fatal). CGMs are FDA-cleared (Class II for most current models) precisely because of this. The principle the boards reward is that intended use plus risk together determine regulatory status."
+    },
+    {
+      "id": "q20",
+      "type": "short",
+      "concept": "pghd-definition",
+      "prompt": "In three or four sentences, define patient-generated health data (PGHD) and explain why provenance and attestation — not data volume — are the governing problems for PGHD integration into the EHR. Give one concrete example of a provenance question a clinician would need answered before acting on a PGHD value.",
+      "expectedKeywords": ["PGHD", "patient", "provenance", "attestation", "device", "source"],
+      "rationale": "A complete answer should define PGHD as health-related data created, recorded, or gathered by or from patients (or family/caregivers) to help address a health concern — including RPM device streams, patient-reported outcomes, smartphone activity data, and patient-entered structured information — distinct from clinically-collected data because the chain of custody runs through the patient rather than a clinician. The governing problem is that the same FHIR Observation field can carry a calibrated clinic measurement and a home reading of unknown technique with no built-in distinction; FHIR has device and performer reference fields exactly for this purpose, but the EHR must surface them. A concrete provenance question: 'Was this blood pressure reading taken on a calibrated arm cuff with the patient seated for five minutes, or on a wrist cuff during a phone call standing up?' Credit any plausible provenance question that turns on device, technique, or conditions of measurement. The point being tested is that PGHD is a data trust problem, not a data volume problem."
     }
   ]
 }

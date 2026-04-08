@@ -1,0 +1,31 @@
+{
+  "id": "05-ai-meets-crypto",
+  "slug": "ai-meets-crypto",
+  "order": 5,
+  "title": "Where AI Meets Crypto",
+  "summary": "The most overhyped intersection in tech, with a few genuinely interesting threads. The honest taxonomy, verifiable inference, decentralized compute, agent wallets, provenance, and what fails when probabilistic systems meet deterministic ledgers.",
+  "learningOutcomes": [
+    "Distinguish AI-on-chain, chain-for-AI, and the marketing layer in between.",
+    "Explain what zero-knowledge ML actually proves and what it doesn't.",
+    "Describe decentralized GPU markets and the economics that decide whether they survive.",
+    "Explain what an agent wallet is and what changes when software earns and spends.",
+    "Describe cryptographic provenance and proof-of-human approaches.",
+    "Identify what breaks when you put a probabilistic system on a deterministic ledger."
+  ],
+  "prerequisites": ["02-bitcoin-from-scratch", "03-blockchains-beyond-bitcoin", "04-machines-arrive"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-honest-taxonomy",
+    "02-verifiable-inference",
+    "03-decentralized-compute",
+    "04-agent-wallets",
+    "05-provenance-and-proof-of-human",
+    "06-probabilistic-meets-deterministic"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

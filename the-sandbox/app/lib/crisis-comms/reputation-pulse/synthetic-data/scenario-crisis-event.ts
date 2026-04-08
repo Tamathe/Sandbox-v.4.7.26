@@ -1,0 +1,1037 @@
+/**
+ * Scenario: Chemistry-Physics Building Gas Leak & Evacuation
+ *
+ * 3-day crisis window (Mar 22–24, 2026).
+ * Day 1: Gas leak detected, evacuation ordered, classes cancelled.
+ * Day 2: Investigation, student accounts, parent concern, media coverage.
+ * Day 3: Building cleared, classes resume, maintenance concerns linger.
+ *
+ * 50 posts. Distribution: 12 positive, 25 negative (21 organic + 4 AI), 13 neutral.
+ * Platforms: twitter, reddit, facebook, instagram, tiktok, news-comment.
+ */
+
+import type {
+  SocialPost,
+  SentimentResult,
+  ThemeCluster,
+  AIDetectionResult,
+  CrisisIntelligenceBrief,
+} from '../types'
+
+const DAY_0 = '2026-03-22T09:00:00Z'
+
+function t(hoursAfter: number): string {
+  return new Date(new Date(DAY_0).getTime() + hoursAfter * 3_600_000).toISOString()
+}
+
+let sproutSeq = 800000
+
+function spr(): string {
+  return `spr_${++sproutSeq}`
+}
+
+// ─── POSITIVE POSTS (12) ──────────────────────────────────────────────────
+
+const POSITIVE: SocialPost[] = [
+  {
+    id: 'ce-p-001', sproutId: spr(),
+    authorHandle: '@BBNrescuemom', authorDisplayName: 'Angela Watts',
+    accountAgeDays: 2200, followerCount: 412, followingCount: 310, totalPostCount: 3100,
+    hasProfilePhoto: true, bioKeywords: ['UK alum', 'mom of 2', 'Lexington'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Massive shoutout to UKPD and LFD for the fastest evacuation I\'ve ever seen. My daughter was in Chem-Phys when the alarm hit and she was out in under 4 minutes. THANK YOU 🙏🏼💙 #BBN',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(3), isReply: false, replyToId: null, hashtags: ['#BBN'],
+    likes: 892, shares: 234, replies: 67, quoteShares: 45,
+  },
+  {
+    id: 'ce-p-002', sproutId: spr(),
+    authorHandle: '@UKFireSafety', authorDisplayName: 'UK Environmental Health & Safety',
+    accountAgeDays: 4100, followerCount: 5600, followingCount: 320, totalPostCount: 2800,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'safety', 'campus'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'All occupants of the Chemistry-Physics Building have been safely evacuated. Lexington Fire Department is on scene. No injuries reported. Please avoid the S. Limestone corridor until further notice.',
+    mediaType: 'image', mediaDescription: 'Photo of fire trucks outside Chem-Phys Building',
+    timestamp: t(1.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1456, shares: 890, replies: 112, quoteShares: 67,
+  },
+  {
+    id: 'ce-p-003', sproutId: spr(),
+    authorHandle: '@WildcatChemTA', authorDisplayName: 'Jordan Ellis',
+    accountAgeDays: 980, followerCount: 189, followingCount: 267, totalPostCount: 1240,
+    hasProfilePhoto: true, bioKeywords: ['chemistry TA', 'UK grad student', 'organic chem'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Prof. Nakamura had us doing orgo review on the lawn outside Funkhouser within 20 minutes of the evacuation lol. That woman does NOT let a gas leak stop learning 😂👏 #UKY',
+    mediaType: 'image', mediaDescription: 'Students sitting in a circle on grass with notebooks',
+    timestamp: t(4), isReply: false, replyToId: null, hashtags: ['#UKY'],
+    likes: 567, shares: 134, replies: 45, quoteShares: 23,
+  },
+  {
+    id: 'ce-p-004', sproutId: spr(),
+    authorHandle: '@LexFireDept', authorDisplayName: 'Lexington Fire Department',
+    accountAgeDays: 5200, followerCount: 34000, followingCount: 890, totalPostCount: 12000,
+    hasProfilePhoto: true, bioKeywords: ['LFD', 'Lexington', 'fire safety'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'LFD responded to a natural gas leak at the UK Chemistry-Physics Building at 10:14 AM. Building fully evacuated. HazMat team on scene. No injuries. Investigation underway with Columbia Gas. #LFD',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(2), isReply: false, replyToId: null, hashtags: ['#LFD'],
+    likes: 2100, shares: 1100, replies: 89, quoteShares: 56,
+  },
+  {
+    id: 'ce-p-005', sproutId: spr(),
+    authorHandle: '@UKStudentGov', authorDisplayName: 'UK Student Government',
+    accountAgeDays: 3800, followerCount: 8900, followingCount: 450, totalPostCount: 5600,
+    hasProfilePhoto: true, bioKeywords: ['SGA', 'UK', 'student voice'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'SGA is working with the Dean of Students to make sure anyone displaced by the Chem-Phys closure has study space. Whitehall 200, Funkhouser 101, and Jacobs Science 204 are open late tonight. We got you 💙',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(8), isReply: false, replyToId: null, hashtags: [],
+    likes: 678, shares: 345, replies: 56, quoteShares: 12,
+  },
+  {
+    id: 'ce-p-006', sproutId: spr(),
+    authorHandle: '@PreMedPanic', authorDisplayName: 'Diya Patel',
+    accountAgeDays: 1100, followerCount: 198, followingCount: 267, totalPostCount: 1560,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'pre-med', 'bio major'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'ngl the gas leak was scary but the way everyone just... helped each other? people sharing chargers, profs moving lectures to the lawn, Ovid\'s giving free coffee to evacuees. this is why i love UK 🥹',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(6), isReply: false, replyToId: null, hashtags: [],
+    likes: 1234, shares: 312, replies: 78, quoteShares: 45,
+  },
+  {
+    id: 'ce-p-007', sproutId: spr(),
+    authorHandle: 'u/chem_major_2027', authorDisplayName: 'chem_major_2027',
+    accountAgeDays: 890, followerCount: 0, followingCount: 0, totalPostCount: 234,
+    hasProfilePhoto: false, bioKeywords: [], platformVerified: false,
+    locationHint: null,
+    platform: 'reddit',
+    text: 'Gotta give credit where it\'s due — UKPD had the building cleared in record time. The fire drill practice actually paid off. Whoever designed that evacuation plan deserves a raise.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(5), isReply: false, replyToId: null, hashtags: [],
+    likes: 234, shares: 0, replies: 67, quoteShares: 0,
+  },
+  {
+    id: 'ce-p-008', sproutId: spr(),
+    authorHandle: '@DrThomasUK', authorDisplayName: 'Dr. James Thomas',
+    accountAgeDays: 3200, followerCount: 1890, followingCount: 450, totalPostCount: 2100,
+    hasProfilePhoto: true, bioKeywords: ['Physics professor', 'UK', 'condensed matter'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Thank you to everyone who reached out. All my research materials are secure. The emergency response team was exceptional — professional, calm, and thorough. Proud of our campus safety protocols.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(10), isReply: false, replyToId: null, hashtags: [],
+    likes: 345, shares: 67, replies: 23, quoteShares: 8,
+  },
+  {
+    id: 'ce-p-009', sproutId: spr(),
+    authorHandle: '@WildcatWellness', authorDisplayName: 'UK Counseling Center',
+    accountAgeDays: 4500, followerCount: 6700, followingCount: 340, totalPostCount: 3400,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'mental health', 'counseling'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'facebook',
+    text: 'If yesterday\'s evacuation left you feeling anxious or shaken, that\'s completely normal. Walk-in hours are available today 9am-5pm at the Counseling Center (Frazee Hall). You don\'t need an appointment. We\'re here. 💙',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(25), isReply: false, replyToId: null, hashtags: [],
+    likes: 456, shares: 234, replies: 34, quoteShares: 0,
+  },
+  {
+    id: 'ce-p-010', sproutId: spr(),
+    authorHandle: '@tiktok_wildcats', authorDisplayName: 'UK Campus Life',
+    accountAgeDays: 400, followerCount: 18000, followingCount: 120, totalPostCount: 340,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'campus life', 'TikTok'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'tiktok',
+    text: 'the way the entire chem-phys building evacuated in 3 minutes flat is giving main character energy 😤💪 UK emergency team said "not today" #uky #campuslife #gasleak #safetyfirst',
+    mediaType: 'video', mediaDescription: 'TikTok showing students streaming out of building with overlaid timer',
+    timestamp: t(7), isReply: false, replyToId: null, hashtags: ['#uky', '#campuslife', '#gasleak', '#safetyfirst'],
+    likes: 4500, shares: 890, replies: 234, quoteShares: 0,
+  },
+  {
+    id: 'ce-p-011', sproutId: spr(),
+    authorHandle: '@UKProvost', authorDisplayName: 'UK Provost Office',
+    accountAgeDays: 4800, followerCount: 12000, followingCount: 560, totalPostCount: 4500,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'Provost', 'academic affairs'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Chemistry-Physics Building has been cleared by Lexington Fire and Columbia Gas. Classes resume tomorrow (Mar 24) at 8 AM. Full update: uky.edu/cpb-update. Thank you for your patience and cooperation.',
+    mediaType: 'link', mediaDescription: 'Link to UK official update page',
+    timestamp: t(48), isReply: false, replyToId: null, hashtags: [],
+    likes: 2300, shares: 1200, replies: 156, quoteShares: 89,
+  },
+  {
+    id: 'ce-p-012', sproutId: spr(),
+    authorHandle: '@BlueGrassBarista', authorDisplayName: 'Jess Morales',
+    accountAgeDays: 780, followerCount: 156, followingCount: 289, totalPostCount: 920,
+    hasProfilePhoto: true, bioKeywords: ['UK sophomore', 'barista', 'art history'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'instagram',
+    text: 'back in chem-phys for the first time since the leak and honestly? grateful for everyone who kept us safe. also grateful my lab samples survived 😅 the community rally was the best part of a bad day 💙',
+    mediaType: 'image', mediaDescription: 'Photo of Chem-Phys Building entrance with students walking in',
+    timestamp: t(52), isReply: false, replyToId: null, hashtags: [],
+    likes: 345, shares: 23, replies: 18, quoteShares: 0,
+  },
+]
+
+// ─── NEGATIVE POSTS — ORGANIC (21) ────────────────────────────────────────
+
+const NEGATIVE_ORGANIC: SocialPost[] = [
+  {
+    id: 'ce-n-001', sproutId: spr(),
+    authorHandle: '@biochem_burnout', authorDisplayName: 'Taylor Reeves',
+    accountAgeDays: 1340, followerCount: 267, followingCount: 312, totalPostCount: 1890,
+    hasProfilePhoto: true, bioKeywords: ['UK junior', 'biochem', 'tired'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'A GAS LEAK?? In a building that\'s been "under review" for maintenance issues since LAST YEAR?? Chem-Phys has had busted fume hoods, flickering lights, and now THIS. What does it take for UK to actually fix things?? 😡',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(2.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1456, shares: 567, replies: 189, quoteShares: 78,
+  },
+  {
+    id: 'ce-n-002', sproutId: spr(),
+    authorHandle: '@SarahGrad2026', authorDisplayName: 'Sarah Mitchell',
+    accountAgeDays: 1600, followerCount: 210, followingCount: 345, totalPostCount: 1200,
+    hasProfilePhoto: true, bioKeywords: ['UK senior', 'nursing', 'first gen'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'I was IN the building when the gas smell hit. 3rd floor, no announcement for almost 5 minutes. I pulled the fire alarm myself because nobody told us what was happening. That delay could have killed someone.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(3.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 2340, shares: 890, replies: 345, quoteShares: 123,
+  },
+  {
+    id: 'ce-n-003', sproutId: spr(),
+    authorHandle: 'u/uk_physics_grad', authorDisplayName: 'uk_physics_grad',
+    accountAgeDays: 1200, followerCount: 0, followingCount: 0, totalPostCount: 456,
+    hasProfilePhoto: false, bioKeywords: [], platformVerified: false,
+    locationHint: null,
+    platform: 'reddit',
+    text: 'I\'ve been reporting the gas line smell in the Chem-Phys basement since January. THREE work orders. All closed as "resolved" without anyone actually coming to check. I have the emails. This was preventable.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(5.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 3456, shares: 0, replies: 567, quoteShares: 0,
+  },
+  {
+    id: 'ce-n-004', sproutId: spr(),
+    authorHandle: '@AngryWildcatDad', authorDisplayName: 'Robert Chen',
+    accountAgeDays: 2800, followerCount: 345, followingCount: 456, totalPostCount: 1890,
+    hasProfilePhoto: true, bioKeywords: ['parent', 'UK dad', 'paying tuition'], platformVerified: false,
+    locationHint: 'Louisville, KY',
+    platform: 'twitter',
+    text: 'My kid pays $30k/year to attend UK and you can\'t maintain a GAS LINE in a 60-year-old building? Where is the tuition money going?? I want answers from @UKYPresident. This is negligence.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(8.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1890, shares: 456, replies: 234, quoteShares: 67,
+  },
+  {
+    id: 'ce-n-005', sproutId: spr(),
+    authorHandle: '@ChemPhysAlum98', authorDisplayName: 'Dr. Patricia Owens',
+    accountAgeDays: 4500, followerCount: 890, followingCount: 345, totalPostCount: 2100,
+    hasProfilePhoto: true, bioKeywords: ['UK PhD 98', 'chemist', 'industry'], platformVerified: false,
+    locationHint: 'Cincinnati, OH',
+    platform: 'twitter',
+    text: 'That building had maintenance issues when I was a grad student in the 90s. Almost 30 YEARS and they still haven\'t fixed the infrastructure. UK keeps building shiny new facilities while the science buildings crumble. Shameful.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(12), isReply: false, replyToId: null, hashtags: [],
+    likes: 1234, shares: 345, replies: 123, quoteShares: 56,
+  },
+  {
+    id: 'ce-n-006', sproutId: spr(),
+    authorHandle: '@LexSafeStreets', authorDisplayName: 'Lex Safe Streets Coalition',
+    accountAgeDays: 1800, followerCount: 3400, followingCount: 567, totalPostCount: 2300,
+    hasProfilePhoto: true, bioKeywords: ['safety', 'Lexington', 'advocacy'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'The Chem-Phys gas leak is part of a pattern. @UKYPresident: UK has 14 buildings with deferred maintenance backlogs exceeding $5M each. When will the Board prioritize infrastructure over new construction? Data: bit.ly/uk-deferred',
+    mediaType: 'link', mediaDescription: 'Link to deferred maintenance analysis',
+    timestamp: t(15), isReply: false, replyToId: null, hashtags: [],
+    likes: 890, shares: 456, replies: 123, quoteShares: 89,
+  },
+  {
+    id: 'ce-n-007', sproutId: spr(),
+    authorHandle: '@tiana_the_student', authorDisplayName: 'Tiana The',
+    accountAgeDays: 900, followerCount: 156, followingCount: 289, totalPostCount: 780,
+    hasProfilePhoto: true, bioKeywords: ['UK 1L', 'law', 'first gen'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'my roommate has asthma and was in chem-phys lab when the leak started. she couldn\'t find her inhaler and was hyperventilating. someone had to carry her out. why is there no emergency medical station in that building??',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(4.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 2100, shares: 678, replies: 234, quoteShares: 89,
+  },
+  {
+    id: 'ce-n-008', sproutId: spr(),
+    authorHandle: '@UKGradWorkers', authorDisplayName: 'UK Graduate Workers United',
+    accountAgeDays: 890, followerCount: 2300, followingCount: 456, totalPostCount: 1200,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'grad workers', 'union', 'labor'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Grad researchers in Chem-Phys were told to "secure your experiments and evacuate." That\'s it. No guidance on hazardous materials protocol. No check-in system. Our members had to figure it out themselves. This is a workplace safety failure.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(7), isReply: false, replyToId: null, hashtags: [],
+    likes: 1567, shares: 456, replies: 189, quoteShares: 67,
+  },
+  {
+    id: 'ce-n-009', sproutId: spr(),
+    authorHandle: '@WKYTnews', authorDisplayName: 'WKYT News',
+    accountAgeDays: 5200, followerCount: 89000, followingCount: 1200, totalPostCount: 45000,
+    hasProfilePhoto: true, bioKeywords: ['news', 'Kentucky', 'WKYT'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'BREAKING: Sources tell WKYT the gas leak at UK\'s Chemistry-Physics Building originated from a corroded pipe that was flagged in a 2024 facilities audit but never repaired. Full story at 6.',
+    mediaType: 'link', mediaDescription: 'Link to WKYT article',
+    timestamp: t(9), isReply: false, replyToId: null, hashtags: [],
+    likes: 3400, shares: 1890, replies: 456, quoteShares: 234,
+  },
+  {
+    id: 'ce-n-010', sproutId: spr(),
+    authorHandle: '@CampusSafetyWatch', authorDisplayName: 'Campus Safety Watch KY',
+    accountAgeDays: 1400, followerCount: 1200, followingCount: 678, totalPostCount: 890,
+    hasProfilePhoto: true, bioKeywords: ['campus safety', 'Kentucky', 'advocacy'], platformVerified: false,
+    locationHint: 'Frankfort, KY',
+    platform: 'twitter',
+    text: 'UK\'s Chemistry-Physics Building was built in 1961. The gas distribution system has never been fully replaced. Today\'s leak was a matter of WHEN, not IF. We\'ve been warning about aging science infrastructure across KY campuses for years.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(11), isReply: false, replyToId: null, hashtags: [],
+    likes: 890, shares: 345, replies: 123, quoteShares: 56,
+  },
+  {
+    id: 'ce-n-011', sproutId: spr(),
+    authorHandle: '@frustrated_wildcat', authorDisplayName: 'Marcus J',
+    accountAgeDays: 1456, followerCount: 387, followingCount: 290, totalPostCount: 2840,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'BBN', 'class of 2027'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'so we just gonna pretend it\'s fine that I have an exam TOMORROW in a building that was full of gas TODAY?? my professor hasn\'t said a word about rescheduling. some of us have anxiety disorders and can\'t just walk back in there',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(10), isReply: false, replyToId: null, hashtags: [],
+    likes: 1890, shares: 567, replies: 234, quoteShares: 45,
+  },
+  {
+    id: 'ce-n-012', sproutId: spr(),
+    authorHandle: '@KYKernelNews', authorDisplayName: 'Kentucky Kernel',
+    accountAgeDays: 6000, followerCount: 15000, followingCount: 890, totalPostCount: 18000,
+    hasProfilePhoto: true, bioKeywords: ['UK student newspaper', 'Kentucky Kernel'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'INVESTIGATION: The Kernel has obtained maintenance records showing 47 unresolved work orders for the Chemistry-Physics Building in the past 18 months — including 3 related to gas line concerns. Full report: kykernel.com/chem-phys',
+    mediaType: 'link', mediaDescription: 'Link to Kentucky Kernel investigation',
+    timestamp: t(28), isReply: false, replyToId: null, hashtags: [],
+    likes: 4500, shares: 2100, replies: 678, quoteShares: 345,
+  },
+  {
+    id: 'ce-n-013', sproutId: spr(),
+    authorHandle: '@concerned_parent_ky', authorDisplayName: 'Linda Beaumont',
+    accountAgeDays: 3200, followerCount: 234, followingCount: 345, totalPostCount: 890,
+    hasProfilePhoto: true, bioKeywords: ['mom', 'Kentucky', 'UK parent'], platformVerified: false,
+    locationHint: 'Bowling Green, KY',
+    platform: 'facebook',
+    text: 'I just got off the phone with my son who was evacuated from the Chemistry-Physics Building. He said students were confused, the alarm took too long, and nobody knew where to go. This is unacceptable. As a parent paying out-of-state tuition I expect BETTER from the University of Kentucky.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(6.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 567, shares: 123, replies: 89, quoteShares: 0,
+  },
+  {
+    id: 'ce-n-014', sproutId: spr(),
+    authorHandle: 'u/ukfaculty_anon', authorDisplayName: 'ukfaculty_anon',
+    accountAgeDays: 2100, followerCount: 0, followingCount: 0, totalPostCount: 345,
+    hasProfilePhoto: false, bioKeywords: [], platformVerified: false,
+    locationHint: null,
+    platform: 'reddit',
+    text: 'Faculty here. I don\'t want to go on the record but the truth is we\'ve been complaining about Chem-Phys to Facilities for YEARS. The HVAC is from the Carter administration. The fume hoods fail monthly. The gas lines were on the deferred maintenance list in 2019. Admin keeps saying "next fiscal year." Well, here we are.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(14), isReply: false, replyToId: null, hashtags: [],
+    likes: 5600, shares: 0, replies: 890, quoteShares: 0,
+  },
+  {
+    id: 'ce-n-015', sproutId: spr(),
+    authorHandle: '@lex_herald_opinion', authorDisplayName: 'Herald-Leader Opinion',
+    accountAgeDays: 5200, followerCount: 45000, followingCount: 890, totalPostCount: 23000,
+    hasProfilePhoto: true, bioKeywords: ['opinion', 'editorial', 'Lexington'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'EDITORIAL: The gas leak at UK\'s Chemistry-Physics Building was predictable and predicted. Deferred maintenance isn\'t a budget strategy — it\'s a gamble with student safety. Read our editorial: herald-leader.com/opinion/uk-maintenance',
+    mediaType: 'link', mediaDescription: 'Link to Herald-Leader editorial',
+    timestamp: t(30), isReply: false, replyToId: null, hashtags: [],
+    likes: 2100, shares: 890, replies: 345, quoteShares: 123,
+  },
+  {
+    id: 'ce-n-016', sproutId: spr(),
+    authorHandle: '@orgo_nightmare', authorDisplayName: 'Aiden Park',
+    accountAgeDays: 670, followerCount: 89, followingCount: 178, totalPostCount: 456,
+    hasProfilePhoto: true, bioKeywords: ['UK sophomore', 'pre-med'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'love that they cancelled chem lab today but my orgo exam is still happening tomorrow in THE SAME BUILDING. bro WHAT. i\'m not going back in there until someone shows me it\'s actually safe not just "cleared" 🙄',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(11.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1234, shares: 345, replies: 189, quoteShares: 34,
+  },
+  {
+    id: 'ce-n-017', sproutId: spr(),
+    authorHandle: '@DisabledCatsUK', authorDisplayName: 'UK Disability Advocacy',
+    accountAgeDays: 1100, followerCount: 890, followingCount: 345, totalPostCount: 670,
+    hasProfilePhoto: true, bioKeywords: ['disability', 'accessibility', 'UK'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'During today\'s evacuation a wheelchair user was stuck on the 2nd floor of Chem-Phys for 8 minutes because the evacuation chair was LOCKED in a closet nobody had the key to. This is an ADA violation. Period. @ABORUKY',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(5), isReply: false, replyToId: null, hashtags: [],
+    likes: 3200, shares: 1456, replies: 456, quoteShares: 189,
+  },
+  {
+    id: 'ce-n-018', sproutId: spr(),
+    authorHandle: '@BBNforever_21', authorDisplayName: 'Marcus Johnson',
+    accountAgeDays: 1456, followerCount: 387, followingCount: 290, totalPostCount: 2840,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'BBN', 'class of 2027'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Day 2 and UK still hasn\'t told us what caused the leak or when Chem-Phys reopens. The "we are investigating" email is giving nothing. Students deserve transparency not PR speak. #UKY',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(26), isReply: false, replyToId: null, hashtags: ['#UKY'],
+    likes: 890, shares: 234, replies: 123, quoteShares: 34,
+  },
+  {
+    id: 'ce-n-019', sproutId: spr(),
+    authorHandle: '@FunkhouseProf', authorDisplayName: 'Dr. Anita Castillo',
+    accountAgeDays: 2800, followerCount: 567, followingCount: 234, totalPostCount: 890,
+    hasProfilePhoto: true, bioKeywords: ['geology', 'UK professor', 'geochemistry'], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'As a faculty member in the science corridor I need to say this publicly: the Chemistry-Physics Building is not the only aging science facility at risk. Bowman Hall, Kastle Hall, and parts of the Mining & Minerals Building have similar deferred maintenance backlogs. This is systemic.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(32), isReply: false, replyToId: null, hashtags: [],
+    likes: 1890, shares: 678, replies: 234, quoteShares: 89,
+  },
+  {
+    id: 'ce-n-020', sproutId: spr(),
+    authorHandle: '@wkyt_comments', authorDisplayName: 'WKYT Comment Section',
+    accountAgeDays: 4000, followerCount: 0, followingCount: 0, totalPostCount: 12000,
+    hasProfilePhoto: false, bioKeywords: [], platformVerified: false,
+    locationHint: 'Lexington, KY',
+    platform: 'news-comment',
+    text: 'I work in facilities management (not at UK) and I can tell you a corroded gas pipe doesn\'t happen overnight. Someone signed off on kicking this down the road and that person should be held accountable. Buildings don\'t just "develop" gas leaks — maintenance failures CAUSE them.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(16), isReply: false, replyToId: null, hashtags: [],
+    likes: 234, shares: 0, replies: 45, quoteShares: 0,
+  },
+  {
+    id: 'ce-n-021', sproutId: spr(),
+    authorHandle: '@UKSenateChair', authorDisplayName: 'UK University Senate',
+    accountAgeDays: 3800, followerCount: 2100, followingCount: 234, totalPostCount: 1200,
+    hasProfilePhoto: true, bioKeywords: ['University Senate', 'UK', 'faculty governance'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'The University Senate has requested a full briefing from Facilities Management on the Chem-Phys gas leak and the status of all deferred maintenance across science facilities. Faculty governance takes infrastructure safety seriously.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(34), isReply: false, replyToId: null, hashtags: [],
+    likes: 890, shares: 345, replies: 89, quoteShares: 45,
+  },
+]
+
+// ─── NEGATIVE POSTS — AI-SOUNDING (4) ────────────────────────────────────
+
+const NEGATIVE_AI: SocialPost[] = [
+  {
+    id: 'ce-ai-001', sproutId: spr(),
+    authorHandle: '@InfraWatch_KY', authorDisplayName: 'Kentucky Infrastructure Watch',
+    accountAgeDays: 12, followerCount: 23, followingCount: 156, totalPostCount: 8,
+    hasProfilePhoto: true, bioKeywords: ['infrastructure', 'accountability', 'Kentucky'], platformVerified: false,
+    locationHint: null,
+    platform: 'twitter',
+    text: 'The recent gas leak incident at the University of Kentucky\'s Chemistry-Physics Building raises deeply concerning questions about the institution\'s commitment to infrastructure maintenance. It is imperative that university administration conduct a comprehensive review of all aging facilities and implement a transparent, evidence-based maintenance prioritization framework.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(13), isReply: false, replyToId: null, hashtags: [],
+    likes: 12, shares: 3, replies: 1, quoteShares: 0,
+  },
+  {
+    id: 'ce-ai-002', sproutId: spr(),
+    authorHandle: '@SafeCampusNow', authorDisplayName: 'Safe Campus Initiative',
+    accountAgeDays: 8, followerCount: 15, followingCount: 200, totalPostCount: 5,
+    hasProfilePhoto: true, bioKeywords: ['campus safety', 'higher education', 'reform'], platformVerified: false,
+    locationHint: null,
+    platform: 'twitter',
+    text: 'While the University of Kentucky has expressed concern regarding the Chemistry-Physics Building gas leak, it is important to note that this incident reflects a broader pattern of deferred maintenance across American higher education institutions. Furthermore, the allocation of resources toward new construction projects while existing facilities deteriorate raises serious questions about institutional priorities and fiduciary responsibility.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(18), isReply: false, replyToId: null, hashtags: [],
+    likes: 8, shares: 2, replies: 0, quoteShares: 0,
+  },
+  {
+    id: 'ce-ai-003', sproutId: spr(),
+    authorHandle: '@HigherEdReform', authorDisplayName: 'Higher Education Reform Network',
+    accountAgeDays: 15, followerCount: 34, followingCount: 189, totalPostCount: 11,
+    hasProfilePhoto: true, bioKeywords: ['higher education', 'reform', 'accountability'], platformVerified: false,
+    locationHint: null,
+    platform: 'twitter',
+    text: 'The gas leak at the University of Kentucky serves as a cautionary example of systemic underinvestment in critical infrastructure. Research indicates that deferred maintenance across higher education exceeds $112 billion nationally. Institutions must adopt proactive, data-driven approaches to facility management rather than reactive measures that place students and faculty at unnecessary risk.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(20), isReply: false, replyToId: null, hashtags: [],
+    likes: 6, shares: 1, replies: 0, quoteShares: 0,
+  },
+  {
+    id: 'ce-ai-004', sproutId: spr(),
+    authorHandle: '@CampusAccountNow', authorDisplayName: 'Campus Accountability Project',
+    accountAgeDays: 10, followerCount: 19, followingCount: 210, totalPostCount: 7,
+    hasProfilePhoto: true, bioKeywords: ['accountability', 'campus safety', 'transparency'], platformVerified: false,
+    locationHint: null,
+    platform: 'twitter',
+    text: 'It is deeply troubling that the University of Kentucky\'s Chemistry-Physics Building, which houses hundreds of students and significant research operations daily, experienced a preventable gas leak due to infrastructure negligence. Stakeholders deserve a comprehensive accounting of maintenance expenditures and a clear commitment to prioritizing the safety and well-being of all campus community members.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(22), isReply: false, replyToId: null, hashtags: [],
+    likes: 9, shares: 2, replies: 1, quoteShares: 0,
+  },
+]
+
+// ─── NEUTRAL POSTS (13) ──────────────────────────────────────────────────
+
+const NEUTRAL: SocialPost[] = [
+  {
+    id: 'ce-u-001', sproutId: spr(),
+    authorHandle: '@UKYAlerts', authorDisplayName: 'UK Emergency Alerts',
+    accountAgeDays: 5000, followerCount: 45000, followingCount: 12, totalPostCount: 3400,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'emergency', 'alerts'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'UK ALERT: Gas leak reported at Chemistry-Physics Building (400 Rose St). Building is being evacuated. Avoid the area. Updates to follow.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(1), isReply: false, replyToId: null, hashtags: [],
+    likes: 3400, shares: 2100, replies: 234, quoteShares: 123,
+  },
+  {
+    id: 'ce-u-002', sproutId: spr(),
+    authorHandle: '@UKYAlerts', authorDisplayName: 'UK Emergency Alerts',
+    accountAgeDays: 5000, followerCount: 45000, followingCount: 12, totalPostCount: 3400,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'emergency', 'alerts'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'UPDATE: All Chemistry-Physics Building classes cancelled for remainder of Mar 22. Labs secured. Affected students check email for course-specific updates from instructors.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(3), isReply: false, replyToId: null, hashtags: [],
+    likes: 2100, shares: 1200, replies: 189, quoteShares: 67,
+  },
+  {
+    id: 'ce-u-003', sproutId: spr(),
+    authorHandle: '@UKRegistrar', authorDisplayName: 'UK Registrar',
+    accountAgeDays: 4200, followerCount: 12000, followingCount: 340, totalPostCount: 5600,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'registrar', 'academic records'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'All exams scheduled in the Chemistry-Physics Building for Mar 22-23 have been moved to Whitehall Classroom Building and Jacobs Science Building. Room assignments: uky.edu/registrar/chem-phys-relocations',
+    mediaType: 'link', mediaDescription: 'Link to relocation schedule',
+    timestamp: t(4.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1200, shares: 890, replies: 123, quoteShares: 34,
+  },
+  {
+    id: 'ce-u-004', sproutId: spr(),
+    authorHandle: '@WLEX18', authorDisplayName: 'LEX 18 News',
+    accountAgeDays: 5200, followerCount: 67000, followingCount: 1100, totalPostCount: 34000,
+    hasProfilePhoto: true, bioKeywords: ['news', 'Lexington', 'Kentucky'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'DEVELOPING: Natural gas leak at University of Kentucky\'s Chemistry-Physics Building prompts evacuation of approximately 300 students and staff. No injuries reported. Columbia Gas on scene. Updates at lex18.com.',
+    mediaType: 'link', mediaDescription: 'Link to LEX 18 live coverage',
+    timestamp: t(2.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 1456, shares: 567, replies: 89, quoteShares: 45,
+  },
+  {
+    id: 'ce-u-005', sproutId: spr(),
+    authorHandle: '@ColumbiagasKY', authorDisplayName: 'Columbia Gas of Kentucky',
+    accountAgeDays: 4800, followerCount: 8900, followingCount: 234, totalPostCount: 2100,
+    hasProfilePhoto: true, bioKeywords: ['Columbia Gas', 'Kentucky', 'natural gas'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Columbia Gas crews are on site at the University of Kentucky Chemistry-Physics Building working with university facilities and Lexington Fire Department. The area has been secured and we are conducting a thorough assessment. We will share updates as available.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(3.5), isReply: false, replyToId: null, hashtags: [],
+    likes: 456, shares: 189, replies: 45, quoteShares: 12,
+  },
+  {
+    id: 'ce-u-006', sproutId: spr(),
+    authorHandle: '@UKYParking', authorDisplayName: 'UK Parking & Transportation',
+    accountAgeDays: 3800, followerCount: 8900, followingCount: 120, totalPostCount: 4500,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'parking', 'transportation'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Due to the Chemistry-Physics Building closure, S. Limestone between Rose St and Huguelet Dr is temporarily closed to traffic. Use Hilltop Ave or Columbia Ave as alternates. Bus routes 13 & 14 detoured.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(2), isReply: false, replyToId: null, hashtags: [],
+    likes: 890, shares: 567, replies: 89, quoteShares: 12,
+  },
+  {
+    id: 'ce-u-007', sproutId: spr(),
+    authorHandle: '@LexHeraldLeader', authorDisplayName: 'Lexington Herald-Leader',
+    accountAgeDays: 5200, followerCount: 89000, followingCount: 1200, totalPostCount: 45000,
+    hasProfilePhoto: true, bioKeywords: ['news', 'Lexington', 'Kentucky'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Gas leak at UK\'s Chemistry-Physics Building forces evacuation of 300. Columbia Gas investigating corroded pipe. No injuries. Building remains closed pending inspection. Full coverage: herald-leader.com/uk-gas-leak',
+    mediaType: 'link', mediaDescription: 'Link to Herald-Leader coverage',
+    timestamp: t(6), isReply: false, replyToId: null, hashtags: [],
+    likes: 1890, shares: 890, replies: 123, quoteShares: 67,
+  },
+  {
+    id: 'ce-u-008', sproutId: spr(),
+    authorHandle: '@UKChemDept', authorDisplayName: 'UK Department of Chemistry',
+    accountAgeDays: 3600, followerCount: 4500, followingCount: 234, totalPostCount: 2100,
+    hasProfilePhoto: true, bioKeywords: ['chemistry', 'UK', 'department'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Chemistry Department update: All Monday labs relocated to Jacobs Science Building rooms 101-104. Tuesday lecture schedule TBD pending building clearance. Check your email for instructor-specific updates.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(24), isReply: false, replyToId: null, hashtags: [],
+    likes: 567, shares: 345, replies: 89, quoteShares: 12,
+  },
+  {
+    id: 'ce-u-009', sproutId: spr(),
+    authorHandle: 'u/lexington_local', authorDisplayName: 'lexington_local',
+    accountAgeDays: 2800, followerCount: 0, followingCount: 0, totalPostCount: 1200,
+    hasProfilePhoto: false, bioKeywords: [], platformVerified: false,
+    locationHint: null,
+    platform: 'reddit',
+    text: 'For anyone wondering: the Chem-Phys Building is the big rectangular one on the south side of campus near Funkhouser and the Rose St parking structure. If you live on Rose Street you might smell gas — that\'s normal for an active investigation per LFD.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(4), isReply: false, replyToId: null, hashtags: [],
+    likes: 123, shares: 0, replies: 34, quoteShares: 0,
+  },
+  {
+    id: 'ce-u-010', sproutId: spr(),
+    authorHandle: '@UKPhysicsDept', authorDisplayName: 'UK Department of Physics',
+    accountAgeDays: 3200, followerCount: 3400, followingCount: 189, totalPostCount: 1800,
+    hasProfilePhoto: true, bioKeywords: ['physics', 'UK', 'department'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Physics Department: All Mar 22-23 classes moved to Whitehall 233 and 235. Office hours relocated to Funkhouser 213. Research labs remain closed until building clearance. Your advisors have been notified.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(8), isReply: false, replyToId: null, hashtags: [],
+    likes: 456, shares: 234, replies: 56, quoteShares: 8,
+  },
+  {
+    id: 'ce-u-011', sproutId: spr(),
+    authorHandle: '@NPR_KY', authorDisplayName: 'WUKY Public Radio',
+    accountAgeDays: 5000, followerCount: 23000, followingCount: 890, totalPostCount: 18000,
+    hasProfilePhoto: true, bioKeywords: ['NPR', 'Kentucky', 'public radio'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'UK spokesperson confirms the gas leak at the Chemistry-Physics Building originated from infrastructure in the building\'s basement. Columbia Gas has isolated the line. Air quality testing underway. Full report on Morning Edition tomorrow.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(10), isReply: false, replyToId: null, hashtags: [],
+    likes: 678, shares: 234, replies: 45, quoteShares: 23,
+  },
+  {
+    id: 'ce-u-012', sproutId: spr(),
+    authorHandle: '@UKFacilities', authorDisplayName: 'UK Facilities Management',
+    accountAgeDays: 3400, followerCount: 3200, followingCount: 120, totalPostCount: 1800,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'facilities', 'maintenance'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'Facilities Management update (Mar 23, 4 PM): Columbia Gas has completed the pipe repair. Independent air quality testing is in progress. Results expected by 10 PM tonight. We will provide a building status update by 6 AM Mar 24.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(31), isReply: false, replyToId: null, hashtags: [],
+    likes: 1200, shares: 678, replies: 134, quoteShares: 45,
+  },
+  {
+    id: 'ce-u-013', sproutId: spr(),
+    authorHandle: '@UKYAlerts', authorDisplayName: 'UK Emergency Alerts',
+    accountAgeDays: 5000, followerCount: 45000, followingCount: 12, totalPostCount: 3400,
+    hasProfilePhoto: true, bioKeywords: ['UK', 'emergency', 'alerts'], platformVerified: true,
+    locationHint: 'Lexington, KY',
+    platform: 'twitter',
+    text: 'FINAL UPDATE: Chemistry-Physics Building cleared for occupancy effective Mar 24, 6 AM. Air quality testing passed all standards. Normal class schedule resumes. Thank you for your patience during this incident.',
+    mediaType: 'none', mediaDescription: null,
+    timestamp: t(45), isReply: false, replyToId: null, hashtags: [],
+    likes: 2300, shares: 1100, replies: 156, quoteShares: 67,
+  },
+]
+
+// ─── COMBINED EXPORT ──────────────────────────────────────────────────────
+
+export const CRISIS_EVENT_POSTS: SocialPost[] = [
+  ...POSITIVE,
+  ...NEGATIVE_ORGANIC,
+  ...NEGATIVE_AI,
+  ...NEUTRAL,
+]
+
+// ─── SENTIMENT RESULTS (50 posts) ─────────────────────────────────────────
+
+export const CRISIS_EVENT_SENTIMENT: SentimentResult[] = [
+  // --- Positive (12) ---
+  { postId: 'ce-p-001', sentiment: 'positive', confidence: 0.96, reason: 'Parent praising first responders and UKPD for fast evacuation of the building.' },
+  { postId: 'ce-p-002', sentiment: 'positive', confidence: 0.93, reason: 'Official safety account confirming safe evacuation with no injuries.' },
+  { postId: 'ce-p-003', sentiment: 'positive', confidence: 0.91, reason: 'Student praising a professor for quickly adapting lecture to outdoor setting.' },
+  { postId: 'ce-p-004', sentiment: 'positive', confidence: 0.94, reason: 'Official fire department update confirming professional emergency response.' },
+  { postId: 'ce-p-005', sentiment: 'positive', confidence: 0.92, reason: 'Student government organizing alternative study spaces for displaced students.' },
+  { postId: 'ce-p-006', sentiment: 'positive', confidence: 0.95, reason: 'Student expressing gratitude for community support during the crisis.' },
+  { postId: 'ce-p-007', sentiment: 'positive', confidence: 0.88, reason: 'Reddit user crediting UKPD for efficient evacuation and emergency planning.' },
+  { postId: 'ce-p-008', sentiment: 'positive', confidence: 0.90, reason: 'Faculty member praising emergency response team as professional and thorough.' },
+  { postId: 'ce-p-009', sentiment: 'positive', confidence: 0.93, reason: 'Counseling center offering walk-in support with empathetic tone.' },
+  { postId: 'ce-p-010', sentiment: 'positive', confidence: 0.89, reason: 'TikTok celebrating the speed of the evacuation with humor and admiration.' },
+  { postId: 'ce-p-011', sentiment: 'positive', confidence: 0.91, reason: 'Official Provost announcement that building is cleared and classes resume.' },
+  { postId: 'ce-p-012', sentiment: 'positive', confidence: 0.87, reason: 'Student expressing gratitude for community rally and safe return to building.' },
+
+  // --- Negative — organic (21) ---
+  { postId: 'ce-n-001', sentiment: 'negative', confidence: 0.97, reason: 'Angry student citing prior maintenance failures as evidence of neglect leading to the gas leak.' },
+  { postId: 'ce-n-002', sentiment: 'negative', confidence: 0.98, reason: 'First-person account of delayed alarm notification creating a dangerous situation.' },
+  { postId: 'ce-n-003', sentiment: 'negative', confidence: 0.96, reason: 'Grad student claiming repeated ignored work orders for the same gas line issue.' },
+  { postId: 'ce-n-004', sentiment: 'negative', confidence: 0.95, reason: 'Parent demanding accountability for tuition expenditure versus maintenance failures.' },
+  { postId: 'ce-n-005', sentiment: 'negative', confidence: 0.93, reason: 'Alumna highlighting decades-long infrastructure neglect in the same building.' },
+  { postId: 'ce-n-006', sentiment: 'negative', confidence: 0.94, reason: 'Advocacy group citing deferred maintenance data to frame the leak as systemic.' },
+  { postId: 'ce-n-007', sentiment: 'negative', confidence: 0.97, reason: 'Student describing a friend\'s medical emergency during evacuation with no on-site help.' },
+  { postId: 'ce-n-008', sentiment: 'negative', confidence: 0.95, reason: 'Grad workers union citing lack of hazardous materials evacuation protocol.' },
+  { postId: 'ce-n-009', sentiment: 'negative', confidence: 0.96, reason: 'Local news revealing the corroded pipe was flagged in a 2024 audit but never repaired.' },
+  { postId: 'ce-n-010', sentiment: 'negative', confidence: 0.93, reason: 'Campus safety organization framing the leak as inevitable given infrastructure age.' },
+  { postId: 'ce-n-011', sentiment: 'negative', confidence: 0.95, reason: 'Student protesting exam scheduling in the same building the day after the leak.' },
+  { postId: 'ce-n-012', sentiment: 'negative', confidence: 0.97, reason: 'Student newspaper publishing investigation revealing 47 unresolved work orders.' },
+  { postId: 'ce-n-013', sentiment: 'negative', confidence: 0.94, reason: 'Out-of-state parent describing child\'s confusion and demanding better emergency response.' },
+  { postId: 'ce-n-014', sentiment: 'negative', confidence: 0.96, reason: 'Anonymous faculty member detailing years of ignored infrastructure complaints.' },
+  { postId: 'ce-n-015', sentiment: 'negative', confidence: 0.95, reason: 'Herald-Leader editorial framing deferred maintenance as a gamble with student safety.' },
+  { postId: 'ce-n-016', sentiment: 'negative', confidence: 0.93, reason: 'Student refusing to return to building until presented with safety evidence.' },
+  { postId: 'ce-n-017', sentiment: 'negative', confidence: 0.98, reason: 'Disability advocacy group reporting a wheelchair user was trapped during evacuation.' },
+  { postId: 'ce-n-018', sentiment: 'negative', confidence: 0.92, reason: 'Student criticizing university communications as vague and unhelpful on day 2.' },
+  { postId: 'ce-n-019', sentiment: 'negative', confidence: 0.94, reason: 'Faculty member warning that multiple other science buildings face similar risks.' },
+  { postId: 'ce-n-020', sentiment: 'negative', confidence: 0.91, reason: 'Facilities professional explaining corroded pipes are a maintenance failure, not an accident.' },
+  { postId: 'ce-n-021', sentiment: 'negative', confidence: 0.90, reason: 'University Senate demanding a full briefing on deferred maintenance across science facilities.' },
+
+  // --- Negative — AI-sounding (4) ---
+  { postId: 'ce-ai-001', sentiment: 'negative', confidence: 0.86, reason: 'Formal criticism of institutional maintenance commitment using policy-recommendation language.' },
+  { postId: 'ce-ai-002', sentiment: 'negative', confidence: 0.84, reason: 'Broad critique framing the gas leak as part of a national higher education pattern.' },
+  { postId: 'ce-ai-003', sentiment: 'negative', confidence: 0.83, reason: 'Policy-oriented criticism citing national deferred maintenance statistics.' },
+  { postId: 'ce-ai-004', sentiment: 'negative', confidence: 0.85, reason: 'Formal stakeholder-framed criticism demanding comprehensive accounting of expenditures.' },
+
+  // --- Neutral (13) ---
+  { postId: 'ce-u-001', sentiment: 'neutral', confidence: 0.95, reason: 'Official emergency alert with factual evacuation information.' },
+  { postId: 'ce-u-002', sentiment: 'neutral', confidence: 0.94, reason: 'Official update on class cancellations with factual scheduling information.' },
+  { postId: 'ce-u-003', sentiment: 'neutral', confidence: 0.93, reason: 'Registrar providing factual exam relocation details.' },
+  { postId: 'ce-u-004', sentiment: 'neutral', confidence: 0.92, reason: 'Local news station reporting developing story with factual details.' },
+  { postId: 'ce-u-005', sentiment: 'neutral', confidence: 0.91, reason: 'Utility company providing factual status update on the investigation.' },
+  { postId: 'ce-u-006', sentiment: 'neutral', confidence: 0.93, reason: 'Parking and transportation service announcing road closure and bus detour.' },
+  { postId: 'ce-u-007', sentiment: 'neutral', confidence: 0.94, reason: 'News outlet providing factual summary of the gas leak and investigation.' },
+  { postId: 'ce-u-008', sentiment: 'neutral', confidence: 0.92, reason: 'Chemistry department announcing class relocation details.' },
+  { postId: 'ce-u-009', sentiment: 'neutral', confidence: 0.88, reason: 'Local Reddit user providing geographic context about the building location.' },
+  { postId: 'ce-u-010', sentiment: 'neutral', confidence: 0.91, reason: 'Physics department announcing class and office hour relocations.' },
+  { postId: 'ce-u-011', sentiment: 'neutral', confidence: 0.93, reason: 'Public radio reporting factual details about the gas leak origin and investigation.' },
+  { postId: 'ce-u-012', sentiment: 'neutral', confidence: 0.92, reason: 'Facilities management providing repair and air quality testing timeline update.' },
+  { postId: 'ce-u-013', sentiment: 'neutral', confidence: 0.95, reason: 'Official final clearance notice with building reopening time and air quality confirmation.' },
+]
+
+// ─── THEME CLUSTERS (6) ──────────────────────────────────────────────────
+
+export const CRISIS_EVENT_THEMES: ThemeCluster[] = [
+  {
+    themeId: 'ce-theme-emergency-response',
+    label: 'Emergency Response & First Responders',
+    postIds: ['ce-p-001', 'ce-p-002', 'ce-p-004', 'ce-p-007', 'ce-p-008', 'ce-p-010', 'ce-u-001', 'ce-u-004', 'ce-u-005', 'ce-n-002', 'ce-n-017'],
+    sentimentBreakdown: { positive: 6, negative: 2, neutral: 3 },
+    sampleQuotes: [
+      'UKPD and LFD for the fastest evacuation I\'ve ever seen. My daughter was out in under 4 minutes.',
+      'I pulled the fire alarm myself because nobody told us what was happening.',
+      'a wheelchair user was stuck on the 2nd floor for 8 minutes because the evacuation chair was LOCKED',
+    ],
+  },
+  {
+    themeId: 'ce-theme-building-maintenance',
+    label: 'Building Maintenance & Safety',
+    postIds: ['ce-n-001', 'ce-n-003', 'ce-n-005', 'ce-n-006', 'ce-n-009', 'ce-n-010', 'ce-n-014', 'ce-n-019', 'ce-n-020', 'ce-ai-001', 'ce-ai-002', 'ce-ai-003', 'ce-ai-004'],
+    sentimentBreakdown: { positive: 0, negative: 13, neutral: 0 },
+    sampleQuotes: [
+      'I\'ve been reporting the gas line smell in the Chem-Phys basement since January. THREE work orders. All closed as "resolved."',
+      'Sources tell WKYT the gas leak originated from a corroded pipe flagged in a 2024 facilities audit but never repaired.',
+      'That building had maintenance issues when I was a grad student in the 90s. Almost 30 YEARS.',
+    ],
+  },
+  {
+    themeId: 'ce-theme-academic-disruption',
+    label: 'Academic Disruption',
+    postIds: ['ce-p-003', 'ce-u-002', 'ce-u-003', 'ce-u-008', 'ce-u-010', 'ce-n-011', 'ce-n-016', 'ce-p-005'],
+    sentimentBreakdown: { positive: 2, negative: 2, neutral: 4 },
+    sampleQuotes: [
+      'Prof. Nakamura had us doing orgo review on the lawn outside Funkhouser within 20 minutes',
+      'so we just gonna pretend it\'s fine that I have an exam TOMORROW in a building that was full of gas TODAY??',
+      'All exams scheduled in the Chemistry-Physics Building for Mar 22-23 have been moved to Whitehall and Jacobs Science Building.',
+    ],
+  },
+  {
+    themeId: 'ce-theme-community-support',
+    label: 'Community Support & Resilience',
+    postIds: ['ce-p-005', 'ce-p-006', 'ce-p-009', 'ce-p-012', 'ce-u-009'],
+    sentimentBreakdown: { positive: 4, negative: 0, neutral: 1 },
+    sampleQuotes: [
+      'people sharing chargers, profs moving lectures to the lawn, Ovid\'s giving free coffee to evacuees',
+      'SGA is working with the Dean of Students to make sure anyone displaced has study space.',
+      'If yesterday\'s evacuation left you feeling anxious or shaken, that\'s completely normal. Walk-in hours are available.',
+    ],
+  },
+  {
+    themeId: 'ce-theme-institutional-accountability',
+    label: 'Institutional Accountability',
+    postIds: ['ce-n-004', 'ce-n-008', 'ce-n-012', 'ce-n-013', 'ce-n-015', 'ce-n-018', 'ce-n-021'],
+    sentimentBreakdown: { positive: 0, negative: 7, neutral: 0 },
+    sampleQuotes: [
+      'My kid pays $30k/year to attend UK and you can\'t maintain a GAS LINE in a 60-year-old building?',
+      'The Kernel has obtained maintenance records showing 47 unresolved work orders in the past 18 months.',
+      'Deferred maintenance isn\'t a budget strategy — it\'s a gamble with student safety.',
+    ],
+  },
+  {
+    themeId: 'ce-theme-media-coverage',
+    label: 'Media Coverage & Public Information',
+    postIds: ['ce-u-004', 'ce-u-007', 'ce-u-011', 'ce-u-012', 'ce-u-013', 'ce-p-011', 'ce-n-009', 'ce-n-015'],
+    sentimentBreakdown: { positive: 1, negative: 2, neutral: 5 },
+    sampleQuotes: [
+      'Natural gas leak at University of Kentucky\'s Chemistry-Physics Building prompts evacuation of approximately 300.',
+      'UK spokesperson confirms the gas leak originated from infrastructure in the building\'s basement.',
+      'Chemistry-Physics Building cleared for occupancy effective Mar 24, 6 AM. Air quality testing passed all standards.',
+    ],
+  },
+]
+
+// ─── AI DETECTION (25 negative posts) ────────────────────────────────────
+
+export const CRISIS_EVENT_AI_DETECTION: AIDetectionResult[] = [
+  // --- Organic negative (21 posts) → likely-human ---
+  {
+    postId: 'ce-n-001', humanLikelihood: 0.95, aiLikelihood: 0.05, confidence: 'high',
+    topSignals: ['authentic frustration markers', 'specific maintenance references', 'informal register with caps'],
+    explanation: 'Contains specific prior complaints (fume hoods, flickering lights) with escalating frustration caps ("LAST YEAR", "THIS") — authentic student voice expressing lived experience.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-002', humanLikelihood: 0.97, aiLikelihood: 0.03, confidence: 'high',
+    topSignals: ['first-person witness account', 'specific floor reference', 'emotional stakes'],
+    explanation: 'First-person account with precise detail (3rd floor, 5-minute delay, pulled fire alarm personally) and genuine fear — highly specific lived experience.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-003', humanLikelihood: 0.96, aiLikelihood: 0.04, confidence: 'high',
+    topSignals: ['specific work order history', 'evidence claim', 'insider knowledge'],
+    explanation: 'References exact number of work orders (THREE), specific location (basement), timeframe (since January), and claims to have email evidence — specific institutional insider knowledge.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-004', humanLikelihood: 0.94, aiLikelihood: 0.06, confidence: 'high',
+    topSignals: ['parental perspective', 'financial specificity', 'direct institution tagging'],
+    explanation: 'Written from parent perspective with specific tuition figure ($30k/year), building age reference (60-year-old), and direct tagging of university president — authentic stakeholder voice.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-005', humanLikelihood: 0.93, aiLikelihood: 0.07, confidence: 'high',
+    topSignals: ['temporal personal reference', 'alumni perspective', 'specific decade claim'],
+    explanation: 'References personal experience as grad student in the 90s, specific timeframe ("almost 30 YEARS"), and contrasts with new construction — long-term perspective consistent with alumna voice.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-006', humanLikelihood: 0.91, aiLikelihood: 0.09, confidence: 'high',
+    topSignals: ['data citation with link', 'organizational voice', 'specific institutional tagging'],
+    explanation: 'Cites specific data (14 buildings, $5M each), includes link to analysis, and tags president directly — consistent with advocacy organization communication patterns.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-007', humanLikelihood: 0.96, aiLikelihood: 0.04, confidence: 'high',
+    topSignals: ['secondhand witness account', 'medical detail', 'emotional authenticity'],
+    explanation: 'Describes roommate\'s asthma episode with specific detail (couldn\'t find inhaler, hyperventilating, had to be carried out) — vivid secondhand witness account with genuine concern.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-008', humanLikelihood: 0.92, aiLikelihood: 0.08, confidence: 'high',
+    topSignals: ['collective voice', 'specific protocol criticism', 'organizational framing'],
+    explanation: 'Uses organized labor framing ("our members"), cites specific protocol gap (hazardous materials), and describes concrete failure (no check-in system) — consistent with union communications.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-009', humanLikelihood: 0.90, aiLikelihood: 0.10, confidence: 'high',
+    topSignals: ['journalistic sourcing', 'specific audit reference', 'institutional knowledge'],
+    explanation: 'References sourced information (2024 facilities audit), specific infrastructure detail (corroded pipe), and uses news-breaking format — consistent with verified journalist account.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-010', humanLikelihood: 0.91, aiLikelihood: 0.09, confidence: 'high',
+    topSignals: ['specific building age', 'infrastructure expertise', 'predictive framing'],
+    explanation: 'Cites exact construction year (1961) and specific system (gas distribution), frames leak as predictable — consistent with safety advocacy organization with institutional knowledge.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-011', humanLikelihood: 0.95, aiLikelihood: 0.05, confidence: 'high',
+    topSignals: ['colloquial language', 'personal stakes', 'mental health disclosure'],
+    explanation: 'Uses informal register ("bro WHAT", "gonna pretend"), references personal exam pressure and anxiety disorder — authentic student voice with real academic stakes.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-012', humanLikelihood: 0.89, aiLikelihood: 0.11, confidence: 'high',
+    topSignals: ['investigative journalism format', 'specific document reference', 'verified account'],
+    explanation: 'Student newspaper investigation with specific data (47 unresolved work orders, 18 months, 3 gas-related) and link to full report — consistent with student journalism.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-013', humanLikelihood: 0.94, aiLikelihood: 0.06, confidence: 'high',
+    topSignals: ['parental perspective', 'phone call reference', 'financial stakes'],
+    explanation: 'Describes phone call with child, specific complaints (alarm too long, confusion about where to go), mentions out-of-state tuition — authentic parent voice with concrete grievances.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-014', humanLikelihood: 0.93, aiLikelihood: 0.07, confidence: 'high',
+    topSignals: ['anonymous insider voice', 'specific system references', 'historical detail'],
+    explanation: 'Anonymous faculty member citing specific systems (HVAC from Carter administration, fume hoods, 2019 deferred maintenance list), repeated "next fiscal year" excuse — deep institutional insider knowledge.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-015', humanLikelihood: 0.90, aiLikelihood: 0.10, confidence: 'high',
+    topSignals: ['editorial framing', 'verified news account', 'institutional critique'],
+    explanation: 'Published editorial from verified news outlet using professional opinion-writing conventions — framing is deliberate but consistent with newspaper editorial board voice.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-016', humanLikelihood: 0.95, aiLikelihood: 0.05, confidence: 'high',
+    topSignals: ['colloquial register', 'personal resistance', 'emoji sarcasm'],
+    explanation: 'Uses student slang ("bro", "love that"), expresses personal refusal to enter building, distinguishes between "cleared" and "actually safe" — authentic skeptical student voice.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-017', humanLikelihood: 0.92, aiLikelihood: 0.08, confidence: 'high',
+    topSignals: ['specific accessibility detail', 'incident reporting format', 'legal reference'],
+    explanation: 'Reports specific incident (wheelchair user, 2nd floor, 8 minutes, locked closet), cites ADA violation, tags Office of Accessibility — advocacy organization with witnessed incident detail.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-018', humanLikelihood: 0.94, aiLikelihood: 0.06, confidence: 'high',
+    topSignals: ['timeline reference', 'communication critique', 'informal register'],
+    explanation: 'References specific timeline (Day 2), criticizes vague institutional email, uses colloquial dismissal ("giving nothing") — authentic student frustration with PR communications.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-019', humanLikelihood: 0.91, aiLikelihood: 0.09, confidence: 'high',
+    topSignals: ['faculty credential', 'specific building names', 'systemic framing'],
+    explanation: 'Self-identifies as faculty member, names specific at-risk buildings (Bowman Hall, Kastle Hall, Mining & Minerals), frames problem as systemic — professional voice with insider knowledge.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-020', humanLikelihood: 0.93, aiLikelihood: 0.07, confidence: 'high',
+    topSignals: ['professional expertise', 'causal analysis', 'accountability framing'],
+    explanation: 'Self-identifies as facilities professional (not at UK), provides expert analysis of pipe corrosion causation, and frames accountability — authentic subject-matter expertise.',
+    verdict: 'likely-human',
+  },
+  {
+    postId: 'ce-n-021', humanLikelihood: 0.89, aiLikelihood: 0.11, confidence: 'high',
+    topSignals: ['institutional governance voice', 'formal request', 'verified account'],
+    explanation: 'Official University Senate account requesting a formal briefing — institutional governance voice that is formal by nature but consistent with verified faculty governance communications.',
+    verdict: 'likely-human',
+  },
+
+  // --- AI-sounding negative posts (4 posts) ---
+  {
+    postId: 'ce-ai-001', humanLikelihood: 0.14, aiLikelihood: 0.86, confidence: 'high',
+    topSignals: ['lexical uniformity', 'hedging patterns', 'formal register mismatch', 'no personal experience'],
+    explanation: 'Highly uniform sentence structure with formal hedging ("deeply concerning", "it is imperative", "comprehensive review"). 12-day-old account with 8 total posts. No personal connection to UK campus. Language register inconsistent with Twitter norms.',
+    verdict: 'likely-ai',
+  },
+  {
+    postId: 'ce-ai-002', humanLikelihood: 0.16, aiLikelihood: 0.84, confidence: 'high',
+    topSignals: ['discourse markers', 'formal register mismatch', 'generic framing', 'absence of personal detail'],
+    explanation: 'Classic AI discourse markers ("it is important to note", "Furthermore", "raises serious questions"). 8-day-old account. Frames UK incident as generic national trend without any personal stake or specific knowledge. Perfectly balanced paragraph structure.',
+    verdict: 'likely-ai',
+  },
+  {
+    postId: 'ce-ai-003', humanLikelihood: 0.13, aiLikelihood: 0.87, confidence: 'high',
+    topSignals: ['lexical uniformity', 'unsourced statistics', 'policy-recommendation language', 'no personal identity'],
+    explanation: 'Cites a national statistic ($112 billion deferred maintenance) without source or link. Uses policy-paper language ("data-driven approaches", "proactive measures"). 15-day-old account with no personal connection to UK. Strongest AI signals in dataset.',
+    verdict: 'likely-ai',
+  },
+  {
+    postId: 'ce-ai-004', humanLikelihood: 0.18, aiLikelihood: 0.82, confidence: 'high',
+    topSignals: ['hedging patterns', 'formal register mismatch', 'stakeholder abstraction', 'no personal experience'],
+    explanation: 'Uses formal hedging ("It is deeply troubling", "comprehensive accounting"), abstracts to "stakeholders" rather than naming personal relationship to UK. 10-day-old account. Language pattern consistent with AI-generated concern-trolling.',
+    verdict: 'likely-ai',
+  },
+]
+
+// ─── CRISIS INTELLIGENCE BRIEF ───────────────────────────────────────────
+
+export const CRISIS_EVENT_BRIEF: CrisisIntelligenceBrief = {
+  analysisTimestamp: '2026-03-24T18:00:00.000Z',
+  postCount: 50,
+  timelineWindow: 'Mar 22 – Mar 24, 2026',
+
+  threatLevel: 'HIGH',
+  threatRationale: 'A natural gas leak forced the evacuation of the Chemistry-Physics Building, displacing ~300 students and staff. The leak originated from a corroded pipe flagged in a 2024 facilities audit but never repaired, creating a powerful accountability narrative. The Kentucky Kernel investigation revealing 47 unresolved work orders has driven the highest-engagement post in the dataset. Media coverage from WKYT, LEX 18, Herald-Leader, and WUKY amplifies the story beyond campus. An ADA-related evacuation failure adds legal exposure. Parent anger and faculty whistleblowing compound reputational risk.',
+
+  sentimentDistribution: {
+    positive: { count: 12, percentage: 24 },
+    negative: { count: 25, percentage: 50 },
+    neutral: { count: 13, percentage: 26 },
+  },
+
+  aiAuthorshipBreakdown: {
+    likelyHuman: { count: 21, percentage: 84 },
+    inconclusive: { count: 0, percentage: 0 },
+    likelyAI: { count: 4, percentage: 16 },
+  },
+
+  themes: CRISIS_EVENT_THEMES,
+
+  pipelineFunnel: {
+    totalPosts: 50,
+    negativePosts: 25,
+    aiFlaggedPosts: 4,
+  },
+
+  spreadAnalysis: {
+    peakHour: 6,
+    velocityTrend: 'decelerating',
+    platformBreakdown: {
+      twitter: 37,
+      reddit: 4,
+      facebook: 2,
+      instagram: 2,
+      tiktok: 1,
+      'news-comment': 1,
+    },
+  },
+
+  responsePosture: 'engage',
+  responseRationale: 'The gas leak is a confirmed, high-visibility safety incident with media coverage, investigative journalism, parent anger, and faculty whistleblowing. The 4 AI-generated posts are low-engagement noise (8-12 likes each) and do not require direct response. However, the organic negative posts — especially the Kernel investigation (4,500 likes, 2,100 shares), the WKYT audit revelation, and the ADA evacuation failure — demand proactive institutional engagement. The positive first-responder narrative provides a foundation, but the maintenance accountability story will dominate unless addressed.',
+
+  suggestedActions: [
+    'Issue a detailed public statement from the President acknowledging the corroded pipe, the 2024 audit finding, and committing to a transparent remediation timeline for all flagged infrastructure.',
+    'Coordinate with Disability Resources to conduct an immediate audit of evacuation equipment access in all campus buildings and publish the results.',
+    'Brief the Board of Trustees on a proposed emergency infrastructure fund specifically addressing deferred maintenance in science facilities, with a public announcement timeline.',
+    'Provide the Kentucky Kernel and Herald-Leader with a proactive data release on maintenance spending and backlog status to shape the narrative before further investigative pieces.',
+    'Establish a visible, ongoing communication cadence (daily updates for 1 week) about Chem-Phys air quality testing results, repair progress, and safety certification status.',
+  ],
+
+  evidenceGaps: [
+    'The anonymous faculty Reddit post (ce-n-014) claims HVAC has not been updated since the Carter administration — this specific claim has not been independently verified against facilities records.',
+    'The LexSafeStreets claim of "14 buildings with deferred maintenance backlogs exceeding $5M each" links to an external analysis whose methodology is unverified.',
+    'The national $112 billion deferred maintenance figure cited in ce-ai-003 has no source — this appears to be an AI-fabricated or outdated statistic.',
+    'The exact timeline of the alarm delay described by ce-n-002 (5 minutes) conflicts with the TikTok video (ce-p-010) showing a 3-minute evacuation — the discrepancy may reflect different floors or alarm zones.',
+    'Whether the 4 AI-flagged accounts are coordinated (same operator) or independent opportunistic actors has not been determined.',
+  ],
+
+  confidence: 'high',
+}
+
+// ─── SANDY NARRATION ─────────────────────────────────────────────────────
+
+export function getCrisisEventNarration(firstName: string): string {
+  return `Here's what I found in the past 3 days, ${firstName} — and I want to be upfront: this one is serious.
+
+**The headline:** 50 posts in just 72 hours, and the threat level is **HIGH**. A natural gas leak forced the evacuation of the Chemistry-Physics Building on March 22, displacing roughly 300 students and staff. Sentiment is running hot — 50% negative, only 24% positive, with 26% neutral (mostly official updates and news coverage).
+
+**Why this matters right now:**
+
+The gas leak itself is alarming, but the real reputational risk is the maintenance story underneath it. WKYT reported that the corroded pipe was flagged in a 2024 facilities audit and never repaired. The Kentucky Kernel followed up with an investigation revealing 47 unresolved work orders for that building in 18 months. That post alone has 4,500 likes and 2,100 shares — it is the highest-engagement item in the entire dataset. Faculty are going on record (and off record on Reddit) saying they have been warning about this for years. Parents are furious about tuition dollars not going to basic safety.
+
+There is also an ADA issue: a wheelchair user was stuck on the second floor during the evacuation because the evacuation chair was locked and nobody had the key. That post has over 3,200 likes and the disability advocacy group tagged the Office of Accessibility directly. This is legal exposure, not just PR.
+
+**What you can safely deprioritize:** I flagged 4 of the 25 negative posts as likely AI-generated — brand-new accounts (8-15 days old), formal policy-paper language, no personal connection to UK, and almost zero engagement (6-12 likes each). They are amplifying the maintenance narrative but nobody is listening to them. Not worth a direct response.
+
+**The counter-narrative:** The first responder praise is genuine and strong. Parents, students, and faculty are all crediting UKPD and Lexington Fire for a fast, professional evacuation. SGA organized alternative study spaces within hours. The Counseling Center offered walk-in support. Professors moved lectures to the lawn. This community resilience angle is your best counter-narrative to lean into — but it will not hold if the maintenance accountability story goes unanswered.
+
+<!--CHIPS:["Show AI-flagged posts","Walk me through themes","Draft a holding statement","What can we ignore?","Explain threat level"]-->
+<!--PHASE:deep-dive-->`
+}

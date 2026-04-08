@@ -1,0 +1,47 @@
+{
+  "id": "discussion-quality",
+  "title": "Case Discussion Rubric",
+  "description": "For threaded clinical case discussions. Volume is not the metric. Whether your posts move the case forward is the metric.",
+  "criteria": [
+    {
+      "name": "Substance",
+      "weight": 0.35,
+      "levels": [
+        { "score": 1, "descriptor": "Agreement, disagreement, or restatement with no added clinical or informatics content." },
+        { "score": 2, "descriptor": "Adds an example, a guideline citation, a standard, or a clarification." },
+        { "score": 3, "descriptor": "Advances the case: a new framing, a counter-example, a relevant SAFER guide, or a question the thread had not asked." },
+        { "score": 4, "descriptor": "Reframes the disagreement so participants who held opposite views recognize the actual sociotechnical crux." }
+      ]
+    },
+    {
+      "name": "Engagement with peers",
+      "weight": 0.25,
+      "levels": [
+        { "score": 1, "descriptor": "Only top-level posts. No replies." },
+        { "score": 2, "descriptor": "Replies that signal agreement or disagreement." },
+        { "score": 3, "descriptor": "Replies that quote what was said and respond to its strongest version." },
+        { "score": 4, "descriptor": "Replies that change the original poster's mind, or that publicly update the responder's own." }
+      ]
+    },
+    {
+      "name": "PHI hygiene",
+      "weight": 0.20,
+      "levels": [
+        { "score": 1, "descriptor": "Posted identifying details. Even one slip is a 1 here." },
+        { "score": 2, "descriptor": "No identifiers, but the abstraction is loose enough that the case is partly identifiable." },
+        { "score": 3, "descriptor": "Clean abstraction. Could not be traced to a specific patient or institution." },
+        { "score": 4, "descriptor": "Clean abstraction AND the writer makes the abstraction itself a teaching point for peers." }
+      ]
+    },
+    {
+      "name": "Tone",
+      "weight": 0.20,
+      "levels": [
+        { "score": 1, "descriptor": "Dismissive, sneering, or performatively certain." },
+        { "score": 2, "descriptor": "Civil but defensive." },
+        { "score": 3, "descriptor": "Curious. Asks rather than tells." },
+        { "score": 4, "descriptor": "Curious AND willing to be wrong in public." }
+      ]
+    }
+  ]
+}

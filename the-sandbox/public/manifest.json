@@ -1,0 +1,24 @@
+{
+  "name": "University of Kentucky",
+  "short_name": "UK",
+  "description": "Courses, campus, and AI tools for UK students and faculty",
+  "start_url": "/hub",
+  "display": "standalone",
+  "theme_color": "#0033A0",
+  "background_color": "#ffffff",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "/uk-wildcat-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/uk-wildcat-mark.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
