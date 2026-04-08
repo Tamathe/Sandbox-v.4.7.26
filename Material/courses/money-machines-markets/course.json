@@ -1,0 +1,34 @@
+{
+  "id": "money-machines-markets",
+  "slug": "money-machines-markets",
+  "title": "Money, Machines, and Markets",
+  "subtitle": "Bitcoin, blockchains, AI, and the economy they are reshaping",
+  "instructorId": "PLACEHOLDER_INSTRUCTOR_ID",
+  "isPublic": false,
+  "estimatedHours": 48,
+  "tags": ["bitcoin", "blockchain", "ai", "macroeconomics", "monetary-policy", "cryptography"],
+  "tone": "opinionated-but-grounded",
+  "summary": "A working mental model for how sound money, trust-minimized computation, machine intelligence, and the macro system are pulling on the same rope. Not a trading course, not a coding course, not a futurism course. A course about how to think clearly when four large forces converge at once.",
+  "learningOutcomes": [
+    "Define money in terms of its three functions and explain why fiat, Bitcoin, and stablecoins satisfy them differently.",
+    "Read the Bitcoin white paper and explain proof-of-work, UTXOs, and the supply schedule from first principles.",
+    "Distinguish honest from theatrical decentralization across major blockchain designs.",
+    "Describe what a modern large language model is, how it is trained, and what it can and cannot do.",
+    "Identify which AI-and-crypto intersections are real engineering problems and which are marketing.",
+    "Analyze a macroeconomic event using monetary, technological, and energy lenses simultaneously.",
+    "Steel-man the strongest critique of any position you hold in this domain."
+  ],
+  "prerequisites": [],
+  "policies": ["academic-integrity", "ai-use-policy"],
+  "modules": [
+    "01-what-is-money",
+    "02-bitcoin-from-scratch",
+    "03-blockchains-beyond-bitcoin",
+    "04-machines-arrive",
+    "05-ai-meets-crypto",
+    "06-macro",
+    "07-frictions-failures",
+    "08-synthesis"
+  ],
+  "finalProject": "final-project"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "abpm-clinical-informatics",
+  "slug": "abpm-clinical-informatics",
+  "title": "ABPM Clinical Informatics Board Prep",
+  "subtitle": "Everything you need to pass the boards, taught the way you'd actually want to learn it",
+  "instructorId": "PLACEHOLDER_INSTRUCTOR_ID",
+  "isPublic": false,
+  "estimatedHours": 60,
+  "tags": ["clinical-informatics", "abpm", "board-prep", "ehr", "fhir", "cds", "hipaa", "amia"],
+  "tone": "rigorous-but-practical",
+  "summary": "A complete board-prep course for the American Board of Preventive Medicine subspecialty exam in Clinical Informatics. Eight modules cover the four ABPM domains: fundamentals, clinical decision making and care process improvement, health information systems, and leadership/change management. The point is not to memorize trivia. The point is to build a working mental model strong enough that the exam questions feel obvious.",
+  "learningOutcomes": [
+    "Define clinical informatics and locate it precisely against bioinformatics, public health informatics, and consumer health informatics.",
+    "Read an HL7 v2 message and a FHIR resource and explain what each is doing and why one replaced the other.",
+    "Map a real EHR workflow and identify where the sociotechnical system is brittle.",
+    "Design a clinical decision support intervention that satisfies the CDS Five Rights without creating alert fatigue.",
+    "Critique a quality dashboard for both statistical validity and frontline usability.",
+    "Explain HIPAA, HITECH, and the 21st Century Cures information-blocking rule in terms a clinician will actually act on.",
+    "Lead an EHR change effort using a named change-management framework and defend the choice.",
+    "Pass the ABPM Clinical Informatics board exam."
+  ],
+  "prerequisites": [
+    "Clinical training (MD, DO, or equivalent) or substantial clinical exposure.",
+    "Comfort with basic statistics (sensitivity, specificity, predictive values)."
+  ],
+  "policies": ["academic-integrity", "ai-use-policy", "phi-handling"],
+  "modules": [
+    "01-foundations-of-informatics",
+    "02-clinical-data-standards",
+    "03-ehr-and-his-architecture",
+    "04-clinical-decision-support",
+    "05-workflow-and-human-factors",
+    "06-quality-safety-analytics",
+    "07-privacy-security-policy",
+    "08-leadership-change-management",
+    "09-imaging-virtual-care-pgd"
+  ],
+  "finalProject": "final-project"
+}

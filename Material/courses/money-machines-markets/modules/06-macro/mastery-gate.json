@@ -1,0 +1,139 @@
+{
+  "id": "mg-06-macro",
+  "moduleId": "06-macro",
+  "title": "Module 6 Mastery Gate — Macro: The Economy These Technologies Are Crashing Into",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions covering all six lessons. The point is the explanations, not the score. Read every rationale, even on questions you got right. Retake until passing — there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "fiscal-dominance",
+      "prompt": "Which of these best describes 'fiscal dominance' as used in the lesson?",
+      "options": [
+        "When the legislature controls fiscal policy independently of the central bank.",
+        "A regime in which the central bank can no longer raise interest rates as much as inflation would warrant, because doing so would make government interest payments unsustainable.",
+        "When fiscal policy is more important than monetary policy in driving GDP.",
+        "When a country's central bank is owned by its Treasury department."
+      ],
+      "correct": 1,
+      "rationale": "Fiscal dominance is the regime in which the fiscal arithmetic constrains the central bank's room to maneuver. The Fed, ECB, or any other supposedly independent central bank can become a de facto debt-management arm of the Treasury without ever announcing the shift. The thing to watch for is not a press release; it is the gap between the inflation rate and the policy rate, and whether the central bank is willing to close that gap when the cost of doing so falls on the Treasury. The 'independence' of central banks is a strong norm, not a law of nature."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "real-default",
+      "prompt": "Why do large sovereign borrowers in their own currency almost never nominally default, even when their debt loads look unsustainable on standard metrics?",
+      "options": [
+        "Because they have access to IMF emergency funding that always covers the gap.",
+        "Because the Constitution prevents it in most countries.",
+        "Because they can pay bondholders in full in nominal terms by issuing more of the currency, transferring the cost to holders of that currency through inflation — a 'real default' that is politically much cheaper than the alternative.",
+        "Because nominal default would trigger automatic war reparations."
+      ],
+      "correct": 2,
+      "rationale": "Nominal default is the path that requires somebody to vote yes to breaking a contract. Inflation is the path that does not. When given the choice, large sovereigns overwhelmingly pick the second one — the bondholders get their dollars, but the dollars are worth less. The honest word for this is real default. Lesson 1 emphasizes that this is the historically dominant resolution to unsustainable sovereign debt, and that pretending otherwise is a category error."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "eroi",
+      "prompt": "What is EROI, and why does the lesson treat it as a foundational macro variable?",
+      "options": [
+        "Energy Return on Investment — the ratio of energy out to energy in for a given source. It matters because the higher it is, the cheaper the surplus energy available to the rest of the economy, and the post-war boom was built on energy with EROI above 50:1.",
+        "Economic Rate of Inflation — the official measure of consumer prices used by the Fed.",
+        "Equity Returns on Investment — the long-run return on stocks relative to bonds.",
+        "Energy Reservation Order Index — a quota system for grid access."
+      ],
+      "correct": 0,
+      "rationale": "EROI is the ratio of energy you get out to energy you put in to extract, refine, and deliver an energy source. Conventional oil in 1950 was around 100:1. Modern shale, tar sands, and renewables are dramatically lower, often single digits. Nuclear is the major exception. EROI matters because it determines how much surplus energy is available for everything else the economy does — and the trend across major sources is, in the long run, downward. This is not a doom prediction, it is an arithmetic constraint that macroeconomic models systematically underweight."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "jevons-paradox",
+      "prompt": "A datacenter operator says: 'AI inference is getting 10x more efficient per token every 18 months, so total AI energy consumption will fall as efficiency improves.' Which concept from Lesson 2 best explains why this reasoning is probably wrong?",
+      "options": [
+        "EROI — efficiency gains are offset by lower-quality energy sources.",
+        "Jevons paradox — when a resource becomes cheaper to use, total consumption usually rises rather than falls because new uses appear.",
+        "Stranded energy — efficient inference attracts more compute to remote locations.",
+        "Polanyi's paradox — humans cannot articulate why they want more compute."
+      ],
+      "correct": 1,
+      "rationale": "Jevons paradox is the historical pattern: more efficient steam engines led to *more* coal use, not less. More efficient lighting led to more lit space, not less electricity. More efficient AI inference is currently leading to AI being deployed in places it wasn't before, multiplying total demand. Efficiency gains are real and good. They do not, by themselves, reduce total energy consumption of any resource that is becoming more economically attractive. People who tell you 'efficiency will solve the energy footprint' are making a Jevons error."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "automation-substitute-vs-competitor",
+      "prompt": "Why does the lesson argue that automation in 2026 Japan and automation in 2026 United States have politically opposite implications, even when the technology is identical?",
+      "options": [
+        "Because Japan has weaker labor unions than the US.",
+        "Because Japan has a shrinking working-age population, so automation is a substitute for missing workers; the US has a more mixed picture in which automation is a competitor to existing workers in some sectors and a substitute in others.",
+        "Because Japanese workers are more skilled on average.",
+        "Because the Japanese government subsidizes automation more heavily."
+      ],
+      "correct": 1,
+      "rationale": "The single biggest insight from Lesson 6 is that 'AI is a substitute for missing workers' and 'AI is a competitor to surviving workers' are *both true at the same time*, and which one dominates depends on the local demographic situation. Japan has no political backlash to automation because the alternative is the lights going out. The US has a confused political conversation because both effects are operating in the same country in different sectors, and the same person can be a beneficiary of one and a victim of the other. Frame any AI-and-jobs argument by asking: shortage or surplus of labor in this specific sector, in this specific country, on what timescale?"
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "scaling-laws",
+      "prompt": "Why does the lesson describe AI scaling laws as producing 'winner-take-most' dynamics in capital and compute, rather than the more typical software pattern of small teams disrupting incumbents?",
+      "options": [
+        "Because AI startups are not allowed to incorporate.",
+        "Because compute and frontier-model training costs scale superlinearly with capability, so the actor with more capital reliably gets a measurably better model — the gap between the leader and the next entrant is predictable, not random, and the entry fee for being a frontier lab is now in the billions.",
+        "Because AI is regulated more heavily than other software.",
+        "Because intellectual property law uniquely favors AI incumbents."
+      ],
+      "correct": 1,
+      "rationale": "Most software industries have low fixed costs — a few engineers in a garage can disrupt a giant if they have a clever idea. AI is different because of scaling laws: capability scales predictably with compute, so the actor with more compute reliably has a better model. There is no 'clever idea' that lets a small lab produce a better frontier model than a hyperscaler running 50x more compute on the same idea. This is closer to the semiconductor industry than to early-2000s web. It is natural concentration driven by returns to scale, which is harder to undo with policy than concentration driven by regulatory moats."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "stablecoin-vs-cbdc-vs-bitcoin",
+      "prompt": "In a country whose local currency is collapsing, which of the three digital-money visions has historically dominated for everyday transactions, and why?",
+      "options": [
+        "CBDC, because the state guarantees its value.",
+        "Bitcoin, because it has the highest stock-to-flow.",
+        "Dollar stablecoins, because they offer a hard-currency-equivalent (the dollar) on global rails without requiring a US bank account, and their volatility is low enough to be usable on transaction timescales.",
+        "Gold, because it is the historical Schelling point."
+      ],
+      "correct": 2,
+      "rationale": "Argentina, Turkey, Lebanon, Nigeria, and a long list of other failing-currency economies have all seen the same pattern: stablecoin adoption races ahead of Bitcoin adoption for everyday use, because stablecoins solve the immediate problem (preserve dollar purchasing power, transact today) better than Bitcoin does on a 12-month horizon. Bitcoin's role in those economies is real but it is the long-horizon savings role for people who can afford volatility. The CBDC is dead-on-arrival because nobody trusts a CBDC built by the same authority that just blew up the local currency. Lesson 5 emphasizes: the three visions are not necessarily competing for the same role, and any single-winner story is wrong."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "dependency-ratio",
+      "prompt": "Why is the dependency ratio considered more macro-relevant than the raw fertility rate when forecasting fiscal sustainability over the next 30 years?",
+      "options": [
+        "Because the dependency ratio is published more often.",
+        "Because the dependency ratio captures the actual ratio of non-working population (children + elderly) to working-age population, which is what determines the per-worker tax burden and entitlement load. Fertility rate predicts the future dependency ratio, but the dependency ratio is what immediately conditions the fiscal arithmetic.",
+        "Because the dependency ratio is independent of immigration.",
+        "Because the dependency ratio is set by central banks."
+      ],
+      "correct": 1,
+      "rationale": "Fertility rates from years past are baked into today's working-age population and tomorrow's dependency ratio. The dependency ratio is the immediate operational variable: every one working-age person in a country with a 1.0 dependency ratio is, on average, supporting one non-working person via taxes and transfers. When that ratio rises sharply — as it has across the OECD and is rising fastest in East Asia — the existing entitlement structure becomes unfundable on current promises without large changes to taxes, benefits, or productivity per worker. This is the slow-moving constraint that makes fiscal dominance from Lesson 1 a near-inevitability rather than a distant possibility."
+    },
+    {
+      "id": "q9",
+      "type": "short",
+      "concept": "fiscal-dominance",
+      "prompt": "In your own words, explain the connection between fiscal dominance (Lesson 1), demographic decline (Lesson 6), and the political pressure on monetary policy. Why does the lesson argue this connection makes 'inflate the debt away' the path of least political resistance? Two or three sentences.",
+      "expectedKeywords": ["debt", "entitlements", "inflation", "political"],
+      "rationale": "There is no single right answer, but a strong response should observe that demographic decline raises entitlement obligations relative to the working-age tax base, which forces governments to borrow more, which raises debt service, which constrains the central bank's ability to raise rates, which means the political path of least resistance is to allow higher inflation than the official target — because raising taxes is unpopular, cutting benefits to the elderly is politically suicidal, and growing your way out requires productivity gains nobody can guarantee. The 'silent' nature of inflation as a tax means no one votes for it, which is the entire point. Recognizing the chain is the goal of this question; agreeing with the conclusion is not required."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "module-synthesis",
+      "prompt": "Module 6 brings together the threads of the course. Pick the two lessons in this module that seem most in tension with each other (in your reading). State the tension in one sentence, then say how you would honestly resolve it (or not). Two to four sentences.",
+      "expectedKeywords": ["tension", "resolve"],
+      "rationale": "There is no single right answer; the question is meant to surface the conceptual conflict at the center of the module. The strongest tensions are usually between Lesson 3 (AI displacing labor) and Lesson 6 (we need automation to substitute for missing labor), or between Lesson 1 (fiscal dominance constrains the state) and Lesson 5 (the state still has enormous coercive power over digital money), or between Lesson 2 (energy is the binding constraint) and Lesson 4 (capital concentration in compute). Any of these can be defended. What matters is whether you can actually *state* the tension, not paper over it. Students who claim there is no tension between any pair of lessons have not yet read the lessons against each other. Try the question again after the discussion threads."
+    }
+  ]
+}

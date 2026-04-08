@@ -1,0 +1,26 @@
+{
+  "id": "03-ehr-and-his-architecture",
+  "slug": "ehr-and-his-architecture",
+  "order": 3,
+  "title": "EHR and Health Information System Architecture",
+  "summary": "What an EHR actually is under the hood: clinical data repository, CPOE, results review, documentation, integration engine, and the rest of the stack. What 'modular' buys you, what it doesn't, and why interoperability is harder than it sounds.",
+  "learningOutcomes": [
+    "Diagram the major components of a modern EHR and explain what each does.",
+    "Explain the role of an integration engine and why it exists.",
+    "Compare best-of-breed and integrated EHR strategies on cost, risk, and clinician experience.",
+    "Define interoperability at the four levels (foundational, structural, semantic, organizational) and give an example of failure at each level.",
+    "Read a real EHR architecture diagram and identify weak points."
+  ],
+  "prerequisites": ["02-clinical-data-standards"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-anatomy-of-the-modern-ehr",
+    "02-cpoe-and-clinical-data-repository",
+    "03-integration-engine",
+    "04-interoperability-in-practice",
+    "05-best-of-breed-vs-integrated"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "concepts": "concepts.json"
+}

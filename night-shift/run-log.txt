@@ -1,0 +1,1902 @@
+=== NIGHT SHIFT START: Sat, Mar 21, 2026  1:40:47 AM ===
+Branch: night-shift-4-tools
+
+=== TOOL 1: Debate Arena — Sat, Mar 21, 2026  1:40:48 AM ===
+--- Build check after Tool 1 (Debate Arena) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 774ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.9s
+  Running TypeScript ...
+Failed to compile.
+
+./app/lib/debate/debate-service.ts:78:31
+Type error: 'room' is possibly 'null'.
+
+[0m [90m 76 |[39m   [36mif[39m ([33m![39mroom) [36mreturn[39m [36mnull[39m
+ [90m 77 |[39m
+[31m[1m>[22m[39m[90m 78 |[39m   [36mfunction[39m mapArg(arg[33m:[39m [36mtypeof[39m room[33m.[39marguments[number])[33m:[39m [33mArgumentWithMeta[39m {
+ [90m    |[39m                               [31m[1m^[22m[39m
+ [90m 79 |[39m     [36mreturn[39m {
+ [90m 80 |[39m       [33m...[39marg[33m,[39m
+ [90m 81 |[39m       voteCount[33m:[39m arg[33m.[39mvotes[33m.[39mlength[33m,[39m[0m
+!!! BUILD FAILED after Tool 1 (Debate Arena) — check run-log.txt
+Tool 1 build failed — skipping commit, continuing to Tool 2
+
+=== TOOL 2: Quiz Bowl Blitz — Sat, Mar 21, 2026  1:47:49 AM ===
+--- Build check after Tool 2 (Quiz Bowl Blitz) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 797ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+=== NIGHT SHIFT START: Sat, Mar 21, 2026  1:48:43 AM ===
+Branch: night-shift-4-tools
+
+=== TOOL 1: Debate Arena — Sat, Mar 21, 2026  1:48:43 AM ===
+--- Build check after Tool 1 (Debate Arena) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 791ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.9s
+  Running TypeScript ...
+=== NIGHT SHIFT START: Sat, Mar 21, 2026  1:49:02 AM ===
+Branch: night-shift-4-tools
+
+=== TOOL 1: Debate Arena — Sat, Mar 21, 2026  1:49:03 AM ===
+The Debate Arena feature has been successfully built and integrated. Here's what was created:
+
+**Schema** — `DebateRoom`, `DebateArgument`, `DebateVote` models + `DebateStatus`/`DebateSide` enums, pushed to the database.
+
+**Lib** — `app/lib/debate/debate-service.ts` with `createRoom`, `getRoom`, `listRoomsForUser`, `submitArgument`, `voteArgument`, `requestVerdict`, and `generateVerdict` (Haiku fire-and-forget).
+
+**API Routes** (6 routes):
+- `GET/POST /api/debate/rooms`
+- `GET /api/debate/rooms/[roomId]`
+- `POST /api/debate/rooms/[roomId]/join`
+- `POST /api/debate/rooms/[roomId]/arguments`
+- `POST /api/debate/rooms/[roomId]/arguments/[argumentId]/vote`
+- `POST /api/debate/rooms/[roomId]/verdict`
+
+**Pages** (5 pages):
+- `/debate` — hub with How It Works strip, join-by-code input, room cards
+- `/debate/new` — create form with title + proposition
+- `/debate/[roomId]` — two-column PRO/CON view, vote buttons, verdict card, 10s polling
+- `/debate/[roomId]/argue` — side selector + claim/evidence/reasoning form
+- `/debate/join` — standalone join-by-code page
+
+**Hub** — Debate Arena card added to `/hub` in the Featured Experiences section.
+
+Build passed: **208 pages, 0 TypeScript errors**.
+--- Build check after Tool 1 (Debate Arena) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 788ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.0s
+  Running TypeScript ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/208) ...
+  Generating static pages using 21 workers (52/208) 
+  Generating static pages using 21 workers (104/208) 
+  Generating static pages using 21 workers (156/208) 
+✓ Generating static pages using 21 workers (208/208) in 1278.0ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /academy
+├ ○ /admin
+├ ○ /admin/news-sources
+├ ○ /admin/users
+├ ○ /admin/ux-audit
+├ ○ /analytics/ab-outcomes
+├ ○ /analytics/faculty
+├ ○ /analytics/faculty-intelligence
+├ ○ /analytics/learning-science
+├ ○ /analytics/platform
+├ ○ /analytics/student
+├ ƒ /api/admin
+├ ƒ /api/admin/announcements
+├ ƒ /api/admin/announcements/[id]
+├ ƒ /api/admin/economics
+├ ƒ /api/admin/flagged
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/study-groups
+├ ƒ /api/admin/tool-sessions/[id]
+├ ƒ /api/admin/tools/[id]
+├ ƒ /api/admin/tools/[id]/approval
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/ab-outcomes
+├ ƒ /api/analytics/analyze-session
+├ ƒ /api/analytics/audit-alerts
+├ ƒ /api/analytics/concept-mastery
+├ ƒ /api/analytics/curriculum-gaps
+├ ƒ /api/analytics/curriculum-signals
+├ ƒ /api/analytics/effectiveness
+├ ƒ /api/analytics/faculty
+├ ƒ /api/analytics/faculty/at-risk-trend
+├ ƒ /api/analytics/faculty/bloom-coverage
+├ ƒ /api/analytics/faculty/cohort-compare
+├ ƒ /api/analytics/faculty/course-health-trend
+├ ƒ /api/analytics/faculty/difficulty-outcome
+├ ƒ /api/analytics/faculty/flag-student
+├ ƒ /api/analytics/faculty/interventions
+├ ƒ /api/analytics/faculty/misconceptions
+├ ƒ /api/analytics/faculty/objective-coverage
+├ ƒ /api/analytics/faculty/session-quality
+├ ƒ /api/analytics/faculty/tool-comparison
+├ ƒ /api/analytics/faculty/velocity-heatmap
+├ ƒ /api/analytics/faculty/weekly-engagement
+├ ƒ /api/analytics/interventions
+├ ƒ /api/analytics/interventions/[id]
+├ ƒ /api/analytics/learning-science
+├ ƒ /api/analytics/platform
+├ ƒ /api/analytics/student
+├ ƒ /api/analytics/student/concept-timeline
+├ ƒ /api/analytics/student/concept-velocity
+├ ƒ /api/analytics/student/concepts
+├ ƒ /api/analytics/student/sr-nudge
+├ ƒ /api/analytics/student/sr-review
+├ ƒ /api/analytics/transfer-explorer
+├ ƒ /api/announcements
+├ ƒ /api/articulation
+├ ƒ /api/articulation/[id]/decision
+├ ƒ /api/articulation/evaluate
+├ ƒ /api/assignments/[id]
+├ ƒ /api/assignments/[id]/submissions
+├ ƒ /api/assignments/[id]/submit
+├ ƒ /api/audio/episodes
+├ ƒ /api/audio/generate
+├ ƒ /api/audio/jobs/[jobId]
+├ ƒ /api/audio/process-job
+├ ƒ /api/audio/synthesize
+├ ƒ /api/auth/status
+├ ƒ /api/avatar/deploy
+├ ƒ /api/avatar/extract-pdf
+├ ƒ /api/book-recommender/digest
+├ ƒ /api/book-recommender/profile
+├ ƒ /api/book-recommender/recommend
+├ ƒ /api/bounties
+├ ƒ /api/bounties/[id]
+├ ƒ /api/bounties/[id]/reviews
+├ ƒ /api/bracket/contests
+├ ƒ /api/bracket/contests/[id]
+├ ƒ /api/bracket/contests/[id]/email
+├ ƒ /api/bracket/contests/[id]/lock
+├ ƒ /api/bracket/contests/[id]/messages
+├ ƒ /api/bracket/contests/[id]/messages/[msgId]/reply
+├ ƒ /api/bracket/contests/[id]/nudge
+├ ƒ /api/bracket/contests/[id]/picks
+├ ƒ /api/bracket/contests/[id]/results
+├ ƒ /api/bracket/contests/join
+├ ƒ /api/brackets/digest
+├ ƒ /api/build-gamification
+├ ƒ /api/build-tool
+├ ƒ /api/builder
+├ ƒ /api/builder/[sessionId]/documents
+├ ƒ /api/builder/[sessionId]/publish
+├ ƒ /api/builder/sessions
+├ ƒ /api/canvas/test
+├ ƒ /api/catalog/courses
+├ ƒ /api/catalog/courses/[code]
+├ ƒ /api/catalog/search
+├ ƒ /api/chat
+├ ƒ /api/chat/channels/[channelId]/messages
+├ ƒ /api/chat/channels/[channelId]/messages/[msgId]
+├ ƒ /api/chat/channels/[channelId]/mute/[userId]
+├ ƒ /api/chat/groups
+├ ƒ /api/chat/groups/[groupId]
+├ ƒ /api/chat/groups/[groupId]/channels
+├ ƒ /api/chat/groups/[groupId]/channels/[channelId]
+├ ƒ /api/chat/groups/[groupId]/join
+├ ƒ /api/chat/groups/[groupId]/leave
+├ ƒ /api/chat/groups/[groupId]/members
+├ ƒ /api/chat/groups/[groupId]/members/[userId]
+├ ƒ /api/chat/groups/[groupId]/mute/[userId]
+├ ƒ /api/chat/groups/eligible
+├ ƒ /api/collab
+├ ƒ /api/collab/[id]/review
+├ ƒ /api/collab/sessions
+├ ƒ /api/collab/sessions/[id]
+├ ƒ /api/collab/sessions/[id]/leave
+├ ƒ /api/collab/sessions/[id]/messages
+├ ƒ /api/collab/sessions/join
+├ ƒ /api/collab/stream/[id]
+├ ƒ /api/concierge
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/courses/[id]/assignments
+├ ƒ /api/courses/[id]/discussions
+├ ƒ /api/courses/[id]/discussions/[threadId]
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts/[postId]
+├ ƒ /api/courses/[id]/discussions/suggest
+├ ƒ /api/courses/[id]/enroll
+├ ƒ /api/courses/[id]/generate-bot
+├ ƒ /api/courses/[id]/gradebook
+├ ƒ /api/courses/[id]/gradebook/bulk-release
+├ ƒ /api/courses/[id]/gradebook/export
+├ ƒ /api/courses/[id]/materials
+├ ƒ /api/courses/[id]/materials/import-syllabus
+├ ƒ /api/courses/[id]/materials/upload
+├ ƒ /api/courses/[id]/my-grades
+├ ƒ /api/courses/[id]/objectives
+├ ƒ /api/courses/[id]/objectives/[objectiveId]
+├ ƒ /api/courses/[id]/rubrics
+├ ƒ /api/courses/[id]/rubrics/generate
+├ ƒ /api/courses/[id]/seed-misconceptions
+├ ƒ /api/courses/[id]/suggest-tools
+├ ƒ /api/courses/[id]/tools
+├ ƒ /api/courses/[id]/tools/[toolId]
+├ ƒ /api/courses/join/[enrollmentKey]
+├ ƒ /api/cron/curriculum-audit
+├ ƒ /api/cron/effectiveness-rollup
+├ ƒ /api/cron/news-fetch
+├ ƒ /api/cron/sandcastle-question-timeout
+├ ƒ /api/dashboard
+├ ƒ /api/dashboard/suggested-tools
+├ ƒ /api/debate/rooms
+├ ƒ /api/debate/rooms/[roomId]
+├ ƒ /api/debate/rooms/[roomId]/arguments
+├ ƒ /api/debate/rooms/[roomId]/arguments/[argumentId]/vote
+├ ƒ /api/debate/rooms/[roomId]/join
+├ ƒ /api/debate/rooms/[roomId]/verdict
+├ ƒ /api/degree-plan
+├ ƒ /api/degree-plan/[planId]
+├ ƒ /api/degree-plan/[planId]/courses
+├ ƒ /api/degree-plan/[planId]/courses/[entryId]
+├ ƒ /api/enrollment
+├ ƒ /api/experiments
+├ ƒ /api/experiments/[id]
+├ ƒ /api/experiments/[id]/enroll
+├ ƒ /api/gradebook/[entryId]
+├ ƒ /api/gradebook/[entryId]/release
+├ ƒ /api/interests/suggest
+├ ƒ /api/library
+├ ƒ /api/library/ids
+├ ƒ /api/lti/jwks
+├ ƒ /api/lti/launch
+├ ƒ /api/materials/[id]/mark-read
+├ ƒ /api/memories
+├ ƒ /api/memories/[id]
+├ ƒ /api/memories/dismiss
+├ ƒ /api/memories/extract
+├ ƒ /api/messages
+├ ƒ /api/messages/[conversationId]
+├ ƒ /api/messages/[conversationId]/read
+├ ƒ /api/messages/[conversationId]/send
+├ ƒ /api/messages/unread-count
+├ ƒ /api/news/articles
+├ ƒ /api/news/sources
+├ ƒ /api/news/sources/[id]
+├ ƒ /api/news/stats
+├ ƒ /api/notes
+├ ƒ /api/notes/[id]
+├ ƒ /api/notifications
+├ ƒ /api/notifications/tool-usage
+├ ƒ /api/objectives/progress
+├ ƒ /api/onboarding/check-email
+├ ƒ /api/onboarding/create-account
+├ ƒ /api/onboarding/enrich
+├ ƒ /api/onboarding/enrich-stream
+├ ƒ /api/onboarding/import-courses
+├ ƒ /api/onboarding/interest-suggestions
+├ ƒ /api/onboarding/set-intent
+├ ƒ /api/petitions
+├ ƒ /api/petitions/[id]
+├ ƒ /api/playground/apps
+├ ƒ /api/playground/apps/[appId]
+├ ƒ /api/playground/apps/[appId]/delegates
+├ ƒ /api/playground/apps/[appId]/delegates/[delegateId]
+├ ƒ /api/playground/apps/[appId]/publish
+├ ƒ /api/playground/apps/[appId]/snapshots
+├ ƒ /api/playground/apps/[appId]/snapshots/[snapshotId]/restore
+├ ƒ /api/playground/apps/public
+├ ƒ /api/playground/chat
+├ ƒ /api/playground/export
+├ ƒ /api/playground/store/[appId]/collection/[name]
+├ ƒ /api/playground/store/[appId]/collection/[name]/[entryId]
+├ ƒ /api/playground/store/[appId]/config/[key]
+├ ƒ /api/playground/store/[appId]/user/[key]
+├ ƒ /api/playground/token
+├ ƒ /api/portfolio
+├ ƒ /api/portfolio/export
+├ ƒ /api/portfolio/generate-bullets
+├ ƒ /api/portfolio/import-resume
+├ ƒ /api/portfolio/items/[id]
+├ ƒ /api/portfolio/suggestions
+├ ƒ /api/presence
+├ ƒ /api/publish/generate-description
+├ ƒ /api/publish/preview-chat
+├ ƒ /api/recommendations
+├ ƒ /api/registrar/analytics
+├ ƒ /api/registrar/articulation
+├ ƒ /api/registrar/articulation/routing-rules
+├ ƒ /api/registrar/cron/graduation-clearance
+├ ƒ /api/registrar/degree-audit
+├ ƒ /api/registrar/degree-audit/[studentId]
+├ ƒ /api/registrar/degree-audit/review/[resultId]
+├ ƒ /api/registrar/petitions
+├ ƒ /api/registrar/petitions/[id]
+├ ƒ /api/registrar/programs
+├ ƒ /api/research-hub
+├ ƒ /api/sandcastle/feature-flags
+├ ƒ /api/sandcastle/feature-flags/[flagId]
+├ ƒ /api/sandcastle/rooms
+├ ƒ /api/sandcastle/rooms/[roomId]
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/clear
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/critique
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/stroke
+├ ƒ /api/sandcastle/rooms/[roomId]/dashboard/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/end
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/grant
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/lower
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/queue
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/raise
+├ ƒ /api/sandcastle/rooms/[roomId]/join
+├ ƒ /api/sandcastle/rooms/[roomId]/participate/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/polls
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/insight
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/vote
+├ ƒ /api/sandcastle/rooms/[roomId]/questions
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/buzz
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/report
+├ ƒ /api/sandcastle/rooms/[roomId]/scoreboard
+├ ƒ /api/sandcastle/rooms/[roomId]/start
+├ ƒ /api/sandcastle/rooms/join/[joinCode]
+├ ƒ /api/sandcastle/ws
+├ ƒ /api/service-documents
+├ ƒ /api/service-documents/embed
+├ ƒ /api/sessions
+├ ƒ /api/sessions/[id]
+├ ƒ /api/sessions/[id]/messages
+├ ƒ /api/student-services/[slug]
+├ ƒ /api/students/me/degree-audit
+├ ƒ /api/studio/audit
+├ ƒ /api/study/[toolId]/documents
+├ ƒ /api/study/[toolId]/sessions
+├ ƒ /api/study/[toolId]/sessions/[sessionId]/messages
+├ ƒ /api/study/[toolId]/upload
+├ ƒ /api/study/guide
+├ ƒ /api/telemetry
+├ ƒ /api/tools
+├ ƒ /api/tools/[id]
+├ ƒ /api/tools/[id]/analytics
+├ ƒ /api/tools/[id]/comments
+├ ƒ /api/tools/[id]/favorite
+├ ƒ /api/tools/[id]/fork
+├ ƒ /api/tools/[id]/insights
+├ ƒ /api/tools/[id]/leaderboard
+├ ƒ /api/tools/[id]/metrics
+├ ƒ /api/tools/[id]/rate
+├ ƒ /api/tools/[id]/score
+├ ƒ /api/tools/[id]/upvote
+├ ƒ /api/tools/recommended
+├ ƒ /api/upload/course-material
+├ ƒ /api/upload/pdf
+├ ƒ /api/user/interests/[tag]
+├ ƒ /api/user/me
+├ ƒ /api/users
+├ ƒ /api/users/[id]
+├ ƒ /app/[appId]
+├ ○ /apps
+├ ƒ /assignments/[id]
+├ ○ /avatar
+├ ○ /bounties
+├ ƒ /bounties/[id]
+├ ○ /bounties/new
+├ ○ /bracket
+├ ƒ /bracket/[contestId]
+├ ƒ /bracket/[contestId]/manage
+├ ƒ /bracket/[contestId]/picks
+├ ○ /bracket/join
+├ ○ /bracket/new
+├ ○ /build
+├ ○ /build/collaborator
+├ ○ /build/refiner
+├ ○ /builder
+├ ○ /campus
+├ ○ /campus-navigator
+├ ƒ /campus-navigator/[slug]
+├ ○ /courses
+├ ƒ /courses/[id]/assignments
+├ ƒ /courses/[id]/assignments/new
+├ ○ /datasets
+├ ○ /debate
+├ ƒ /debate/[roomId]
+├ ƒ /debate/[roomId]/argue
+├ ○ /debate/join
+├ ○ /debate/new
+├ ○ /experience
+├ ○ /hub
+├ ƒ /join/[enrollmentKey]
+├ ○ /library
+├ ○ /messages
+├ ○ /my-apps
+├ ○ /notes
+├ ○ /notifications
+├ ○ /onboard
+├ ○ /petitions
+├ ○ /petitions/new
+├ ○ /playground
+├ ○ /portfolio
+├ ƒ /portfolio/[userId]
+├ ƒ /profile/[id]
+├ ○ /publish
+├ ○ /registrar
+├ ○ /registrar/analytics
+├ ○ /registrar/articulation
+├ ○ /registrar/degree-audit
+├ ○ /registrar/petitions
+├ ○ /registrar/programs
+├ ○ /registrar/reports
+├ ○ /research-hub
+├ ƒ /research-hub/[slug]
+├ ƒ /sandcastle/[roomId]
+├ ƒ /sandcastle/[roomId]/participate
+├ ƒ /sandcastle/[roomId]/report
+├ ƒ /sandcastle/join/[joinCode]
+├ ○ /sandcastle/new
+├ ○ /service-bot
+├ ○ /signup
+├ ○ /student-services
+├ ƒ /student-services/[slug]
+├ ○ /student-services/academic-advisor
+├ ○ /studio
+├ ○ /tools
+├ ƒ /tools/[id]
+├ ○ /tools/ai-registrar-flashcards
+├ ○ /tools/book-recommender
+├ ○ /tools/transfer-credit-articulator
+├ ○ /tools/uk-in-the-news
+└ ○ /tools/uk-now
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+--- Build OK after Tool 1 (Debate Arena) ---
+[night-shift-4-tools b8137f6] feat: Debate Arena — two-sided argument platform with AI verdict
+ 27 files changed, 1924 insertions(+), 23 deletions(-)
+ create mode 100644 app/api/chat/channels/[channelId]/messages/[msgId]/route.ts
+ create mode 100644 app/api/chat/channels/[channelId]/mute/[userId]/route.ts
+ create mode 100644 app/api/chat/groups/[groupId]/mute/[userId]/route.ts
+ create mode 100644 app/api/debate/rooms/[roomId]/arguments/[argumentId]/vote/route.ts
+ create mode 100644 app/api/debate/rooms/[roomId]/arguments/route.ts
+ create mode 100644 app/api/debate/rooms/[roomId]/join/route.ts
+ create mode 100644 app/api/debate/rooms/[roomId]/route.ts
+ create mode 100644 app/api/debate/rooms/[roomId]/verdict/route.ts
+ create mode 100644 app/api/debate/rooms/route.ts
+ create mode 100644 app/debate/[roomId]/argue/page.tsx
+ create mode 100644 app/debate/[roomId]/page.tsx
+ create mode 100644 app/debate/join/page.tsx
+ create mode 100644 app/debate/new/page.tsx
+ create mode 100644 app/debate/page.tsx
+ create mode 100644 app/lib/debate/debate-service.ts
+ create mode 100644 app/lib/debate/index.ts
+ create mode 100644 night_shift.sh
+Tool 1 COMMITTED
+
+=== TOOL 2: Quiz Bowl Blitz — Sat, Mar 21, 2026  1:57:12 AM ===
+Quiz Bowl Blitz is live. Build passes with 211 pages, 0 TS errors.
+
+Here's what was built:
+
+**Schema** — 4 new models (`QuizBowl`, `QuizBowlQuestion`, `QuizBowlPlayer`, `QuizBowlAnswer`) + `QuizBowlStatus` enum + back-relations on `User`. Pushed and generated.
+
+**Lib** (`app/lib/quiz-bowl/quiz-bowl-service.ts`) — 8 functions: `createQuiz`, `generateQuestions` (fire-and-forget Haiku call → JSON parse → bulk create), `getQuiz`, `listQuizzesForUser`, `joinQuiz`, `startQuiz`, `advanceQuestion`, `submitAnswer`.
+
+**API** — 6 thin routes, all guarded with `requireRequestUser`:
+- `GET/POST /api/quiz-bowl` — list + create
+- `GET /api/quiz-bowl/[quizId]` — fetch game state
+- `POST /api/quiz-bowl/[quizId]/join` — player join
+- `POST /api/quiz-bowl/[quizId]/start` — host starts
+- `POST /api/quiz-bowl/[quizId]/advance` — host advances question
+- `POST /api/quiz-bowl/[quizId]/answer` — player submits answer
+
+**Pages:**
+- `/quiz-bowl` — hub with "How it Works", quiz list, join-by-code inline form
+- `/quiz-bowl/new` — create form with title, topic, and question count slider (1–10)
+- `/quiz-bowl/[quizId]` — full game view (dark slate-900 background, state machine: LOBBY → GENERATING → READY → IN_PROGRESS → COMPLETE), blue/green/amber/red answer buttons, per-question feedback with explanation, leaderboard sidebar, podium for top 3
+
+**Hub card** — added to the Featured Experience grid in `/hub` alongside The Bracket and Debate Arena.
+--- Build check after Tool 2 (Quiz Bowl Blitz) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 813ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 8.9s
+  Running TypeScript ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/211) ...
+  Generating static pages using 21 workers (52/211) 
+  Generating static pages using 21 workers (105/211) 
+  Generating static pages using 21 workers (158/211) 
+✓ Generating static pages using 21 workers (211/211) in 788.8ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /academy
+├ ○ /admin
+├ ○ /admin/news-sources
+├ ○ /admin/users
+├ ○ /admin/ux-audit
+├ ○ /analytics/ab-outcomes
+├ ○ /analytics/faculty
+├ ○ /analytics/faculty-intelligence
+├ ○ /analytics/learning-science
+├ ○ /analytics/platform
+├ ○ /analytics/student
+├ ƒ /api/admin
+├ ƒ /api/admin/announcements
+├ ƒ /api/admin/announcements/[id]
+├ ƒ /api/admin/economics
+├ ƒ /api/admin/flagged
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/study-groups
+├ ƒ /api/admin/tool-sessions/[id]
+├ ƒ /api/admin/tools/[id]
+├ ƒ /api/admin/tools/[id]/approval
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/ab-outcomes
+├ ƒ /api/analytics/analyze-session
+├ ƒ /api/analytics/audit-alerts
+├ ƒ /api/analytics/concept-mastery
+├ ƒ /api/analytics/curriculum-gaps
+├ ƒ /api/analytics/curriculum-signals
+├ ƒ /api/analytics/effectiveness
+├ ƒ /api/analytics/faculty
+├ ƒ /api/analytics/faculty/at-risk-trend
+├ ƒ /api/analytics/faculty/bloom-coverage
+├ ƒ /api/analytics/faculty/cohort-compare
+├ ƒ /api/analytics/faculty/course-health-trend
+├ ƒ /api/analytics/faculty/difficulty-outcome
+├ ƒ /api/analytics/faculty/flag-student
+├ ƒ /api/analytics/faculty/interventions
+├ ƒ /api/analytics/faculty/misconceptions
+├ ƒ /api/analytics/faculty/objective-coverage
+├ ƒ /api/analytics/faculty/session-quality
+├ ƒ /api/analytics/faculty/tool-comparison
+├ ƒ /api/analytics/faculty/velocity-heatmap
+├ ƒ /api/analytics/faculty/weekly-engagement
+├ ƒ /api/analytics/interventions
+├ ƒ /api/analytics/interventions/[id]
+├ ƒ /api/analytics/learning-science
+├ ƒ /api/analytics/platform
+├ ƒ /api/analytics/student
+├ ƒ /api/analytics/student/concept-timeline
+├ ƒ /api/analytics/student/concept-velocity
+├ ƒ /api/analytics/student/concepts
+├ ƒ /api/analytics/student/sr-nudge
+├ ƒ /api/analytics/student/sr-review
+├ ƒ /api/analytics/transfer-explorer
+├ ƒ /api/announcements
+├ ƒ /api/articulation
+├ ƒ /api/articulation/[id]/decision
+├ ƒ /api/articulation/evaluate
+├ ƒ /api/assignments/[id]
+├ ƒ /api/assignments/[id]/submissions
+├ ƒ /api/assignments/[id]/submit
+├ ƒ /api/audio/episodes
+├ ƒ /api/audio/generate
+├ ƒ /api/audio/jobs/[jobId]
+├ ƒ /api/audio/process-job
+├ ƒ /api/audio/synthesize
+├ ƒ /api/auth/status
+├ ƒ /api/avatar/deploy
+├ ƒ /api/avatar/extract-pdf
+├ ƒ /api/book-recommender/digest
+├ ƒ /api/book-recommender/profile
+├ ƒ /api/book-recommender/recommend
+├ ƒ /api/bounties
+├ ƒ /api/bounties/[id]
+├ ƒ /api/bounties/[id]/reviews
+├ ƒ /api/bracket/contests
+├ ƒ /api/bracket/contests/[id]
+├ ƒ /api/bracket/contests/[id]/email
+├ ƒ /api/bracket/contests/[id]/lock
+├ ƒ /api/bracket/contests/[id]/messages
+├ ƒ /api/bracket/contests/[id]/messages/[msgId]/reply
+├ ƒ /api/bracket/contests/[id]/nudge
+├ ƒ /api/bracket/contests/[id]/picks
+├ ƒ /api/bracket/contests/[id]/results
+├ ƒ /api/bracket/contests/join
+├ ƒ /api/brackets/digest
+├ ƒ /api/build-gamification
+├ ƒ /api/build-tool
+├ ƒ /api/builder
+├ ƒ /api/builder/[sessionId]/documents
+├ ƒ /api/builder/[sessionId]/publish
+├ ƒ /api/builder/sessions
+├ ƒ /api/canvas/test
+├ ƒ /api/catalog/courses
+├ ƒ /api/catalog/courses/[code]
+├ ƒ /api/catalog/search
+├ ƒ /api/chat
+├ ƒ /api/chat/channels/[channelId]/messages
+├ ƒ /api/chat/channels/[channelId]/messages/[msgId]
+├ ƒ /api/chat/channels/[channelId]/mute/[userId]
+├ ƒ /api/chat/groups
+├ ƒ /api/chat/groups/[groupId]
+├ ƒ /api/chat/groups/[groupId]/channels
+├ ƒ /api/chat/groups/[groupId]/channels/[channelId]
+├ ƒ /api/chat/groups/[groupId]/join
+├ ƒ /api/chat/groups/[groupId]/leave
+├ ƒ /api/chat/groups/[groupId]/members
+├ ƒ /api/chat/groups/[groupId]/members/[userId]
+├ ƒ /api/chat/groups/[groupId]/mute/[userId]
+├ ƒ /api/chat/groups/eligible
+├ ƒ /api/collab
+├ ƒ /api/collab/[id]/review
+├ ƒ /api/collab/sessions
+├ ƒ /api/collab/sessions/[id]
+├ ƒ /api/collab/sessions/[id]/leave
+├ ƒ /api/collab/sessions/[id]/messages
+├ ƒ /api/collab/sessions/join
+├ ƒ /api/collab/stream/[id]
+├ ƒ /api/concierge
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/courses/[id]/assignments
+├ ƒ /api/courses/[id]/discussions
+├ ƒ /api/courses/[id]/discussions/[threadId]
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts/[postId]
+├ ƒ /api/courses/[id]/discussions/suggest
+├ ƒ /api/courses/[id]/enroll
+├ ƒ /api/courses/[id]/generate-bot
+├ ƒ /api/courses/[id]/gradebook
+├ ƒ /api/courses/[id]/gradebook/bulk-release
+├ ƒ /api/courses/[id]/gradebook/export
+├ ƒ /api/courses/[id]/materials
+├ ƒ /api/courses/[id]/materials/import-syllabus
+├ ƒ /api/courses/[id]/materials/upload
+├ ƒ /api/courses/[id]/my-grades
+├ ƒ /api/courses/[id]/objectives
+├ ƒ /api/courses/[id]/objectives/[objectiveId]
+├ ƒ /api/courses/[id]/rubrics
+├ ƒ /api/courses/[id]/rubrics/generate
+├ ƒ /api/courses/[id]/seed-misconceptions
+├ ƒ /api/courses/[id]/suggest-tools
+├ ƒ /api/courses/[id]/tools
+├ ƒ /api/courses/[id]/tools/[toolId]
+├ ƒ /api/courses/join/[enrollmentKey]
+├ ƒ /api/cron/curriculum-audit
+├ ƒ /api/cron/effectiveness-rollup
+├ ƒ /api/cron/news-fetch
+├ ƒ /api/cron/sandcastle-question-timeout
+├ ƒ /api/dashboard
+├ ƒ /api/dashboard/suggested-tools
+├ ƒ /api/debate/rooms
+├ ƒ /api/debate/rooms/[roomId]
+├ ƒ /api/debate/rooms/[roomId]/arguments
+├ ƒ /api/debate/rooms/[roomId]/arguments/[argumentId]/vote
+├ ƒ /api/debate/rooms/[roomId]/join
+├ ƒ /api/debate/rooms/[roomId]/verdict
+├ ƒ /api/degree-plan
+├ ƒ /api/degree-plan/[planId]
+├ ƒ /api/degree-plan/[planId]/courses
+├ ƒ /api/degree-plan/[planId]/courses/[entryId]
+├ ƒ /api/enrollment
+├ ƒ /api/experiments
+├ ƒ /api/experiments/[id]
+├ ƒ /api/experiments/[id]/enroll
+├ ƒ /api/gradebook/[entryId]
+├ ƒ /api/gradebook/[entryId]/release
+├ ƒ /api/interests/suggest
+├ ƒ /api/library
+├ ƒ /api/library/ids
+├ ƒ /api/lti/jwks
+├ ƒ /api/lti/launch
+├ ƒ /api/materials/[id]/mark-read
+├ ƒ /api/memories
+├ ƒ /api/memories/[id]
+├ ƒ /api/memories/dismiss
+├ ƒ /api/memories/extract
+├ ƒ /api/messages
+├ ƒ /api/messages/[conversationId]
+├ ƒ /api/messages/[conversationId]/read
+├ ƒ /api/messages/[conversationId]/send
+├ ƒ /api/messages/unread-count
+├ ƒ /api/news/articles
+├ ƒ /api/news/sources
+├ ƒ /api/news/sources/[id]
+├ ƒ /api/news/stats
+├ ƒ /api/notes
+├ ƒ /api/notes/[id]
+├ ƒ /api/notifications
+├ ƒ /api/notifications/tool-usage
+├ ƒ /api/objectives/progress
+├ ƒ /api/onboarding/check-email
+├ ƒ /api/onboarding/create-account
+├ ƒ /api/onboarding/enrich
+├ ƒ /api/onboarding/enrich-stream
+├ ƒ /api/onboarding/import-courses
+├ ƒ /api/onboarding/interest-suggestions
+├ ƒ /api/onboarding/set-intent
+├ ƒ /api/petitions
+├ ƒ /api/petitions/[id]
+├ ƒ /api/playground/apps
+├ ƒ /api/playground/apps/[appId]
+├ ƒ /api/playground/apps/[appId]/delegates
+├ ƒ /api/playground/apps/[appId]/delegates/[delegateId]
+├ ƒ /api/playground/apps/[appId]/publish
+├ ƒ /api/playground/apps/[appId]/snapshots
+├ ƒ /api/playground/apps/[appId]/snapshots/[snapshotId]/restore
+├ ƒ /api/playground/apps/public
+├ ƒ /api/playground/chat
+├ ƒ /api/playground/export
+├ ƒ /api/playground/store/[appId]/collection/[name]
+├ ƒ /api/playground/store/[appId]/collection/[name]/[entryId]
+├ ƒ /api/playground/store/[appId]/config/[key]
+├ ƒ /api/playground/store/[appId]/user/[key]
+├ ƒ /api/playground/token
+├ ƒ /api/portfolio
+├ ƒ /api/portfolio/export
+├ ƒ /api/portfolio/generate-bullets
+├ ƒ /api/portfolio/import-resume
+├ ƒ /api/portfolio/items/[id]
+├ ƒ /api/portfolio/suggestions
+├ ƒ /api/presence
+├ ƒ /api/publish/generate-description
+├ ƒ /api/publish/preview-chat
+├ ƒ /api/quiz-bowl
+├ ƒ /api/quiz-bowl/[quizId]
+├ ƒ /api/quiz-bowl/[quizId]/advance
+├ ƒ /api/quiz-bowl/[quizId]/answer
+├ ƒ /api/quiz-bowl/[quizId]/join
+├ ƒ /api/quiz-bowl/[quizId]/start
+├ ƒ /api/recommendations
+├ ƒ /api/registrar/analytics
+├ ƒ /api/registrar/articulation
+├ ƒ /api/registrar/articulation/routing-rules
+├ ƒ /api/registrar/cron/graduation-clearance
+├ ƒ /api/registrar/degree-audit
+├ ƒ /api/registrar/degree-audit/[studentId]
+├ ƒ /api/registrar/degree-audit/review/[resultId]
+├ ƒ /api/registrar/petitions
+├ ƒ /api/registrar/petitions/[id]
+├ ƒ /api/registrar/programs
+├ ƒ /api/research-hub
+├ ƒ /api/sandcastle/feature-flags
+├ ƒ /api/sandcastle/feature-flags/[flagId]
+├ ƒ /api/sandcastle/rooms
+├ ƒ /api/sandcastle/rooms/[roomId]
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/clear
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/critique
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/stroke
+├ ƒ /api/sandcastle/rooms/[roomId]/dashboard/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/end
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/grant
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/lower
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/queue
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/raise
+├ ƒ /api/sandcastle/rooms/[roomId]/join
+├ ƒ /api/sandcastle/rooms/[roomId]/participate/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/polls
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/insight
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/vote
+├ ƒ /api/sandcastle/rooms/[roomId]/questions
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/buzz
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/report
+├ ƒ /api/sandcastle/rooms/[roomId]/scoreboard
+├ ƒ /api/sandcastle/rooms/[roomId]/start
+├ ƒ /api/sandcastle/rooms/join/[joinCode]
+├ ƒ /api/sandcastle/ws
+├ ƒ /api/service-documents
+├ ƒ /api/service-documents/embed
+├ ƒ /api/sessions
+├ ƒ /api/sessions/[id]
+├ ƒ /api/sessions/[id]/messages
+├ ƒ /api/student-services/[slug]
+├ ƒ /api/students/me/degree-audit
+├ ƒ /api/studio/audit
+├ ƒ /api/study/[toolId]/documents
+├ ƒ /api/study/[toolId]/sessions
+├ ƒ /api/study/[toolId]/sessions/[sessionId]/messages
+├ ƒ /api/study/[toolId]/upload
+├ ƒ /api/study/guide
+├ ƒ /api/telemetry
+├ ƒ /api/tools
+├ ƒ /api/tools/[id]
+├ ƒ /api/tools/[id]/analytics
+├ ƒ /api/tools/[id]/comments
+├ ƒ /api/tools/[id]/favorite
+├ ƒ /api/tools/[id]/fork
+├ ƒ /api/tools/[id]/insights
+├ ƒ /api/tools/[id]/leaderboard
+├ ƒ /api/tools/[id]/metrics
+├ ƒ /api/tools/[id]/rate
+├ ƒ /api/tools/[id]/score
+├ ƒ /api/tools/[id]/upvote
+├ ƒ /api/tools/recommended
+├ ƒ /api/upload/course-material
+├ ƒ /api/upload/pdf
+├ ƒ /api/user/interests/[tag]
+├ ƒ /api/user/me
+├ ƒ /api/users
+├ ƒ /api/users/[id]
+├ ƒ /app/[appId]
+├ ○ /apps
+├ ƒ /assignments/[id]
+├ ○ /avatar
+├ ○ /bounties
+├ ƒ /bounties/[id]
+├ ○ /bounties/new
+├ ○ /bracket
+├ ƒ /bracket/[contestId]
+├ ƒ /bracket/[contestId]/manage
+├ ƒ /bracket/[contestId]/picks
+├ ○ /bracket/join
+├ ○ /bracket/new
+├ ○ /build
+├ ○ /build/collaborator
+├ ○ /build/refiner
+├ ○ /builder
+├ ○ /campus
+├ ○ /campus-navigator
+├ ƒ /campus-navigator/[slug]
+├ ○ /courses
+├ ƒ /courses/[id]/assignments
+├ ƒ /courses/[id]/assignments/new
+├ ○ /datasets
+├ ○ /debate
+├ ƒ /debate/[roomId]
+├ ƒ /debate/[roomId]/argue
+├ ○ /debate/join
+├ ○ /debate/new
+├ ○ /experience
+├ ○ /hub
+├ ƒ /join/[enrollmentKey]
+├ ○ /library
+├ ○ /messages
+├ ○ /my-apps
+├ ○ /notes
+├ ○ /notifications
+├ ○ /onboard
+├ ○ /petitions
+├ ○ /petitions/new
+├ ○ /playground
+├ ○ /portfolio
+├ ƒ /portfolio/[userId]
+├ ƒ /profile/[id]
+├ ○ /publish
+├ ○ /quiz-bowl
+├ ƒ /quiz-bowl/[quizId]
+├ ○ /quiz-bowl/new
+├ ○ /registrar
+├ ○ /registrar/analytics
+├ ○ /registrar/articulation
+├ ○ /registrar/degree-audit
+├ ○ /registrar/petitions
+├ ○ /registrar/programs
+├ ○ /registrar/reports
+├ ○ /research-hub
+├ ƒ /research-hub/[slug]
+├ ƒ /sandcastle/[roomId]
+├ ƒ /sandcastle/[roomId]/participate
+├ ƒ /sandcastle/[roomId]/report
+├ ƒ /sandcastle/join/[joinCode]
+├ ○ /sandcastle/new
+├ ○ /service-bot
+├ ○ /signup
+├ ○ /student-services
+├ ƒ /student-services/[slug]
+├ ○ /student-services/academic-advisor
+├ ○ /studio
+├ ○ /tools
+├ ƒ /tools/[id]
+├ ○ /tools/ai-registrar-flashcards
+├ ○ /tools/book-recommender
+├ ○ /tools/transfer-credit-articulator
+├ ○ /tools/uk-in-the-news
+└ ○ /tools/uk-now
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+--- Build OK after Tool 2 (Quiz Bowl Blitz) ---
+[night-shift-4-tools f13331c] feat: Quiz Bowl Blitz — AI-generated live quiz competition
+ 13 files changed, 1480 insertions(+), 1 deletion(-)
+ create mode 100644 app/api/quiz-bowl/[quizId]/advance/route.ts
+ create mode 100644 app/api/quiz-bowl/[quizId]/answer/route.ts
+ create mode 100644 app/api/quiz-bowl/[quizId]/join/route.ts
+ create mode 100644 app/api/quiz-bowl/[quizId]/route.ts
+ create mode 100644 app/api/quiz-bowl/[quizId]/start/route.ts
+ create mode 100644 app/api/quiz-bowl/route.ts
+ create mode 100644 app/lib/quiz-bowl/index.ts
+ create mode 100644 app/lib/quiz-bowl/quiz-bowl-service.ts
+ create mode 100644 app/quiz-bowl/[quizId]/page.tsx
+ create mode 100644 app/quiz-bowl/new/page.tsx
+ create mode 100644 app/quiz-bowl/page.tsx
+Tool 2 COMMITTED
+
+=== TOOL 3: Case Pitch — Sat, Mar 21, 2026  2:08:00 AM ===
+Case Pitch is live. Here's what was built:
+
+**Schema** — 3 new models (`PitchRoom`, `PitchSubmission`, `PitchVote`) + `PitchRoomStatus` enum + back-relations on `User`. Migrated via `db push`.
+
+**Lib** (`app/lib/pitch/`) — Full service layer: room CRUD, pitch submission with fire-and-forget Claude Sonnet feedback, toggle voting, host controls.
+
+**API** — 5 thin routes, all guarded with `requireRequestUser`:
+- `GET/POST /api/pitch/rooms`
+- `GET /api/pitch/rooms/[roomId]`
+- `POST /api/pitch/rooms/[roomId]/pitches`
+- `POST /api/pitch/rooms/[roomId]/pitches/[pitchId]/vote`
+- `POST /api/pitch/rooms/[roomId]/status`
+
+**Pages** — 4 pages:
+- `/pitch` — hub with How-It-Works strip, join-by-code input, room grid
+- `/pitch/new` — case brief creation form with example prompts
+- `/pitch/[roomId]` — boardroom view: case prompt, pitch cards with vote buttons, AI feedback (polls every 5s until generated), winner callout, host controls
+- `/pitch/[roomId]/submit` — structured pitch form (team name, executive summary, recommendation, rationale)
+
+**Hub card** — Added to `/hub` alongside The Bracket, Debate Arena, and Quiz Bowl Blitz.
+
+**Build:** 214 pages, 0 TypeScript errors.
+--- Build check after Tool 3 (Case Pitch) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 784ms
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 9.4s
+  Running TypeScript ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/214) ...
+  Generating static pages using 21 workers (53/214) 
+  Generating static pages using 21 workers (106/214) 
+  Generating static pages using 21 workers (160/214) 
+✓ Generating static pages using 21 workers (214/214) in 818.0ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /academy
+├ ○ /admin
+├ ○ /admin/news-sources
+├ ○ /admin/users
+├ ○ /admin/ux-audit
+├ ○ /analytics/ab-outcomes
+├ ○ /analytics/faculty
+├ ○ /analytics/faculty-intelligence
+├ ○ /analytics/learning-science
+├ ○ /analytics/platform
+├ ○ /analytics/student
+├ ƒ /api/admin
+├ ƒ /api/admin/announcements
+├ ƒ /api/admin/announcements/[id]
+├ ƒ /api/admin/economics
+├ ƒ /api/admin/flagged
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/study-groups
+├ ƒ /api/admin/tool-sessions/[id]
+├ ƒ /api/admin/tools/[id]
+├ ƒ /api/admin/tools/[id]/approval
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/ab-outcomes
+├ ƒ /api/analytics/analyze-session
+├ ƒ /api/analytics/audit-alerts
+├ ƒ /api/analytics/concept-mastery
+├ ƒ /api/analytics/curriculum-gaps
+├ ƒ /api/analytics/curriculum-signals
+├ ƒ /api/analytics/effectiveness
+├ ƒ /api/analytics/faculty
+├ ƒ /api/analytics/faculty/at-risk-trend
+├ ƒ /api/analytics/faculty/bloom-coverage
+├ ƒ /api/analytics/faculty/cohort-compare
+├ ƒ /api/analytics/faculty/course-health-trend
+├ ƒ /api/analytics/faculty/difficulty-outcome
+├ ƒ /api/analytics/faculty/flag-student
+├ ƒ /api/analytics/faculty/interventions
+├ ƒ /api/analytics/faculty/misconceptions
+├ ƒ /api/analytics/faculty/objective-coverage
+├ ƒ /api/analytics/faculty/session-quality
+├ ƒ /api/analytics/faculty/tool-comparison
+├ ƒ /api/analytics/faculty/velocity-heatmap
+├ ƒ /api/analytics/faculty/weekly-engagement
+├ ƒ /api/analytics/interventions
+├ ƒ /api/analytics/interventions/[id]
+├ ƒ /api/analytics/learning-science
+├ ƒ /api/analytics/platform
+├ ƒ /api/analytics/student
+├ ƒ /api/analytics/student/concept-timeline
+├ ƒ /api/analytics/student/concept-velocity
+├ ƒ /api/analytics/student/concepts
+├ ƒ /api/analytics/student/sr-nudge
+├ ƒ /api/analytics/student/sr-review
+├ ƒ /api/analytics/transfer-explorer
+├ ƒ /api/announcements
+├ ƒ /api/articulation
+├ ƒ /api/articulation/[id]/decision
+├ ƒ /api/articulation/evaluate
+├ ƒ /api/assignments/[id]
+├ ƒ /api/assignments/[id]/submissions
+├ ƒ /api/assignments/[id]/submit
+├ ƒ /api/audio/episodes
+├ ƒ /api/audio/generate
+├ ƒ /api/audio/jobs/[jobId]
+├ ƒ /api/audio/process-job
+├ ƒ /api/audio/synthesize
+├ ƒ /api/auth/status
+├ ƒ /api/avatar/deploy
+├ ƒ /api/avatar/extract-pdf
+├ ƒ /api/book-recommender/digest
+├ ƒ /api/book-recommender/profile
+├ ƒ /api/book-recommender/recommend
+├ ƒ /api/bounties
+├ ƒ /api/bounties/[id]
+├ ƒ /api/bounties/[id]/reviews
+├ ƒ /api/bracket/contests
+├ ƒ /api/bracket/contests/[id]
+├ ƒ /api/bracket/contests/[id]/email
+├ ƒ /api/bracket/contests/[id]/lock
+├ ƒ /api/bracket/contests/[id]/messages
+├ ƒ /api/bracket/contests/[id]/messages/[msgId]/reply
+├ ƒ /api/bracket/contests/[id]/nudge
+├ ƒ /api/bracket/contests/[id]/picks
+├ ƒ /api/bracket/contests/[id]/results
+├ ƒ /api/bracket/contests/join
+├ ƒ /api/brackets/digest
+├ ƒ /api/build-gamification
+├ ƒ /api/build-tool
+├ ƒ /api/builder
+├ ƒ /api/builder/[sessionId]/documents
+├ ƒ /api/builder/[sessionId]/publish
+├ ƒ /api/builder/sessions
+├ ƒ /api/canvas/test
+├ ƒ /api/catalog/courses
+├ ƒ /api/catalog/courses/[code]
+├ ƒ /api/catalog/search
+├ ƒ /api/chat
+├ ƒ /api/chat/channels/[channelId]/messages
+├ ƒ /api/chat/channels/[channelId]/messages/[msgId]
+├ ƒ /api/chat/channels/[channelId]/mute/[userId]
+├ ƒ /api/chat/groups
+├ ƒ /api/chat/groups/[groupId]
+├ ƒ /api/chat/groups/[groupId]/channels
+├ ƒ /api/chat/groups/[groupId]/channels/[channelId]
+├ ƒ /api/chat/groups/[groupId]/join
+├ ƒ /api/chat/groups/[groupId]/leave
+├ ƒ /api/chat/groups/[groupId]/members
+├ ƒ /api/chat/groups/[groupId]/members/[userId]
+├ ƒ /api/chat/groups/[groupId]/mute/[userId]
+├ ƒ /api/chat/groups/eligible
+├ ƒ /api/collab
+├ ƒ /api/collab/[id]/review
+├ ƒ /api/collab/sessions
+├ ƒ /api/collab/sessions/[id]
+├ ƒ /api/collab/sessions/[id]/leave
+├ ƒ /api/collab/sessions/[id]/messages
+├ ƒ /api/collab/sessions/join
+├ ƒ /api/collab/stream/[id]
+├ ƒ /api/concierge
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/courses/[id]/assignments
+├ ƒ /api/courses/[id]/discussions
+├ ƒ /api/courses/[id]/discussions/[threadId]
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts/[postId]
+├ ƒ /api/courses/[id]/discussions/suggest
+├ ƒ /api/courses/[id]/enroll
+├ ƒ /api/courses/[id]/generate-bot
+├ ƒ /api/courses/[id]/gradebook
+├ ƒ /api/courses/[id]/gradebook/bulk-release
+├ ƒ /api/courses/[id]/gradebook/export
+├ ƒ /api/courses/[id]/materials
+├ ƒ /api/courses/[id]/materials/import-syllabus
+├ ƒ /api/courses/[id]/materials/upload
+├ ƒ /api/courses/[id]/my-grades
+├ ƒ /api/courses/[id]/objectives
+├ ƒ /api/courses/[id]/objectives/[objectiveId]
+├ ƒ /api/courses/[id]/rubrics
+├ ƒ /api/courses/[id]/rubrics/generate
+├ ƒ /api/courses/[id]/seed-misconceptions
+├ ƒ /api/courses/[id]/suggest-tools
+├ ƒ /api/courses/[id]/tools
+├ ƒ /api/courses/[id]/tools/[toolId]
+├ ƒ /api/courses/join/[enrollmentKey]
+├ ƒ /api/cron/curriculum-audit
+├ ƒ /api/cron/effectiveness-rollup
+├ ƒ /api/cron/news-fetch
+├ ƒ /api/cron/sandcastle-question-timeout
+├ ƒ /api/dashboard
+├ ƒ /api/dashboard/suggested-tools
+├ ƒ /api/debate/rooms
+├ ƒ /api/debate/rooms/[roomId]
+├ ƒ /api/debate/rooms/[roomId]/arguments
+├ ƒ /api/debate/rooms/[roomId]/arguments/[argumentId]/vote
+├ ƒ /api/debate/rooms/[roomId]/join
+├ ƒ /api/debate/rooms/[roomId]/verdict
+├ ƒ /api/degree-plan
+├ ƒ /api/degree-plan/[planId]
+├ ƒ /api/degree-plan/[planId]/courses
+├ ƒ /api/degree-plan/[planId]/courses/[entryId]
+├ ƒ /api/enrollment
+├ ƒ /api/experiments
+├ ƒ /api/experiments/[id]
+├ ƒ /api/experiments/[id]/enroll
+├ ƒ /api/gradebook/[entryId]
+├ ƒ /api/gradebook/[entryId]/release
+├ ƒ /api/interests/suggest
+├ ƒ /api/library
+├ ƒ /api/library/ids
+├ ƒ /api/lti/jwks
+├ ƒ /api/lti/launch
+├ ƒ /api/materials/[id]/mark-read
+├ ƒ /api/memories
+├ ƒ /api/memories/[id]
+├ ƒ /api/memories/dismiss
+├ ƒ /api/memories/extract
+├ ƒ /api/messages
+├ ƒ /api/messages/[conversationId]
+├ ƒ /api/messages/[conversationId]/read
+├ ƒ /api/messages/[conversationId]/send
+├ ƒ /api/messages/unread-count
+├ ƒ /api/news/articles
+├ ƒ /api/news/sources
+├ ƒ /api/news/sources/[id]
+├ ƒ /api/news/stats
+├ ƒ /api/notes
+├ ƒ /api/notes/[id]
+├ ƒ /api/notifications
+├ ƒ /api/notifications/tool-usage
+├ ƒ /api/objectives/progress
+├ ƒ /api/onboarding/check-email
+├ ƒ /api/onboarding/create-account
+├ ƒ /api/onboarding/enrich
+├ ƒ /api/onboarding/enrich-stream
+├ ƒ /api/onboarding/import-courses
+├ ƒ /api/onboarding/interest-suggestions
+├ ƒ /api/onboarding/set-intent
+├ ƒ /api/petitions
+├ ƒ /api/petitions/[id]
+├ ƒ /api/pitch/rooms
+├ ƒ /api/pitch/rooms/[roomId]
+├ ƒ /api/pitch/rooms/[roomId]/pitches
+├ ƒ /api/pitch/rooms/[roomId]/pitches/[pitchId]/vote
+├ ƒ /api/pitch/rooms/[roomId]/status
+├ ƒ /api/playground/apps
+├ ƒ /api/playground/apps/[appId]
+├ ƒ /api/playground/apps/[appId]/delegates
+├ ƒ /api/playground/apps/[appId]/delegates/[delegateId]
+├ ƒ /api/playground/apps/[appId]/publish
+├ ƒ /api/playground/apps/[appId]/snapshots
+├ ƒ /api/playground/apps/[appId]/snapshots/[snapshotId]/restore
+├ ƒ /api/playground/apps/public
+├ ƒ /api/playground/chat
+├ ƒ /api/playground/export
+├ ƒ /api/playground/store/[appId]/collection/[name]
+├ ƒ /api/playground/store/[appId]/collection/[name]/[entryId]
+├ ƒ /api/playground/store/[appId]/config/[key]
+├ ƒ /api/playground/store/[appId]/user/[key]
+├ ƒ /api/playground/token
+├ ƒ /api/portfolio
+├ ƒ /api/portfolio/export
+├ ƒ /api/portfolio/generate-bullets
+├ ƒ /api/portfolio/import-resume
+├ ƒ /api/portfolio/items/[id]
+├ ƒ /api/portfolio/suggestions
+├ ƒ /api/presence
+├ ƒ /api/publish/generate-description
+├ ƒ /api/publish/preview-chat
+├ ƒ /api/quiz-bowl
+├ ƒ /api/quiz-bowl/[quizId]
+├ ƒ /api/quiz-bowl/[quizId]/advance
+├ ƒ /api/quiz-bowl/[quizId]/answer
+├ ƒ /api/quiz-bowl/[quizId]/join
+├ ƒ /api/quiz-bowl/[quizId]/start
+├ ƒ /api/recommendations
+├ ƒ /api/registrar/analytics
+├ ƒ /api/registrar/articulation
+├ ƒ /api/registrar/articulation/routing-rules
+├ ƒ /api/registrar/cron/graduation-clearance
+├ ƒ /api/registrar/degree-audit
+├ ƒ /api/registrar/degree-audit/[studentId]
+├ ƒ /api/registrar/degree-audit/review/[resultId]
+├ ƒ /api/registrar/petitions
+├ ƒ /api/registrar/petitions/[id]
+├ ƒ /api/registrar/programs
+├ ƒ /api/research-hub
+├ ƒ /api/sandcastle/feature-flags
+├ ƒ /api/sandcastle/feature-flags/[flagId]
+├ ƒ /api/sandcastle/rooms
+├ ƒ /api/sandcastle/rooms/[roomId]
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/clear
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/critique
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/stroke
+├ ƒ /api/sandcastle/rooms/[roomId]/dashboard/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/end
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/grant
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/lower
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/queue
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/raise
+├ ƒ /api/sandcastle/rooms/[roomId]/join
+├ ƒ /api/sandcastle/rooms/[roomId]/participate/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/polls
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/insight
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/vote
+├ ƒ /api/sandcastle/rooms/[roomId]/questions
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/buzz
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/report
+├ ƒ /api/sandcastle/rooms/[roomId]/scoreboard
+├ ƒ /api/sandcastle/rooms/[roomId]/start
+├ ƒ /api/sandcastle/rooms/join/[joinCode]
+├ ƒ /api/sandcastle/ws
+├ ƒ /api/service-documents
+├ ƒ /api/service-documents/embed
+├ ƒ /api/sessions
+├ ƒ /api/sessions/[id]
+├ ƒ /api/sessions/[id]/messages
+├ ƒ /api/student-services/[slug]
+├ ƒ /api/students/me/degree-audit
+├ ƒ /api/studio/audit
+├ ƒ /api/study/[toolId]/documents
+├ ƒ /api/study/[toolId]/sessions
+├ ƒ /api/study/[toolId]/sessions/[sessionId]/messages
+├ ƒ /api/study/[toolId]/upload
+├ ƒ /api/study/guide
+├ ƒ /api/telemetry
+├ ƒ /api/tools
+├ ƒ /api/tools/[id]
+├ ƒ /api/tools/[id]/analytics
+├ ƒ /api/tools/[id]/comments
+├ ƒ /api/tools/[id]/favorite
+├ ƒ /api/tools/[id]/fork
+├ ƒ /api/tools/[id]/insights
+├ ƒ /api/tools/[id]/leaderboard
+├ ƒ /api/tools/[id]/metrics
+├ ƒ /api/tools/[id]/rate
+├ ƒ /api/tools/[id]/score
+├ ƒ /api/tools/[id]/upvote
+├ ƒ /api/tools/recommended
+├ ƒ /api/upload/course-material
+├ ƒ /api/upload/pdf
+├ ƒ /api/user/interests/[tag]
+├ ƒ /api/user/me
+├ ƒ /api/users
+├ ƒ /api/users/[id]
+├ ƒ /app/[appId]
+├ ○ /apps
+├ ƒ /assignments/[id]
+├ ○ /avatar
+├ ○ /bounties
+├ ƒ /bounties/[id]
+├ ○ /bounties/new
+├ ○ /bracket
+├ ƒ /bracket/[contestId]
+├ ƒ /bracket/[contestId]/manage
+├ ƒ /bracket/[contestId]/picks
+├ ○ /bracket/join
+├ ○ /bracket/new
+├ ○ /build
+├ ○ /build/collaborator
+├ ○ /build/refiner
+├ ○ /builder
+├ ○ /campus
+├ ○ /campus-navigator
+├ ƒ /campus-navigator/[slug]
+├ ○ /courses
+├ ƒ /courses/[id]/assignments
+├ ƒ /courses/[id]/assignments/new
+├ ○ /datasets
+├ ○ /debate
+├ ƒ /debate/[roomId]
+├ ƒ /debate/[roomId]/argue
+├ ○ /debate/join
+├ ○ /debate/new
+├ ○ /experience
+├ ○ /hub
+├ ƒ /join/[enrollmentKey]
+├ ○ /library
+├ ○ /messages
+├ ○ /my-apps
+├ ○ /notes
+├ ○ /notifications
+├ ○ /onboard
+├ ○ /petitions
+├ ○ /petitions/new
+├ ○ /pitch
+├ ƒ /pitch/[roomId]
+├ ƒ /pitch/[roomId]/submit
+├ ○ /pitch/new
+├ ○ /playground
+├ ○ /portfolio
+├ ƒ /portfolio/[userId]
+├ ƒ /profile/[id]
+├ ○ /publish
+├ ○ /quiz-bowl
+├ ƒ /quiz-bowl/[quizId]
+├ ○ /quiz-bowl/new
+├ ○ /registrar
+├ ○ /registrar/analytics
+├ ○ /registrar/articulation
+├ ○ /registrar/degree-audit
+├ ○ /registrar/petitions
+├ ○ /registrar/programs
+├ ○ /registrar/reports
+├ ○ /research-hub
+├ ƒ /research-hub/[slug]
+├ ƒ /sandcastle/[roomId]
+├ ƒ /sandcastle/[roomId]/participate
+├ ƒ /sandcastle/[roomId]/report
+├ ƒ /sandcastle/join/[joinCode]
+├ ○ /sandcastle/new
+├ ○ /service-bot
+├ ○ /signup
+├ ○ /student-services
+├ ƒ /student-services/[slug]
+├ ○ /student-services/academic-advisor
+├ ○ /studio
+├ ○ /tools
+├ ƒ /tools/[id]
+├ ○ /tools/ai-registrar-flashcards
+├ ○ /tools/book-recommender
+├ ○ /tools/transfer-credit-articulator
+├ ○ /tools/uk-in-the-news
+└ ○ /tools/uk-now
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+--- Build OK after Tool 3 (Case Pitch) ---
+[night-shift-4-tools 6a97d09] feat: Case Pitch — business case competition with AI executive feedback
+ 13 files changed, 1479 insertions(+), 1 deletion(-)
+ create mode 100644 app/api/pitch/rooms/[roomId]/pitches/[pitchId]/vote/route.ts
+ create mode 100644 app/api/pitch/rooms/[roomId]/pitches/route.ts
+ create mode 100644 app/api/pitch/rooms/[roomId]/route.ts
+ create mode 100644 app/api/pitch/rooms/[roomId]/status/route.ts
+ create mode 100644 app/api/pitch/rooms/route.ts
+ create mode 100644 app/lib/pitch/index.ts
+ create mode 100644 app/lib/pitch/pitch-service.ts
+ create mode 100644 app/pitch/[roomId]/page.tsx
+ create mode 100644 app/pitch/[roomId]/submit/page.tsx
+ create mode 100644 app/pitch/new/page.tsx
+ create mode 100644 app/pitch/page.tsx
+Tool 3 COMMITTED
+
+=== TOOL 4: Gallery Walk — Sat, Mar 21, 2026  2:16:42 AM ===
+--- Build check after Tool 4 (Gallery Walk) ---
+
+> the-sandbox@0.1.0 build
+> prisma generate && next build
+
+Loaded Prisma config from prisma.config.ts.
+
+Prisma schema loaded from prisma\schema.prisma.
+warn Preview feature "driverAdapters" is deprecated. The functionality can be used without specifying it as a preview feature.
+
+✔ Generated Prisma Client (v7.4.2) to .\app\generated\prisma in 1.01s
+
+Start by importing your Prisma Client (See: https://pris.ly/d/importing-client)
+
+
+▲ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local, .env
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 12.2s
+  Running TypeScript ...
+  Collecting page data using 21 workers ...
+  Generating static pages using 21 workers (0/214) ...
+  Generating static pages using 21 workers (53/214) 
+  Generating static pages using 21 workers (106/214) 
+  Generating static pages using 21 workers (160/214) 
+✓ Generating static pages using 21 workers (214/214) in 875.1ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /academy
+├ ○ /admin
+├ ○ /admin/news-sources
+├ ○ /admin/users
+├ ○ /admin/ux-audit
+├ ○ /analytics/ab-outcomes
+├ ○ /analytics/faculty
+├ ○ /analytics/faculty-intelligence
+├ ○ /analytics/learning-science
+├ ○ /analytics/platform
+├ ○ /analytics/student
+├ ƒ /api/admin
+├ ƒ /api/admin/announcements
+├ ƒ /api/admin/announcements/[id]
+├ ƒ /api/admin/economics
+├ ƒ /api/admin/flagged
+├ ƒ /api/admin/stats
+├ ƒ /api/admin/study-groups
+├ ƒ /api/admin/tool-sessions/[id]
+├ ƒ /api/admin/tools/[id]
+├ ƒ /api/admin/tools/[id]/approval
+├ ƒ /api/admin/users
+├ ƒ /api/admin/users/[id]
+├ ƒ /api/analytics/ab-outcomes
+├ ƒ /api/analytics/analyze-session
+├ ƒ /api/analytics/audit-alerts
+├ ƒ /api/analytics/concept-mastery
+├ ƒ /api/analytics/curriculum-gaps
+├ ƒ /api/analytics/curriculum-signals
+├ ƒ /api/analytics/effectiveness
+├ ƒ /api/analytics/faculty
+├ ƒ /api/analytics/faculty/at-risk-trend
+├ ƒ /api/analytics/faculty/bloom-coverage
+├ ƒ /api/analytics/faculty/cohort-compare
+├ ƒ /api/analytics/faculty/course-health-trend
+├ ƒ /api/analytics/faculty/difficulty-outcome
+├ ƒ /api/analytics/faculty/flag-student
+├ ƒ /api/analytics/faculty/interventions
+├ ƒ /api/analytics/faculty/misconceptions
+├ ƒ /api/analytics/faculty/objective-coverage
+├ ƒ /api/analytics/faculty/session-quality
+├ ƒ /api/analytics/faculty/tool-comparison
+├ ƒ /api/analytics/faculty/velocity-heatmap
+├ ƒ /api/analytics/faculty/weekly-engagement
+├ ƒ /api/analytics/interventions
+├ ƒ /api/analytics/interventions/[id]
+├ ƒ /api/analytics/learning-science
+├ ƒ /api/analytics/platform
+├ ƒ /api/analytics/student
+├ ƒ /api/analytics/student/concept-timeline
+├ ƒ /api/analytics/student/concept-velocity
+├ ƒ /api/analytics/student/concepts
+├ ƒ /api/analytics/student/sr-nudge
+├ ƒ /api/analytics/student/sr-review
+├ ƒ /api/analytics/transfer-explorer
+├ ƒ /api/announcements
+├ ƒ /api/articulation
+├ ƒ /api/articulation/[id]/decision
+├ ƒ /api/articulation/evaluate
+├ ƒ /api/assignments/[id]
+├ ƒ /api/assignments/[id]/submissions
+├ ƒ /api/assignments/[id]/submit
+├ ƒ /api/audio/episodes
+├ ƒ /api/audio/generate
+├ ƒ /api/audio/jobs/[jobId]
+├ ƒ /api/audio/process-job
+├ ƒ /api/audio/synthesize
+├ ƒ /api/auth/status
+├ ƒ /api/avatar/deploy
+├ ƒ /api/avatar/extract-pdf
+├ ƒ /api/book-recommender/digest
+├ ƒ /api/book-recommender/profile
+├ ƒ /api/book-recommender/recommend
+├ ƒ /api/bounties
+├ ƒ /api/bounties/[id]
+├ ƒ /api/bounties/[id]/reviews
+├ ƒ /api/bracket/contests
+├ ƒ /api/bracket/contests/[id]
+├ ƒ /api/bracket/contests/[id]/email
+├ ƒ /api/bracket/contests/[id]/lock
+├ ƒ /api/bracket/contests/[id]/messages
+├ ƒ /api/bracket/contests/[id]/messages/[msgId]/reply
+├ ƒ /api/bracket/contests/[id]/nudge
+├ ƒ /api/bracket/contests/[id]/picks
+├ ƒ /api/bracket/contests/[id]/results
+├ ƒ /api/bracket/contests/join
+├ ƒ /api/brackets/digest
+├ ƒ /api/build-gamification
+├ ƒ /api/build-tool
+├ ƒ /api/builder
+├ ƒ /api/builder/[sessionId]/documents
+├ ƒ /api/builder/[sessionId]/publish
+├ ƒ /api/builder/sessions
+├ ƒ /api/canvas/test
+├ ƒ /api/catalog/courses
+├ ƒ /api/catalog/courses/[code]
+├ ƒ /api/catalog/search
+├ ƒ /api/chat
+├ ƒ /api/chat/channels/[channelId]/messages
+├ ƒ /api/chat/channels/[channelId]/messages/[msgId]
+├ ƒ /api/chat/channels/[channelId]/mute/[userId]
+├ ƒ /api/chat/groups
+├ ƒ /api/chat/groups/[groupId]
+├ ƒ /api/chat/groups/[groupId]/channels
+├ ƒ /api/chat/groups/[groupId]/channels/[channelId]
+├ ƒ /api/chat/groups/[groupId]/join
+├ ƒ /api/chat/groups/[groupId]/leave
+├ ƒ /api/chat/groups/[groupId]/members
+├ ƒ /api/chat/groups/[groupId]/members/[userId]
+├ ƒ /api/chat/groups/[groupId]/mute/[userId]
+├ ƒ /api/chat/groups/eligible
+├ ƒ /api/collab
+├ ƒ /api/collab/[id]/review
+├ ƒ /api/collab/sessions
+├ ƒ /api/collab/sessions/[id]
+├ ƒ /api/collab/sessions/[id]/leave
+├ ƒ /api/collab/sessions/[id]/messages
+├ ƒ /api/collab/sessions/join
+├ ƒ /api/collab/stream/[id]
+├ ƒ /api/concierge
+├ ƒ /api/courses
+├ ƒ /api/courses/[id]
+├ ƒ /api/courses/[id]/assignments
+├ ƒ /api/courses/[id]/discussions
+├ ƒ /api/courses/[id]/discussions/[threadId]
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts
+├ ƒ /api/courses/[id]/discussions/[threadId]/posts/[postId]
+├ ƒ /api/courses/[id]/discussions/suggest
+├ ƒ /api/courses/[id]/enroll
+├ ƒ /api/courses/[id]/generate-bot
+├ ƒ /api/courses/[id]/gradebook
+├ ƒ /api/courses/[id]/gradebook/bulk-release
+├ ƒ /api/courses/[id]/gradebook/export
+├ ƒ /api/courses/[id]/materials
+├ ƒ /api/courses/[id]/materials/import-syllabus
+├ ƒ /api/courses/[id]/materials/upload
+├ ƒ /api/courses/[id]/my-grades
+├ ƒ /api/courses/[id]/objectives
+├ ƒ /api/courses/[id]/objectives/[objectiveId]
+├ ƒ /api/courses/[id]/rubrics
+├ ƒ /api/courses/[id]/rubrics/generate
+├ ƒ /api/courses/[id]/seed-misconceptions
+├ ƒ /api/courses/[id]/suggest-tools
+├ ƒ /api/courses/[id]/tools
+├ ƒ /api/courses/[id]/tools/[toolId]
+├ ƒ /api/courses/join/[enrollmentKey]
+├ ƒ /api/cron/curriculum-audit
+├ ƒ /api/cron/effectiveness-rollup
+├ ƒ /api/cron/news-fetch
+├ ƒ /api/cron/sandcastle-question-timeout
+├ ƒ /api/dashboard
+├ ƒ /api/dashboard/suggested-tools
+├ ƒ /api/debate/rooms
+├ ƒ /api/debate/rooms/[roomId]
+├ ƒ /api/debate/rooms/[roomId]/arguments
+├ ƒ /api/debate/rooms/[roomId]/arguments/[argumentId]/vote
+├ ƒ /api/debate/rooms/[roomId]/join
+├ ƒ /api/debate/rooms/[roomId]/verdict
+├ ƒ /api/degree-plan
+├ ƒ /api/degree-plan/[planId]
+├ ƒ /api/degree-plan/[planId]/courses
+├ ƒ /api/degree-plan/[planId]/courses/[entryId]
+├ ƒ /api/enrollment
+├ ƒ /api/experiments
+├ ƒ /api/experiments/[id]
+├ ƒ /api/experiments/[id]/enroll
+├ ƒ /api/gradebook/[entryId]
+├ ƒ /api/gradebook/[entryId]/release
+├ ƒ /api/interests/suggest
+├ ƒ /api/library
+├ ƒ /api/library/ids
+├ ƒ /api/lti/jwks
+├ ƒ /api/lti/launch
+├ ƒ /api/materials/[id]/mark-read
+├ ƒ /api/memories
+├ ƒ /api/memories/[id]
+├ ƒ /api/memories/dismiss
+├ ƒ /api/memories/extract
+├ ƒ /api/messages
+├ ƒ /api/messages/[conversationId]
+├ ƒ /api/messages/[conversationId]/read
+├ ƒ /api/messages/[conversationId]/send
+├ ƒ /api/messages/unread-count
+├ ƒ /api/news/articles
+├ ƒ /api/news/sources
+├ ƒ /api/news/sources/[id]
+├ ƒ /api/news/stats
+├ ƒ /api/notes
+├ ƒ /api/notes/[id]
+├ ƒ /api/notifications
+├ ƒ /api/notifications/tool-usage
+├ ƒ /api/objectives/progress
+├ ƒ /api/onboarding/check-email
+├ ƒ /api/onboarding/create-account
+├ ƒ /api/onboarding/enrich
+├ ƒ /api/onboarding/enrich-stream
+├ ƒ /api/onboarding/import-courses
+├ ƒ /api/onboarding/interest-suggestions
+├ ƒ /api/onboarding/set-intent
+├ ƒ /api/petitions
+├ ƒ /api/petitions/[id]
+├ ƒ /api/pitch/rooms
+├ ƒ /api/pitch/rooms/[roomId]
+├ ƒ /api/pitch/rooms/[roomId]/pitches
+├ ƒ /api/pitch/rooms/[roomId]/pitches/[pitchId]/vote
+├ ƒ /api/pitch/rooms/[roomId]/status
+├ ƒ /api/playground/apps
+├ ƒ /api/playground/apps/[appId]
+├ ƒ /api/playground/apps/[appId]/delegates
+├ ƒ /api/playground/apps/[appId]/delegates/[delegateId]
+├ ƒ /api/playground/apps/[appId]/publish
+├ ƒ /api/playground/apps/[appId]/snapshots
+├ ƒ /api/playground/apps/[appId]/snapshots/[snapshotId]/restore
+├ ƒ /api/playground/apps/public
+├ ƒ /api/playground/chat
+├ ƒ /api/playground/export
+├ ƒ /api/playground/store/[appId]/collection/[name]
+├ ƒ /api/playground/store/[appId]/collection/[name]/[entryId]
+├ ƒ /api/playground/store/[appId]/config/[key]
+├ ƒ /api/playground/store/[appId]/user/[key]
+├ ƒ /api/playground/token
+├ ƒ /api/portfolio
+├ ƒ /api/portfolio/export
+├ ƒ /api/portfolio/generate-bullets
+├ ƒ /api/portfolio/import-resume
+├ ƒ /api/portfolio/items/[id]
+├ ƒ /api/portfolio/suggestions
+├ ƒ /api/presence
+├ ƒ /api/publish/generate-description
+├ ƒ /api/publish/preview-chat
+├ ƒ /api/quiz-bowl
+├ ƒ /api/quiz-bowl/[quizId]
+├ ƒ /api/quiz-bowl/[quizId]/advance
+├ ƒ /api/quiz-bowl/[quizId]/answer
+├ ƒ /api/quiz-bowl/[quizId]/join
+├ ƒ /api/quiz-bowl/[quizId]/start
+├ ƒ /api/recommendations
+├ ƒ /api/registrar/analytics
+├ ƒ /api/registrar/articulation
+├ ƒ /api/registrar/articulation/routing-rules
+├ ƒ /api/registrar/cron/graduation-clearance
+├ ƒ /api/registrar/degree-audit
+├ ƒ /api/registrar/degree-audit/[studentId]
+├ ƒ /api/registrar/degree-audit/review/[resultId]
+├ ƒ /api/registrar/petitions
+├ ƒ /api/registrar/petitions/[id]
+├ ƒ /api/registrar/programs
+├ ƒ /api/research-hub
+├ ƒ /api/sandcastle/feature-flags
+├ ƒ /api/sandcastle/feature-flags/[flagId]
+├ ƒ /api/sandcastle/rooms
+├ ƒ /api/sandcastle/rooms/[roomId]
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/clear
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/critique
+├ ƒ /api/sandcastle/rooms/[roomId]/canvas/stroke
+├ ƒ /api/sandcastle/rooms/[roomId]/dashboard/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/end
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/grant
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/lower
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/queue
+├ ƒ /api/sandcastle/rooms/[roomId]/hand/raise
+├ ƒ /api/sandcastle/rooms/[roomId]/join
+├ ƒ /api/sandcastle/rooms/[roomId]/participate/stream
+├ ƒ /api/sandcastle/rooms/[roomId]/polls
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/insight
+├ ƒ /api/sandcastle/rooms/[roomId]/polls/[pollId]/vote
+├ ƒ /api/sandcastle/rooms/[roomId]/questions
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/buzz
+├ ƒ /api/sandcastle/rooms/[roomId]/questions/[questionId]/close
+├ ƒ /api/sandcastle/rooms/[roomId]/report
+├ ƒ /api/sandcastle/rooms/[roomId]/scoreboard
+├ ƒ /api/sandcastle/rooms/[roomId]/start
+├ ƒ /api/sandcastle/rooms/join/[joinCode]
+├ ƒ /api/sandcastle/ws
+├ ƒ /api/service-documents
+├ ƒ /api/service-documents/embed
+├ ƒ /api/sessions
+├ ƒ /api/sessions/[id]
+├ ƒ /api/sessions/[id]/messages
+├ ƒ /api/student-services/[slug]
+├ ƒ /api/students/me/degree-audit
+├ ƒ /api/studio/audit
+├ ƒ /api/study/[toolId]/documents
+├ ƒ /api/study/[toolId]/sessions
+├ ƒ /api/study/[toolId]/sessions/[sessionId]/messages
+├ ƒ /api/study/[toolId]/upload
+├ ƒ /api/study/guide
+├ ƒ /api/telemetry
+├ ƒ /api/tools
+├ ƒ /api/tools/[id]
+├ ƒ /api/tools/[id]/analytics
+├ ƒ /api/tools/[id]/comments
+├ ƒ /api/tools/[id]/favorite
+├ ƒ /api/tools/[id]/fork
+├ ƒ /api/tools/[id]/insights
+├ ƒ /api/tools/[id]/leaderboard
+├ ƒ /api/tools/[id]/metrics
+├ ƒ /api/tools/[id]/rate
+├ ƒ /api/tools/[id]/score
+├ ƒ /api/tools/[id]/upvote
+├ ƒ /api/tools/recommended
+├ ƒ /api/upload/course-material
+├ ƒ /api/upload/pdf
+├ ƒ /api/user/interests/[tag]
+├ ƒ /api/user/me
+├ ƒ /api/users
+├ ƒ /api/users/[id]
+├ ƒ /app/[appId]
+├ ○ /apps
+├ ƒ /assignments/[id]
+├ ○ /avatar
+├ ○ /bounties
+├ ƒ /bounties/[id]
+├ ○ /bounties/new
+├ ○ /bracket
+├ ƒ /bracket/[contestId]
+├ ƒ /bracket/[contestId]/manage
+├ ƒ /bracket/[contestId]/picks
+├ ○ /bracket/join
+├ ○ /bracket/new
+├ ○ /build
+├ ○ /build/collaborator
+├ ○ /build/refiner
+├ ○ /builder
+├ ○ /campus
+├ ○ /campus-navigator
+├ ƒ /campus-navigator/[slug]
+├ ○ /courses
+├ ƒ /courses/[id]/assignments
+├ ƒ /courses/[id]/assignments/new
+├ ○ /datasets
+├ ○ /debate
+├ ƒ /debate/[roomId]
+├ ƒ /debate/[roomId]/argue
+├ ○ /debate/join
+├ ○ /debate/new
+├ ○ /experience
+├ ○ /hub
+├ ƒ /join/[enrollmentKey]
+├ ○ /library
+├ ○ /messages
+├ ○ /my-apps
+├ ○ /notes
+├ ○ /notifications
+├ ○ /onboard
+├ ○ /petitions
+├ ○ /petitions/new
+├ ○ /pitch
+├ ƒ /pitch/[roomId]
+├ ƒ /pitch/[roomId]/submit
+├ ○ /pitch/new
+├ ○ /playground
+├ ○ /portfolio
+├ ƒ /portfolio/[userId]
+├ ƒ /profile/[id]
+├ ○ /publish
+├ ○ /quiz-bowl
+├ ƒ /quiz-bowl/[quizId]
+├ ○ /quiz-bowl/new
+├ ○ /registrar
+├ ○ /registrar/analytics
+├ ○ /registrar/articulation
+├ ○ /registrar/degree-audit
+├ ○ /registrar/petitions
+├ ○ /registrar/programs
+├ ○ /registrar/reports
+├ ○ /research-hub
+├ ƒ /research-hub/[slug]
+├ ƒ /sandcastle/[roomId]
+├ ƒ /sandcastle/[roomId]/participate
+├ ƒ /sandcastle/[roomId]/report
+├ ƒ /sandcastle/join/[joinCode]
+├ ○ /sandcastle/new
+├ ○ /service-bot
+├ ○ /signup
+├ ○ /student-services
+├ ƒ /student-services/[slug]
+├ ○ /student-services/academic-advisor
+├ ○ /studio
+├ ○ /tools
+├ ƒ /tools/[id]
+├ ○ /tools/ai-registrar-flashcards
+├ ○ /tools/book-recommender
+├ ○ /tools/transfer-credit-articulator
+├ ○ /tools/uk-in-the-news
+└ ○ /tools/uk-now
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+--- Build OK after Tool 4 (Gallery Walk) ---
+[night-shift-4-tools 7081b14] feat: Gallery Walk — peer critique studio with AI curator notes
+ 5 files changed, 388 insertions(+), 9 deletions(-)
+ create mode 100644 app/lib/gallery/gallery-service.ts
+ create mode 100644 app/lib/gallery/index.ts
+Tool 4 COMMITTED
+
+=== ALL TOOLS COMPLETE: Sat, Mar 21, 2026  9:02:19 AM ===
+Git log:
+7081b14 feat: Gallery Walk — peer critique studio with AI curator notes
+6a97d09 feat: Case Pitch — business case competition with AI executive feedback
+f13331c feat: Quiz Bowl Blitz — AI-generated live quiz competition
+b8137f6 feat: Debate Arena — two-sided argument platform with AI verdict
+bcc59a2 pre-night-shift: fix replayStrokeOnCanvas scope error, build clean at 200 pages
+9ab4563 Add major platform features: Sandcastle, Bracket, analytics intelligence, degree plans, academic advisor, and personalization

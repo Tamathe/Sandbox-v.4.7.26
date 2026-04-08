@@ -1,0 +1,27 @@
+{
+  "id": "04-clinical-decision-support",
+  "slug": "clinical-decision-support",
+  "order": 4,
+  "title": "Clinical Decision Support",
+  "summary": "The CDS Five Rights, alert fatigue, knowledge representation (Arden, GLIF, modern guideline-as-service), and how to design CDS that clinicians actually use without breaking their workflow.",
+  "learningOutcomes": [
+    "State the CDS Five Rights and apply them to a real CDS design.",
+    "Explain alert fatigue at the cognitive, workflow, and metric levels.",
+    "Compare Arden Syntax, GLIF, and modern FHIR-based CDS Hooks.",
+    "Design a CDS intervention for a given clinical problem and defend each design choice.",
+    "Recognize the failure modes of CDS that look right on paper and break in practice."
+  ],
+  "prerequisites": ["03-ehr-and-his-architecture"],
+  "estimatedHours": 7,
+  "lessons": [
+    "01-what-is-cds",
+    "02-cds-five-rights",
+    "03-alert-fatigue",
+    "04-knowledge-representation-arden-glif",
+    "05-cds-hooks-modern-cds"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

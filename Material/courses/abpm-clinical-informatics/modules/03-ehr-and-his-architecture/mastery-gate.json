@@ -1,0 +1,209 @@
+{
+  "id": "mg-03-ehr-and-his-architecture",
+  "moduleId": "03-ehr-and-his-architecture",
+  "title": "Module 3 Mastery Gate — EHR and HIS Architecture",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on EHR anatomy, CPOE, the clinical data repository, the integration engine, HIE architectures, the national interoperability frameworks, and the best-of-breed-vs-integrated strategic question. Read every rationale.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "master-patient-index",
+      "prompt": "A health system discovers that the same patient has been registered under two different MRNs after the patient was seen at two different facilities within the system. Lab results, medications, and historical visits are split across the two records. Which EHR component is most directly responsible for preventing this kind of error?",
+      "options": [
+        "The clinical data repository",
+        "The master patient index (MPI / EMPI)",
+        "The integration engine's transformation layer",
+        "The CDS module"
+      ],
+      "correct": 1,
+      "rationale": "The master patient index is the component responsible for ensuring that one human being maps to one identity across all systems sharing patient data. Inside a single hospital, the MPI is usually part of the EHR; across multiple facilities or systems, an enterprise MPI (EMPI) lives in the integration layer. MPI failures produce duplicate records, split data, and downstream safety events. The CDR stores the data but does not arbitrate identity. The integration engine transports messages but does not (by itself) decide who is who. CDS reads from whatever the MPI hands it and is downstream of identity errors."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "clinical-data-repository",
+      "prompt": "A research team needs to extract structured lab results, medications, and notes for 5,000 patients over a five-year period to support a retrospective study. They are planning to read directly from the live production EHR application. What is the most appropriate architectural objection to this plan?",
+      "options": [
+        "The EHR application is the system of record and direct queries are the most accurate source.",
+        "Analytical queries should be run against the enterprise data warehouse (or a derived analytics database fed from the CDR), not against the live application, to avoid degrading clinical performance and to avoid coupling research code to the application's user interface.",
+        "Research is not allowed to use EHR data without IRB approval, so the architectural question is moot.",
+        "FHIR APIs are the only acceptable way to read from any EHR."
+      ],
+      "correct": 1,
+      "rationale": "The CDR is the system of record for live clinical data and must remain available, transactionally consistent, and current. Analytical queries belong on a derived store (the enterprise data warehouse) that is optimized for queries, can be updated on a schedule, and isolates clinical performance from research load. IRB approval is necessary but is a separate question; FHIR APIs are *one* acceptable path but not the *only* one — direct CDR reads through governed pipelines are common. The architectural principle is separation of transactional and analytical workloads."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "cpoe-unintended-consequences",
+      "prompt": "A physician intends to order acetaminophen 650 mg PO every 6 hours, types 'acet' into the order entry search, and selects what they believe is the third item in a long pick list. The cursor lands on the fifth item — acetazolamide 250 mg — and the order is signed. Which Koppel-style category of CPOE-related error best describes this incident?",
+      "options": [
+        "Workflow issues — orders that worked smoothly on paper now require multiple screens.",
+        "Juxtaposition error / new kinds of errors introduced by the user interface (long pick list with similar drug names on adjacent lines).",
+        "Power structure shift — work moved from nurses to physicians.",
+        "Paper persistence — printed orders defeat CPOE benefits."
+      ],
+      "correct": 1,
+      "rationale": "Pick-list selection errors in which the cursor lands on a different drug than intended are juxtaposition errors and a canonical example of new kinds of errors introduced by the CPOE user interface. The fix is design-level: separate similar drug names, use tall-man lettering, require confirmation for high-risk drugs, and tune the search to prefer the drug the clinical context implies. 'Physicians should be more careful' is not the right answer to the boards — the right answer is the design fix."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "koppel-paper",
+      "prompt": "Which 2005 JAMA paper is the most-cited study on the unintended consequences of CPOE and identified twenty-two specific ways a CPOE system at a large academic medical center facilitated medication errors?",
+      "options": [
+        "Bates et al., 'Effect of CPOE on Medication Error Rates'",
+        "Koppel et al., 'Role of Computerized Physician Order Entry Systems in Facilitating Medication Errors'",
+        "McDonald et al., 'Protocol-Based Computer Reminders'",
+        "Sittig and Singh, 'A New Sociotechnical Model'"
+      ],
+      "correct": 1,
+      "rationale": "Koppel et al., JAMA 2005, is the canonical paper. The boards reference it by name. Bates' work on CPOE is older and largely favorable; the Sittig-Singh sociotechnical model is from 2010 and is in Module 5. The Koppel paper marked the transition from 'CPOE is unambiguously good' to 'CPOE is good if implemented well and harmful if implemented badly,' and the taxonomy it produced is required board knowledge."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "integration-engine",
+      "prompt": "A hospital interface team discovers that the lab interface has produced no result messages for the past 18 hours, but the lab itself has been running normally. The most likely explanation is that the receiving EHR was unable to acknowledge messages and the engine eventually stopped delivering. What kind of monitoring would have detected this earlier?",
+      "options": [
+        "A daily report showing total message volume by interface.",
+        "A real-time alert that fires when an interface produces no traffic for longer than its expected baseline interval.",
+        "A weekly review of dead-letter queue contents.",
+        "An annual audit of interface configurations."
+      ],
+      "correct": 1,
+      "rationale": "Absence-of-traffic alerts are the single most useful integration monitoring tool because the failure mode 'interface produces zero messages' does not announce itself the way an error queue does. Daily reports would catch this at most 24 hours late; weekly DLQ reviews catch it later; annual audits are not monitoring at all. A healthy interface monitoring practice has both error-rate alerts and absence-of-traffic alerts at the per-interface level."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "dead-letter-queue",
+      "prompt": "What is a dead-letter queue in the context of an integration engine, and what is its operational purpose?",
+      "options": [
+        "An archive of every message the engine has processed, kept for compliance.",
+        "A queue of messages that failed delivery after retries, parked for human investigation and remediation.",
+        "A backup of the EHR's clinical data repository.",
+        "A queue of incoming messages waiting for the engine to start processing."
+      ],
+      "correct": 1,
+      "rationale": "A dead-letter queue holds messages that the engine could not deliver after its configured retry policy. The purpose is to surface failures for human investigation rather than silently dropping them. A DLQ that nobody is watching is the most reliable failure mode in interface operations — the boards have asked questions of this exact form, where the answer is some version of 'the DLQ existed but was not being reviewed.'"
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "hie-architecture",
+      "prompt": "A regional HIE maintains an index of which patients have records at which member organizations and queries each holding organization in real time when a clinician requests a patient's records. The HIE itself does not store the underlying clinical data. Which architectural pattern is this?",
+      "options": [
+        "Centralized (consolidated) HIE",
+        "Federated (distributed) HIE",
+        "Hybrid HIE",
+        "Point-to-point exchange"
+      ],
+      "correct": 1,
+      "rationale": "A federated HIE keeps data at the holding organizations and uses a record locator service plus a real-time query mechanism. Centralized HIEs maintain a copy of the data in a central repository. Hybrid HIEs combine elements of both. Point-to-point is not really an HIE pattern — it is the absence of one. Each pattern has different trade-offs in latency, governance burden, and freshness. The boards expect you to identify the pattern from a description."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "tefca",
+      "prompt": "What is TEFCA, when did it go live, and what is its relationship to existing networks like eHealth Exchange, CommonWell, and Carequality?",
+      "options": [
+        "TEFCA is a new EHR vendor that replaced Epic and Cerner in 2023.",
+        "TEFCA is the Trusted Exchange Framework and Common Agreement, authorized by the 21st Century Cures Act, developed by ONC, with first QHINs designated in 2023; it adds a federally-recognized framework above existing networks rather than replacing them.",
+        "TEFCA is a consumer-facing patient app launched in 2023.",
+        "TEFCA is the successor to HIPAA and replaces it for interoperability purposes."
+      ],
+      "correct": 1,
+      "rationale": "TEFCA was authorized by the 21st Century Cures Act, developed by ONC with the Sequoia Project as the recognized coordinating entity, and went live in 2023 with the first QHINs designated. It adds a federally-recognized trust framework above existing networks (eHealth Exchange, CommonWell, Epic's Carequality-affiliated network, Health Gorilla, Kno2, MedAllies, KONZA, etc.) and standardizes the rules for joining. TEFCA does not replace HIPAA or replace existing networks; it adds a layer on top of them. The boards test the relationship and the chronology."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "qhin",
+      "prompt": "What is a QHIN under TEFCA?",
+      "options": [
+        "A patient-facing application certified by ONC.",
+        "A Qualified Health Information Network — a network designated by ONC under TEFCA that has met the Common Agreement's technical and policy requirements and through which TEFCA-based exchange occurs.",
+        "A specific vocabulary used for clinical data.",
+        "A regional health authority responsible for state-level public health reporting."
+      ],
+      "correct": 1,
+      "rationale": "QHIN stands for Qualified Health Information Network. The first QHINs were designated in 2023 and include several existing national networks. Two organizations connected to QHINs can exchange across QHINs through the TEFCA framework. The boards test the acronym and its role in the TEFCA architecture."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "carequality",
+      "prompt": "Carequality is best described as which of the following?",
+      "options": [
+        "An EHR vendor consortium that built a federated record-locator service and query infrastructure.",
+        "A trust framework — a legal and technical framework that lets different exchange networks interoperate with each other, sometimes called a 'network of networks.'",
+        "A specific HL7 standard for patient summaries.",
+        "A federal agency within HHS responsible for interoperability."
+      ],
+      "correct": 1,
+      "rationale": "Carequality, founded in 2014 by the Sequoia Project, is a trust framework that connects multiple exchange networks (eHealth Exchange, CommonWell, EHR vendor networks, regional HIEs). It is sometimes called a 'network of networks.' CommonWell is the vendor consortium (option A); a patient summary is C-CDA; and Carequality is not a federal agency. Memorize the four-way distinction: eHealth Exchange (oldest national network), CommonWell (vendor consortium), Carequality (trust framework connecting them), TEFCA (the federal framework above all of them)."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "best-of-breed",
+      "prompt": "A community hospital is considering replacing its current best-of-breed environment (separate vendors for inpatient EHR, outpatient EHR, lab system, radiology, and pharmacy) with an integrated platform from a single vendor. Which of the following is the LEAST defensible reason given for the change?",
+      "options": [
+        "Reducing the number of interfaces and the integration burden on the IT team.",
+        "Improving clinician experience by providing a single login and consistent navigation across modules.",
+        "Eliminating all vendor lock-in risk by moving to a more flexible architecture.",
+        "Easier compliance with federal certification requirements that assume integrated functionality."
+      ],
+      "correct": 2,
+      "rationale": "Both strategies have lock-in; they just lock in different things. Moving from best-of-breed to integrated does not eliminate vendor lock-in — it concentrates lock-in onto a single integrated vendor, which is in many ways a deeper form of lock-in because the migration cost away from an integrated platform is enormous. The other three options are real and defensible reasons (reduced interfaces, better clinician experience, easier certification) that have driven the actual U.S. market consolidation toward integrated platforms. The boards reward you for noticing that 'eliminating lock-in' is not what either strategy actually does."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "integrated-platform",
+      "prompt": "By 2017, the U.S. large-hospital EHR market had consolidated to the point that two vendors collectively dominated. Which two?",
+      "options": [
+        "Meditech and Allscripts",
+        "Epic and Cerner (now Oracle Health)",
+        "AthenaHealth and eClinicalWorks",
+        "VistA and HELP"
+      ],
+      "correct": 1,
+      "rationale": "Epic and Cerner (acquired by Oracle in 2022 and rebranded Oracle Health) collectively dominate the large-hospital U.S. market. Epic is dominant in academic medical centers and large integrated delivery networks; Oracle Health is dominant in community hospitals and the federal sector (after winning the DoD MHS GENESIS contract in 2015 and the VA contract in 2018). The other vendors hold meaningful share in particular segments but are not the default for new large enterprise deals. The boards expect you to know the duopoly by name and to know that the consolidation is recent (post-2010)."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "cpoe",
+      "prompt": "Which statement about CPOE and medication safety best reflects the current evidence?",
+      "options": [
+        "CPOE alone, without decision support, eliminates medication errors.",
+        "CPOE in combination with appropriate decision support reduces medication errors compared to handwritten orders, particularly transcription errors and dose errors, but introduces new failure modes that depend on implementation quality.",
+        "CPOE has no measurable effect on medication safety.",
+        "CPOE increases medication errors and should be avoided."
+      ],
+      "correct": 1,
+      "rationale": "The honest summary of the CPOE evidence is that the CPOE-plus-CDS combination reduces certain categories of errors (transcription, dose, illegibility, missing fields) and introduces new categories (juxtaposition, wrong-patient, alert fatigue, workarounds). CPOE alone, without decision support, produces smaller gains. Implementation quality determines net safety effect. The boards reward you for the nuanced answer rather than the unconditional 'CPOE is safer' or 'CPOE is harmful' framings."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "integration-engine",
+      "prompt": "Name three concepts an integration engine implements (beyond simply moving messages from one place to another) and briefly explain why each matters operationally. Three to four sentences.",
+      "expectedKeywords": ["routing", "transformation", "queueing", "monitoring", "acknowledgment"],
+      "rationale": "A complete answer names three of: routing (deciding which messages go to which destinations), transformation (translating between formats and field mappings), queueing (holding messages when receivers are unavailable, providing resilience to routine downtimes), error handling / dead-letter queues (parking failed messages for human investigation), monitoring (tracking volumes, latencies, and error rates so failures are surfaced before clinical consequences), acknowledgments (confirming delivery so unacknowledged messages can be treated as failures), and auditing (forensic and legal record). Each is operationally load-bearing. A team that understands only message transport and not the rest will have an integration practice that produces silent failures."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "best-of-breed",
+      "prompt": "A health system you advise is considering moving from a best-of-breed environment to an integrated platform. Identify ONE benefit they should reasonably expect and ONE cost they should be honest about. Two to three sentences.",
+      "expectedKeywords": ["integration", "lock-in", "clinician experience", "innovation"],
+      "rationale": "A complete answer names one real benefit (reduced integration burden, more consistent clinician experience, easier federal compliance, reliable upgrade path) and one real cost (concentrated vendor lock-in, slower innovation in specialty areas where the integrated vendor is weak, reduced bargaining power, higher switching cost in the future). The point is that both sides are real — the move has trade-offs, not a winner. Answers that name only benefits or only costs are missing the discipline the boards are testing."
+    }
+  ]
+}

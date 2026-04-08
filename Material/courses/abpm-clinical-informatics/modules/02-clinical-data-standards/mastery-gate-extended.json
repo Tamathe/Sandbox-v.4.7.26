@@ -1,0 +1,146 @@
+{
+  "id": "mg-02-clinical-data-standards-extended",
+  "moduleId": "02-clinical-data-standards",
+  "title": "Module 2 Mastery Gate — Extended (UMLS additions)",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Sprint-10 extended bank for Module 2: ten additional items targeting the UMLS lesson. Same scoring rules as the canonical gate. Read every rationale.",
+  "set": "extended",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "umls-metathesaurus",
+      "prompt": "An informatics team at a five-hospital consortium needs to query a shared data warehouse for patients with heart failure. Three hospitals send problem-list data coded in SNOMED CT, one sends ICD-10-CM only, and one sends a mix of SNOMED, ICD-9, and free-text problems from a custom local dictionary. Which resource is the MOST appropriate first step to normalize concepts across all five sources?",
+      "options": [
+        "Adopt SNOMED CT at all five hospitals and re-code historical data",
+        "Use the UMLS Metathesaurus to map every source code to a Concept Unique Identifier (CUI)",
+        "Translate every code to ICD-10-CM",
+        "Build a local crosswalk file by hand"
+      ],
+      "correct": 1,
+      "rationale": "The UMLS Metathesaurus is the meta-vocabulary that already maps more than 200 source vocabularies (SNOMED, LOINC, RxNorm, ICD-10, ICD-9, MeSH, and many more) to shared Concept Unique Identifiers. Mapping every incoming code to its CUI normalizes the five hospitals into a single concept space without forcing anyone to re-code. Forcing SNOMED everywhere is impractical and ignores the legacy and free-text data. Translating everything to ICD-10-CM loses clinical granularity and forces a billing vocabulary onto a clinical question. A hand-built local crosswalk reinvents UMLS — badly. The boards reward you for naming UMLS the moment a stem describes multi-vocabulary reconciliation."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "umls-cui",
+      "prompt": "What is a UMLS Concept Unique Identifier (CUI)?",
+      "options": [
+        "A SNOMED CT identifier formatted with a leading C",
+        "A stable identifier that the UMLS Metathesaurus assigns to a clinical concept across all source vocabularies it has ingested",
+        "A LOINC code for laboratory tests",
+        "A vendor-assigned local concept ID"
+      ],
+      "correct": 1,
+      "rationale": "A CUI is the stable identifier UMLS assigns to a clinical concept regardless of which source vocabulary expressed it — myocardial infarction has the CUI C0027051 whether it arrived as a SNOMED code, an ICD-10 code, a MeSH heading, or a local term. CUIs are the abstraction that makes cross-vocabulary normalization possible. The C prefix is UMLS-specific, not SNOMED. LOINC codes look entirely different and identify what was measured rather than concepts in general. Vendor local IDs are exactly what UMLS exists to reconcile away."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "umls-semantic-network",
+      "prompt": "A clinical NLP system extracts the terms 'lisinopril' and 'hypertension' from a discharge summary and needs to determine that 'treats(lisinopril, hypertension)' is a plausible clinical relationship. Which UMLS knowledge source is most directly responsible for letting the system reason about *what kind of thing* each concept is, and which relationships are allowed between those kinds of things?",
+      "options": [
+        "UMLS Metathesaurus",
+        "UMLS Semantic Network",
+        "SPECIALIST Lexicon",
+        "RxNorm"
+      ],
+      "correct": 1,
+      "rationale": "The UMLS Semantic Network is the typed graph of about 130 semantic types (Disease or Syndrome, Pharmacologic Substance, etc.) and the allowed relationships between them (treats, causes, location_of, manifestation_of, etc.). It is what lets a system know that lisinopril is a Pharmacologic Substance, hypertension is a Disease or Syndrome, and that 'treats' is a plausible relation between substances and diseases. The Metathesaurus stores the concepts and CUIs themselves but does not classify what kind of thing each concept is. SPECIALIST is the lexicon for morphology and stemming, not for typed reasoning. RxNorm is a single source vocabulary, not a reasoning layer."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "umls-specialist-lexicon",
+      "prompt": "Which UMLS knowledge source provides a large biomedical English lexicon used for stemming, lemmatization, and morphological analysis when mapping free-text clinical notes to UMLS concepts?",
+      "options": [
+        "Metathesaurus",
+        "Semantic Network",
+        "SPECIALIST Lexicon",
+        "RxNorm"
+      ],
+      "correct": 2,
+      "rationale": "The SPECIALIST Lexicon is the third UMLS knowledge source — a large English biomedical lexicon used by clinical NLP pipelines for stemming, lemmatization, and morphological analysis. It powers tools like cTAKES and MetaMap. The Metathesaurus is the concept database. The Semantic Network is the typed reasoning layer. RxNorm is a separate source vocabulary, not part of the UMLS knowledge sources triple. The boards expect you to be able to recite all three knowledge sources and what each one is for — Metathesaurus, Semantic Network, SPECIALIST Lexicon."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "ctakes-metamap",
+      "prompt": "A research team needs to extract structured concepts from a corpus of free-text discharge summaries and map them to UMLS Concept Unique Identifiers. They want a board-named, open-source pipeline. Which two tools are the canonical answer?",
+      "options": [
+        "BLAST and MUSCLE",
+        "cTAKES and MetaMap",
+        "Apache Lucene and Elasticsearch",
+        "BioBERT and ClinicalBERT"
+      ],
+      "correct": 1,
+      "rationale": "cTAKES (clinical Text Analysis and Knowledge Extraction System), from the Mayo Clinic and built on Apache UIMA, and MetaMap, from the National Library of Medicine, are the two canonical UMLS-based clinical NLP tools and are board-named. Modern transformer-based clinical language models like BioBERT and ClinicalBERT are increasingly used in research practice but are not the established board answer for 'extract UMLS CUIs from clinical text.' BLAST and MUSCLE are bioinformatics sequence-alignment tools (bioinformatics, not clinical informatics). Lucene and Elasticsearch are general-purpose search engines, not UMLS-aware NLP."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "umls-license",
+      "prompt": "A health-tech startup plans to embed UMLS-derived concept mappings in a commercial product sold to U.S. hospitals. Which statement about UMLS licensing is MOST accurate?",
+      "options": [
+        "UMLS is fully public domain and imposes no restrictions on commercial use.",
+        "UMLS itself is free under an NLM license, but some source vocabularies inside the Metathesaurus (such as CPT) are proprietary and impose their own licensing constraints that the product must comply with separately.",
+        "UMLS requires per-seat licensing fees from the NLM for commercial users.",
+        "UMLS may not be used in any commercial product."
+      ],
+      "correct": 1,
+      "rationale": "UMLS is free for use under a National Library of Medicine UMLS Metathesaurus License, but the license is conditional and the source vocabularies inside UMLS retain their own terms. CPT, owned by the AMA, is the most-cited example: a commercial product that uses CPT through UMLS still has to license CPT separately under the AMA's terms. Other source vocabularies have their own restrictions (some research-only, some country-specific). The practical implication is that 'free under UMLS' is not the same as 'free of all licensing constraints,' and the boards reward you for knowing the nuance — particularly the CPT case."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "umls-metathesaurus",
+      "prompt": "Which of the following is NOT a problem the UMLS Metathesaurus is designed to solve?",
+      "options": [
+        "The same clinical concept being represented by different codes in different source vocabularies",
+        "Mapping a vendor-specific local term to a standard concept identifier",
+        "Defining the clinical case definition (phenotype) for 'heart failure' in a research cohort",
+        "Linking SNOMED, ICD-10, and ICD-9 codes that refer to the same underlying concept"
+      ],
+      "correct": 2,
+      "rationale": "UMLS reconciles vocabularies. It does not write phenotype definitions. Deciding which set of CUIs constitutes 'heart failure' for a research cohort is a clinical and methodologic judgment, often made with help from validated phenotype libraries like eMERGE or PheKB, not from UMLS itself. The other three options are exactly what UMLS exists to solve. The boards reward you for distinguishing the vocabulary-reconciliation layer (UMLS) from the case-definition layer (phenotype libraries)."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "umls-cui",
+      "prompt": "A board stem describes an application that 'normalizes incoming coded data from multiple clinical source systems by translating each code to a stable concept identifier maintained by the National Library of Medicine.' Which identifier is the application using?",
+      "options": [
+        "SNOMED CT Concept ID",
+        "LOINC Code",
+        "UMLS CUI",
+        "ICD-10-CM Code"
+      ],
+      "correct": 2,
+      "rationale": "The phrase 'stable concept identifier maintained by the National Library of Medicine' that 'normalizes incoming coded data from multiple sources' is a near-quotation of the UMLS CUI definition. SNOMED Concept IDs are stable but live inside SNOMED only and do not span source vocabularies. LOINC codes identify lab and other measurements, not arbitrary clinical concepts. ICD-10-CM is a billing vocabulary, not a normalization layer. The NLM-maintained part of the stem is also a CUI tell — UMLS is an NLM product."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "umls-metathesaurus",
+      "prompt": "An informaticist who only ever works inside a single EHR vendor's data, with all problems coded in SNOMED CT and all medications in RxNorm, asks whether their team needs UMLS. Which answer is BEST?",
+      "options": [
+        "Yes, because UMLS is required for any clinical informatics work.",
+        "No, because if every code already comes from a single source vocabulary the team needs that source vocabulary's license and tools, not the meta-vocabulary that exists to reconcile across sources.",
+        "Yes, because UMLS is the only way to query SNOMED.",
+        "No, because UMLS does not contain SNOMED."
+      ],
+      "correct": 1,
+      "rationale": "UMLS exists to reconcile across vocabularies. If a team only ever consumes data from a single source vocabulary, they need that vocabulary's license, browser, and hierarchy tools, not UMLS. Adding UMLS does not break anything but it does not solve a problem the team has. UMLS does contain SNOMED (it is one of the largest source vocabularies in the Metathesaurus) and it can be used to query SNOMED, but it is not the only way. The boards test whether you understand that the right tool depends on whether the problem is single-vocabulary or multi-vocabulary."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "umls-semantic-network",
+      "prompt": "In two or three sentences, explain how the UMLS Semantic Network differs from the UMLS Metathesaurus and give one example of a question each is used to answer.",
+      "expectedKeywords": ["Metathesaurus", "Semantic Network", "concept", "semantic type", "relationship"],
+      "rationale": "A complete answer should observe that the Metathesaurus stores the actual concepts (with CUIs) and the source-vocabulary mappings — it answers questions like 'what is the CUI for myocardial infarction across SNOMED, ICD-10, and MeSH?' The Semantic Network sits above the Metathesaurus and stores the typed graph of about 130 semantic types and the allowed relationships between them — it answers questions like 'is lisinopril a Pharmacologic Substance, and is the relation `treats` allowed between Pharmacologic Substance and Disease or Syndrome?' The Metathesaurus is concept-level; the Semantic Network is type-level. Credit any answer that captures that distinction with a representative example for each."
+    }
+  ]
+}

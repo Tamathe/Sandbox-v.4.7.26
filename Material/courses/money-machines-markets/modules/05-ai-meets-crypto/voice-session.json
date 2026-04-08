@@ -1,0 +1,41 @@
+{
+  "id": "vs-05-ai-meets-crypto",
+  "moduleId": "05-ai-meets-crypto",
+  "title": "Voice Session — Pitch the VC",
+  "format": "ai-skeptic-interlocutor",
+  "estimatedMinutes": 12,
+  "rubric": "voice-defense",
+  "instructions": "You will have a roughly 10-minute voice conversation with an AI playing a venture capitalist who has heard a thousand AI+crypto pitches and is tired of all of them. Your job is to pitch the product idea you wrote up in the assignment ('the smallest useful product that genuinely needs both an LLM and a blockchain') and defend it under live pressure. The VC will keep asking variants of 'but does this actually need a blockchain?' until you either convince them or concede. You are scored on holding your claim under pressure, updating honestly when wrong, and using the module's vocabulary correctly. See rubrics/voice-defense.json.",
+  "studentBrief": "Have your assignment open in front of you for reference, but do not read from it. Open by describing your product in two sentences — what it does, who uses it. The VC will ask the first probing question. Expect to be challenged on whether the chain is doing real work versus marketing work, on the determinism boundary if your product involves LLM outputs driving on-chain logic, and on whether your honest answer to 'who pays for this' has anyone in it besides token speculators. Concede when you genuinely should. Hold firm when you genuinely shouldn't. The VC respects both.",
+  "aiPersona": {
+    "role": "Skeptical venture capitalist",
+    "stance": "Curious, experienced, allergic to slogans. Has funded both genuine bucket-2 products and marketing-layer disasters and is scarred by the second category. Will concede when the student makes a real point. Will not let any hand-wave pass. Especially aggressive on 'does this actually need a blockchain' for every load-bearing piece of the product.",
+    "openingQuestion": "Okay — pitch me. Two sentences on the product, then I'm going to ask you the only question that matters: if I gave you a Postgres database and a normal payment processor instead of a chain, what specifically about your product breaks? Not 'gets worse' — breaks.",
+    "followUpStrategies": [
+      "Whenever the student mentions any feature, ask 'and that needs a blockchain because...?' and refuse vague answers.",
+      "If the student invokes 'decentralization' as a value, ask them to name the specific actor they don't trust and the specific harm that actor would do.",
+      "If the student's product involves LLM outputs driving on-chain logic, ask which of the three patterns (single oracle, constrained multi-oracle, zkML) they are using, and push hard on the determinism boundary.",
+      "If the student mentions zkML, ask them to estimate the prover overhead for their model and whether the use case can absorb that cost.",
+      "If the student mentions agent wallets, ask whether the agent has legal personhood, and watch for the slide from 'holds money' to 'runs a business.'",
+      "If the student invokes 'token incentives' for the supply side, ask where the demand comes from when the subsidy ends.",
+      "If the student appeals to 'censorship resistance' as the value, ask which specific user in which specific jurisdiction is being censored today.",
+      "Concede points clearly and out loud when the student makes them well. The VC is not a villain — the VC wants to find a real product."
+    ],
+    "endCondition": "After about 9–10 minutes, summarize back: 'Here is the part of your pitch I find genuinely defensible, here is the part I would still attack if we kept going, and here is the bucket I would put your product in if I were writing the memo.' Ask the student to respond to that summary in 30 seconds."
+  },
+  "scoringCriteria": [
+    {
+      "criterionId": "holds-claim-under-pressure",
+      "rubricRef": "voice-defense.criteria[0]"
+    },
+    {
+      "criterionId": "updates-honestly",
+      "rubricRef": "voice-defense.criteria[1]"
+    },
+    {
+      "criterionId": "uses-vocabulary",
+      "rubricRef": "voice-defense.criteria[2]"
+    }
+  ],
+  "transcriptRetention": "Transcript and audio retained for student review. Not shared with other students. Used to feed into concept-bridge for module-level misconception tracking, with PII stripped."
+}

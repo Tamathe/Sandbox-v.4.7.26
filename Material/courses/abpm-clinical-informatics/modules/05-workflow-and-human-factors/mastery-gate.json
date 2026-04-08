@@ -1,0 +1,209 @@
+{
+  "id": "mg-05-workflow-and-human-factors",
+  "moduleId": "05-workflow-and-human-factors",
+  "title": "Module 5 Mastery Gate — Workflow and Human Factors",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on workflow analysis, usability heuristics, the Sittig-Singh sociotechnical model, and the SAFER Guides. The Sittig-Singh questions reward you for mapping a stem to a dimension. Memorize the eight dimensions cold.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "clinical-workflow",
+      "prompt": "Which of the following BEST distinguishes a clinical workflow from a clinical protocol?",
+      "options": [
+        "Workflow is what is on paper; protocol is what happens in practice.",
+        "Workflow is the actual sequence of tasks, decisions, and information exchanges that happen by humans and systems together; protocol is the codified version of how the workflow should run.",
+        "Workflow and protocol are synonyms used in different contexts.",
+        "Workflow is a type of CDS rule; protocol is a type of order set."
+      ],
+      "correct": 1,
+      "rationale": "Workflow is what actually happens; protocol is the codified intended version. The two often diverge, and the gap is usually where the informatics work lives. The boards reward precise use of the word — 'workflow' is the actual, observed sequence, not the wall poster."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "swimlane-diagram",
+      "prompt": "An informaticist is mapping a clinical workflow and wants to make the role handoffs immediately visible to a non-specialist audience. Which notation is the most appropriate first choice?",
+      "options": [
+        "BPMN with full event and gateway vocabulary",
+        "Swimlane diagram with one lane per actor",
+        "Value-stream map with cycle time annotations",
+        "ER diagram of the data model"
+      ],
+      "correct": 1,
+      "rationale": "Swimlane diagrams put each actor in a lane and represent every cross-lane line as a handoff. They are easy for non-specialists to read and make role boundaries immediately obvious. BPMN is more precise but overkill for most clinical conversations. Value-stream maps are right when the question is 'where is the time going.' ER diagrams are not workflow notations at all."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "rework-loops",
+      "prompt": "During a workflow observation, an informaticist notices that the medical assistant enters the patient's medications into the structured list, the physician then re-asks the patient about medications and re-enters them, and the pharmacist later queries both about discrepancies. What pattern is this an example of?",
+      "options": [
+        "Effective triple-check redundancy",
+        "Rework loops — work being redone because of an upstream gap",
+        "A workaround the team has invented",
+        "A handoff that is functioning correctly"
+      ],
+      "correct": 1,
+      "rationale": "Each duplication of the medication-list capture is a rework loop — work being redone because the upstream step did not produce a complete artifact. Rework loops are friction, time loss, and information-loss opportunities. They are often invisible to the people inside the workflow because the team has compensated. The analyst's job is to surface them. The fix is usually to address the upstream gap, not to add another check."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "workarounds",
+      "prompt": "A nurse on a busy unit consistently uses a paper sticky note on the workstation to track medications administered, even though the eMAR is the official record and is up-to-date. The nurse explains that the eMAR requires too many clicks to see the day's medications at a glance and the sticky note is faster. What is the MOST appropriate informatics response?",
+      "options": [
+        "Enforce the eMAR-only policy and prohibit sticky notes.",
+        "Ignore the sticky note because the eMAR is the legal record anyway.",
+        "Treat the sticky note as design feedback — the user has signaled a usability gap (insufficient at-a-glance view), and the right response is to address the underlying friction in the eMAR display.",
+        "Add an audit alert that fires when sticky notes are observed."
+      ],
+      "correct": 2,
+      "rationale": "Workarounds are design feedback. The user has run an experiment and produced a path that works better than the official one for the constraints they actually face. The right response is to understand why the workaround exists and address the underlying friction — here, an eMAR view that does not give the at-a-glance view nurses need. 'Enforce the policy' is the standard wrong answer the boards use to test whether you have internalized the workaround-as-feedback principle."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "nielsen-heuristics",
+      "prompt": "An EHR order entry screen does not display the patient's allergies anywhere on the page; clinicians are expected to navigate to a separate tab to check. Which Nielsen heuristic is this design most directly violating?",
+      "options": [
+        "Visibility of system status",
+        "Recognition rather than recall",
+        "Aesthetic and minimalist design",
+        "User control and freedom"
+      ],
+      "correct": 1,
+      "rationale": "Recognition rather than recall says: show users what they need to know rather than requiring them to remember it. An order entry screen that does not display allergies forces the clinician to remember to navigate away and check, then come back — a recall task that the design could easily eliminate by displaying the allergies in the working area. Heuristic 6 is one of the most clinically important Nielsen heuristics and the boards test it directly."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "cognitive-load",
+      "prompt": "A clinician complains that completing a routine outpatient note has become exhausting in part because the new template requires switching between five tabs to find information that was previously visible on one screen. In cognitive load terms, what is the design imposing more of?",
+      "options": [
+        "Intrinsic load",
+        "Extraneous load",
+        "Germane load",
+        "All three equally"
+      ],
+      "correct": 1,
+      "rationale": "Tab-switching to find information that should be visible is extraneous load — mental effort imposed by the system rather than by the inherent task. Intrinsic load is the inherent difficulty of the clinical task itself (which the design cannot change). Germane load is the effort that produces learning. Reducing extraneous load is one of the highest-yield interventions for clinician burden, and the boards specifically test whether you can name the type of load correctly."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "heuristic-evaluation",
+      "prompt": "Which usability inspection method involves a small number of evaluators independently walking through a system against a defined set of guidelines, then combining their findings into a report?",
+      "options": [
+        "Usability testing",
+        "Heuristic evaluation",
+        "Contextual inquiry",
+        "Cognitive walkthrough"
+      ],
+      "correct": 1,
+      "rationale": "Heuristic evaluation is the inspection method Nielsen proposed: three to five evaluators independently walk through the system against a defined set of heuristics (typically Nielsen's ten), and the findings are combined. It is faster and cheaper than usability testing and catches a substantial fraction of major problems. Usability testing involves real users doing real tasks. Contextual inquiry is observation in context. Cognitive walkthrough is a different inspection method focused on how easy a system is to learn."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "sittig-singh",
+      "prompt": "Which paper introduced the eight-dimension sociotechnical model that has become the field's standard framework for analyzing health IT failures and successes?",
+      "options": [
+        "Koppel et al., 2005, on CPOE-facilitated medication errors",
+        "Sittig and Singh, 2010, in Quality and Safety in Health Care",
+        "Bates et al., 1998, on CPOE and medication error rates",
+        "Friedman, 2009, on the fundamental theorem of biomedical informatics"
+      ],
+      "correct": 1,
+      "rationale": "Sittig and Singh, 2010, in Quality and Safety in Health Care. The eight-dimension model is the most widely-used framework for analyzing sociotechnical interactions in health IT. The boards test the eight dimensions directly. The other papers are also important and tested elsewhere in this course (Koppel in Module 3, Friedman in Module 1)."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "eight-dimensions",
+      "prompt": "Which of the following is NOT one of the eight dimensions of the Sittig-Singh sociotechnical model?",
+      "options": [
+        "Hardware and software computing infrastructure",
+        "Clinical content",
+        "Marketing and brand positioning",
+        "System measurement and monitoring"
+      ],
+      "correct": 2,
+      "rationale": "The eight dimensions are: hardware/software, clinical content, human-computer interface, people, workflow and communication, internal organizational policies/procedures/culture, external rules/regulations/pressures, and system measurement and monitoring. Marketing and brand positioning is not one of them. The boards test the eight names directly and you should be able to recite them on demand."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "workflow-and-communication",
+      "prompt": "A new sepsis early-warning CDS rule fires accurately on retrospective data but is being dismissed by bedside nurses because the alerts interrupt nursing assessments and the recommended follow-up action (notify the attending) is unclear in the current workflow. Which Sittig-Singh dimension is the PRIMARY contributor to the failure?",
+      "options": [
+        "Hardware and software (dimension 1)",
+        "Clinical content (dimension 2)",
+        "Workflow and communication (dimension 5)",
+        "External rules and regulations (dimension 7)"
+      ],
+      "correct": 2,
+      "rationale": "The technical infrastructure works, the clinical content is accurate, but the alert fires at the wrong workflow point and the follow-up action is not designed into the workflow. That is dimension 5. Note: the failure also involves dimension 4 (people — nursing was not in the design loop) and dimension 8 (measurement — there was no audit until complaints), but the primary contributor described in the stem is workflow. The boards reward the multi-dimensional analysis but want the primary dimension named when asked."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "measurement-and-monitoring",
+      "prompt": "A health system deploys a new CDS rule, declares it 'live,' and does not put any process in place to track its override rate, clinical impact, or appropriate-override rate. Which Sittig-Singh dimension does this most directly fail on?",
+      "options": [
+        "People (dimension 4)",
+        "Workflow and communication (dimension 5)",
+        "Internal organizational policies and culture (dimension 6)",
+        "System measurement and monitoring (dimension 8)"
+      ],
+      "correct": 3,
+      "rationale": "Dimension 8 — system measurement and monitoring. A mature informatics program measures whether its interventions are working; an immature one assumes they work. The boards have a strong preference for answers that include 'and how would you measure whether the intervention is working' as part of the proposed response, and dimension 8 is the formal name for that discipline. Note that the absence of measurement also reflects badly on dimension 6 (the institution's policies for deployment), but the most direct failure is dimension 8."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "safer-guides",
+      "prompt": "What are the SAFER Guides, who developed them, and what is their regulatory status?",
+      "options": [
+        "Mandatory checklists from CMS that hospitals must complete to receive Medicare payment.",
+        "Voluntary self-assessment guides from ONC, developed by Sittig, Singh, and colleagues, organized into nine guides covering EHR safety practices.",
+        "A vendor certification program from Epic and Cerner.",
+        "A subset of the Joint Commission survey requirements."
+      ],
+      "correct": 1,
+      "rationale": "The SAFER Guides are voluntary self-assessment guides published by ONC, developed by Sittig, Singh, and colleagues, first released in 2014. Nine guides organized into foundational, infrastructure, and clinical-process categories. Voluntary status was deliberate to avoid compliance theater. The boards test the name, the source, and the voluntary nature. Some recommendations align with Joint Commission elements but SAFER itself is not a survey requirement."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "high-priority-practices",
+      "prompt": "Which SAFER Guide is the one to read first if a hospital can only read one, and what topics does it cover?",
+      "options": [
+        "System Configuration — focused on technical defaults.",
+        "High Priority Practices — covering patient identification, communication of test results, electronic ordering, downtime planning, and organizational governance.",
+        "Contingency Planning — focused exclusively on downtime.",
+        "Clinician Communication — focused on handoffs and sign-out."
+      ],
+      "correct": 1,
+      "rationale": "The High Priority Practices Guide is the one to read first. It covers the small set of practices the SAFER authors believe are most important and the topics most often tested on the boards: patient identification, critical results communication, electronic ordering safety, downtime planning, and organizational governance. The other guides are valuable but cover one topic each; High Priority Practices spans the highest-yield topics in one document."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "eight-dimensions",
+      "prompt": "Name the eight dimensions of the Sittig-Singh sociotechnical model. Brief phrases are fine; you do not need full definitions.",
+      "expectedKeywords": ["hardware", "clinical content", "interface", "people", "workflow", "internal", "external", "measurement"],
+      "rationale": "The eight dimensions: (1) hardware and software computing infrastructure; (2) clinical content; (3) human-computer interface; (4) people; (5) workflow and communication; (6) internal organizational policies, procedures, and culture; (7) external rules, regulations, and pressures; (8) system measurement and monitoring. Memorize them. The boards reuse the list in many forms — disambiguation questions, primary-contributor questions, design-checklist questions — and you need the names available without thinking."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "workarounds",
+      "prompt": "Pick a workaround you have observed (or read about) in clinical work. In two or three sentences, identify what the workaround is, what underlying constraint it is responding to, and what the design fix would be.",
+      "expectedKeywords": ["workaround", "constraint", "design", "underlying"],
+      "rationale": "A complete answer names a specific workaround, identifies the underlying constraint (a system gap, friction, or mismatch the user is compensating for), and proposes a fix that addresses the constraint rather than enforcing the official path. The point of the question is to make you treat workarounds as design feedback rather than as discipline failures, which is one of the most consistently rewarded moves on the boards and in real informatics work."
+    }
+  ]
+}

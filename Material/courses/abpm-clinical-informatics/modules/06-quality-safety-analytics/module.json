@@ -1,0 +1,27 @@
+{
+  "id": "06-quality-safety-analytics",
+  "slug": "quality-safety-analytics",
+  "order": 6,
+  "title": "Quality, Safety, and Analytics",
+  "summary": "Measure design, registries, dashboards, population health, and the statistical literacy traps the boards quietly test. How to read a quality measure spec, how to critique a dashboard, and how to tell a real signal from a denominator artifact.",
+  "learningOutcomes": [
+    "Read a CMS or NQF measure specification and identify numerator, denominator, and exclusions.",
+    "Critique a quality dashboard for both statistical validity and frontline usability.",
+    "Distinguish process measures, outcome measures, and balancing measures with clinical examples.",
+    "Recognize common analytic traps: regression to the mean, Simpson's paradox, denominator drift.",
+    "Explain the difference between a registry and a data warehouse and when you'd build each."
+  ],
+  "prerequisites": ["03-ehr-and-his-architecture"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-measure-design-and-specification",
+    "02-registries-vs-warehouses",
+    "03-dashboards-and-visualization",
+    "04-statistical-traps",
+    "05-population-health-and-public-health-reporting"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "studyGroup": "study-group-brief.md",
+  "concepts": "concepts.json"
+}

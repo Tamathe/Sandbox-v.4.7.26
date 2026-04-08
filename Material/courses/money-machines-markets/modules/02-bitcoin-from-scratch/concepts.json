@@ -1,0 +1,295 @@
+{
+  "moduleId": "02-bitcoin-from-scratch",
+  "concepts": [
+    {
+      "id": "white-paper",
+      "name": "Bitcoin white paper",
+      "definition": "The 2008 nine-page document by Satoshi Nakamoto titled 'Bitcoin: A Peer-to-Peer Electronic Cash System.' Engineering pitch, not manifesto. Most of the cultural mythology around Bitcoin is layered on top of, not contained in, this document.",
+      "appearsInLessons": ["01-the-white-paper", "06-political-object"]
+    },
+    {
+      "id": "double-spend-problem",
+      "name": "Double-spend problem",
+      "definition": "The problem of preventing the same digital token from being spent twice without relying on a trusted third party. The only hard problem the Bitcoin white paper is genuinely solving.",
+      "appearsInLessons": ["01-the-white-paper"]
+    },
+    {
+      "id": "timestamp-server",
+      "name": "Timestamp server",
+      "definition": "A construction in which each timestamp includes the previous one as part of its hash, forming a chain. Older idea (Haber and Stornetta, 1991) that Bitcoin builds on. Bitcoin's contribution is making the timestamp server distributed.",
+      "appearsInLessons": ["01-the-white-paper"]
+    },
+    {
+      "id": "peer-to-peer-cash",
+      "name": "Peer-to-peer electronic cash",
+      "definition": "Satoshi's original framing of what Bitcoin was for. Note that 'cash' implies medium of exchange. The 'digital gold' / 'store of value' framing came later.",
+      "appearsInLessons": ["01-the-white-paper", "06-political-object"]
+    },
+    {
+      "id": "longest-chain-rule",
+      "name": "Longest-chain rule",
+      "definition": "The conflict-resolution rule that says nodes always treat the chain with the most cumulative proof-of-work as the canonical history. Allows the network to recover from temporary forks without coordination.",
+      "appearsInLessons": ["01-the-white-paper", "02-proof-of-work"]
+    },
+    {
+      "id": "merkle-tree",
+      "name": "Merkle tree",
+      "definition": "A hash tree that allows you to prove a single item is part of a set without needing the entire set. Used in Bitcoin for transaction commitments and lightweight client verification. Older cryptography (Ralph Merkle, 1979).",
+      "appearsInLessons": ["01-the-white-paper"]
+    },
+    {
+      "id": "proof-of-work",
+      "name": "Proof-of-work",
+      "definition": "A mechanism in which producing a valid block requires demonstrably expending computation (and therefore energy). The cost is the point: it makes rewriting history economically expensive in proportion to how far back you want to rewrite.",
+      "appearsInLessons": ["01-the-white-paper", "02-proof-of-work"]
+    },
+    {
+      "id": "hash-function",
+      "name": "Cryptographic hash function",
+      "definition": "A function that maps arbitrary input to a fixed-size output, with the property that there is no shortcut from output back to input or to finding a preimage with desired properties. Bitcoin uses SHA-256, applied twice.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "difficulty-adjustment",
+      "name": "Difficulty adjustment",
+      "definition": "Bitcoin's self-regulating mechanism that retargets the proof-of-work difficulty every 2,016 blocks based on how long the last 2,016 took, keeping the average block time near ten minutes regardless of how much hash power is on the network.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "nonce",
+      "name": "Nonce",
+      "definition": "An arbitrary field in the block header that miners increment in their search for a hash below the difficulty target. The whole proof-of-work guessing game is conducted by varying this number.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "probabilistic-finality",
+      "name": "Probabilistic finality",
+      "definition": "The kind of finality Bitcoin provides: a transaction is not declared final by an authority but becomes asymptotically final as more blocks are built on top of it, with the cost of reversing it growing exponentially.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "51-percent-attack",
+      "name": "51% attack",
+      "definition": "An attack in which a single party controls more than half the network's hash power and uses it to produce an alternative chain longer than the honest one, enabling double-spends of their own transactions. Cannot steal others' coins or mint new ones, but can shake confidence.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "energy-as-truth",
+      "name": "Energy-as-truth (economic finality)",
+      "definition": "The idea that Bitcoin's truth claims about the order of history are anchored in energy expenditure: rewriting history requires redoing the work, and the work was real and expensive. A contested framing — accurate as a description, evocative as a slogan.",
+      "appearsInLessons": ["02-proof-of-work"]
+    },
+    {
+      "id": "utxo",
+      "name": "UTXO (Unspent Transaction Output)",
+      "definition": "A discrete chunk of bitcoin that exists as the output of some prior transaction and has not yet been spent. Bitcoin tracks state as a set of UTXOs rather than as account balances. Your wallet's 'balance' is the sum of UTXOs it can prove it controls.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "account-model",
+      "name": "Account model",
+      "definition": "The alternative to UTXOs, in which the system maintains a balance per account and updates it on each transaction. Used by Ethereum and traditional banks. Easier for smart contracts; harder to parallelize.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "private-key",
+      "name": "Private key",
+      "definition": "A 256-bit number whose only function is to produce digital signatures the network will accept as authorization to spend specific UTXOs. Not a password to an account. The only thing in the world that can authorize spending.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "public-key",
+      "name": "Public key",
+      "definition": "A point on the secp256k1 elliptic curve derived from the private key. Verifies signatures made by the corresponding private key without revealing the key itself.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "address",
+      "name": "Address",
+      "definition": "A hashed and encoded form of a public key, safe to share publicly. The destination field in a Bitcoin transaction.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "self-custody",
+      "name": "Self-custody",
+      "definition": "Holding your own private keys directly rather than entrusting them to a third party. Eliminates custodian-failure risk and replaces it with self-mistake risk. Whether the trade is a good one depends on the user's threat model and competence.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "seed-phrase",
+      "name": "Seed phrase (mnemonic)",
+      "definition": "A 12- or 24-word human-readable encoding of a private key (or, technically, of a master key from which many keys are derived). Anyone who has the words has the funds. The seed is the key, not a recovery code for the key.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "coin-selection",
+      "name": "Coin selection",
+      "definition": "The algorithm a wallet uses to decide which UTXOs to combine for a given outgoing payment. Affects fees, change UTXO count, and the privacy information leaked to chain analysts.",
+      "appearsInLessons": ["03-utxos-and-keys"]
+    },
+    {
+      "id": "supply-cap",
+      "name": "21 million supply cap",
+      "definition": "The asymptotic upper bound on Bitcoin's total supply. An emergent property of the issuance schedule (50 BTC per block, halved every 210,000 blocks), not a hard-coded constant. The cap is enforced by social consensus across nodes, not by physics.",
+      "appearsInLessons": ["04-supply-schedule"]
+    },
+    {
+      "id": "halving",
+      "name": "Halving",
+      "definition": "The event, occurring every 210,000 blocks (~4 years), when the per-block subsidy is cut in half. Mechanically a single rule change at a single block height. Indirectly squeezes mining economics and refreshes the supply-scarcity narrative.",
+      "appearsInLessons": ["04-supply-schedule"]
+    },
+    {
+      "id": "issuance-curve",
+      "name": "Issuance curve",
+      "definition": "The geometric series of block subsidies that produces Bitcoin's supply schedule. Starts at 50 BTC per block, halves every 210,000 blocks, sums to slightly under 21 million.",
+      "appearsInLessons": ["04-supply-schedule"]
+    },
+    {
+      "id": "security-budget",
+      "name": "Security budget",
+      "definition": "The total dollar value paid to miners per unit time, which determines how much it costs to attack the network. Currently dominated by the block subsidy. As the subsidy approaches zero, must be replaced by transaction fees — an unresolved long-run problem.",
+      "appearsInLessons": ["04-supply-schedule", "05-lightning"]
+    },
+    {
+      "id": "block-subsidy",
+      "name": "Block subsidy",
+      "definition": "The newly-issued bitcoin paid to a miner for finding a valid block. The only way new bitcoin enters circulation. Currently 3.125 BTC per block; will fall to 1.5625 in 2028.",
+      "appearsInLessons": ["04-supply-schedule"]
+    },
+    {
+      "id": "transaction-fees",
+      "name": "Transaction fees",
+      "definition": "The portion of a block reward paid by transactors rather than created by the protocol. Currently a small fraction of total miner revenue. Must scale up as the subsidy halves toward zero, or the security budget falls.",
+      "appearsInLessons": ["04-supply-schedule", "05-lightning"]
+    },
+    {
+      "id": "throughput-problem",
+      "name": "Base-layer throughput problem",
+      "definition": "Bitcoin's base layer can settle roughly seven transactions per second. A deliberate trade-off chosen to keep node operation cheap. Motivates second-layer scaling solutions.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "payment-channel",
+      "name": "Payment channel",
+      "definition": "A construction in which two parties lock funds in a 2-of-2 multisignature output and then transact with each other off-chain by exchanging signed updates of the balance, only touching the base layer to open and close.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "htlc",
+      "name": "HTLC (Hashed Time-Locked Contract)",
+      "definition": "A scripted spending condition that allows multi-hop Lightning payments to either complete atomically across all hops or unwind without anyone being out of pocket. The mechanism that turns a network of bilateral channels into a routable payment network.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "routing",
+      "name": "Lightning routing",
+      "definition": "The process of finding a path through a graph of payment channels with sufficient capacity at every hop. A hard problem in practice, especially for larger payments. Most traffic flows through a small number of high-capacity routing nodes.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "inbound-liquidity",
+      "name": "Inbound liquidity",
+      "definition": "The capacity in a Lightning channel that points toward you, determining how much you can receive. Distinct from outbound capacity (what you can send). New users routinely discover they have one and not the other. A major UX friction.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "layer-2",
+      "name": "Layer 2",
+      "definition": "Any system that conducts transactions off the base chain while inheriting some of the base chain's security properties. Lightning is Bitcoin's most prominent layer-2. The term is used much more loosely in the Ethereum world.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "channel-balance",
+      "name": "Channel balance",
+      "definition": "The state of a payment channel at any moment: how much of the locked capacity belongs to each party. Updated by exchanging signed messages off-chain.",
+      "appearsInLessons": ["05-lightning"]
+    },
+    {
+      "id": "separation-of-money-and-state",
+      "name": "Separation of money and state",
+      "definition": "The contested claim that Bitcoin represents, for money, what the Enlightenment-era separation of church and state represented for religion. Strong version: money becomes a voluntary, plural, competitive space. Strong critique: states do not give up monetary tools voluntarily.",
+      "appearsInLessons": ["06-political-object"]
+    },
+    {
+      "id": "block-size-war",
+      "name": "Block size war",
+      "definition": "The 2015–2017 conflict over whether to increase Bitcoin's block size limit. Resolved with the small-block faction prevailing on the main chain and the big-block faction forking off to create Bitcoin Cash. Established the principle that Bitcoin's governance is social, not formal.",
+      "appearsInLessons": ["06-political-object"]
+    },
+    {
+      "id": "social-consensus",
+      "name": "Social consensus",
+      "definition": "The mechanism by which Bitcoin's rules are actually enforced: changes require coordinated buy-in from many independently-acting parties, and proposals that fail to coordinate simply do not happen. Not written in any document; an emergent property of the architecture.",
+      "appearsInLessons": ["04-supply-schedule", "06-political-object"]
+    },
+    {
+      "id": "censorship-resistance",
+      "name": "Censorship resistance",
+      "definition": "The property that no party can prevent a valid transaction from being included on the chain. General — does not distinguish between transactions one would consider legitimate and those one would not. The valued-and-uncomfortable property at the same time.",
+      "appearsInLessons": ["06-political-object"]
+    },
+    {
+      "id": "ossification",
+      "name": "Ossification",
+      "definition": "The tendency of Bitcoin's protocol to become harder to change over time as the cost of coordinating any change rises. Maximalists call it a feature (uncorruptible). Critics call it a bug (cannot fix its own problems). Both readings describe the same fact.",
+      "appearsInLessons": ["06-political-object"]
+    },
+    {
+      "id": "bitcoin-as-protest",
+      "name": "Bitcoin as protest",
+      "definition": "The reading that Bitcoin began as a specific political act against the post-2008 bailout response, evidenced by the Times headline embedded in the genesis block. Distinct from any later cultural overlay.",
+      "appearsInLessons": ["06-political-object"]
+    },
+    {
+      "id": "fork",
+      "name": "Fork",
+      "definition": "A divergence in the chain's history. A 'soft fork' tightens rules in a backward-compatible way; a 'hard fork' changes rules in a way that splits the network into two chains. Bitcoin Cash is the canonical example of a contentious hard fork.",
+      "appearsInLessons": ["06-political-object"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "proof-of-work",
+      "wrongBelief": "Miners solve complex math problems to validate transactions.",
+      "correctView": "Miners run a brute-force guessing game with cryptographic hashes. There is no equation, no mathematical insight, no shortcut. Validating transactions and finding a valid block are two different things; the proof-of-work is purely about finding a hash below a target. The 'math problem' phrasing is journalistic shorthand that obscures the actual mechanism and makes the whole system sound smarter than it is.",
+      "watchFor": "Students who say 'the math gets harder' as if there's a math problem to solve. Reframe: 'the target gets smaller, so more guesses are needed on average.'"
+    },
+    {
+      "id": "misc-2",
+      "concept": "supply-cap",
+      "wrongBelief": "The 21 million cap is enforced by the laws of mathematics or physics and cannot be changed.",
+      "correctView": "The cap is enforced by social consensus among Bitcoin nodes. If a future version of the software tried to raise the cap, every node operator would have to either run that version (accepting the new rule) or stay on the old one (forking off). Historically, the community would refuse — and that historical refusal is exactly what enforces the cap. It is a Schelling point with extraordinarily strong norms behind it, but it is not a law of nature.",
+      "watchFor": "Students who treat 21 million as if it were physically impossible to change. Ask them to explain who would stop a hypothetical change and how, and they will discover it is humans coordinating, not physics."
+    },
+    {
+      "id": "misc-3",
+      "concept": "self-custody",
+      "wrongBelief": "Self-custody is always the right choice; only fools leave their bitcoin on exchanges.",
+      "correctView": "Self-custody substitutes one risk (custodian failure) for a different risk (your own mistakes, lost keys, inheritance failure, phishing, hardware bugs). The right choice depends on your threat model, your technical competence, your discipline, the amount at stake, and whether you have a working inheritance plan. For many users in stable jurisdictions holding small amounts, a reputable custodian is a defensible choice. The maximalist position assumes everyone has the same threat model — they don't.",
+      "watchFor": "Students who recite 'not your keys, not your coins' as a slogan without having actually built the inheritance plan, the seed-phrase backup strategy, or the operational discipline that real self-custody requires."
+    },
+    {
+      "id": "misc-4",
+      "concept": "lightning",
+      "wrongBelief": "Lightning solves Bitcoin's scaling problem and lets anyone use Bitcoin as everyday cash.",
+      "correctView": "Lightning solves *some* scaling problems for *some* uses. It has serious frictions around inbound liquidity, routing reliability for larger payments, watchtower/liveness requirements, and the fact that most actual end-user usage today is on custodial wrappers — which surrenders the very property that made Bitcoin distinctive. Lightning also does not by itself fix the long-run security budget problem and may even worsen it by diverting fee-paying volume off-chain.",
+      "watchFor": "Students who treat Lightning as a finished solution. Ask them how they would actually receive a Lightning payment from a stranger as a new user, and the inbound liquidity problem will surface immediately."
+    },
+    {
+      "id": "misc-5",
+      "concept": "censorship-resistance",
+      "wrongBelief": "Censorship resistance is unambiguously good — it protects dissidents from authoritarian states.",
+      "correctView": "Censorship resistance is *general*. The same property that lets a dissident move money out of an authoritarian state lets a sanctions evader move money into one. The protocol cannot tell the difference and does not try. You either accept the property as a structural feature you sometimes hate the consequences of, or you ask for exceptions that bring back the gatekeeper. There is no third option, despite frequent attempts to find one.",
+      "watchFor": "Students who default to whichever framing matches their politics. Push them to imagine the opposite case (their opponents using the same property for ends they hate) and watch the discomfort. Discomfort is the right response; pretending it isn't there is the wrong one."
+    },
+    {
+      "id": "misc-6",
+      "concept": "halving",
+      "wrongBelief": "Halvings cause the price of Bitcoin to rise.",
+      "correctView": "A halving directly does exactly one thing: cut the per-block subsidy in half at a specific block height. It does not change existing supply, does not adjust difficulty, does not move price by any direct mechanism. Markets are forward-looking and the halving is known years in advance, so by the efficient-markets argument it should be priced in. By the reflexive-narrative counter-argument, maybe not. Whether halvings cause price action or merely correlate with it for unrelated reasons is genuinely unresolved from the data we have.",
+      "watchFor": "Students who treat 'stock-to-flow says price will be X' as a forecast rather than as a model whose predictive performance has been mixed at best."
+    }
+  ]
+}

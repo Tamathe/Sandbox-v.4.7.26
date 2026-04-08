@@ -1,0 +1,2072 @@
+{
+  "courseId": "abpm-clinical-informatics",
+  "description": "Cross-module concept aggregator. Lists every concept ID used anywhere in the course with its canonical home module and the modules it appears in. Used by the platform's concept-bridging surface.",
+  "totalConcepts": 321,
+  "concepts": [
+    {
+      "id": "clinical-informatics-definition",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "amia-core-competencies",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "bioinformatics-vs-clinical",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "public-health-informatics",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "consumer-health-informatics",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "sociotechnical-system",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "dikw-hierarchy",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "data-vs-information",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "knowledge-representation",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "structured-vs-unstructured-data",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "context-of-interpretation",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "early-his-systems",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "vista-history",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "regenstrief-medical-record",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "help-system",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "meaningful-use",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "hitech-act",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "cures-act-history",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "friedmans-fundamental-theorem",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "human-plus-system",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "augmentation-vs-automation",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "intervention-evaluation",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "informatics-vs-it",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "clinical-it-roles",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics"
+      ]
+    },
+    {
+      "id": "cmio-role",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "governance-structure",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "reporting-relationships",
+      "homeModule": "01-foundations-of-informatics",
+      "appearsIn": [
+        "01-foundations-of-informatics",
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "interoperability-four-levels",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "content-vs-transport",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "vocabulary-vs-format",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "semantic-interoperability",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "implementation-guide",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "hl7-v2",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "hl7-v3",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "rim-reference-information-model",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "mllp-transport",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "adt-orm-oru",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "mdm-siu-dft",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "delimiters-pipe-hat",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "fhir",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "fhir-resources",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "fhir-rest-api",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "smart-on-fhir",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "cds-hooks",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards",
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "us-core",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "profiles-and-extensions",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "snomed-ct",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "loinc",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "rxnorm",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "vocabulary-granularity",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "value-set-binding",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "umls",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "icd-10-cm",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "icd-10-pcs",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "cpt",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "hcpcs",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "drg-msdrg",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "billing-vs-clinical-coding",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "ucum",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "units-of-measure",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "unit-conversion-errors",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "drug-dosing-unit-errors",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "traditional-vs-si-units",
+      "homeModule": "02-clinical-data-standards",
+      "appearsIn": [
+        "02-clinical-data-standards"
+      ]
+    },
+    {
+      "id": "ehr-components",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "clinical-data-repository",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture",
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "ehr-application-layer",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "master-patient-index",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "ancillary-systems",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "registration-adt",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "documentation-module",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "cpoe",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "cpoe-unintended-consequences",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "structured-vs-narrative-orders",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "order-sets",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "koppel-paper",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "integration-engine",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "interface-engine",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "routing-and-transformation",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "message-queueing",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "mirth-rhapsody-cloverleaf",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "interface-monitoring",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "dead-letter-queue",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "hie-architecture",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "centralized-hie",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "federated-hie",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "hybrid-hie",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "ehealth-exchange",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "carequality",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "commonwell",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "tefca",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "qhin",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "record-locator-service",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "best-of-breed",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "integrated-platform",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "vendor-consolidation",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "epic-cerner-duopoly",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "total-cost-of-ownership",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "vendor-lock-in",
+      "homeModule": "03-ehr-and-his-architecture",
+      "appearsIn": [
+        "03-ehr-and-his-architecture"
+      ]
+    },
+    {
+      "id": "cds-definition",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "active-vs-passive-cds",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "interruptive-vs-noninterruptive",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "cds-modalities",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "infobutton",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "order-set-as-cds",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "predictive-cds",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "cds-five-rights",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "right-information",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "right-person",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "right-format",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "right-channel",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "right-time",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "cds-design-framework",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "alert-fatigue",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "alert-burden",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "override-rate",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "tiered-alerts",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "alert-tuning",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "desensitization",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "clinically-significant-alerts",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "arden-syntax",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "mlm-medical-logic-module",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "curly-braces-problem",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "glif",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "guideline-modeling",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "kr-vs-cds-hooks",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "hook-events",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "cds-cards",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "externalized-cds",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "smart-on-fhir-cds",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "cqi-and-cql",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support",
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "patient-view-hook",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "order-sign-hook",
+      "homeModule": "04-clinical-decision-support",
+      "appearsIn": [
+        "04-clinical-decision-support"
+      ]
+    },
+    {
+      "id": "clinical-workflow",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "workflow-analysis",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "swimlane-diagram",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "bpmn",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "value-stream-mapping",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "rework-loops",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "handoffs",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "workflow-vs-process",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "workarounds",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "usability",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "nielsen-heuristics",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "cognitive-load",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "heuristic-evaluation",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "usability-vs-satisfaction",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "user-centered-design",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "usability-testing",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "sociotechnical-model",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "sittig-singh",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors",
+        "06-quality-safety-analytics",
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "eight-dimensions",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "hardware-and-software",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "clinical-content",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "human-computer-interface",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "people-dimension",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "workflow-and-communication",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "internal-policies",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "external-rules",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "measurement-and-monitoring",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "safer-guides",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "ehr-safety-self-assessment",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "high-priority-practices",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "organizational-responsibilities",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "patient-identification-safer",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "cpoe-safer",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "test-results-safer",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors"
+      ]
+    },
+    {
+      "id": "downtime-planning",
+      "homeModule": "05-workflow-and-human-factors",
+      "appearsIn": [
+        "05-workflow-and-human-factors",
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "clinical-quality-measure",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "numerator-denominator",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "measure-exclusions-exceptions",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "process-vs-outcome-measure",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "balancing-measure",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "donabedian",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "ecqm",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "clinical-registry",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "data-warehouse",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "data-mart",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "data-lake",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "data-governance",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "fitness-for-use",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "etl-vs-elt",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "quality-dashboard",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "dashboard-audience",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "data-density",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "vanity-metrics",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "denominator-drift",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "dashboard-freshness",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "run-charts",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "regression-to-mean",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "simpsons-paradox",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "selection-bias",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "immortal-time-bias",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "confounding-by-indication",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "base-rate-neglect",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "multiple-comparisons",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "sensitivity-specificity",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "ppv-npv",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "low-prevalence-trap",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "population-health",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "risk-stratification",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "case-identification",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "panel-management",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "syndromic-surveillance",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "electronic-case-reporting",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "reportable-conditions",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "immunization-information-systems",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "fhir-public-health",
+      "homeModule": "06-quality-safety-analytics",
+      "appearsIn": [
+        "06-quality-safety-analytics"
+      ]
+    },
+    {
+      "id": "hipaa-privacy-rule",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "hipaa-security-rule",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "covered-entity",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "business-associate",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "phi-eighteen-identifiers",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "minimum-necessary",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "tpo-treatment-payment-operations",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "administrative-safeguards",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "physical-safeguards",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "technical-safeguards",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "required-vs-addressable",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "phi-handling",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "hitech-breach-notification",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "breach-definition",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "notification-timing",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "five-hundred-record-threshold",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "wall-of-shame",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "cmp-tiers",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "business-associate-direct-liability",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "encryption-safe-harbor",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "cures-act",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "information-blocking",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "eight-exceptions",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "preventing-harm-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "privacy-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "security-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "infeasibility-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "health-it-performance-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "content-and-manner-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "fees-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "licensing-exception",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "fhir-api-requirement",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "four-As",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "authentication",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "authorization",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "audit",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "accounting",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "rbac",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "abac",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "mfa",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "encryption-at-rest",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "encryption-in-transit",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "ransomware",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "change-healthcare-2024",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "defense-in-depth",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "incident-response",
+      "homeModule": "07-privacy-security-policy",
+      "appearsIn": [
+        "07-privacy-security-policy"
+      ]
+    },
+    {
+      "id": "pmbok",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "agile-in-healthcare",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "scrum-kanban",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "waterfall",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "hybrid-pm",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "standish-failure-rates",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "product-vs-project-management",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "scope-schedule-budget",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "stakeholder-management",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "risk-register",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "informatics-governance",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "cnio",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "crio",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "cds-committee",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "ehr-steering-committee",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "clinical-content-committee",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "raci-matrix",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "decision-rights",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "roi-informatics",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "hard-vs-soft-benefits",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "direct-vs-avoided-costs",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "npv",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "payback-period",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "tco-revisited",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "sensitivity-analysis",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "opportunity-cost",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "business-case",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "kotter-8-steps",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "adkar",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "lewin-three-stages",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "change-management",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "resistance-to-change",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "informatics-ethics",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "dual-loyalty",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    {
+      "id": "tell-the-truth-to-leadership",
+      "homeModule": "08-leadership-change-management",
+      "appearsIn": [
+        "08-leadership-change-management"
+      ]
+    },
+    { "id": "umls-metathesaurus", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "umls-cui", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "umls-semantic-network", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "umls-specialist-lexicon", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "umls-license", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "ctakes-metamap", "homeModule": "02-clinical-data-standards", "appearsIn": ["02-clinical-data-standards"] },
+    { "id": "fee-for-service", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "value-based-care", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "aco", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "macra", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "qpp-mips-apm", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "promoting-interoperability", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "meaningful-use-history", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "hospital-vbp", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "hospital-readmissions-reduction", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "bundled-payments", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "capitation", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "ffs-vs-vbc-incentive-misalignment", "homeModule": "08-leadership-change-management", "appearsIn": ["08-leadership-change-management"] },
+    { "id": "dicom-standard", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "dicom-information-object", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "dimse-services", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "dicom-modality-worklist", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "pacs", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ris", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "vna", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "enterprise-imaging", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ihe-profiles", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ihe-xds-i", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ihe-pix-pdq", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ihe-atna", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "ihe-xua", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] },
+    { "id": "wado-rs", "homeModule": "09-imaging-virtual-care-pgd", "appearsIn": ["09-imaging-virtual-care-pgd"] }
+  ]
+}

@@ -1,0 +1,103 @@
+Adopt the persona of a busy university faculty member using this interface for the first time.
+
+You are highly educated, but your patience for confusing software is zero. You do not want to explore. You do not want to learn the product. You just want to complete this task and move on:
+
+[TASK HERE]
+Examples:
+- publishing a practice quiz
+- uploading course materials
+- linking a tool to a course
+- reviewing a module
+
+Code to review:
+[FILE PATHS HERE]
+
+Instructions:
+1. Read the existing code first. Do not redesign from scratch.
+2. Walk through the exact click-by-click sequence required to complete the task.
+3. Identify the 3 highest-friction moments.
+4. Focus only on:
+   - ambiguous button labels or unclear primary actions
+   - overwhelming layouts with too many choices on one screen
+   - software jargon that should be plain English
+   - missing cancel, back, or save-for-later escape hatches
+5. Then provide detailed instructions for a developer to eliminate that friction. Do not write the code yourself.
+6. Describe clearly how to make the primary action visually obvious.
+7. Identify which secondary actions should be pushed into standard menus or lower-emphasis UI.
+8. List specific jargon terms to find and replace with plain English.
+9. Specify where "Back," "Cancel," or "Save" paths are missing.
+10. Ensure recommendations preserve existing architecture and state flow.
+
+Constraints:
+- No new packages
+- No schema changes or migrations unless absolutely required
+- No broad rewrites or new abstractions unless the current structure makes the fix impossible
+- Prefer surgical edits over new components
+- Keep role-based behavior intact
+- Do not output code blocks or diffs. Provide plain text instructions only.
+
+Output format:
+1. Faculty walkthrough: exact sequence of actions
+2. Top 3 friction points
+3. Engineering Instructions: Detailed bullet points on exactly what to change in the file.
+4. Verification: Explain why the task is now easier based on these changes.
+
+
+
+
+
+
+Role: You are a seasoned Product Manager and a Senior Software Engineer, brought in to do a final review of "The Sandbox" before we hand it over to university stakeholders for a live MVP demo. Your job is to identify the highest-impact, lowest-effort changes we can make to ensure the platform feels polished, intuitive, and "alive" for a first-time user.
+
+
+Somebody offer the following advice.  What do you think?  If you would change anything, please write that up as a markdown file for Codex
+
+
+
+
+
+
+# Role & Persona
+Adopt the persona of a busy University Faculty Member (Dr. Smith) using this dashboard for the first time.
+- **Context:** You have 10 minutes before your next lecture. You are stressed.
+- **Attitude:** You are highly educated, but your patience for confusing software is zero. You treat "gamification" and "jargon" as unprofessional obstacles.
+- **Goal:** You just want to complete your task and move on.
+
+# The Task
+Review the provided UI code and attempt to: **[INSERT SPECIFIC TASK HERE, e.g., "Upload a PDF syllabus to the Biology 101 course"]**
+
+# Step 1: The "Think-Aloud" Walkthrough
+Walk through the UI code line-by-line as Dr. Smith. Write out your **internal monologue** as you encounter different elements.
+- If you see a generic label like "Submit", express confusion ("Submit what?").
+- If you see a complex grid, express overwhelm.
+- If you see jargon (e.g., "Config", "Payload", "XP"), express annoyance.
+
+# Step 2: Friction Analysis
+Identify the top 3 "Friction Points" that caused Dr. Smith to hesitate or get annoyed.
+1. Ambiguous Labels
+2. Visual Overwhelm / Distractions
+3. Unclear "Happy Path"
+
+overwhelming layouts with too many choices on one screen
+software jargon that should be plain English
+missing cancel, back, or save-for-later escape hatches
+Then provide detailed instructions for a developer to eliminate that friction. Do not write the code yourself.
+Describe clearly how to make the primary action visually obvious.
+Identify which secondary actions should be pushed into standard menus or lower-emphasis UI.
+List specific jargon terms to find and replace with plain English.
+Specify where "Back," "Cancel," or "Save" paths are missing.
+Ensure recommendations preserve existing architecture and state flow.
+Constraints:
+
+No new packages
+No schema changes or migrations unless absolutely required
+No broad rewrites or new abstractions unless the current structure makes the fix impossible
+Prefer surgical edits over new components
+Keep role-based behavior intact
+Do not output code blocks or diffs. Provide plain text instructions only.
+Output format:
+
+Faculty walkthrough: exact sequence of actions
+Top 3 friction points
+Engineering Instructions: Detailed bullet points on exactly what to change in the file.
+Verification: Explain why the task is now easier based on these changes.

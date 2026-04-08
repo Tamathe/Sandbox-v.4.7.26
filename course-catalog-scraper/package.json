@@ -1,0 +1,12 @@
+{
+  "name": "uk-course-catalog-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scrape.mjs",
+    "scrape:grad": "node scrape.mjs --catoid=19"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  }
+}

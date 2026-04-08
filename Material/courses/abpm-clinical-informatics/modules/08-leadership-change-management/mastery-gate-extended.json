@@ -1,0 +1,146 @@
+{
+  "id": "mg-08-leadership-change-management-extended",
+  "moduleId": "08-leadership-change-management",
+  "title": "Module 8 Mastery Gate — Extended (Healthcare Financing additions)",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Sprint-10 extended bank for Module 8: ten additional items targeting the healthcare financing lesson. Same scoring rules as the canonical gate. Read every rationale.",
+  "set": "extended",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "ffs-vs-vbc-incentive-misalignment",
+      "prompt": "A radiology department built and piloted a duplicate-imaging alert that successfully identified patients about to receive a CT they had already had within the past 30 days. After a strong pilot, the alert was quietly turned off three months after go-live. The hospital is paid fee-for-service by every payer in its market. What is the MOST likely reason the alert was deactivated?",
+      "options": [
+        "The technology was poorly built.",
+        "Under fee-for-service, every CT the alert prevents is revenue the hospital does not collect, so there was no positive business case for the alert and stakeholders with revenue responsibility opposed it.",
+        "The alert violated HIPAA.",
+        "The radiologists did not believe duplicate imaging was harmful."
+      ],
+      "correct": 1,
+      "rationale": "This is the prototypical FFS misalignment case. The technology and the clinical evidence are both fine. The economics fail: under FFS the hospital is paid for the CT, so preventing it removes revenue, and whoever owns the radiology P&L will not defend the alert against pressure. The boards reward you for identifying payment-incentive misalignment as the failure mode rather than reaching for technology, HIPAA, or clinician disbelief. The same alert would be the most valuable feature in the EHR under capitation or in an ACO with downside risk for total cost of care."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "aco",
+      "prompt": "A community hospital joins a Medicare Shared Savings Program ACO covering a quarter of its panel. Which informatics investment is MOST DIRECTLY justified by the new payment relationship?",
+      "options": [
+        "An imaging viewer for the radiology reading room",
+        "An ADT-based event notification service that pages the patient's PCP on every discharge from any hospital in the region for attributed ACO patients",
+        "A new operating-room scheduling system",
+        "A bedside infusion pump replacement"
+      ],
+      "correct": 1,
+      "rationale": "ACO economics reward avoided utilization and improved transitions of care for the attributed population. ADT-based event notification — paging the PCP whenever an attributed patient is discharged from any hospital in the region — directly enables the post-discharge follow-up that prevents readmissions and the duplicate-care that ACOs are penalized for. The other options are operational investments unrelated to the ACO economic logic. The boards reward you for matching the named payment vehicle to the informatics investment whose business case it enables."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "hospital-readmissions-reduction",
+      "prompt": "A hospital is being penalized by CMS for excess 30-day risk-adjusted readmissions for heart failure, COPD, and pneumonia. Which named CMS program is generating the penalty?",
+      "options": [
+        "Hospital Value-Based Purchasing (VBP)",
+        "Hospital-Acquired Conditions Reduction Program (HACRP)",
+        "Hospital Readmissions Reduction Program (HRRP)",
+        "Inpatient Quality Reporting (IQR)"
+      ],
+      "correct": 2,
+      "rationale": "HRRP is the CMS program that specifically penalizes hospitals for excess 30-day risk-adjusted readmissions for selected conditions, including heart failure, COPD, pneumonia, and several others. VBP adjusts payments based on a different basket of quality measures. HACRP penalizes hospital-acquired conditions. IQR is the underlying reporting program that supplies data for the others but is not itself a penalty program. The boards write 'excess 30-day readmissions' stems and expect the answer 'HRRP' by name."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "macra",
+      "prompt": "Which of the following did MACRA do?",
+      "options": [
+        "Repealed HIPAA and replaced it with a value-based privacy framework",
+        "Repealed the Sustainable Growth Rate (SGR) formula, consolidated Medicare physician payment adjustment programs into the Quality Payment Program (QPP), and created the MIPS and Advanced APM tracks",
+        "Created the Meaningful Use program",
+        "Mandated the use of FHIR APIs in all certified EHRs"
+      ],
+      "correct": 1,
+      "rationale": "MACRA — the Medicare Access and CHIP Reauthorization Act of 2015 — repealed the perpetually-deferred SGR formula, rolled prior Medicare physician payment adjustment programs into the Quality Payment Program, and established the two QPP tracks (MIPS and Advanced APMs). It did not repeal HIPAA. Meaningful Use was created by HITECH (2009), not MACRA, and was later folded into MIPS as the Promoting Interoperability category. The FHIR API requirement comes from the 21st Century Cures Act and the ONC Cures Final Rule, not MACRA."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "qpp-mips-apm",
+      "prompt": "Under the Quality Payment Program, which of the following best distinguishes MIPS from the Advanced APM track?",
+      "options": [
+        "MIPS applies only to hospitals; Advanced APMs apply only to clinicians.",
+        "MIPS adjusts fee-for-service Medicare payments based on a composite performance score across Quality, Cost, Improvement Activities, and Promoting Interoperability; Advanced APMs require clinicians to participate in qualifying alternative payment models with downside financial risk and exempt them from MIPS in exchange for a separate bonus.",
+        "MIPS is voluntary; Advanced APMs are mandatory for all Medicare clinicians.",
+        "MIPS replaces HIPAA; Advanced APMs replace HITECH."
+      ],
+      "correct": 1,
+      "rationale": "MIPS is performance-adjusted FFS — clinicians remain on FFS rates but those rates are adjusted up or down based on a composite score across the four MIPS categories (Quality, Cost, Improvement Activities, Promoting Interoperability). Advanced APMs are the genuine-risk track: clinicians who get a sufficient share of their Medicare payments through qualifying APMs with downside risk are exempted from MIPS and receive a separate bonus payment. MIPS applies to clinicians, not hospitals. The hospital VBP program is the parallel hospital pay-for-performance vehicle. MIPS is not voluntary for most participating clinicians, and neither program touches HIPAA or HITECH directly."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "promoting-interoperability",
+      "prompt": "A board question asks which MIPS performance category is the successor to the clinician-side Meaningful Use program. The correct answer is:",
+      "options": [
+        "Quality",
+        "Cost",
+        "Improvement Activities",
+        "Promoting Interoperability"
+      ],
+      "correct": 3,
+      "rationale": "The Promoting Interoperability (PI) category of MIPS is the renamed successor to the clinician-side Meaningful Use program, which was rolled into MIPS in 2018. The parallel hospital Meaningful Use program was renamed Promoting Interoperability at the same time. The PI category measures e-prescribing, health information exchange, provider-to-patient exchange, and public health/clinical data registry reporting. The boards still occasionally use the phrase 'Meaningful Use' out of habit but the current name is Promoting Interoperability — and that is the answer they will reward when both names are available as options."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "capitation",
+      "prompt": "A medical group is paid a fixed per-member-per-month payment to provide all needed care for an attributed Medicare Advantage population, with no additional payment for additional services. Which payment model is described, and which informatics investment is most economically aligned with it?",
+      "options": [
+        "Fee-for-service; investments in volume-tracking dashboards",
+        "Capitation; investments in population health analytics, risk stratification, and care management informatics that prevent avoidable utilization",
+        "Bundled payments; investments in operating-room throughput optimization",
+        "Hospital VBP; investments in HCAHPS survey administration"
+      ],
+      "correct": 1,
+      "rationale": "Per-member-per-month payment for a defined attributed population, regardless of utilization, is the textbook definition of capitation. Capitation is the most aggressive form of provider risk-bearing, and every avoided ED visit, readmission, or duplicate test goes directly to the bottom line — which is exactly the economic engine that funds population health analytics, risk stratification, and care management. Bundled payments cover episodes of care, not populations. Hospital VBP is a hospital pay-for-performance program. FFS is the opposite economic logic. The boards reward you for matching the described economics to the named model and predicting the informatics investment that aligns with it."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "bundled-payments",
+      "prompt": "A health system receives a single negotiated payment from CMS that covers a hip replacement and the 90 days of post-acute care that follow. The system keeps the difference if total actual cost is below the payment and absorbs the loss if it is above. Which payment model is this?",
+      "options": [
+        "Capitation",
+        "Fee-for-service with quality bonuses",
+        "Bundled payments (episode-of-care payment)",
+        "Hospital Value-Based Purchasing"
+      ],
+      "correct": 2,
+      "rationale": "A single payment covering an episode of care — the procedure plus a defined post-acute window — with the provider bearing the variance is the textbook definition of a bundled payment. The hip-replacement-plus-90-days example is the canonical CMS bundled-payment scenario (BPCI Advanced and the legacy CJR). Capitation is per-member-per-month, not per-episode. Hospital VBP is a quality-adjustment program, not an episode bundle. FFS-with-bonuses adjusts FFS rates but does not bundle services into a single episode payment. The boards will use the hip replacement plus 90 days framing directly."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "meaningful-use-history",
+      "prompt": "Which of the following is a TRUE statement about the relationship between the HITECH Act, Meaningful Use, and Promoting Interoperability?",
+      "options": [
+        "HITECH created Meaningful Use, which was renamed Promoting Interoperability in 2018 when its clinician-side requirements were folded into the MIPS program under MACRA's Quality Payment Program.",
+        "Promoting Interoperability was created by the 21st Century Cures Act and replaced HITECH entirely.",
+        "Meaningful Use is still the current name of the program for both clinicians and hospitals.",
+        "MACRA repealed Meaningful Use and replaced it with HIPAA enforcement."
+      ],
+      "correct": 0,
+      "rationale": "Required board history: HITECH (2009) created the Meaningful Use program (Stages 1, 2, 3) that paid hospitals and clinicians to adopt and use certified EHRs in increasingly substantive ways. In 2018, the clinician-side program was rolled into MIPS (a creation of MACRA, 2015) as the Promoting Interoperability category, and the parallel hospital program was renamed Promoting Interoperability as well. The 21st Century Cures Act is a separate statute focused on interoperability, information blocking, and the FHIR API rule — it did not create or replace Meaningful Use. The other options invert the history."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "ffs-vs-vbc-incentive-misalignment",
+      "prompt": "A new CMIO is asked to recommend whether to invest in a clinical decision support tool that suppresses unnecessary follow-up imaging after low-risk imaging findings. In three to four sentences, describe how the answer should depend on the payer mix and named payment programs the institution participates in. Identify at least one situation where the recommendation is to invest and one where the recommendation is to defer.",
+      "expectedKeywords": ["fee-for-service", "value-based", "ACO", "capitation", "incentive", "business case"],
+      "rationale": "A complete answer recognizes that the same tool has opposite business cases under different payment environments. Under predominantly fee-for-service Medicare and commercial payers, every avoided follow-up scan is revenue the institution does not collect, the radiology P&L will oppose the intervention, and the recommendation should typically be to defer or to seek non-revenue funding (mission, quality, regulatory pressure). Under capitation, full-risk Medicare Advantage contracts, an MSSP ACO with downside risk, or HRRP/VBP exposure where avoided utilization improves the institution's bottom line, the same tool is one of the most valuable possible investments and should be deployed promptly. Credit any answer that names at least one specific payment vehicle on each side and explains the directional logic. The point being tested is that informatics business cases are payment-environment-dependent and the CMIO is expected to read the environment, not the technology."
+    }
+  ]
+}

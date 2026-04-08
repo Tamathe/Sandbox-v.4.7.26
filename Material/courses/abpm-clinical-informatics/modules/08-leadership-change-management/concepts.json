@@ -1,0 +1,205 @@
+{
+  "moduleId": "08-leadership-change-management",
+  "concepts": [
+    {
+      "id": "pmbok",
+      "label": "PMBOK",
+      "summary": "Project Management Institute's Project Management Body of Knowledge. The canonical reference for classical project management. Organizes work into ten knowledge areas: integration, scope, schedule, cost, quality, resource, communications, risk, procurement, stakeholder. Closely associated with the waterfall approach."
+    },
+    {
+      "id": "agile-in-healthcare",
+      "label": "Agile in Healthcare",
+      "summary": "Family of frameworks sharing the values articulated in the 2001 Agile Manifesto: working software over documentation, individuals and interactions over process, customer collaboration over contracts, responding to change over plans. The right framework when requirements are unstable, technology is novel, user feedback is essential, and the cost of late changes is low."
+    },
+    {
+      "id": "scrum-kanban",
+      "label": "Scrum and Kanban",
+      "summary": "Scrum: time-boxed sprints (typically 2 weeks), product backlog, daily standups, sprint review and retrospective, roles of product owner / scrum master / team. Kanban: continuous flow on a board with work-in-progress (WIP) limits on each column. Scrum for sprint-shaped work; Kanban for operational support and unpredictable arrival."
+    },
+    {
+      "id": "waterfall",
+      "label": "Waterfall",
+      "summary": "Linear PM approach: requirements, design, build, test, deploy, maintain — each phase completed before the next, with formal sign-offs. Right when requirements are stable, technology is well understood, and the cost of late changes is high. Not obsolete; the right framework for procurement-heavy and compliance-driven projects."
+    },
+    {
+      "id": "hybrid-pm",
+      "label": "Hybrid Project Management",
+      "summary": "Combination of waterfall and agile on the same effort — waterfall for procurement, contracting, and high-level scope; agile (Scrum or Kanban) for configuration, build, testing, and iterative refinement. The dominant pattern in large healthcare IT efforts."
+    },
+    {
+      "id": "standish-failure-rates",
+      "label": "Standish CHAOS Failure Rates",
+      "summary": "Standish Group's longitudinal study of large IT project outcomes. Approximately 30% success, 50% challenged (delivered but late, over budget, or with reduced scope), 20% outright failure. Healthcare IT is at or below the average. Failure modes dominated by stakeholder and scope problems, not technical incompetence."
+    },
+    {
+      "id": "product-vs-project-management",
+      "label": "Product vs Project Management",
+      "summary": "Project management assumes a temporary endeavor with a defined start, end, and deliverable. Product management assumes ongoing responsibility for a product over its lifecycle, prioritizing continuous improvement, user outcomes, and adoption metrics. Most clinical informatics work fits the product shape better than the project shape."
+    },
+    {
+      "id": "scope-schedule-budget",
+      "label": "Scope, Schedule, Budget",
+      "summary": "The classic project management triple constraint. Adjusting one without adjusting the others is the most common cause of project failure. Scope creep — the slow expansion of project requirements without corresponding adjustments to schedule and budget — is the most testable variant."
+    },
+    {
+      "id": "stakeholder-management",
+      "label": "Stakeholder Management",
+      "summary": "PMBOK knowledge area covering identification of stakeholders, mapping their interests, managing expectations, and communicating appropriately. The most underweighted knowledge area in informatics projects and the most common source of project failure that does not look like a project failure on the surface."
+    },
+    {
+      "id": "risk-register",
+      "label": "Risk Register",
+      "summary": "The list of identified project risks with probability, impact, owner, and mitigation. The boards test the existence of a risk register and the discipline of maintaining it as a living document, not a one-time deliverable."
+    },
+    {
+      "id": "informatics-governance",
+      "label": "Informatics Governance",
+      "summary": "The institutional structures, committees, decision rights, and reporting relationships that determine how informatics decisions get made. Clarity of decision rights matters more than the exact org chart. Committees that lack a defined scope, charter, decision-making authority, or cadence degenerate into status updates."
+    },
+    {
+      "id": "cmio-role",
+      "label": "CMIO Role",
+      "summary": "Chief Medical Information Officer. Senior physician leader responsible for the clinical use of the EHR and related health IT. Reports to CMO, CIO, both (matrix), or as a peer of the CIO. The reporting line is institution-dependent and determines whether the CMIO sits closer to the build team or to the medical staff. (Reused from Module 1.)"
+    },
+    {
+      "id": "cnio",
+      "label": "CNIO Role",
+      "summary": "Chief Nursing Information Officer. Senior nursing leader responsible for nursing use of the EHR. The CNIO/CMIO pairing is the dominant clinical informatics leadership pattern in U.S. hospitals. Typically has years of bedside experience plus informatics training."
+    },
+    {
+      "id": "crio",
+      "label": "CRIO Role",
+      "summary": "Chief Research Informatics Officer. Responsible for research informatics — data warehouses, registries, and analytical capabilities supporting clinical research. Common at academic medical centers; rare at community hospitals."
+    },
+    {
+      "id": "cds-committee",
+      "label": "CDS Committee",
+      "summary": "Clinical Decision Support Committee. Responsible for the clinical content layer — order sets, alerts, decision rules, drug-drug interactions, override audits. Typically chaired by the CMIO or designee with multi-specialty representation. The most-important committee for the safety profile of the EHR."
+    },
+    {
+      "id": "ehr-steering-committee",
+      "label": "EHR Steering Committee",
+      "summary": "Senior governance body for the EHR as a whole. Sets strategic direction, approves the upgrade and optimization roadmap, resolves cross-service-line conflicts, owns the EHR program budget. The committee that most often fails by becoming a status meeting rather than a decision-making body."
+    },
+    {
+      "id": "clinical-content-committee",
+      "label": "Clinical Content Committee",
+      "summary": "Owns the order set library, documentation templates, problem list dictionary, and formulary integration. Often a sub-committee of the EHR Steering or CDS Committee. The unglamorous, ongoing committee where most institutions fail at content maintenance (Sittig-Singh dimension 2)."
+    },
+    {
+      "id": "raci-matrix",
+      "label": "RACI Matrix",
+      "summary": "Decision-rights tool. R = Responsible (does the work, multiple Rs OK). A = Accountable (owns the outcome, exactly one A). C = Consulted (input sought before decision, two-way). I = Informed (notified after decision, one-way). The discipline of writing a RACI surfaces disagreements that have been hiding under collective ownership."
+    },
+    {
+      "id": "decision-rights",
+      "label": "Decision Rights",
+      "summary": "Written specification of who decides what for recurring decision classes. Matters more than the org chart. Institutions with unwritten decision rights are exposed to key-person risk and to the reorganization fallacy — the belief that the next reorg will fix the decisions when the actual fix is the unglamorous writing of RACIs."
+    },
+    {
+      "id": "governance-structure",
+      "label": "Governance Structure",
+      "summary": "The set of committees, decision rights, charters, and reporting relationships through which an institution makes informatics decisions. (Reused from Module 1.)"
+    },
+    {
+      "id": "reporting-relationships",
+      "label": "Reporting Relationships",
+      "summary": "Who reports to whom in the formal org chart. The boards test CMIO reporting patterns directly (to CMO, to CIO, to both, peer-of-CIO) and reward you for knowing the trade-offs of each. (Reused from Module 1.)"
+    },
+    {
+      "id": "roi-informatics",
+      "label": "ROI for Informatics",
+      "summary": "Return-on-investment calculation for an informatics intervention. The formula is simple; the discipline is in the inputs. Most informatics ROI calculations are partial fictions; the right response is honesty about the fictions while still producing the number leadership can act on."
+    },
+    {
+      "id": "hard-vs-soft-benefits",
+      "label": "Hard vs Soft Benefits",
+      "summary": "Hard benefit: real dollars on the financial statement, auditable. Soft benefit: real and valuable but does not show up cleanly on the books (clinician satisfaction, patient experience, cognitive load reduction). The honest ROI case includes both, labels them, and does not dress soft benefits up as hard."
+    },
+    {
+      "id": "direct-vs-avoided-costs",
+      "label": "Direct vs Avoided Costs",
+      "summary": "Direct cost: a real dollar the institution will spend. Avoided cost: a dollar the institution would have spent without the intervention. Avoided costs are the category most prone to inflation; the honest move is to count them only when there is a specific documentable counterfactual."
+    },
+    {
+      "id": "npv",
+      "label": "Net Present Value (NPV)",
+      "summary": "ROI framing that discounts future benefits and costs back to present-day dollars using a discount rate. The right framing when benefits and costs are spread over multiple years. The boards test the existence of NPV; they do not test the discount-rate math."
+    },
+    {
+      "id": "payback-period",
+      "label": "Payback Period",
+      "summary": "Time it takes for cumulative benefits to equal cumulative costs. The framing finance committees most often ask for. Conservative and easy to understand; undervalues long-horizon investments."
+    },
+    {
+      "id": "tco-revisited",
+      "label": "TCO Revisited",
+      "summary": "Total cost of ownership returns from Module 3 as the cost side of the ROI calculation. Includes initial purchase, implementation labor, hardware, integration, training, ongoing maintenance, content maintenance, vendor support, internal support staff, and eventual decommissioning. The honest denominator is the full TCO over the appropriate time horizon, not the line-item license cost."
+    },
+    {
+      "id": "sensitivity-analysis",
+      "label": "Sensitivity Analysis",
+      "summary": "Showing how the ROI conclusion changes when key assumptions change. The output is a range, not a point estimate. Honest cases identify the assumption that drives most of the variance; dishonest cases hide it."
+    },
+    {
+      "id": "opportunity-cost",
+      "label": "Opportunity Cost",
+      "summary": "The value of the next-best thing the institution could have done with the same resources. The hidden line item in every informatics decision. Almost never quantified in ROI cases; the discipline of asking the question is what separates a CMIO who allocates the budget well from one who picks projects based on whoever asks loudest."
+    },
+    {
+      "id": "business-case",
+      "label": "Business Case",
+      "summary": "The full document presenting the ROI analysis, the strategic rationale, the risks, and the recommendation to leadership. Includes the ROI numbers as one component of a broader argument."
+    },
+    {
+      "id": "kotter-8-steps",
+      "label": "Kotter's 8 Steps",
+      "summary": "(1) Establish a sense of urgency; (2) Form a powerful guiding coalition; (3) Develop a vision and strategy; (4) Communicate the change vision; (5) Empower broad-based action; (6) Generate short-term wins; (7) Consolidate gains and produce more change; (8) Anchor new approaches in the culture. Right framework for large-scale, institution-wide change."
+    },
+    {
+      "id": "adkar",
+      "label": "ADKAR",
+      "summary": "Prosci's individual-level change framework. (A) Awareness, (D) Desire, (K) Knowledge, (A) Ability, (R) Reinforcement. Right framework when success depends on individual behavior. Diagnostic power: map a described change failure to the specific stage where it broke down. The most common error is misreading an Ability problem as a Knowledge problem."
+    },
+    {
+      "id": "lewin-three-stages",
+      "label": "Lewin's Three Stages",
+      "summary": "Kurt Lewin (1947). Unfreeze (disturb the status quo), Change (transition), Refreeze (stabilize and institutionalize the new state). The simplest of the three named frameworks. Right for discrete, time-bounded changes. Most failed change efforts fail at refreeze."
+    },
+    {
+      "id": "change-management",
+      "label": "Change Management",
+      "summary": "The discipline of leading individuals and organizations through change. Three major named frameworks: Kotter (institutional), ADKAR (individual), Lewin (discrete state-to-state). The frameworks are tools, not creeds — the CMIO who knows all three and picks among them outperforms the one who has memorized one and applies it everywhere."
+    },
+    {
+      "id": "resistance-to-change",
+      "label": "Resistance to Change",
+      "summary": "The default framing — that resistance is an obstacle to be overcome — is wrong. Resistance is information. The right response is to treat it as design feedback, ask what the resister is solving for, and address the underlying constraint. Cross-reference Module 5's framing of workarounds."
+    },
+    {
+      "id": "informatics-ethics",
+      "label": "Informatics Ethics",
+      "summary": "The ethical responsibilities of an informaticist who is also a clinician. Three obligations: patient welfare first (the trump card), professional obligations to colleagues (design with respect, treat workarounds as data), tell the truth to leadership (including the uncomfortable parts)."
+    },
+    {
+      "id": "dual-loyalty",
+      "label": "Dual Loyalty",
+      "summary": "The clinical informaticist's two loyalties — to the patient (clinical role) and to the institution and clinical staff (informatics role). Most of the time the two point the same way. When they conflict, patient welfare is the trump card and the obligation does not lapse when the informaticist takes on an institutional role."
+    },
+    {
+      "id": "tell-the-truth-to-leadership",
+      "label": "Tell the Truth to Leadership",
+      "summary": "The obligation to give honest assessments to leadership, including uncomfortable parts, including projections that an initiative will not work. The discipline that distinguishes a CMIO who builds long-term credibility from one who is replaced after the third surprise."
+    },
+    {
+      "id": "friedmans-fundamental-theorem",
+      "label": "Friedman's Fundamental Theorem (and its corollary)",
+      "summary": "Original (Module 1): a person working with an information resource should perform better than the same person without it. Corollary (Module 8): if the person with the resource performs WORSE than without it, the informaticist is obligated to retract or redesign the resource. The discipline of measuring against the counterfactual and retracting when the counterfactual wins is the closing ethical move of the field. (Reused from Module 1.)"
+    },
+    {
+      "id": "sittig-singh",
+      "label": "Sittig-Singh",
+      "summary": "Cross-referenced here for the eight-dimension model's role in mapping the failure modes of change initiatives. (Reused from Module 5.)"
+    }
+  ]
+}

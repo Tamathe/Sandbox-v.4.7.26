@@ -1,0 +1,259 @@
+{
+  "moduleId": "06-macro",
+  "concepts": [
+    {
+      "id": "sovereign-debt",
+      "name": "Sovereign debt",
+      "definition": "Debt issued by a national government, denominated in its own currency or in another. The form (own-currency vs foreign-currency) determines whether the borrower can inflate the debt away or must default nominally.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat"]
+    },
+    {
+      "id": "debt-to-gdp",
+      "name": "Debt-to-GDP ratio",
+      "definition": "Total outstanding sovereign debt divided by annual GDP. A coarse but widely-used measure of fiscal load. The level matters less than the trajectory and the average interest rate.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat"]
+    },
+    {
+      "id": "fiscal-dominance",
+      "name": "Fiscal dominance",
+      "definition": "A regime in which the central bank can no longer raise interest rates as much as inflation would warrant, because doing so would make government debt service unsustainable. The shift from independence to dominance happens by drift, not decree.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat", "06-demographics-and-productivity"]
+    },
+    {
+      "id": "financial-repression",
+      "name": "Financial repression",
+      "definition": "A set of policies that hold real interest rates below market levels (interest rate caps, capital controls, forced savings vehicles) so that savers fund the government below cost. The dominant tool by which post-WWII debt was ground down.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat"]
+    },
+    {
+      "id": "real-default",
+      "name": "Real default",
+      "definition": "Repayment of debt in nominal terms using a currency that has lost purchasing power through inflation. The most common way large sovereigns resolve unsustainable debt loads. Politically much cheaper than nominal default.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat"]
+    },
+    {
+      "id": "bretton-woods",
+      "name": "Bretton Woods",
+      "definition": "The post-WWII international monetary system (1944–1971) that pegged the US dollar to gold and other currencies to the dollar. Its end in 1971 removed the mechanical constraint that had previously limited sovereign borrowing.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat"]
+    },
+    {
+      "id": "eroi",
+      "name": "EROI (Energy Return on Investment)",
+      "definition": "The ratio of energy delivered by a source to the energy required to extract, refine, and deliver it. Conventional oil in 1950 was around 100:1. Modern alternatives are mostly lower, with nuclear as the main exception.",
+      "appearsInLessons": ["02-energy-as-base-layer"]
+    },
+    {
+      "id": "energy-intensity",
+      "name": "Energy intensity",
+      "definition": "The amount of energy required per unit of GDP. Has been declining slowly across developed economies, but the absolute energy required to support a 1% GDP increase keeps rising because the GDP base is larger.",
+      "appearsInLessons": ["02-energy-as-base-layer"]
+    },
+    {
+      "id": "base-layer",
+      "name": "Energy as base layer",
+      "definition": "The argument that energy, not money or labor, is the foundational input on which every other layer of the economy depends. Money is a coordination layer above it; labor and capital both run on energy.",
+      "appearsInLessons": ["02-energy-as-base-layer"]
+    },
+    {
+      "id": "jevons-paradox",
+      "name": "Jevons paradox",
+      "definition": "When efficiency in using a resource improves, total consumption of that resource usually rises rather than falls, because the cheaper it is to use, the more uses appear. Critical for evaluating any 'efficiency will solve the energy problem' argument.",
+      "appearsInLessons": ["02-energy-as-base-layer"]
+    },
+    {
+      "id": "stranded-energy",
+      "name": "Stranded energy",
+      "definition": "Energy produced in places where it cannot be efficiently transported or sold (flared gas, remote hydro, midday solar surplus). Bitcoin mining and AI compute are unusual in being able to monetize stranded energy in place.",
+      "appearsInLessons": ["02-energy-as-base-layer"]
+    },
+    {
+      "id": "cognitive-labor",
+      "name": "Cognitive labor",
+      "definition": "Work whose primary input is thought, judgment, language, or symbolic manipulation rather than physical action. The category most directly affected by capable LLMs.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap"]
+    },
+    {
+      "id": "substitution",
+      "name": "Substitution (in labor and AI)",
+      "definition": "When AI does a task in place of a human worker, reducing the marginal demand for the human's labor on that task. Whether this matters depends on what tasks remain and what the local labor supply looks like.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap", "06-demographics-and-productivity"]
+    },
+    {
+      "id": "complementarity",
+      "name": "Complementarity (in labor and AI)",
+      "definition": "When AI makes a human worker dramatically more effective at a task, raising rather than lowering the value of the human in that role. The flip side of substitution; both happen at once on different tasks within any given job.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap"]
+    },
+    {
+      "id": "skill-premium",
+      "name": "Skill premium",
+      "definition": "The wage gap between higher-skill and lower-skill workers. Cognitive AI is reshaping this by collapsing the premium for routine educated labor while raising it for taste, judgment, and trust.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap"]
+    },
+    {
+      "id": "polanyi-paradox",
+      "name": "Polanyi's paradox",
+      "definition": "The observation that humans know how to do many things they cannot articulate well enough to teach to a machine. Tacit knowledge is sticky; many real jobs are mostly tacit knowledge with a few articulated tasks on top.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap"]
+    },
+    {
+      "id": "moravec-paradox",
+      "name": "Moravec's paradox",
+      "definition": "Things that are hard for humans (formal reasoning, chess, abstract math) tend to be relatively easy for machines, and things that are easy for humans (walking, picking up objects, reading a room) tend to be very hard for machines. Implication: blue-collar physical work may be more durable than white-collar cognitive work.",
+      "appearsInLessons": ["03-labor-when-cognition-is-cheap"]
+    },
+    {
+      "id": "scaling-laws",
+      "name": "AI scaling laws",
+      "definition": "The empirical finding that AI model capability scales predictably with compute, data, and parameters in a power-law relationship. The defining structural fact of the modern AI industry; it implies that more capital reliably produces measurably better models.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "returns-to-scale",
+      "name": "Returns to scale",
+      "definition": "Whether doubling all inputs more or less than doubles output. AI has strong returns to scale at the training step, which is why the industry concentrates structurally rather than incidentally.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "winner-take-most",
+      "name": "Winner-take-most",
+      "definition": "An industry structure in which a small number of firms capture a disproportionate share of revenue and value, not because of unfair behavior but because of underlying scale economics. Distinct from monopoly.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "compute-divide",
+      "name": "Compute divide",
+      "definition": "The gap between actors with access to frontier-scale training compute (a handful of hyperscalers and well-funded labs) and everyone else. The structural inequality of the AI era.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "regulatory-capture",
+      "name": "Regulatory capture",
+      "definition": "When regulatory bodies start serving the interests of the incumbents they were supposed to regulate. A standard concern in AI policy because the incumbents have the resources and expertise to shape the rules.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "rent",
+      "name": "Economic rent",
+      "definition": "Profit earned above what would be necessary to keep a firm in business. Persistent rents are a sign of weak competitive pressure. NVIDIA's gross margins through 2024–25 are a textbook case.",
+      "appearsInLessons": ["04-capital-concentration"]
+    },
+    {
+      "id": "cbdc",
+      "name": "Central bank digital currency (CBDC)",
+      "definition": "Digital money issued directly by a central bank to citizens and businesses, bypassing the commercial banking system. The most state-aligned of the three digital-money visions. Technically capable of programmable restrictions, surveillance, and direct freezing.",
+      "appearsInLessons": ["05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "stablecoin",
+      "name": "Stablecoin",
+      "definition": "A token issued on a public blockchain by a private entity, pegged 1:1 to a fiat currency held in reserve. The dominant successful crypto product by transaction volume as of 2026. Combines public-blockchain plumbing with private commercial issuance.",
+      "appearsInLessons": ["05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "bitcoin-as-money",
+      "name": "Bitcoin as money",
+      "definition": "The vision of Bitcoin as a non-state, hard-cap-supplied store of value (and aspirationally a medium of exchange). The only one of the three digital-money visions that takes the soft-money critique seriously enough to try to fix it at the protocol level.",
+      "appearsInLessons": ["05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "programmable-money",
+      "name": "Programmable money",
+      "definition": "Money whose use can be constrained by rules embedded in the money itself — expiration dates, category restrictions, geographic limits, conditional transfers. A core technical feature of CBDCs and (in different form) of stablecoins on smart-contract chains.",
+      "appearsInLessons": ["05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "financial-surveillance",
+      "name": "Financial surveillance",
+      "definition": "The systematic monitoring of financial transactions by states or intermediaries. Already pervasive in the existing banking system; CBDCs represent a step-change because the surveillance capability is built into the money itself rather than into the institutions that handle it.",
+      "appearsInLessons": ["05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "reserve-currency",
+      "name": "Reserve currency status",
+      "definition": "The ability of a national currency to be held by foreign central banks and used in cross-border trade. Confers extraordinary fiscal capacity on the issuing country (the 'exorbitant privilege') and makes that country's debt cheaper to roll. The dollar holds it; nothing else currently comes close.",
+      "appearsInLessons": ["01-sovereign-debt-and-fiat", "05-cbdc-vs-stablecoin-vs-bitcoin"]
+    },
+    {
+      "id": "dependency-ratio",
+      "name": "Dependency ratio",
+      "definition": "The ratio of non-working-age population (children + elderly) to working-age population. The immediate operational variable for fiscal sustainability — every working-age person is, on average, supporting the dependents through taxes and transfers.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    },
+    {
+      "id": "total-fertility-rate",
+      "name": "Total fertility rate (TFR)",
+      "definition": "The average number of children per woman over a reproductive lifetime. Replacement is about 2.1. Most of the OECD and all of East Asia are well below replacement. Bakes future dependency ratios in for decades.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    },
+    {
+      "id": "productivity-growth",
+      "name": "Productivity growth",
+      "definition": "The rate at which output per worker increases. The only macro variable that can save aging societies from fiscal collapse if labor force is shrinking. Has been low across the OECD since around 2005.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    },
+    {
+      "id": "automation-substitute",
+      "name": "Automation as substitute (for missing workers)",
+      "definition": "Automation deployed in a context where there are not enough humans to do the work, so the machine fills a gap rather than displacing a worker. Japan in 2026 is the canonical case.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    },
+    {
+      "id": "automation-competitor",
+      "name": "Automation as competitor (to surviving workers)",
+      "definition": "Automation deployed in a context where there is sufficient labor available, displacing rather than substituting for workers. The same technology can be a substitute in one country and a competitor in another at the same time.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    },
+    {
+      "id": "secular-stagnation",
+      "name": "Secular stagnation",
+      "definition": "The hypothesis that mature economies have entered a period of structurally lower growth driven by demographics, declining productivity gains, and high savings relative to investment opportunities. Disputed but increasingly hard to argue with.",
+      "appearsInLessons": ["06-demographics-and-productivity"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "fiscal-dominance",
+      "wrongBelief": "A country that issues its own currency can never go bankrupt and therefore can borrow without limit.",
+      "correctView": "Such a country cannot be forced into nominal default, but it can be forced into real default through inflation. The cost of unsustainable borrowing shows up in the currency, not in the bond contract. Fiscal dominance is the regime in which this becomes the binding constraint, and the central bank's stated independence stops being credible.",
+      "watchFor": "Students who confidently repeat the MMT slogan 'a sovereign in its own currency can always pay' as if it ended the conversation. It does not. Ask: paid in what, and worth what?"
+    },
+    {
+      "id": "misc-2",
+      "concept": "eroi",
+      "wrongBelief": "Energy is just one input to GDP among many; macroeconomics already accounts for it.",
+      "correctView": "Standard macro models treat energy as a small share of GDP cost (3–5%) and therefore underweight it dramatically. The post-war boom was built on extraordinarily high-EROI hydrocarbons and the macro models that worked then have not adapted to the lower-EROI present. Energy is the base layer, and assuming otherwise gives you forecasts that fall apart whenever there is an energy shock — which is most of the times macro models have been wildly wrong.",
+      "watchFor": "Students who say 'but energy is only 4% of GDP.' Reply: yes, and labor is only 60%, and you would not say labor is a minor input. The cost share is not the same as the importance share for an essential input."
+    },
+    {
+      "id": "misc-3",
+      "concept": "automation-substitute-vs-competitor",
+      "wrongBelief": "Either AI takes jobs (bad) or AI creates jobs (good). Pick one.",
+      "correctView": "AI is simultaneously a substitute for missing workers and a competitor to surviving ones, often in the same country at the same time in different sectors. Whether the local effect is mostly substitute or mostly competitor depends on the demographic and labor-supply situation. Japan and Korea live in mostly-substitute regimes; the US lives in a mixed regime; sub-Saharan Africa lives in a mostly-competitor regime. The honest framing requires saying which regime you are talking about.",
+      "watchFor": "Students adopting either the techno-optimist 'AI creates jobs' line or the techno-pessimist 'AI destroys jobs' line as a complete answer. Reply: in which sector, in which country, on what timescale?"
+    },
+    {
+      "id": "misc-4",
+      "concept": "stablecoin",
+      "wrongBelief": "Stablecoins are 'fiat in a costume' and therefore not interesting from a Bitcoin perspective.",
+      "correctView": "Stablecoins are arguably the most successful crypto product of the last decade. They are the dollar exporting itself to places that previously had monetary autonomy, which is a world-historical macro event whether or not Bitcoin maximalists like the answer. Dismissing stablecoins because they are not Bitcoin misses the actual map of digital money in 2026: stablecoins are winning the medium-of-exchange and short-horizon store-of-value competition in failing-currency economies, and Bitcoin is winning a different (much narrower) long-horizon store-of-value competition. Both can be true.",
+      "watchFor": "Maximalists who refuse to engage with stablecoin success metrics. Reply: what is your forecast for stablecoin transaction volume vs Bitcoin transaction volume in 2030, and what would it take to falsify your view?"
+    },
+    {
+      "id": "misc-5",
+      "concept": "scaling-laws",
+      "wrongBelief": "AI is a normal software industry where small teams will disrupt the giants once a clever architecture appears.",
+      "correctView": "AI is a capital-intensive industry with strong empirically-validated returns to scale at the training step. The same clever idea, run on the giant's compute, also produces a better model on the giant's hardware. This is closer to semiconductors than to web software. The structural concentration is real, it is mostly natural rather than policy-driven, and it is unlikely to be undone by a startup with a clever architecture alone.",
+      "watchFor": "Students who keep waiting for 'the AI Dropbox moment.' Reply: which previous capital-intensive industry with strong returns to scale was disrupted by a small team with no compute? The list is short."
+    },
+    {
+      "id": "misc-6",
+      "concept": "dependency-ratio",
+      "wrongBelief": "Aging societies can solve the demographic problem with immigration.",
+      "correctView": "Immigration helps at the margin but cannot solve the problem at the scale required, for two reasons. First, the global supply of working-age would-be migrants from countries with surplus labor is large but not unlimited, and is itself shrinking as global fertility declines. Second, the political tolerance for immigration at the levels actually required (millions per year sustained for decades in receiving countries with already-stressed integration capacity) does not exist in any large democracy. Immigration is a partial answer; productivity and automation are the rest, and the math without them does not close.",
+      "watchFor": "Students who reach for immigration as a complete solution. Reply: do the arithmetic with realistic numbers and tell me what fertility rate the receiving country would need to be at for immigration alone to balance the dependency ratio. The answer surprises people."
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "id": "mg-07-privacy-security-policy",
+  "moduleId": "07-privacy-security-policy",
+  "title": "Module 7 Mastery Gate — Privacy, Security, and Policy",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on HIPAA, HITECH, the 21st Century Cures Act information blocking rule, and security controls. Heavy on the eight information-blocking exceptions and the HIPAA safeguard categories. Memorize the eight exceptions cold — they are the highest-yield single fact in this module.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "covered-entity",
+      "prompt": "Which of the following is NOT a covered entity under HIPAA?",
+      "options": [
+        "A 240-bed community hospital that bills electronically",
+        "A self-insured employer's group health plan",
+        "A medical billing company that processes claims for several physician practices",
+        "A pediatric clinic that submits claims electronically"
+      ],
+      "correct": 2,
+      "rationale": "A medical billing company is a business associate, not a covered entity. HIPAA's covered entities are: (1) health plans, (2) healthcare clearinghouses, and (3) healthcare providers that transmit health information electronically in standard transactions. The billing company performs functions on behalf of covered entities involving PHI and therefore needs a BAA, but it is not itself a covered entity. The boards test this disambiguation directly. After HITECH, business associates have direct HIPAA liability to HHS, but the legal category remains distinct from covered entity."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "phi-eighteen-identifiers",
+      "prompt": "A research dataset has been stripped of all 18 HIPAA identifiers using the Safe Harbor method. The dataset describes a rural county with one cardiothoracic surgeon and includes the row 'the cardiothoracic surgeon at the county hospital, age 67, recent diagnosis of pancreatic adenocarcinoma.' Is the dataset de-identified?",
+      "options": [
+        "Yes — the 18 identifiers have been removed, so by definition the dataset is de-identified.",
+        "No — the catch-all in identifier #18 ('any other unique identifying number, characteristic, or code') is violated. A combination of attributes can still identify a specific individual even when none of identifiers 1–17 is present.",
+        "Yes, but only if no one outside the institution has access.",
+        "Only the age 67 is the problem; removing it would make the dataset compliant."
+      ],
+      "correct": 1,
+      "rationale": "The catch-all in #18 — 'any other unique identifying number, characteristic, or code' — is what this scenario violates. A combination of attributes that does not include any of identifiers 1–17 but that could reasonably identify a specific individual still counts as PHI. 'The cardiothoracic surgeon at the county hospital' in a small population is a unique identifying characteristic. The boards test this with stems describing small populations and 'de-identified' datasets that are in fact still identifiable. The Safe Harbor method requires the actor to also have no actual knowledge that the information could still identify the individual, which fails here."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "tpo-treatment-payment-operations",
+      "prompt": "A primary care physician sends a complete copy of a patient's chart, including notes and imaging, to a consulting cardiologist at a different institution for an outpatient referral. No patient authorization is on file. Which statement BEST describes the HIPAA analysis?",
+      "options": [
+        "This is a violation; patient authorization is required for any disclosure to an outside provider.",
+        "This is permitted as a treatment disclosure under TPO. Importantly, the minimum necessary standard does NOT apply to disclosures to a healthcare provider for treatment purposes — the disclosing provider's clinical judgment about what the receiving provider needs governs.",
+        "This is permitted but the minimum necessary standard requires the PCP to send only the most recent visit note.",
+        "This is permitted only if the patient has signed a notice of privacy practices."
+      ],
+      "correct": 1,
+      "rationale": "Treatment disclosures under TPO are permitted without authorization. Critically, the minimum necessary standard does NOT apply to disclosures to a healthcare provider for treatment purposes (one of the few explicit exceptions to minimum necessary). The PCP's clinical judgment governs what to send. The boards test the treatment exception to minimum necessary directly because it is one of the most commonly missed nuances. Notice of privacy practices is a separate patient right, not a precondition for disclosure. Authorization is required for most non-TPO disclosures, not for treatment."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "administrative-safeguards",
+      "prompt": "An institution implements mandatory annual security training for all workforce members, with documented completion tracking and remediation for staff who fail. Under the HIPAA Security Rule, this control falls into which safeguard category?",
+      "options": [
+        "Physical safeguards",
+        "Technical safeguards",
+        "Administrative safeguards",
+        "Both physical and technical safeguards"
+      ],
+      "correct": 2,
+      "rationale": "Workforce security awareness and training is explicitly named in the administrative safeguards category. Administrative safeguards cover the people, policies, processes, and management practices that protect ePHI — including security management, workforce security, access management, training, incident procedures, contingency planning, and BAAs. Physical safeguards are about facility access and device controls; technical safeguards are about access control, audit, integrity, authentication, and transmission security. The boards test the three categories directly with this question form. Memorize what falls in each."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "required-vs-addressable",
+      "prompt": "Encryption of ePHI at rest is classified in the HIPAA Security Rule as 'addressable' rather than 'required.' Which statement BEST describes what 'addressable' actually means?",
+      "options": [
+        "Optional — the covered entity may choose whether to implement encryption.",
+        "The covered entity must assess whether encryption is reasonable and appropriate, and either implement it, implement an equivalent alternative, or document in writing why neither is reasonable. Addressable demands a written justification, not a free pass.",
+        "Required only for institutions over 100 beds.",
+        "Required only after a breach has occurred."
+      ],
+      "correct": 1,
+      "rationale": "'Addressable' is widely misread as 'optional.' It is not. The covered entity must perform and document an analysis of whether the specification is reasonable and appropriate, and either implement it, implement a defensible alternative, or document the justification for doing neither. After HITECH established the encryption breach-notification safe harbor (lesson 2), encryption of ePHI at rest became close to a de facto requirement because the financial and reputational consequences of an unencrypted breach are large. The boards test the addressable-vs-required distinction directly."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "hitech-breach-notification",
+      "prompt": "A hospital discovers on March 1 that a laptop containing unencrypted PHI for 1,500 patients was stolen from a clinician's car on February 20. By what date must the hospital notify HHS, and how?",
+      "options": [
+        "Within 60 days after the end of the calendar year (i.e., by March 1 of the following year), bundled with other small breaches.",
+        "Contemporaneously with notification to affected individuals, no later than 60 days from discovery (April 30), because the breach affects 500 or more individuals.",
+        "Within 24 hours of discovery, by phone.",
+        "Only if the laptop is recovered with evidence that the data was viewed."
+      ],
+      "correct": 1,
+      "rationale": "Breaches affecting 500 or more individuals must be reported to HHS contemporaneously with individual notification, no later than 60 days from discovery. Discovery is March 1, so the deadline is April 30. The breach also lands on the HHS public breach reporting website (the Wall of Shame) and triggers prominent-media notice. Breaches affecting fewer than 500 individuals are batched annually (60 days after the end of the calendar year). The unencrypted state of the laptop is what makes this a notifiable breach at all — encrypted data would have qualified for the safe harbor and not triggered notification."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "wall-of-shame",
+      "prompt": "What is the 'HIPAA Wall of Shame' and what triggers a listing on it?",
+      "options": [
+        "An internal CMS database of providers with low quality scores.",
+        "The HHS public breach reporting website that lists all breaches affecting 500 or more individuals; the listing is searchable and persists indefinitely.",
+        "A Joint Commission registry of accredited hospitals with sentinel events.",
+        "An OIG enforcement list of providers excluded from federal healthcare programs."
+      ],
+      "correct": 1,
+      "rationale": "The Wall of Shame is the informal name for the HHS Office for Civil Rights breach reporting website, which publicly lists all breaches affecting 500 or more individuals. Once a breach lands there, it is searchable by name effectively forever, and the reputational consequences are part of why the 500-record threshold is the inflection point in institutional response. The boards test the threshold (500), the consequence (HHS public listing plus media notice), and the informal name. The other options describe different programs."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "meaningful-use",
+      "prompt": "Which statement about HITECH and Meaningful Use is correct?",
+      "options": [
+        "Meaningful Use is a separate statute passed in 2014 that has no relationship to HITECH.",
+        "HITECH and Meaningful Use are the same statute (2009) — HITECH established Meaningful Use as the financial incentive program that drove EHR adoption, AND simultaneously strengthened HIPAA with breach notification, business associate direct liability, and the CMP tier structure.",
+        "HITECH established only the privacy rules; Meaningful Use was administered by ONC under separate authority.",
+        "Meaningful Use was the predecessor to HITECH and was repealed when HITECH passed."
+      ],
+      "correct": 1,
+      "rationale": "HITECH (2009) is the statute that BOTH established Meaningful Use as the EHR adoption incentive program AND strengthened HIPAA. The two halves were politically and substantively linked: the architects of HITECH believed that the EHR adoption push had to come bundled with privacy and security strengthening to make patients comfortable with the resulting digitization. The boards quietly test this cross-reference because a stem about 'the law that established Meaningful Use' and a stem about 'the law that established breach notification' have the same answer. Cross-reference Module 1."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "cures-act",
+      "prompt": "The 21st Century Cures Act information blocking rule has an important structural feature that distinguishes it from HIPAA. Which statement BEST captures the difference?",
+      "options": [
+        "The Cures Act repealed HIPAA.",
+        "HIPAA's default is 'PHI is restricted; here are the permitted uses,' while the Cures Act's default is reversed: EHI must be shared unless one of eight specific exceptions applies. Compliance with HIPAA is not information blocking, but the cultural transition from 'default no' to 'default yes' is the work the field is still doing.",
+        "The Cures Act applies only to academic medical centers.",
+        "The Cures Act only governs research data, not clinical data."
+      ],
+      "correct": 1,
+      "rationale": "The structural inversion is the key fact. HIPAA tells you when you may disclose; the information blocking rule tells you that you must facilitate access unless you can name an exception. The two regimes coexist and are not in conflict — the Privacy Exception in the information blocking rule explicitly covers HIPAA-prohibited disclosures — but they pull in different directions. The cultural transition from 'default no' to 'default yes' is the work that institutions are still doing. The boards test the structural inversion directly."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "eight-exceptions",
+      "prompt": "Which of the following is NOT one of the eight information blocking exceptions under the 21st Century Cures Act?",
+      "options": [
+        "Preventing Harm Exception",
+        "Privacy Exception",
+        "Cost Recovery Exception",
+        "Infeasibility Exception"
+      ],
+      "correct": 2,
+      "rationale": "The eight exceptions are: Preventing Harm, Privacy, Security, Infeasibility, Health IT Performance (the five 'not fulfilling' exceptions), and Content and Manner, Fees, Licensing (the three 'procedures' exceptions). 'Cost Recovery Exception' is not one of them — costs are addressed under the Fees Exception, which has specific criteria for what counts as a permissible fee. The boards test the eight by name with this question form. Memorize the list verbatim and the categorization (5 + 3)."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "preventing-harm-exception",
+      "prompt": "A radiologist identifies a finding of metastatic cancer on an imaging study. The patient is scheduled to see her oncologist in 48 hours. The radiologist requests that the report be held from the patient portal until after the in-person discussion with the oncologist. Under the information blocking rule, which exception is the radiologist potentially invoking, and what is the bar for it to apply?",
+      "options": [
+        "The Privacy Exception; the bar is that the patient has requested a restriction.",
+        "The Preventing Harm Exception; the bar is that the actor has a reasonable belief the practice will substantially reduce a risk of harm AND the practice meets the specific conditions in the rule about the type of risk and harm. The exception is narrower than clinicians often think and is reviewed retrospectively against the rule's specific conditions.",
+        "The Infeasibility Exception; the bar is a written explanation within 10 days.",
+        "No exception is available; immediate release is always required."
+      ],
+      "correct": 1,
+      "rationale": "The Preventing Harm Exception is the one in play. The bar is high: the actor must have a reasonable belief that the practice will substantially reduce a risk of harm, and the practice must meet the rule's specific conditions about the type of risk (e.g., to a patient or another person) and the type of harm. The exception is narrower than clinicians often think — it does not cover discomfort or inconvenience, and the rule's conditions are reviewed retrospectively. The boards test this exception specifically because the bar is the part most often missed. The Privacy Exception applies when the patient has requested a restriction, not when the clinician is making the decision. Infeasibility is a different category (uncontrollable events, segmentation, written-analysis infeasibility)."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "four-As",
+      "prompt": "A hospital implements a system in which clinicians authenticate using a username/password plus a token, are then granted access only to the records of patients on their assigned units, and every chart access is logged in a tamper-resistant log that is reviewed weekly by the privacy officer. Map each component to the Four A's.",
+      "options": [
+        "Username/token = audit; unit-based limit = authentication; logs = authorization; weekly review = accounting.",
+        "Username/token = authentication; unit-based limit = authorization; logs = audit; weekly review = accounting.",
+        "Username/token = authorization; unit-based limit = authentication; logs = accounting; weekly review = audit.",
+        "All four components are authentication."
+      ],
+      "correct": 1,
+      "rationale": "Authentication = verifying identity (username + token = two factors). Authorization = determining what an authenticated user is allowed to do (unit-based limit on which patients the clinician may view). Audit = recording who did what, when, and from where (the access logs). Accounting = the discipline of being able to account for all access (the privacy officer's weekly review and the ability to answer questions about the data's history). The boards test the disambiguation directly because the four are easy to conflate. 'The user logged in' is authentication, not authorization."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "ransomware",
+      "prompt": "A regional hospital system is hit by a ransomware attack. The cloud-hosted EHR is unaffected but the institution chooses to disconnect from it as a containment measure, putting itself into full downtime. Which prior decision is MOST likely to determine whether patient care during the downtime period is safe or unsafe?",
+      "options": [
+        "Whether the institution had paid a cyber insurance premium in the past year.",
+        "Whether the institution had practiced downtime drills routinely, maintained current paper backup procedures, and printed downtime clinical content packets stocked on units. The Sittig-Singh dimension 5 (workflow) and dimension 4 (people — trained staff) interact with the technical incident to determine whether the institution can operate safely during multi-week downtime.",
+        "Whether the cloud EHR vendor offered a discount for the affected period.",
+        "Whether the hospital had disclosed prior breaches on the Wall of Shame."
+      ],
+      "correct": 1,
+      "rationale": "Downtime preparedness is the difference between an institution that operates safely during a multi-week outage and one that does not. The cross-reference to Module 5 (SAFER High Priority Practices Guide, sociotechnical readiness) and Module 6 (measurement of safety during downtime) is the right disposition: downtime is a security topic AND a sociotechnical topic, and the institutional capability is built months and years before the incident. Insurance, vendor discounts, and prior breach history do not affect day-to-day safety during the downtime period. The boards have started testing the safety dimension of ransomware as much as the privacy dimension."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "eight-exceptions",
+      "prompt": "Name the eight information blocking exceptions under the 21st Century Cures Act. Brief phrases are fine; you do not need to define each one. State which five are 'not fulfilling' exceptions and which three are 'procedures' exceptions.",
+      "expectedKeywords": ["preventing harm", "privacy", "security", "infeasibility", "health it performance", "content and manner", "fees", "licensing"],
+      "rationale": "The five 'not fulfilling' exceptions: Preventing Harm, Privacy, Security, Infeasibility, Health IT Performance. The three 'procedures' exceptions: Content and Manner, Fees, Licensing. Memorize the list cold. The boards test it with both 'which is NOT an exception' questions and scenario stems that ask which exception applies. The names are verbatim from the rule and will not be paraphrased on the exam."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "encryption-safe-harbor",
+      "prompt": "Explain in two or three sentences why the HITECH encryption safe harbor is the regulatory mechanism that drove encryption from an 'addressable' Security Rule specification to a near-universal practice. Describe how the safe harbor interacts with the breach notification rule.",
+      "expectedKeywords": ["encryption", "safe harbor", "breach notification", "unsecured", "exempt"],
+      "rationale": "PHI encrypted in accordance with HHS guidance is not 'unsecured PHI' and is therefore exempt from the breach notification rule. A laptop with encrypted PHI that is lost or stolen is not a reportable breach; the same laptop without encryption is. The financial, reputational, and operational consequences of triggering breach notification (notice to affected individuals, HHS, prominent media, the Wall of Shame, possible CMPs) are large enough that institutions universally chose to encrypt portable devices and storage as the cheapest control with the highest expected value. The safe harbor turned an 'addressable' specification into a de facto requirement through incentive rather than mandate."
+    }
+  ]
+}

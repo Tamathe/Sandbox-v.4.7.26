@@ -1,0 +1,229 @@
+{
+  "moduleId": "05-ai-meets-crypto",
+  "concepts": [
+    {
+      "id": "ai-on-chain",
+      "name": "AI-on-chain",
+      "definition": "Systems where the AI model, its inference, or its outputs are anchored to a blockchain in a load-bearing way (not as decoration).",
+      "appearsInLessons": ["01-honest-taxonomy", "02-verifiable-inference"]
+    },
+    {
+      "id": "chain-for-ai",
+      "name": "Chain-for-AI",
+      "definition": "Systems where blockchains provide infrastructure (payment, coordination, attestation) used by AI systems whose actual computation runs off-chain.",
+      "appearsInLessons": ["01-honest-taxonomy", "03-decentralized-compute", "04-agent-wallets"]
+    },
+    {
+      "id": "marketing-layer",
+      "name": "The marketing layer",
+      "definition": "AI products with tokens glued on for fundraising purposes, where removing the chain would not change how the product actually works.",
+      "appearsInLessons": ["01-honest-taxonomy"]
+    },
+    {
+      "id": "does-it-need-a-blockchain",
+      "name": "The 'does it need a blockchain' test",
+      "definition": "A single question for evaluating any AI+crypto pitch: if you replaced the chain with a normal database operated by the company, would the product break or just be modestly worse? Only the first case is in bucket 1 or 2.",
+      "appearsInLessons": ["01-honest-taxonomy"]
+    },
+    {
+      "id": "tokenized-incentive",
+      "name": "Tokenized incentive",
+      "definition": "A coordination mechanism in which contributors to a shared resource are rewarded with a token whose value is supposed to scale with the usefulness of the resource. Reliably attracts supply, unreliably attracts demand.",
+      "appearsInLessons": ["01-honest-taxonomy", "03-decentralized-compute"]
+    },
+    {
+      "id": "zkml",
+      "name": "zkML (zero-knowledge machine learning)",
+      "definition": "Cryptographic proof systems that produce a compact, publicly verifiable proof that a specific model run on a specific input produced a specific output, without necessarily revealing the model weights or the input.",
+      "appearsInLessons": ["02-verifiable-inference", "06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "verifiable-inference",
+      "name": "Verifiable inference",
+      "definition": "Any technique that lets a third party verify a claim about a model's inference without trusting the party that ran the model. zkML is one such technique; signed oracles are a much weaker one.",
+      "appearsInLessons": ["02-verifiable-inference"]
+    },
+    {
+      "id": "model-identity",
+      "name": "Model identity attestation",
+      "definition": "A cryptographic guarantee, usually combining a published commitment to weights with a proof of inference, that a particular output came from a particular committed model and not a silent substitute.",
+      "appearsInLessons": ["02-verifiable-inference"]
+    },
+    {
+      "id": "prover-overhead",
+      "name": "Prover overhead",
+      "definition": "The compute cost of producing a zk proof relative to the cost of the underlying computation. For zkML in 2026, typically 10,000x to 1,000,000x.",
+      "appearsInLessons": ["02-verifiable-inference"]
+    },
+    {
+      "id": "oracle-problem",
+      "name": "The oracle problem",
+      "definition": "The general challenge of getting trustworthy external data into a smart contract. Verifiable inference is one principled answer for ML-based oracles.",
+      "appearsInLessons": ["02-verifiable-inference", "06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "decentralized-compute",
+      "name": "Decentralized compute",
+      "definition": "Marketplaces in which GPU owners list their hardware and customers rent it via on-chain coordination. Technically tractable, economically dependent on demand-side discipline.",
+      "appearsInLessons": ["03-decentralized-compute"]
+    },
+    {
+      "id": "gpu-marketplace",
+      "name": "GPU marketplace",
+      "definition": "Specifically the matching, payment, and attestation layer for renting GPUs on a decentralized network.",
+      "appearsInLessons": ["03-decentralized-compute"]
+    },
+    {
+      "id": "supply-subsidy",
+      "name": "Supply subsidy via token",
+      "definition": "The pattern in which a new network attracts supply (GPUs, content, labels) by paying contributors in a token. Easy to bootstrap, hard to convert into real demand-driven revenue.",
+      "appearsInLessons": ["03-decentralized-compute"]
+    },
+    {
+      "id": "utilization-rate",
+      "name": "Utilization rate",
+      "definition": "The fraction of available capacity that is actually being used. The single most important metric for whether a compute marketplace is real or subsidized.",
+      "appearsInLessons": ["03-decentralized-compute"]
+    },
+    {
+      "id": "latency-sensitivity",
+      "name": "Latency sensitivity",
+      "definition": "The degree to which a workload's value depends on how quickly it returns. Decentralized compute is uncompetitive for high-latency-sensitivity workloads (training, real-time inference) and competitive for low-sensitivity ones (batch jobs).",
+      "appearsInLessons": ["03-decentralized-compute"]
+    },
+    {
+      "id": "agent-wallet",
+      "name": "Agent wallet",
+      "definition": "A cryptographic key pair controlled by software (typically an LLM-based agent) used to hold and spend money on a blockchain.",
+      "appearsInLessons": ["04-agent-wallets"]
+    },
+    {
+      "id": "autonomous-agent",
+      "name": "Autonomous agent",
+      "definition": "Software, typically built on an LLM, that takes goals and pursues them across multiple steps without human intervention at each step. Holds no legal personhood regardless of marketing.",
+      "appearsInLessons": ["04-agent-wallets"]
+    },
+    {
+      "id": "permissioned-spend",
+      "name": "Permissioned spend",
+      "definition": "Smart-contract-enforced constraints on what an agent's wallet can spend on (categories, daily limits, recipient whitelists). Makes agent wallets safe enough to use in practice.",
+      "appearsInLessons": ["04-agent-wallets"]
+    },
+    {
+      "id": "micropayment",
+      "name": "Micropayment",
+      "definition": "A payment too small (sub-cent or cents) to be economical on traditional rails like credit cards, but practical on stablecoin rails on cheap chains.",
+      "appearsInLessons": ["04-agent-wallets"]
+    },
+    {
+      "id": "bearer-credential",
+      "name": "Bearer credential",
+      "definition": "An authorization token where holding the token is the right to use the service. Lets APIs be paid-for and consumed without account creation, like a vending machine.",
+      "appearsInLessons": ["04-agent-wallets"]
+    },
+    {
+      "id": "content-provenance",
+      "name": "Content provenance",
+      "definition": "Cryptographic signing of content (and its edit history) at the moment of creation, so origin and modification can later be verified without trusting the creator.",
+      "appearsInLessons": ["05-provenance-and-proof-of-human"]
+    },
+    {
+      "id": "c2pa",
+      "name": "C2PA",
+      "definition": "Coalition for Content Provenance and Authenticity. The dominant open standard for content provenance signing, primarily PKI-based with optional blockchain anchoring.",
+      "appearsInLessons": ["05-provenance-and-proof-of-human"]
+    },
+    {
+      "id": "watermarking",
+      "name": "Watermarking",
+      "definition": "A perturbation of generated content (visible or invisible) intended to identify the producing model. Trivially defeated in adversarial settings; a polite agreement among compliant parties.",
+      "appearsInLessons": ["05-provenance-and-proof-of-human"]
+    },
+    {
+      "id": "proof-of-human",
+      "name": "Proof of human",
+      "definition": "Any mechanism that verifies a particular account is operated by a unique real person. The shape of the future internet's anti-bot infrastructure as CAPTCHAs collapse.",
+      "appearsInLessons": ["05-provenance-and-proof-of-human"]
+    },
+    {
+      "id": "sybil-resistance",
+      "name": "Sybil resistance",
+      "definition": "The property of a system that prevents one actor from cheaply creating many identities to gain disproportionate influence. Proof-of-human is one approach.",
+      "appearsInLessons": ["05-provenance-and-proof-of-human"]
+    },
+    {
+      "id": "determinism",
+      "name": "Determinism (in consensus)",
+      "definition": "The property that every node in a network produces byte-identical results from the same inputs. Required for blockchain consensus to function.",
+      "appearsInLessons": ["06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "non-determinism",
+      "name": "Non-determinism (in LLMs)",
+      "definition": "The property of LLM inference whereby the same prompt produces different outputs across runs, hardware, or numerical environments. Fundamental to modern model architectures.",
+      "appearsInLessons": ["06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "consensus",
+      "name": "Consensus",
+      "definition": "The mechanism by which a distributed network of nodes agrees on a single state. Breaks if nodes get different answers from the same input.",
+      "appearsInLessons": ["06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "off-chain-compute",
+      "name": "Off-chain compute",
+      "definition": "Computation performed outside the consensus-replicated environment of a blockchain, typically because the computation is too expensive, too non-deterministic, or both.",
+      "appearsInLessons": ["06-probabilistic-meets-deterministic"]
+    },
+    {
+      "id": "oracle-pattern",
+      "name": "Oracle pattern",
+      "definition": "Architectures for getting external data or computation results into a smart contract. Single-oracle, multi-oracle consensus, and zk-verified are the three main shapes.",
+      "appearsInLessons": ["06-probabilistic-meets-deterministic"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "ai-on-chain",
+      "wrongBelief": "Most 'AI on chain' products actually run their AI on a chain.",
+      "correctView": "Almost none do. The model runs on a normal server; the chain handles payment, attestation, or marketing. The honest categories are chain-for-AI (real but unsexy) and a small set of zk-verified narrow models. Most projects that say 'AI on chain' are in the marketing layer and would work identically with a Postgres database.",
+      "watchFor": "Pitches that use 'on-chain AI' as a slogan without specifying whether the chain is doing computation, verification, or just bookkeeping. Always ask which."
+    },
+    {
+      "id": "misc-2",
+      "concept": "zkml",
+      "wrongBelief": "zkML lets you trust an AI model's outputs.",
+      "correctView": "zkML proves one mathematical claim — that a specific committed model, run on a specific committed input, produced a specific output. It does not prove the model is good, the input is honest, or the output is true. It relocates trust from 'the inference happened' to 'the model is what it claims to be.' That relocation is genuinely valuable in narrow contexts. It is not general AI trust.",
+      "watchFor": "Students who say zkML 'makes AI safe' or 'makes models trustworthy.' Ask them to state precisely what the proof actually proves. Most can't, on first try."
+    },
+    {
+      "id": "misc-3",
+      "concept": "decentralized-compute",
+      "wrongBelief": "Decentralized GPU networks are a serious threat to AWS and the big clouds.",
+      "correctView": "For frontier training they are not, because of physics: gradient sync needs interconnect speeds geographically distributed networks can't match. For latency-sensitive inference they are not, because production workloads need predictable response times. For embarrassingly parallel batch jobs and for jurisdictionally constrained compute, they are genuinely competitive — and that is a real but much smaller market than the pitch decks describe.",
+      "watchFor": "Confusion between 'we have N GPUs onboarded' (a supply metric, easily inflated by token subsidies) and 'we have N GPUs utilized doing real work' (the only metric that matters). Always ask for utilization."
+    },
+    {
+      "id": "misc-4",
+      "concept": "agent-wallet",
+      "wrongBelief": "Agent wallets enable autonomous AI corporations and 'agent economies' that operate without human oversight.",
+      "correctView": "An agent wallet is a key pair controlled by software. It does not confer legal personhood, contract capacity, or anything else that an 'autonomous corporation' would need. The genuinely real use case is much narrower: software-to-software micropayments at granularities credit cards can't reach, especially when combined with smart-contract-enforced spending limits ('permissioned spend'). That's a real and useful primitive. The corporate-personhood version is fantasy.",
+      "watchFor": "Students who slide from 'agents can hold money' to 'agents can run businesses.' These are very different claims and the second one isn't supported."
+    },
+    {
+      "id": "misc-5",
+      "concept": "determinism",
+      "wrongBelief": "We can put LLMs on chain by 'just being clever about consensus.'",
+      "correctView": "Blockchains require byte-identical results from every node. LLM inference is not byte-identical even on the same model with temperature zero, because of floating-point order, batch composition, and hardware variance. The only architectures that survive this constraint are: (1) trusted single oracle (chain doing nothing), (2) constrained-output multi-oracle (LLM doing very little), or (3) zkML (rigorous but expensive and only feasible for small models). There is no fourth option, and pitches that imply one are marketing.",
+      "watchFor": "Any pitch that uses phrases like 'consensus-driven AI' or 'distributed inference' without saying which of patterns 1, 2, or 3 it falls into."
+    },
+    {
+      "id": "misc-6",
+      "concept": "watermarking",
+      "wrongBelief": "AI watermarking will let us reliably detect AI-generated content.",
+      "correctView": "Watermarking is a polite agreement among compliant model providers. It can be removed by re-encoding, by minor edits, or by adversarial filters specifically designed for the purpose. It works against casual use and fails against any motivated bad actor. Provenance signing (C2PA) is the stronger primitive, because it asserts origin cryptographically rather than perturbing content.",
+      "watchFor": "Conflation of watermarking with provenance. They solve different problems with different reliability profiles. Detection-of-AI is a fundamentally weaker thing to ask for than verification-of-origin."
+    }
+  ]
+}

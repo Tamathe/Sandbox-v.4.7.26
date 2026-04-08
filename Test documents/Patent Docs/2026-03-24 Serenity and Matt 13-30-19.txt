@@ -1,0 +1,836 @@
+00:00:00:00 - 00:00:22:15
+Unknown
+Put out that he wanted us all to do the, training for Cat's Eye. Oh, yeah. So I have seen you all day. I'm sorry about that. It's all right. Do you have a face? Sorry. How does this. Are you doing, like, 1.5 speed? I'd be curious. Do you really want to know? Yeah. Are you doing here?
+
+00:00:22:15 - 00:00:42:14
+Unknown
+I'm skipping it and going right to the assignments. Yeah? Yeah, right. I'm kind of moving and being like, do I know this, I know this, I know this, I know this. All right, so let me get to this. I'm here. Yeah, but I'm only through module. I'm just finishing up. So I've done the first module on this assignment, and then I've done the second module.
+
+00:00:42:15 - 00:01:08:09
+Unknown
+It's first assignment. But I really have to go post some public form. But we'll see. So that's the one I'm on now. Gotcha. She's awesome. So let me get around things that I need to get warmed up. Yeah. You need.
+
+00:01:08:12 - 00:01:17:05
+Unknown
+I to tell you, I'm messing around with Microsoft Studio. What is going on? Serenity? That is not,
+
+00:01:17:07 - 00:01:31:14
+Unknown
+Yeah, that's not yours. Keep it nice. Not Yama. Oh, hello. Look at that baby.
+
+00:01:31:16 - 00:01:45:18
+Unknown
+Shoot. I had pushed out an update. It looks like it hasn't hit the board yet.
+
+00:01:45:21 - 00:01:58:28
+Unknown
+Okay. I don't know.
+
+00:01:59:01 - 00:02:18:15
+Unknown
+Now, if I could make my, cloud based database run faster, I'd be in heaven. But, a lot of us that cannot.
+
+00:02:18:18 - 00:02:46:15
+Unknown
+All right. Got it for that. Fine. So, I know you sat through one of these before. Probably was. I actually was probably after I was director on one of the other things. And I know we've met regarding Socratic tutor. Yeah. So I've kind of read through what you put in here. Yeah. I just want to see, like, in simple terms, what are you trying to do?
+
+00:02:46:18 - 00:03:09:03
+Unknown
+The sandbox. Yeah, it's an operating system for a university. It's the only high powered institution. Like everything. Like soup to nuts. Like to nuts. Everything. Yeah. Yeah. So? So the idea is that right now, the way that the university works is we have huge data silos, right? So you have your email here, your calendar here, you have grades in canvas.
+
+00:03:09:03 - 00:03:30:04
+Unknown
+You'll have UK now, which is on its own server. You'll have the student success data sets, which are all, all fragmented and fractured. And so truly, if we think that we are going to create an intelligence utility that sits over the top of a university, we're going to have to bring all of these data sets together. And then once you have these data sets, what can you do with it?
+
+00:03:30:07 - 00:03:51:27
+Unknown
+You know, how can you use the AI systems that are already available to then either do analysis or make people's workflows better? Elevate our teaching and learning. Is it to be a course repository? Is it to be, live interactive chat bots with your financial advisor, your mentor, all of those things? The argument is do all of them.
+
+00:03:51:29 - 00:04:13:09
+Unknown
+If you're going to do anything, do all of it. And so this is a new operating system, and the idea is that you and I both have two completely different workflows when you sit down at your computer versus mine. There's almost no two people who do the same thing. Right. You'll open up your email, your calendars, you know, I'll open up whatever the other things are.
+
+00:04:13:12 - 00:04:37:02
+Unknown
+And this brings them all into one space. I can send you a link, if you want to tinker around in there. Yeah, that'd be great. I like tinker. I but I will I will eventually look at it because I normally do my tinkering at night, but. Right now, I'm on this stupid project to make an open floor run my entire life.
+
+00:04:37:05 - 00:05:01:20
+Unknown
+Yeah. No, I hear you. See how that goes? Yep. And cloud has a version of its own that's working pretty well. Do you want to just open it now so that I can kind of walk you through the system? And then if you don't, to share your screen in your own.
+
+00:05:01:23 - 00:05:23:00
+Unknown
+What do I need to use a log in. So, like, do we have an RSS Oder? I need to log in. Oh, no. Yeah, I've kept it as private. I've got all of my API keys on there. I kind of don't love to. Okay, well, you know, I'm building an open floor, and I can use all the API keys I could.
+
+00:05:23:01 - 00:05:36:13
+Unknown
+Yeah, I know, I hear you. Look, I'm sure, if you don't mind, I'll share my screen. That's a lot less impressive if you do it from a shared screen. Well, I mean, it is what it is. Unless you want to give me access to all your API key. Yeah, 100%. All right. Give me just a second.
+
+00:05:36:13 - 00:05:58:13
+Unknown
+I'm just going to share. And then, here we go. So, I'm going to start somewhat out of sequence from what I described to you, because this is probably how it was explained to you by, by Ian. But the the conversation that we are, we are so far off based on how Ian described it.
+
+00:05:58:15 - 00:06:18:19
+Unknown
+Okay. Not even in the same ballpark. Okay. Yeah. Which ends. And thank God. Yeah. No. Like, essentially, he came to us and said, Tom, to build a better and better version of Socratic Tutor. And we went, what? Oh, yeah. And this is not that. This is. Yeah. Something completely different. Yeah. No. So, so so this is the sandbox, essentially.
+
+00:06:18:19 - 00:06:45:27
+Unknown
+So, this is your home screen as an educator, you get dumped onto here. On the left side of the screen is Sandy. Sandy is essentially an AI chat bot that is trained on all institutional knowledge. And so right now what I've got on there is all UK now articles. The psychology advising, financial aid, anything on the student success website and then all of my tech 100 material etc. and then some synthetic email stuff.
+
+00:06:45:29 - 00:07:02:02
+Unknown
+So the idea is that all of this is going to connect to Azure. And so when you first log in that it's going to give you a filtered idea of what your emails look like. And then over on the side you have your assistant that says, hey, just, you know, Dean Robinson needs a thing. Your deadline is messed up.
+
+00:07:02:04 - 00:07:20:29
+Unknown
+What do you want to do about it? And then I'm just going to say walk through my emails. And then. So what it'll do is it'll essentially just be your personal assistant in priority order. It'll say like, okay, the first thing you need to do is talk to Dean Robinson about this thing. And so let's say that I was like, okay, fine, I'm finally going to talk to Dean Robinson.
+
+00:07:21:00 - 00:07:38:18
+Unknown
+It loads up your email. And let's say that my response is, I'll pull that together and send it by end of day. Oh. I'm sorry. It also drafts replies based on what it expects you to say. And so thank you for reaching out. Yes, I think that's good. Let's approve that. This is a response to a student about a thing.
+
+00:07:38:18 - 00:07:58:24
+Unknown
+An extension. Yeah, I think that's fine. Here's a two day extension. Let's do that. So it goes to your emails. It's got your schedule that's built into outlook, and then it's got a set of tasks, and the tasks are auto generated based on your emails. Yeah. There's a natural language processor that runs through all of your emails, all of your teams, meetings.
+
+00:07:59:00 - 00:08:17:20
+Unknown
+And then it comes up with all of the tasks that you're supposed to be doing. And then gives you that on the student side instead of a bunch of tasks, would it actually gives you, is your upcoming, like, due dates. And so, like, if you have a paper that's coming up, it'll tell you, you know, there's a career fair Thursday.
+
+00:08:17:20 - 00:08:35:24
+Unknown
+Your Fafsa is due in 18 days. Your evidence due brief is due in three days. And it's like, oh, shoot. Okay. My evidence for the thing is here. So can we open up a study plan? And so this is where I'm going to take a step back for a second and say, I'm about to transition away from the, the homepage.
+
+00:08:35:26 - 00:08:58:15
+Unknown
+Is there anything on the home page that that you wanted to to talk through before we, we move forward on to some of the other stuff. So the thing you just built right there, you know, we have to come up with a project in this stupid, not stupid jerk class that the class that. Yeah, that's really offensive. Now, that's three times that you've been disparaging about it.
+
+00:08:58:19 - 00:09:25:08
+Unknown
+Like, I know that we're all buddy buddy here, but calling me fucking stupid is really insulting. It's it's not that. It's. I enjoy the class. However, I am sorry. So that just may be my colloquialism and our familiarity, so I apologize. Yeah. Okay. I think your class has value. And what I was going to say is it got me thinking about what tools I wanted for our team.
+
+00:09:25:10 - 00:09:47:12
+Unknown
+So when I was building our project, I was looking at something like this for our team, and it's in. So if you took it as disparaging, I'm sorry, that's on me. It's not disparaging. I think it's probably the same thing with my kid. I made him do a science fair project with I. Yeah, because I know we have.
+
+00:09:47:12 - 00:10:05:14
+Unknown
+Okay, well, I tell you what. If you don't mind. If you don't mind. Did not call my course. Stupid. I might not say that. It's a big waste of time. And I'm going to get on a discussion board and post. Yeah, we'll see what that happens. If you don't mind, can we not continue to shit on my course?
+
+00:10:05:17 - 00:10:29:14
+Unknown
+Absolutely. I apologize again. Thank you very much. So, walking through this, so this all functions. It's with Azure stuff. It also brings in any of the engagement of your students working through, the, your course activities. So when you go to the actual courses, essentially how this works is you'll upload a syllabus. And so I'm going to create a new course over here.
+
+00:10:29:14 - 00:10:47:15
+Unknown
+We're going to say that this is whatever the thing is. And then I'm going to create a public course. Oh good. It broke. And then so I'm going to import my syllabus. And so in my folder then I have some demo syllabi. Then I've got, I'm going to upload this one and then it's going to start parsing it.
+
+00:10:47:15 - 00:11:07:15
+Unknown
+And so it takes your syllabus and it understands exactly what's going on. This is my tech 100 course that we've talked about already. And essentially what it does is it'll go through all of your course policy and put them all in one place. And the purpose of that is now I have a teaching assistant, where you can dynamically talk to your syllabi.
+
+00:11:07:15 - 00:11:21:19
+Unknown
+You can talk to all of your course material as a student from one place, so you can say, what is my next thing do, blah, blah, blah, blah blah. From a faculty perspective, let's say that I'm looking at module four. So module four is all about hallucinations. If you click on it you can see what you're learning.
+
+00:11:21:19 - 00:11:42:29
+Unknown
+Objectives are all of this was extracted from the syllabus automatically. And let's say that I am an educator who doesn't have any, experience with artificial intelligence at all. And I just wanted to build some kind of AI tool because I'm told by the university, hey, I need to be starting to use AI. And so it'll you can just hit this button to suggest a tool.
+
+00:11:43:05 - 00:12:02:18
+Unknown
+And so what it will do is it goes through all of your materials. It looks at your learning objectives, it looks at whatever other material you've uploaded with that module. And then it comes up with a series of different options for what an AI powered tool for your for that module is. And so in this case this is vital for it's about finding hallucinations.
+
+00:12:02:22 - 00:12:23:02
+Unknown
+And so the three things that it says were a hallucination spotter. And so present students with AI generated responses containing plaintiff hallucinations. Should you trust this answer, which is like a debate? And then there's like a quiz. And so let's say that I wanted to build this tool. So you just hit build the tool, and then it takes you to the builder page.
+
+00:12:23:04 - 00:12:45:27
+Unknown
+And so it auto populates the, information down here. And, and so essentially build a simulation called a hallucination spotter. It's a live fact simulator, and it's based on this. The reason that that's important is because because it already has all of my course material loaded into the system, then it is able to use that as the knowledge base.
+
+00:12:45:29 - 00:13:00:10
+Unknown
+And so right now what it's doing is it's generating the initial draft of what it's going to put up here in the preview. But while it's doing that, it's going to ask you questions. And so it's talking about here's what it's going to do. It's an AI that plays the role of a confident but flawed AI assistant.
+
+00:13:00:12 - 00:13:22:03
+Unknown
+And then one question, does the module for focus specifically on a particular domain of hallucinations or is it cross-domain? And so after, a couple of questions and answers back and forth, then you'll get this preview on the site. And so already just based on, hey, I want to do this off of my, module four material and it's already created this, hallucination spotter.
+
+00:13:22:06 - 00:13:42:00
+Unknown
+And so you can go ahead and, answer some of these questions and say it's cross-domain. And it'll go through. And if it's cross-domain or whatever the thing is, then it will update your preview here with however you want. I'm going to cut forward a little bit and just say build the tool. So now the preview has already been built in.
+
+00:13:42:00 - 00:14:07:27
+Unknown
+If as I hit build the tool now it creates this, it creates essentially the assignment that we talked about. So you can go in there and demo it. And then if I can stop you for a second. Yeah. So but this be able to take almost any, I guess classroom syllabus that has, you know, if it has enough definition then to let any professor put this in and develop training modules off of it, that they would just be able to publish in their student state, correct?
+
+00:14:08:02 - 00:14:30:22
+Unknown
+Yes. And also, the way that it's built right now is you can upload, an entire course from canvas. So I've got some demos of that that I'm working on uploading, but once you have your, your course, from canvas uploaded, then it creates all of the assignments and eventually the purpose of it is that this replaces canvas.
+
+00:14:30:25 - 00:14:50:21
+Unknown
+Is that this is the source of knowledge for your entire course as a student. If you wanted to read things, you would go here as you want to engage with your professor. Then you can talk to your professor through, through here and just say like, hey, I had a question. Whatever the thing is, and, and also it functions as a Ta.
+
+00:14:50:22 - 00:15:07:19
+Unknown
+So at any time you can just talk to your professor, quote unquote. And they can they can train it on whatever material. The thing is, let's say that you don't want to use your course and you just want to build something, then great. You can here's, you know, a debate on the causes of the French Revolution. Let's just go ahead and do the thing.
+
+00:15:07:22 - 00:15:28:17
+Unknown
+You can just build, straight down to the build tool. But let's say that you wanted to build something more substantial. So, like, more than just. I'm a text box. If I just wanted to, to build, like, an app. And so these are some, demos, some templates that I've put together. So, like, let's say I want to build I'm in the medical school.
+
+00:15:28:17 - 00:15:48:03
+Unknown
+I would have a cardiac arrest simulator. So this is a demo of a cardiac arrest simulator. It's it's slowly compiling this thing and so. Great. So now we have a cardiac arrest simulator. And in this case, it's a lupus patient. So you've got their medical chart here you have their HPI. And then you have what looks like a step function for a heartbeat.
+
+00:15:48:06 - 00:16:10:25
+Unknown
+And so with my cardiac arrest so oh she's in PDA. So she is pulseless right now. And so I want to give her epinephrine and then, you know, it does the whole thing. You can treat causes, etc., etc.. So the purpose of that is to say that if you wanted something more sophisticated than just, I, I bet this one I've been tinkering with that one today.
+
+00:16:10:27 - 00:16:30:28
+Unknown
+Let's say that I wanted a physics sandbox, instead of just like a chat bot simulator or something like that. Then I can make, a physics sandbox and then launch the things, and I can set it however I want if I want to do something in, an electrical engineering, then I've got, a circuit simulator that I can do that.
+
+00:16:31:00 - 00:16:53:00
+Unknown
+Anyway, these are just some templates that I built out for each of the different, colleges. They have something for music. It does. Whatever. The thing is. Ten. So. Yeah. So for what each of, let's say, the experts in a given field have the ability to go in and create some of those simulators to plug in and then, I guess, share with a larger ecosystem within a university.
+
+00:16:53:05 - 00:17:19:13
+Unknown
+Yes, yes. Oh that's great. And also so, so let's say, build me a tool to test chord progression in music theory. And so the way that this thing is built, is it'll give you a couple of back and forth. But essentially it kind of understands what you want to do, or at least it makes it first pass if you have truly no idea.
+
+00:17:19:13 - 00:17:38:13
+Unknown
+Like, I don't know anything about coding, but I know that I think this thing can do something with music theory, than what it's doing right now is it's understanding essentially goes out it it looks at how people are using software to, test chord progression and music theory, and then it builds out kind of a first pass.
+
+00:17:38:18 - 00:18:01:29
+Unknown
+The first pass is never awesome. But it's good enough to get you kind of started. This is taking a while. Maybe it's kind of. It's a complicated. Once you start adding in, like, music and audio, then it takes a while. Do it. So what is it using to generate the kind of like, what I can? The code itself is coming through opus 4.6.
+
+00:18:02:02 - 00:18:27:21
+Unknown
+Okay. Time you go through, the, just the Sandy that's just on it. There is an open AI for text speech. And then there is, Oh, shoot. I got a script there on that one. So, I mean, so it's using our copilot kind of it's license years with those back end. Right? Eventually. The goal is that it's built in Azure.
+
+00:18:27:23 - 00:18:53:17
+Unknown
+And so once it's built in Azure, then we would have institutional enterprise licenses. Right now it's just like I said, it's just running on my API keys. Okay. So the the sandbox itself came out of this, and so the, the idea is that for the sandbox, we wanted to create a platform where people can create tools and share them with each other.
+
+00:18:53:20 - 00:19:10:09
+Unknown
+And so let's say that one of your tools is I have a lecture and I want to paste my notes, or. I'm sorry, I want to paste my lecture transcript here, and to create a study guide for all of my students. Then I can upload that and it'll create it. I'm still in the other one.
+
+00:19:10:09 - 00:19:29:07
+Unknown
+So let me switch over to this guy. But you would be able to load up, the information that's in your library into there. There's things for like researchers if you have, like, a literature search and, you know, if you need help with citations, there's a bunch of tools that we can go into if you like.
+
+00:19:29:10 - 00:20:02:17
+Unknown
+There are some community things that, allow us to do. So you mentioned professor would be able to record, like, a given classroom session and create a brief for it and a study guide. Does it give the students the ability to also record that lecture and grade a study guide out of it? If they. Yeah. So, in my mind, the way that I would answer that question is if the faculty member records the lecture and post it on whatever the streaming services that they use for their course, then yes, you would be able to download the transcript and put it through, through the tool.
+
+00:20:02:20 - 00:20:26:10
+Unknown
+And so the, in my mind, the tricky thing about this is that your professors material is all IP, and so we cannot tell them that they have to load up all of their stuff here, but just that this is here. And if they want their students to use the tools to name the name, should be able to opt into it.
+
+00:20:26:12 - 00:20:52:00
+Unknown
+But will there be some some guardrails against a student essentially bootlegging a lecture and then adding up some transcript file on their, to do? Like if they're given the option to go somewhere or download a file, a transcript that the professor makes available, there's some guardrail there to prevent a student from recording and then bringing in a transcript of that themselves.
+
+00:20:52:02 - 00:21:09:14
+Unknown
+If that is a concern. But there's, there's so I would say that it is as big of a concern as I would have for people doing that with ChatGPT. It is as easy to do that with ChatGPT than it is for this. And, you know, and so I would say that there's, there's nothing to say.
+
+00:21:09:17 - 00:21:30:09
+Unknown
+Can we try to build in a guardrail that says in order to use course material, it has to be somewhat flagged or approved and go through our system? Yes, we 100% can build that. But I would say that students are already doing all of this right now. I'm actually coming down on the side of I thought it would just be baked in, that they could report it, because I have to assume they're recording and putting it through chat.
+
+00:21:30:10 - 00:21:53:11
+Unknown
+GPT is that it? Right, I would yeah, I would hope that they're doing that. Yeah. Yeah. Sorry I decide right. Yeah. No way. That's it. So the the idea is, you know, as I was going through this in, what I wanted to do was to find a way to bring all of your information into one place.
+
+00:21:53:13 - 00:22:20:00
+Unknown
+The other thing that it is doing, and I am going to actually switch over to my local build, because I've been working on this, just today, like, so crisis communications asked, hey, can we build a tool so that we can look at, Twitter and, and see when people are posting negative things on Twitter?
+
+00:22:20:03 - 00:22:46:00
+Unknown
+Then can we pick up on trends and then identify whether or not it's being, you know, written by humans, are written by artificial intelligence? And so the other thing that this system gives you is a way to build and share AI powered tools like that, because right now, okay. Yeah, it's not working yet. So right now, if they wanted to build this tool and deploy it, they don't really have a place to deploy code in software.
+
+00:22:46:00 - 00:23:07:04
+Unknown
+Right? Like you'd be running it off of your own machine. Or, you know, the best that most people do is those custom teams that are on on chat GPT and so what this gives us is a place where as an institution, if we build something like that, like there's a UK now tool on here somewhere, where you can go through and look at, you know, what's the recent campus news?
+
+00:23:07:04 - 00:23:27:24
+Unknown
+Let's say that I wanted to look at only the whatever the thing is, I guess this isn't loading. But let's say that I wanted to ask it about, you know what? Research is happening, UK. Whatever. It's not working. But essentially it would go in there and it would give everybody access to this tool, instead of you needing to, like, pass it back and forth through emails or, you know, thumb drives or whatever.
+
+00:23:27:24 - 00:23:52:24
+Unknown
+The thing is, links, I guess. As a degree planner. So eventually I want this to also somewhat automate a lot of the registrar. And so the, the two users that we've been looking at so far are students and faculty. And then this is the registrar portal. It will essentially do everything that, you know, all the, the this is all synthetic data.
+
+00:23:52:24 - 00:24:15:16
+Unknown
+But the idea is that whatever registrar, registrar data input, is, you can put it through here and you can do your degree audits and, and your petitions, your transfer credits all on the same dashboard. Is there is there plans to, like, expand it out into like grants area, or accounting space and things like that where it all kind of plays together.
+
+00:24:15:16 - 00:24:39:28
+Unknown
+So Grant comes in, there's an AI place that handles that, and that would also interface with all of the project managers on grants, things like that, to come back in and do that. Accounting and oversight a little bit. Yes. Yeah. Yes. To your point about, you know, can you create groups, etc., etc. that's kind of why I wanted to have like a chat immediately available here.
+
+00:24:40:05 - 00:25:00:20
+Unknown
+And so the chat will automatically create like earlier we created that course that was this year. And so it automatically created a, a chat group, you know, for everyone who's enrolled in that course gets auto populated onto this conversation. And then also you can you can make your own if you wanted to, you can send your message or create a group.
+
+00:25:00:22 - 00:25:28:04
+Unknown
+So to your point about, you know, could this be something for program management? Yes. Also because this is going to eventually when we get Azure connectivity, it's going to connect to one OneDrive, SharePoint. So if you have a bunch of research documents in one place, then it can feed all into that as well. And then also I had built I can't even find it right now, but I had built a, a grant finding tool that essentially chews through your, material.
+
+00:25:28:04 - 00:25:49:05
+Unknown
+Like if you have a manuscript or something, or even just, like, planning documents, it looks through it, it understands, you know, what your what is your research project? And then it goes and it states, you know, the grant websites looking for grants that you would be eligible for.
+
+00:25:49:07 - 00:26:15:08
+Unknown
+The last thing, is I'm working on this now. I haven't, quite tracked it because I just thought about it this morning. But is agent mode? Is a lot of this is built on agents? You know, there's an agent to, you know, scrape Twitter. There's an agent to look for grants. And my thought is, instead of needing to go to the hub and then climb through all of this stuff to find whatever the tool is, what it.
+
+00:26:15:08 - 00:26:39:15
+Unknown
+Sandy was your agent as well. And so can you just do with do a study buddy session on constitutional law and it's of course, airing out on me. But the I o because maybe because I'm a local, but eventually the idea is that, anything that you can do in the entire system, my hope is that you could just deploy straight from here so you can almost have.
+
+00:26:39:18 - 00:27:03:01
+Unknown
+Would it be a straight just agent Sandy being it or would be like Sandy was a series of sub agents doing work for Sandy? Yeah, exactly. So. So yeah. Yes. So the way it's designed right now is Sandy. I'm integrating an MCP, you know, so like, essentially an orchestrator for multiple agents. And then so the first agent that Sandy would do is look at your request.
+
+00:27:03:01 - 00:27:22:14
+Unknown
+Do you actually need a tool or an agent for this, or can I just generate a sonnet response and then if it's a tool or an agent, then it goes through the, you know, the 17 some odd agents that already exist on the platform. And then it, it would load up theoretically the right one.
+
+00:27:22:16 - 00:27:42:12
+Unknown
+Yeah. Eventually, when it gets connected to people's calendars and stuff, my hope is that you'd be able to say things like, hey, you get 30 minutes of time with serenity and me, and then it'll find some options and they give it to you. The demo of that works right now. I was hoping to to use my own data, and it's starting to break.
+
+00:27:42:14 - 00:28:10:09
+Unknown
+This, like the fact that Microsoft doesn't have something already that's just like, look at everyone's outlook and pick a time that works for everyone is outrageous to me. Yeah, yeah. All right. So can I. Can I ask some questions? Yeah. In the blue dropdown that you had a minute ago, it looked like one of the suggestions was what is your case?
+
+00:28:10:12 - 00:28:38:17
+Unknown
+I policy. Yeah. So, you know, as a teaching faculty member this semester, we had to create a policy around I use at the beginning of the semester on a super low level piece. Right. But see where I'm going with this? Will it tell me here's a best practice for how to put a policy around I use in your classroom.
+
+00:28:38:20 - 00:28:53:06
+Unknown
+I think that's where the vast majority of faculty sit right now. Yeah, right. So then as this rolls out so let's say this gets deployed across campus in the fall. Earliest best case scenario, right. Everybody's using it in the fall.
+
+00:28:53:09 - 00:29:18:14
+Unknown
+Have you been in conversations for the AI policy to change or to to adapt or evolve with this in terms of how faculty and students are allowed or should be guiding use in class? Gotcha. The advance committee has policies in place. And effectively, the policy is each course should decide what their policy is and put that in the syllabus.
+
+00:29:18:17 - 00:29:44:16
+Unknown
+Is is the current university's the AI policy for course? Yes. There is going to be something that replaces the advance committee. And they haven't rolled that one out. I think they're waiting to install the, the AI director. And then to your point about, can there be something that recommends, syllabus language. Yeah, 100% that that can be an easy, tool that that you build.
+
+00:29:44:19 - 00:30:03:01
+Unknown
+And the, you know, the menu options are things like you can't use it at all to you should use it every single possible way that you can to you have to disclose when you're using it and explain how you're using it etc.. Yeah. Which is what mine currently says good or bad. That's what mine currently says.
+
+00:30:03:04 - 00:30:24:18
+Unknown
+Yeah. Right. Which I think is okay. Yeah. So for courses like mine where we're not necessarily building things right. But they are moving ideas forward, creating ideas, they have to write, reflect, analyze on those things. I saw, in one of those pages that you were scrolling through. So I'm like a write this or something of that nature.
+
+00:30:24:25 - 00:30:57:03
+Unknown
+Yeah. How does this fit into courses that are very much writing paper heavy? What are what are your thoughts there? Yes. I would say that first and foremost, anything that you do on here is opt in by the faculty member. And so if your faculty member is like in English and they're like, no way, we are not doing anything, I then, you know, you just don't have all of this stuff.
+
+00:30:57:06 - 00:31:22:00
+Unknown
+What I anticipate will happen is that the faculty will start to recognize that whether they want it to happen or not, all of their students are using AI for all of their assignments. Currently, and they're they're going to have to learn how to elevate their, their teaching. And so the hope is that this gives them a way to build new tools, to elevate their teaching.
+
+00:31:22:03 - 00:31:52:25
+Unknown
+So I have somewhere in here, I was thinking about exactly that, about like, if I'm an English major, you know, what would I want to have? Anyway, it's a it's a rhyme and meter, for poetry thing in email. There it is. There it is. So do you find it? Oh, yeah. And so, I work here, and so let's say that, let's say that you're an English teacher and you're trying to decide, you know, how do I integrate AI into my whatever?
+
+00:31:52:25 - 00:32:16:16
+Unknown
+The thing is, maybe it's not. Can my students use AI to write, a poem, but instead, like, how can I use AI to teach them about rhyme schemes and whatever the thing is? And so, you know, this isn't necessarily AI powered. But this was I mean, essentially, I, I had I gave it one sentence which was come up with something for an English teacher to use artificial intelligence and software.
+
+00:32:16:18 - 00:32:39:15
+Unknown
+And then so, you know, then what you can do is you can, I don't know, choose the different things. Anyway, the point is to say, that I think you're going to get a jagged edge of people who are readily going to adopt AI and people who are going to be very, very resistant to it. And my hope is that this caters to both of those groups, you know, one group who wants to actually build sophisticated platforms and deploy from here.
+
+00:32:39:19 - 00:32:58:27
+Unknown
+Or, you know, the hope is that eventually this becomes a licensable product that other universities are in the marketplace and so let's say that Hunter and Matthew build the Socratic tutor. It's much more sophisticated than me saying, create a little study session. Right. And so then that would get deployed out of the, out of the hub.
+
+00:32:58:29 - 00:33:26:21
+Unknown
+And so eventually, theoretically, this could be a marketplace for people who want to build with AI tools and then and then deploy them on here. All of these are external AI tools that have built in other places, that you can just kind of like launch just by just by clicking on them, just seeing this other more, I guess, more in-depth, more niche AI based tools could be put in this as kind of co with everything else that this tool at all.
+
+00:33:26:23 - 00:33:47:06
+Unknown
+Yes. Yeah, exactly. At the end of the day, in my mind this is just the platform. Like it's the operating system. I populated it with all of these to give people that I'm talking to about it, some kind of an idea of what's possible. But but truly, the product isn't this stuff, like this stuff you can build in ChatGPT in a heartbeat.
+
+00:33:47:08 - 00:34:09:05
+Unknown
+The, the platform that truly the product is, is everything else that's around it. You know, it's it's it's a place to to keep all of your information from the entire university and then run intelligence and analytics over the top of it. What are you going to what I assume, and I'm trying really hard not to make assumptions in this conversation.
+
+00:34:09:05 - 00:34:38:13
+Unknown
+Right. Because we assumed Ian was reporting to us what was true. And that turned out not to be true. So I'm trying not to make any assumptions. Are you going to Deloitte? Yeah. Okay. What is your role in defining their scope of work. Yeah. So I, I don't know what the Deloitte question is. The meaning what you're asking Deloitte or what my question about.
+
+00:34:38:15 - 00:35:07:23
+Unknown
+No. Like, I don't quite know what the purpose of the the conversation with Deloitte is. I guess it's to take a demo and turn it into a product. But really, what I need is not somebody to build that for me. What I need is Azure, right? Like, I need access to university data and open, you know, essentially outlook and calendar so that I can actually build the thing like, like the building itself is, is the easy part.
+
+00:35:07:25 - 00:35:35:14
+Unknown
+It's the data cleanup. Have you said that to them? Say what? No, I haven't had you have you I, I have shown Ian a very early prototype of it, but you know, what he got out of it was I'm building a Socratic tutor. It. And so it's a maybe it's another conversation with Ian about like, hey, this thing has evolved to a point where, you know, maybe we should talk about what our ask is next week.
+
+00:35:35:16 - 00:36:07:08
+Unknown
+So here, here's a question. Okay? All the oh, sorry, sorry. You need to jump in if you have another question. So all of the things that are built in this time is it like are you using like sonnet to code a lot of the stuff. You were okay. Is there, you know, I've talked to some developers that are, you know, using, like opus and kind of that cloud coworker space.
+
+00:36:07:08 - 00:36:39:14
+Unknown
+And there's still, there's saying it's close, but not all the way there. Yeah, yeah. Would Deloitte be able to provide some kind of resource to make sure it's workable across platforms, things like that, that maybe open that maybe Sonic can't do? Yeah. My opinion of that is that. You're starting to hear that change. Yeah, a little bit.
+
+00:36:39:17 - 00:37:08:01
+Unknown
+Right. I think people are getting really developers are getting really scared right now. Exactly. There's a lot of messaging that's like, no, we still need the jacket. Yes, we still need to do that. Yes. So. So our brother in law is a software engineer, and he and I have had many long conversations about this. And the what I understand from what they say is that they, they look at all of this AI generated code, and then when they try to go back and understand it, it's quote unquote spaghetti.
+
+00:37:08:03 - 00:37:32:19
+Unknown
+When in reality, I think that it is coding at a level that humans just aren't at yet. And so while humans don't understand what it's writing, the code certainly does, because it's like we started doing this 13 days ago, like this entire infrastructure was put together in 13 days, like all of the everything in this hub, that that is built out has only been 13 days.
+
+00:37:32:21 - 00:37:53:26
+Unknown
+And I also have a full time job outside of this. So, like, all of that to say that's not a me thing. That is a that's where the code that's where the software technology is right now. And so, you know, when you ask, I asked this morning what it thought it would take if a team of eight people were to build this separately.
+
+00:37:53:29 - 00:38:14:22
+Unknown
+He said one full stack software engineer would probably take seven years to build this stuff. That a group of 8 to 10 software engineers could probably do it in 5 to 8 months. And it took me 13 days. And so the point of that is to say that right now it is functional, like I keep saying that this is synthetic and demo stuff, and that's just because I don't have the plug in.
+
+00:38:14:28 - 00:38:44:19
+Unknown
+But it's not that, you know, I didn't write out these words. Instead, what I did was I created this synthetic outlook material and then plug that data stream in. And then this is what it looks like. And so theoretically, once you plug yours in, it should just be able to go. And so I don't know what what the ask is for Deloitte because I don't think we should take the idea and then start over on an entirely new interface, because that would be a tremendous amount of, of time and work.
+
+00:38:44:21 - 00:38:58:18
+Unknown
+Instead, I think maybe it's just, you know, to your point, is it troubleshooting? Is it plugging in your, your data streams?
+
+00:38:58:21 - 00:39:20:03
+Unknown
+But just so I'm on the same page, none of it matters if they're not willing to give you access to the behind the scenes stuff you talking about, like, outlook and things like that. I think that, because, right. Because, like, you can build all you want, but if you don't have that, then the end, you cannot get to the outcome that you're trying to get to.
+
+00:39:20:03 - 00:39:40:16
+Unknown
+Is that correct? I would say so. I would also say that I have a decent amount of institutional support behind this. And I think that the institutional support, if I am getting resistance, will make sure that that we are able to do this. Oh, yeah. I think that is true. I think they don't realize that.
+
+00:39:40:16 - 00:40:02:26
+Unknown
+That's all you need right now. Yeah, I think they think you need help developing. Right. So I'm I'm just trying to understand. So when I'm asked at the end of this meeting. Yeah. What is your assessment I am advocating with you. Yeah. Gotcha. Yeah, I, I think I think that's the question about Deloitte. Like what does Deloitte bring to the table here?
+
+00:40:02:29 - 00:40:27:15
+Unknown
+It doesn't seem like a lot. Yeah. And yeah. And maybe it is just, I don't know, a big brother looking over your shoulder and saying, like, actually all this things work, you know, like, like, kind of a second opinion. I mean, I'll tell you, I don't know, like, I know they have a dev team and take a look at it.
+
+00:40:27:15 - 00:41:09:03
+Unknown
+Here's what concerns me from an IP side of things. Right. We're in territory where, you know, it is sonnet drafting cut right. Copyright office has been pretty clear where they come down on. You know, I drafted code ownership of that. How things were like. My fear is always like we go to Deloitte regardless of what contract we have in place that says, oh, we're protecting confidential formation and IP, we're since we just handing them a playbook on how to do this.
+
+00:41:09:05 - 00:41:45:28
+Unknown
+Yeah, right. And with the laws where they are with respect to copyright like they're lagging behind kind of where I coding is like a year. Yeah. Right. Interesting. The copyright says everything written by sonnet or opens or whoever has no ownership, like you cannot have an I have ownership over a copyright. So when you draft up a non-disclosure agreement that says, hey, what's ours is ours, and what year is it yours, and we won't mix them, and you can't go do anything or tell anyone what we're sharing with you.
+
+00:41:46:00 - 00:42:09:17
+Unknown
+And then you look at it and go, well, it's not yours anyway. Your contract says only what's yours. And the law defines this as not being yours because it doesn't have an author. So if is ownership truly vested at UK, is it on a personal level that kind of, you know, there are copyright elements to that's absolutely the way it's defined, the way it's laid out.
+
+00:42:09:19 - 00:42:37:24
+Unknown
+Right. Yeah. But the coding under, you know, that structure itself is not so that's always a concern of mine as well as, you know, when this goes out, and we bring them in and what type of, contractual kind of things are in place. In addition. So this I know you said to deploy it at UK, you need access to Azure.
+
+00:42:37:24 - 00:43:16:19
+Unknown
+So you know all of that institutional data. Right. So let's think down the road. So let's say we go for and it's great where it's good. We're looking at a licensing play out to someone else. Right. You know if this is is all the code being generated, is it kind of like and like, would this only be able to be deployed with someone that has kind of that same Microsoft enterprise license that UK has access to, or could it be deployed to other institutions that may not be that far away?
+
+00:43:16:22 - 00:43:34:20
+Unknown
+You know, I've been thinking about that too. And so let's say that the University of Louisville wanted to turn this on tomorrow. How would you do it? I think it would have to be an audit of where all of their data streams are coming from. I don't think it necessarily needs to be, on the like.
+
+00:43:34:20 - 00:44:05:12
+Unknown
+I don't think they need to be a Microsoft shop. But just like how ChatGPT was built on Azure products, I think that, that we would essentially take the platform and then just change up the input data streams. Yeah. And, you know, honestly, maybe that's the question for, for Deloitte. To go back to your, your comments about, about this being, you know, completely AI generated and, you know, what does that mean for, for IP?
+
+00:44:05:12 - 00:44:24:05
+Unknown
+I think that is an interesting question. You know, I was thinking about like, how do I show the work that went into it? And so these are all like the markdowns. So after I, we do like a coding sprint. Then it'll create a markdown of this is what I want to have happen. This is what I want to do.
+
+00:44:24:08 - 00:44:49:28
+Unknown
+And it, it builds out, you know, kind of like the essentially a summary of all of the things that we talked about. These are our immediate next steps. And then, you know, it creates an archive of each of the, the back and forth, you know, conversations. Does that help? I mean, it does a little bit. So here I just pulled it up specifically just to make sure because, you know, this is always in flux.
+
+00:44:49:28 - 00:45:27:17
+Unknown
+But currently right now the US Copyright Office says that AI generated content. So we're saying code in this case, if it's doing it or if it's Codex or whoever, cannot be copyrighted as it lacks human authorship. Now, as I was saying, the layout, the way that page looks, right, unless you're having the AI do all of that, unless you know you're setting it up to arrange in a way that has copyright, has this weird feature, it has to have some type of artistic value, right?
+
+00:45:27:17 - 00:45:55:27
+Unknown
+It can't just be fact encodings. A weird spot where the language has a meaning. The language has a directive to a machine to operate a certain function, but they've always allowed the copyright because each coder is like their own artist with the code that they're writing. Right. You can have a room of developers ask them to write code to do one thing, and probably you're going to get eight different versions of that code, right?
+
+00:45:56:03 - 00:46:27:07
+Unknown
+So that's how they've always justified having that ownership in their, so what they've said is like human edited or heavily curated AI works and have ownership. But this is one place I think the wall just hasn't kept up with what's happening. Right. So that's always a concern. So the fact that you have the markdowns, the turn I'm assuming, just turn everything into just text.
+
+00:46:27:09 - 00:46:55:04
+Unknown
+Yeah. Yeah. So with that like though I mean the AI's generating right. I mean we'll have your back and forth. So what you write would have it. But that's still not a way to protect the outcome. Right now. The question becomes so when you're creating those modules, are you inputting. So let's say, you know, take your physics model for example where you shot the robot right.
+
+00:46:55:06 - 00:47:20:08
+Unknown
+Or like who decided it has a black background in the fact that it was like an orange colored trail behind the rocket or whatever color that was, and who determined the color of the rocket itself? Yeah, all of that was. Yeah, yeah. Oh, so all right. If that if those esthetic decisions were human, I think you, you work over into copyrightable some protection.
+
+00:47:20:11 - 00:47:46:26
+Unknown
+Right. But if I was making all those selections and what the the widgets actually look like within there, then it's always that concern was where the law. Right. It's just like I said, the law it is I frankly, I don't know that the law will ever catch it. Right. Because AI is the capabilities are expanding such a rapid pace at this point.
+
+00:47:46:28 - 00:48:09:21
+Unknown
+Having law like they could pass a law tomorrow that says, awesome, if you use this and this, you're the one that input it, then you're the owner. Yeah, well, what happens next week when someone with open file just creates an agent? It says solve the problem and the agent runs out to Codex or and develops its own prompts to come up with its own code to solve a problem.
+
+00:48:09:24 - 00:48:32:27
+Unknown
+You know, there wasn't an input of, oh, I didn't put in the outcome I wanted. It was just, I have a problem, solve it. And the agent went out and solved so that raises a whole others, right? I don't know if the law will ever change, so I would just be mindful of that. When you share what you're doing, how it's done, and the I think the only protection we're going to have is on the contracts on this.
+
+00:48:33:03 - 00:48:53:21
+Unknown
+So I don't know what kind of agreements we have with Deloitte or what we want to turn over within. We just need to have a robust confidentiality agreement with them that says what we're going to give you a bunch of stuff. You can never do anything with it outside of interfacing with us. And anything that you create or provide to us won't be considered work for hire.
+
+00:48:53:21 - 00:49:33:24
+Unknown
+And we're going to end it all in this entire space. Like we almost need to foreclose Deloitte from ever doing anything that mirrors a operating system for an institution. Right. Or it didn't just get scary from a legal standpoint. Matt, is there any way to use to leverage a design or utility patent here. So again, I mean I know the answer is usually no, but just wondering if because of how he put all the Lego blocks together, is is there a more creative way to put a little bit more behind this?
+
+00:49:33:27 - 00:50:02:05
+Unknown
+So potentially I mean, you could say assistant playing maybe right. Design not right. Because design patterns are solely for esthetics, not for anything function. Right. It's like you can't get a design pattern on a bird feeder, but you can get a design pattern on a bird feeder that has stupid little perches that have little flowers designed in a particular way.
+
+00:50:02:10 - 00:50:09:10
+Unknown
+And I have written so many design patterns for bird.
+
+00:50:09:12 - 00:50:46:18
+Unknown
+From a utility standpoint, I mean, we could take a stab at it and say, right, but the problem that we're going to run into is it is using them to write. We can say that it's a combination of known tools and try to get that. And to be honest, I wouldn't be opposed to getting something and at least filing it with the ability to put in patent pending on a system, even if we could never get a full blown patent because of 101 issues.
+
+00:50:46:18 - 00:51:06:28
+Unknown
+Just to kind of lock our doors. If you. Right. So to be able to put, you know, it's a patent pending system, we'll keep some people that would have been inclined to try to make a copy of it, not,
+
+00:51:07:00 - 00:51:22:24
+Unknown
+What do you need from us to consider that more fully or to make that happen? I mean, I think.
+
+00:51:22:26 - 00:51:50:17
+Unknown
+Yeah, I think we have enough. Especially me seeing it, that we could take a first stab at it, and then we would have to get it out to you. Tom. And you take a look at it and see what else needs to go. But. Right. Because, I mean, if you built what you built in 13 days, I'm sure there's a lot of other things you would want to put in there or things that I have to change, get adjusted as this moves forward and not think about it as.
+
+00:51:50:20 - 00:52:15:21
+Unknown
+It's actually occurring, but think about it broader of what could occur, if that makes sense. Right. So you may have and all the ways that I've trained you tonight to not talk about the future features of Socratic tutor and not get hung up on those. Yeah. This is where you talk about all the future features and to be hung up like that, but not future features in the sense of I'm trying to think of a good way to explain.
+
+00:52:15:22 - 00:52:49:15
+Unknown
+So it's not the individual features that need to be called out, it's the broader ideas that features can be added. Right? And how those look and how those what the the interplay is between the underlying system and all of those features. Right. So if it's, you know, if you think about it as like a hierarchy, right. Like what's the underlying principle of the system itself, then you have all these features you can build.
+
+00:52:49:15 - 00:53:19:08
+Unknown
+Why? Because of the underlying principle. Right. And that's how we want to capture it. Not so in that sense of architecture, not in the sense of it doesn't fit. Right. Because the one thing we have to do, the one thing that's required on software, this is. This is again long. Sorry. It's not definitive. Yeah. Right. And Supreme Court has come out and said it has to have some transformative features okay.
+
+00:53:19:10 - 00:53:47:10
+Unknown
+Now next question should be well what's the transformative feature. Supreme Court when they came out with a ruling that it has to be transformative, gave no definition of what transformative feature, no. Right. So we're all kind of left to muddle through. And I think their ultimate goal was to develop jurisprudence from lower courts, and then they can make a determination and take all of these different court definitions of what beta does not mean.
+
+00:53:47:10 - 00:54:19:15
+Unknown
+A transformative feature. Again, the problem we're in is that anticipate some slow linear growth in the technology, not kind of what we're experiencing with AI, where it is where the growth is not linear and it's not slow. And like I said, even if it does or does not meet unwilling to partner. Now here's the problem. Okay.
+
+00:54:19:17 - 00:55:05:03
+Unknown
+So this is always the juxtaposition with it. So you have the idea that. You can develop software, you can have some type of protection order through licensing and confidentiality agreements. Right. But you're always open to someone independently creating. Right okay. Or you can again go down the road of patent protection problem. There is the exchange, the monopoly you get and the ability to go, you know, try to protect or exclude others from entering your space is you have to tell everyone in the world exactly how you did this.
+
+00:55:05:05 - 00:55:32:25
+Unknown
+Right. That lends itself especially in this era of design when design around. Okay. So I take a look at your patent and go great. You've explained to me exactly how to do it and your plain language says this. So I'm going to do something that does everything you do except for the like. If software patents normally the claims fill up and they're huge, right?
+
+00:55:32:25 - 00:55:50:21
+Unknown
+Because you're trying to fit in all of this transformative feature to make sure you're getting a lot. So let's say a normal software claim has like 13 elements to right. And I look at your patent and go, oh, I love that. I want to do it. I don't want to pay for I'm going to make something that does 12.
+
+00:55:50:21 - 00:56:10:12
+Unknown
+I'm not 13. But your patent doesn't cover because to infringe you have to do each and every element of that flank. So let's say they take out one thing from the claim we needed to get a while. It's still a product not as good, but now they don't have to come back. All right. So it's always this trade off.
+
+00:56:10:12 - 00:56:28:15
+Unknown
+You trying to keep everything locked down. Keep it secret. The confidentiality agreements, knowing that any time someone can step in and start doing the same thing, right, as long as they don't have access to your source code or your like, if someone finds out Duke's rolling this out, they go, oh, I bet I can build that in AI as well.
+
+00:56:28:15 - 00:56:53:03
+Unknown
+And they go and build one. There's not a whole lot we can do or go the amount of time to get protection. We don't know if we get it or not, but we have to explain that to everybody and show them the secret sauce. So it's always that trade off right. So I guess in this space knowing that that's the trade off and knowing what do you know about building something like this.
+
+00:56:53:05 - 00:57:15:18
+Unknown
+Do you think one of those ways has an advantage to try to discourage someone from stepping in and doing the same? I think if you don't mind, I take a little bit to to think that went through instead of just kind of give you my. Oh, no, it's not an easy question. Right. It's one like, you know, when I was counsel in companies, it's always that idea.
+
+00:57:15:18 - 00:57:43:28
+Unknown
+The main one, the main issue was always the kind of juxtaposition between trade secrets and filing a patent. Right. And the question always came down to this how hard is it to reverse engineer. Right. If it's very difficult to reverse engineer trade secret maybe often if it's very easy to reverse engineer patent was always the better. Right.
+
+00:57:43:28 - 00:57:50:14
+Unknown
+Because you have to look at someone just seeing your product. How easy it for them is to recreate.
+
+00:57:50:16 - 00:58:15:00
+Unknown
+I mean I would not do good. I was just going to say it's software nowadays. I mean, anyone can recreate anything. Yeah, ideally. And therein lies the problem, right? Right. So it's that's why I'm willing to, to file a patent at least to essentially lock our door so someone can come in, like, it'll give them pause before they, they want to try to take it.
+
+00:58:15:02 - 00:58:43:02
+Unknown
+But at the same time, knowing that we may run into some pretty stiff 101 rejections at the patent. But we could technically delay those long enough that it may become irrelevant. And by delay, I mean we don't have to face those rejections for probably 3 to 4 years. Oh yeah. Right. And we could just leave patent pending on the software.
+
+00:58:43:05 - 00:59:04:24
+Unknown
+Oh, interesting. Yeah. So, yeah, we could file provisional. It gives us 12 months. We could take that provisional instead of going to us. We could file TCT. That gives us another 18 months. So right there were 30 months. And then likely in this phase probably not going to see your first office action for anywhere between 24 and 36 months.
+
+00:59:05:00 - 00:59:28:05
+Unknown
+So, I mean, we could push it out for a long time before the patent office actually came back and filled. In reality, if we push it out of that form, the fact that we're even trying to protect it may be irrelevant with where I will be in five years, right? We may not even have computers like we understand them for five years, yet even that which is terrifying to me because I'm just understanding them as we know them now.
+
+00:59:28:05 - 00:59:51:20
+Unknown
+But so, Matt, from a timing perspective, this is where I was going with my next question. And I know we're out of time, so we can always pick this up later. But, can we delay it? Can we not write like, don't file? Now, let Tom, I continue to work and build. And when we're ready to deploy, then file our patent pending.
+
+00:59:51:22 - 01:00:09:09
+Unknown
+So we're already well down the road with this before we ever filed a provisional. Right. So before we tell anybody and I also would not go down this route unless we felt decent, I'm not going to say good because I've seen enough of these to know how this works. So I'm not going to say good about the conversion.
+
+01:00:09:09 - 01:00:36:18
+Unknown
+But if we felt like there's a chance here, then then I think I would say, let's have this conversation about going down this road, right? That if we start putting the claims together and we go and you say, I just don't think there's any way that I wouldn't go this route. Right. But if we think, let's say there's a decent chance it's a maybe, can we wait and delay the provisional filing until we're ready to roll this out across the institution?
+
+01:00:36:25 - 01:01:14:21
+Unknown
+So both things are moving at the same time, which means we're significantly ahead from anybody who may pick this up and copy it. So. Given the time frame that I created and things I don't know of, waiting on a provisional does a whole lot for. Right? Okay. In the world of therapeutics where you need FDA approval, you have, you know, you have this block of time that's literally going to be not wasted, but you're not going to be able to sell products, product, right, or making advancement.
+
+01:01:14:21 - 01:01:49:09
+Unknown
+You're just literally testing that thing. Right. Then it becomes problematic in this world where stuff pivots and changes. Then that I don't know is waiting as any innovate. Okay. Right. But I just so Tom I know you have the markdowns of all the stuff you've done. Yeah. Yeah. If you could have seen me do that. So one of the big things we always do in software is try to determine the language.
+
+01:01:49:12 - 01:02:15:00
+Unknown
+Right. Like I have a terminal connection via some connection to a file server that then has a connection to a hard data center. And then, you know, it's like ping answer but something happens, you know, and they do that and that's how they try to get around the out. Now people are trying to use that as transformative. My data is transforming.
+
+01:02:15:00 - 01:02:47:27
+Unknown
+The operation is transforming because I've done this signal transfer and and output an input. Right. I wonder with all of I wonder if the I just this gets a bit mad. I wonder if the I would be able to describe the coding. It's done in the resources using in the signal path that it has developed in its code to talk about, like the interdependencies.
+
+01:02:48:00 - 01:03:22:07
+Unknown
+Right? What how the, you know, like so let's say you're working in you know, it's reading the email, it's reading your calendar, it's pinging another calendar. It's writing a response, unsure like is there an intermediate step where it's also reviewing something else before it comes back with the response you're looking for? Is it pinging some database? It could kind of map out what it's doing, if that makes sense.
+
+01:03:22:09 - 01:03:52:01
+Unknown
+Yes. And that might be this file. So, this is essentially, kind of like the, you know, essentially how everything works on the back end. But so, like, it gives you your tech stack and then the specifics, you know, how all of the authentication works? The architecture. I can send this to you so you can, like, look through it and see if this is if this is what you're looking for.
+
+01:03:52:04 - 01:04:20:28
+Unknown
+It's essentially a high level summary. You should be able to just take this document and recreate the entire thing. Okay. Oh, you mean this far? I mean, recreating everything you built, pretty much like I mean, you know, it's not it's not down to like the level of the code, but every tool, every, every, you know, thing that it does is, is in here somewhere with an explanation of, okay.
+
+01:04:20:28 - 01:04:52:02
+Unknown
+So the graduation clearance pipeline is actually, you know, these things or whatever the thing is. Yeah. I. I mean, it sounds like from what you have, you have access to more AI stuff than I did. Right? I wonder if it would be possible to take this file, throw it in to an iron and say, give me a plain English version of everything that's happening with interdependencies.
+
+01:04:52:05 - 01:05:06:24
+Unknown
+Yeah, yeah. I mean, I could almost even in C and then give me that, that would be more valuable because that's what I would do. Right. And if you have better access than I do. Yeah. Then.
+
+01:05:06:27 - 01:05:40:02
+Unknown
+That's essentially what we're looking for. We can use that as the basis for the application itself. Okay. It's give me what are the what are the other things other than like interdependencies that you think would be helpful to, to build into that. So let me let me give you exactly. And this the I may write so, a mixture here.
+
+01:05:40:02 - 01:05:49:26
+Unknown
+And it's a good idea.
+
+01:05:49:28 - 01:06:16:09
+Unknown
+So we need like, interdependencies how signals travel. Like, is there any processing of the signal data for implementation from one kind of module to another module? Those things would be beneficial.
+
+01:06:16:11 - 01:06:52:22
+Unknown
+So, like, I mean, I hesitate putting in, like, are there any, like, transformative features, did this thing develop any new, assuming it develops some type of algorithm to do something right, like the physics obviously has some kind of mathematical algorithm in it, but it came up with that itself, I'm assuming. Yeah, yeah. Algorithms are always a strange place anyway because they are by definition non patentable, but they're treated as a black box right.
+
+01:06:52:24 - 01:07:26:25
+Unknown
+So it's almost is there any training that has to be done with the data you're pulling. Whether it's synthetic real doesn't matter. Right. Cause you're still doing it to the data. Is there any training that has to be done before it goes into any black box in the system? Okay. Right. Because the way we the way we can kind of get around and what we typically do with AI is we collect data, we do something to it, we curated, we assign it weights, we we do something, then we throw it through the black box.
+
+01:07:26:25 - 01:07:53:15
+Unknown
+That is the algorithm or AI, whatever it may be, and then we get an output right. In addition, another feature would be is the program doing anything with the outputs from something to change it to be an input for something else? Is there any transformation that's happening from output from one module that then becomes input for another because of that transformative I see.
+
+01:07:53:18 - 01:08:04:06
+Unknown
+Right, right. So that's another way we can try to get a hook into it as well. Yeah.
+
+01:08:04:08 - 01:08:27:12
+Unknown
+Glad you see. Because right now in law, like a bunch of stodgy old people in robes determining computer stuff that they have no idea. Right. With a Supreme Court that refuses to make a decision on how things should actually be handled and defers it all to district courts that happen to be political appointees from whatever era they were able.
+
+01:08:27:14 - 01:08:51:07
+Unknown
+Right. Yeah, I can, I can I can send you both, you know, kind of what the the cloud in the file. And then I'll put together something else based on this conversation, maybe do a little bit of research about how other people are, are trying to protect their AI software. And then and then I'll send you that sometime in the next couple of hours.
+
+01:08:51:09 - 01:09:08:17
+Unknown
+Oh, that would be great. Yeah. And then we get started at least something to go down the road, and then it's probably going to be a back and forth on that. This isn't going to be, like, you know, someone gives us a therapeutic like that's a chemical structure. That's easy. Right. It's not is not going to be easy.
+
+01:09:08:20 - 01:09:38:09
+Unknown
+Right? Right. So yeah, but I want to get as much as we can again, because I don't think there's no point in waiting. In Italy's Lockhart laws for a number of years. If we can, we can do this one time. And if we, you know, we may be able to get this all the way through now, whether or not that patterns of value five years from now when it issues is a whole nother story.
+
+01:09:38:11 - 01:10:05:23
+Unknown
+Sure. Right. Most institutions when the whole AI boom started, they just pulled the plug on everything. Patent five because they're like, at the time you filed. And well, because if you think about it, I typically has six month or less cycle. Yeah, right. So if you're finding an AI patent that you know is going to be examined for three years, what value is going to have on the other side.
+
+01:10:05:25 - 01:10:25:17
+Unknown
+Right. Yeah. Right. How you know, that's relying on a lot of people to anticipate the exact tools you're going to have five AI cycles from that, right? Oh, it's just it's hard to get there. But you know at least let us put something on it. Wow. We shot this. We're having fun. The best thing to do. Yeah, yeah.
+
+01:10:25:19 - 01:10:48:09
+Unknown
+Okay. And then also, it sounds like, from our conversation that your recommendation would be to reach out to Ian to talk about what our interests like, our goals for the Deloitte conversation should be. Yeah. Yeah. And and I'm happy to nudge that along. I have to call him after this, to let him know how the conversation goes.
+
+01:10:48:09 - 01:11:12:12
+Unknown
+Because you got to remember, he thinks we're infringing on Socratic tutor, so I've got to. I've got to redirect him. Yeah. We are not like this is. Yeah. This is so next level. I'll redirect him. And as part of that conversation, you know, I can slag like, hey, we need to talk scope of work here for Deloitte. And I can frame it as I ask questions around what do you need to make this deployable?
+
+01:11:12:14 - 01:11:31:15
+Unknown
+And then he said he just needs access to Azure in some data pools. Like I think we need to let him try to get a little bit further before we contract with Deloitte to build this out, when that may not be the investment the university needs to make. You know, I can nudge the conversation along so it's it's not being instigated by you.
+
+01:11:31:15 - 01:11:48:19
+Unknown
+And I can frame it from an investment and commercialization perspective. Yeah. And, you know, I can tell them we're going to look it up at a patent. And so it would be better to buy us a little bit of time to let you continue to work with Azure and figure out all that it can actually do and what you want it to do, because that will only strengthen our patent like I can.
+
+01:11:48:21 - 01:12:12:07
+Unknown
+These are all things that I can plug to push that conversation to try and help you. Yeah, okay. Awesome. As another thing, I just looked in our database so I know Deloitte has done some work for us. By talking to legal counsel, I mean, I know that they've stepped in and done some things, but we don't aren't we shouldn't no record of an NDA at all.
+
+01:12:12:07 - 01:12:38:06
+Unknown
+I'm assuming, given the work that's been done, an NDA has to be in place, maybe legal counsel did that, but I have nothing in our records which like, that's where the majority of this protection is going to have to come from is a full blown to green. So is there any if you're talking maybe in mind, we need to find out who.
+
+01:12:38:06 - 01:13:02:29
+Unknown
+We need to talk to Deloitte to get that into place. Right. Because I know there's relationships already there. I don't want to just randomly find an email for Deloitte and be like, hey, want to have a meeting with you guys? I need, India, right? And they're probably not going to like what we have to say in there, but I, I'm just trying to think of how to tackle this when we don't have a great IP position.
+
+01:13:03:05 - 01:13:21:26
+Unknown
+But yeah. Yeah, I can bring that up as well. And I'm confident this is going to land in like, oh, we'll just tell an American well to give Tom access and I can be like, so I was in a meeting the other day and like this we have somebody in purchasing who operates very similar. And so I can just say he's been randy it.
+
+01:13:22:02 - 01:13:43:18
+Unknown
+And we've got to move past that so I can do that. And you don't have to do that. Awesome. Thank you. That has been my experience. I really think it yeah. Eric Debord from Microsoft has he and I have talked about, him getting me some kind of, like, back door as well. So the and Ian that has been pushing that too.
+
+01:13:43:20 - 01:13:58:09
+Unknown
+So, you know, he's already aware that it'd be nice to, to be able to actually play with the tools and, and test this thing out. Yeah, yeah. And then, you know, I can push both those things. I can say I was in that conversation because they were interested in Socratic tutor. Here's what I know to be true.
+
+01:13:58:09 - 01:14:15:22
+Unknown
+And these these are the current barriers to development. It's not a dev team. It's access to the tools for him to know and the data stream so that he can know what it can and cannot do. Yeah. Yes. Yeah. Exactly.
+
+01:14:15:25 - 01:14:45:21
+Unknown
+Okay. Great. I mean, it sounds like they have a plane. Yeah. You know that the I know you started to kick out that document kind of the, the word version of what's going on. Yeah. When you get that Tom and get it over to me and we'll, we'll get it out to. I'm really bummed out because we had just demoed and I put and drafting that in some aspects outpaces some of our outside counsel.
+
+01:14:45:23 - 01:15:06:26
+Unknown
+Oh, yeah. I just lost access to it, but I was like, I, I so wanted to run that through there. Just because it's that good. But we'll get it out. We'll get something set, and get it out. And like I said, it's going to be a back and forth. Yeah, right. Because.
+
+01:15:06:28 - 01:15:26:17
+Unknown
+As I mentioned, it's not like a thing set in stone. It's this kind of living idea of how information is flowing and being transformed to accomplish the goal. So yeah, we just want to make sure we're going to capture everything, and no one's going to know that better than you. As far as what your ideas on piece. Yeah, perfect.
+
+01:15:26:20 - 01:15:51:12
+Unknown
+But, All right. Well, that's all I have. Awesome. Just, just before we, we end, I'm very sorry that, about, getting upset. That was completely unprofessional. And I apologize for, for my behavior. Well, I was going to say I'm sorry that anything I said was derogatory against your class. Like, genuinely. Tama. I'm excited to get through it.
+
+01:15:51:14 - 01:16:07:19
+Unknown
+I think I view it as like, I understand where the class is coming from. Like, you get a lot students that have never even touched this, right? Right. But I kind of like, I'm getting to the prompts and it's like, create problem for this. I'm like, oh, I just want to build. I just want to. Yeah, I just want to build.
+
+01:16:07:19 - 01:16:37:09
+Unknown
+Right? Because I've been using stuff at home to do things, and I'm trying to get used to this copilot studio environment. Yeah. You know, not going to, this is I'm not going to sugarcoat it. It's not as good as some other things I've messed with. Like it's, you know, you get all these dropdown boxes where you gotta put a description in here and you got to like, today I ran into a topic where I came up my description.
+
+01:16:37:12 - 01:17:00:00
+Unknown
+Right. I, I came up with some other features and I need to put some input there. Right. And literally I cannot click on the input button. Yeah. I get the little like circle with the cross through it. Yeah. It's grayed out Yeah. It's just clean now I can't select it. So it's giving me stuff, but it's not like I need to put that in.
+
+01:17:00:02 - 01:17:18:04
+Unknown
+Right. Like it's not. I guess it's frustration because I can build stuff at home way quicker, but I can't bring it into this environment. Yeah, right. I need to be able to build it here. And that's why I was saying, like, I like January when I got on, I was like, I feel like I've been in a meeting with you all day.
+
+01:17:18:04 - 01:17:36:14
+Unknown
+Not in a bad sense, in a good sense. I just want to get to the bill. That's it. So, yeah, if anything I said came across as derogatory. It's not that I'm excited to finish it out because I know the final. I'm hoping the final is the final project to build what I want the final project for. So, a couple of thoughts.
+
+01:17:36:15 - 01:18:00:27
+Unknown
+The the final project is just the proposal. Okay. Now, the to your point about the Visual Studio Copilot is very, difficult. That's actually one of the reasons that that this thing came around that that we included the build function that I included the build function is because I don't think the vast majority of people at the university are going to even try to do what you've already done.
+
+01:18:01:02 - 01:18:21:24
+Unknown
+And then when you do try it, it's it's very frustrating. It is unbelievable. Like compared to Codex, you know, I haven't messed around with, interrupts. Right? I haven't messed around with flawed. I don't like in my personal life, and I have $200 additional dollars to spend to to get into that environment. But I have access to Codex.
+
+01:18:22:00 - 01:18:43:17
+Unknown
+Right, right. And it's awesome. And it it's awesome. It's awesome. Like, yeah, it's genuinely awesome. And like I'm trying to get my like I'm I have a seventh grader. I made him do an AI science fair project. Yeah. Nice, right. He built, an AI that had the ability to go in and detect. So he plays disc golf.
+
+01:18:43:19 - 01:19:12:02
+Unknown
+Yeah. Ever know what this ridiculous game is? Yeah. Yeah. And he built an AI there in YOLO that could detect the disk, determine its speed, determine its launch angle, and then predict its distance. And he built it over a weekend and outperformed $300 tech. That does the same thing. Yeah. That's cool. It was right. Like in just in.
+
+01:19:12:03 - 01:19:32:13
+Unknown
+Did he know how to code. No. Yeah. Right. He knew how to use ChatGPT is what he did. I told him I was like in the background. I was running a separate science fair experiment that was like in a seventh grader build something that works. Yeah, with no knowledge of how to do it. Yeah. The software industry, I think, is going to be completely different in five years when he graduates.
+
+01:19:32:13 - 01:20:03:09
+Unknown
+Like, I don't even know what they're going to do. Yeah. I mean, like I always told people I was like, you know, we're all just humans and coding as a second language and AI is building a native speaker. Yes. Yeah. Right there. Just you can't compare and that is where the tech companies are focusing, because the ultimate goal, I believe, is to develop essentially AI engineers so they can start recursive building their own eyes.
+
+01:20:03:11 - 01:20:24:10
+Unknown
+So of course that's where you start. Yeah. You start with the thing you want, which is an AI coder that's better than any human AI coder. Say course you're starting with. Yeah. So it is by far the best at that. Yep, yep. 100% to fully agree that's coming. All right. Well Tom, I'm glad we worked that out. And yeah, I will make sure not to let me know.
+
+01:20:24:10 - 01:20:42:24
+Unknown
+Wait, will isms bleed over? But I'm excited to finish it out. So I think it's I think it's great. It's awesome. I had a way to send it to my kid and make him do it. Oh yeah, I would do it as well. But yeah, yeah, I did present. Awesome. All right. I'll get to work on this and then and then get you guys the report by the end of the day.
+
+01:20:42:27 - 01:21:10:21
+Unknown
+Awesome. Thank you very much. Appreciate it. I see.
+
+01:21:10:24 - 01:21:41:06
+Unknown
+No, no.
+
+01:21:41:08 - 01:22:05:26
+Unknown
+Oh.
+
+01:22:05:29 - 01:22:07:11
+Unknown
+Hello. Hello how.
+

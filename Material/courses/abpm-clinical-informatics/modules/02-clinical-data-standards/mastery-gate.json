@@ -1,0 +1,209 @@
+{
+  "id": "mg-02-clinical-data-standards",
+  "moduleId": "02-clinical-data-standards",
+  "title": "Module 2 Mastery Gate — Clinical Data Standards",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions covering interoperability levels, HL7 v2/v3, FHIR, the major terminologies, billing codes, and UCUM. The vocabulary identification questions reward you for reading the use case carefully, not just matching keywords. Read every rationale.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "interoperability-four-levels",
+      "prompt": "Two hospitals exchange CDA documents successfully. The CDA documents parse correctly on both sides. The receiving clinicians find the imported problem lists nearly useless because the local sender uses unmapped free-text problems and the medications arrive without dose or route. Which level of interoperability has FAILED?",
+      "options": [
+        "Foundational",
+        "Structural",
+        "Semantic",
+        "Organizational"
+      ],
+      "correct": 2,
+      "rationale": "The bytes arrived (foundational ✓), the documents parsed (structural ✓), and the organizations are willing to share (organizational ✓). What failed is that the *meaning* of the codes does not survive the trip — problems are unmapped, medications lack the structured detail needed for clinical use. That is a semantic interoperability failure, and it is the level that fails most often in real-world deployments. Note that all four levels can fail independently and most projects only test the lower levels."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "interoperability-four-levels",
+      "prompt": "A regional HIE has perfect technical exchange between two competing health systems. Both have semantic interoperability. The data still does not flow because the two systems' lawyers cannot agree on a data use agreement. Which level of interoperability has failed?",
+      "options": [
+        "Foundational",
+        "Structural",
+        "Semantic",
+        "Organizational"
+      ],
+      "correct": 3,
+      "rationale": "Organizational interoperability is the level the Cures Act information blocking rule is trying to force. The technical levels can be perfect and the data can still fail to flow because of governance, trust, legal, or business reasons. This is the most common failure mode in real interoperability initiatives and the one the press most often misdiagnoses as a 'technical' problem. The boards specifically reward you for distinguishing organizational failures from technical ones."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "hl7-v2",
+      "prompt": "A board stem describes a hospital where most ancillary systems (lab, radiology, pharmacy) are 'out of sync' with the EHR's patient census after a planned downtime. Which HL7 v2 message type is most likely involved in restoring synchronization?",
+      "options": [
+        "ORM (Order Message)",
+        "ORU (Observational Result Unsolicited)",
+        "ADT (Admit, Discharge, Transfer)",
+        "MDM (Medical Document Management)"
+      ],
+      "correct": 2,
+      "rationale": "ADT messages carry patient movement events (admit, discharge, transfer, register) and are how almost every downstream system in a hospital keeps its patient list in sync with the EHR. After a downtime, the resynchronization is almost always an ADT replay. ORM is for orders, ORU is for results, MDM is for clinical documents. Memorize the v2 message-type cheat sheet — the boards reuse it: ADT/ORM/ORU/MDM/SIU/DFT covers most of the question space."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "hl7-v3",
+      "prompt": "Which of the following is the BEST explanation for why HL7 v3 failed to replace HL7 v2 in U.S. hospitals?",
+      "options": [
+        "v3 was technically incorrect.",
+        "v3 had no support from any standards body.",
+        "v3 had a vertical learning curve, required mastery of the Reference Information Model, had inadequate tooling, and required the entire ecosystem to migrate at once with no incremental incentive.",
+        "v3 was prohibited by the FDA."
+      ],
+      "correct": 2,
+      "rationale": "The v3 cautionary tale is required board knowledge. v3 was beautiful in theory and unworkable in practice: the RIM took weeks to learn, the tooling was expensive and fragile, vendors had no incentive to migrate, and the standard was so flexible that no two implementations interpreted it identically. The lesson HL7 took from v3 — and that produced FHIR — was that standards must be easy to implement with normal tools, not theoretically pure. The one piece of v3 that survived is CDA (Clinical Document Architecture), which was Meaningful-Use-relevant for document exchange."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "fhir",
+      "prompt": "A third-party patient-facing app launches from inside an EHR's patient portal, asks the patient to consent to a set of OAuth scopes, and then makes API calls against the EHR's FHIR endpoint to retrieve the patient's records. Which standard or framework BEST describes this pattern?",
+      "options": [
+        "HL7 v2 over MLLP",
+        "C-CDA document exchange",
+        "SMART on FHIR",
+        "Arden Syntax"
+      ],
+      "correct": 2,
+      "rationale": "SMART on FHIR is exactly this pattern — OAuth-authorized, scope-requested, EHR-launched, FHIR-API-driven, third-party-app-friendly. The Cures Act API rule effectively mandated SMART on FHIR for certified EHRs. Arden Syntax is a CDS knowledge representation language (Module 4), C-CDA is for document exchange, and HL7 v2 over MLLP is the legacy intra-hospital interface pattern. If a stem describes a third-party app launching from an EHR with OAuth, the answer is SMART on FHIR — there is no other right answer the boards will give."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "us-core",
+      "prompt": "A health system claims their FHIR API is 'fully standards-compliant' but a third-party app cannot reliably parse the Observation resources because required fields like the LOINC code are sometimes missing and the units are in vendor-specific strings. What is the most likely missing piece?",
+      "options": [
+        "The system needs a faster FHIR server.",
+        "The system needs to conform to a specific implementation guide such as US Core, with required profiles, value set bindings, and required elements.",
+        "The system needs to switch from JSON to XML.",
+        "The system needs to migrate from FHIR R4 to FHIR R5."
+      ],
+      "correct": 1,
+      "rationale": "Plain FHIR is deliberately permissive — almost any field is optional and almost any code system can be used. Implementation guides like US Core add the constraints that make interoperability work in practice: which profiles to use, which fields are required, which value sets must be bound. A system that exposes FHIR without conforming to a shared implementation guide is technically compliant and practically useless. The boards distinguish 'FHIR' from 'FHIR + US Core' precisely on this point."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "snomed-ct",
+      "prompt": "Which vocabulary is the most appropriate choice for the EHR problem list, where clinicians need rich clinical expressiveness, hierarchical reasoning (so a query for 'heart failure' captures all subtypes), and a vocabulary that is free for U.S. users due to a national license?",
+      "options": [
+        "ICD-10-CM",
+        "CPT",
+        "SNOMED CT",
+        "HCPCS Level II"
+      ],
+      "correct": 2,
+      "rationale": "SNOMED CT is the right answer for the problem list and for most clinical (non-billing) reasoning. It has the granularity (350,000+ concepts), the polyhierarchical structure, and is free for U.S. users via the National Library of Medicine's national license. ICD-10-CM is for billing and lacks the granularity and hierarchical reasoning depth. CPT is for procedures, not diagnoses. HCPCS is for items and services beyond CPT. The boards test the SNOMED-as-problem-list use case directly."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "loinc",
+      "prompt": "A lab system in Boston sends a result to a hospital in Phoenix. The local lab calls the test 'Na'; the receiving hospital calls it 'Sodium, serum.' Which vocabulary should both sides use to ensure they agree on what test was performed?",
+      "options": [
+        "SNOMED CT",
+        "LOINC",
+        "RxNorm",
+        "ICD-10-CM"
+      ],
+      "correct": 1,
+      "rationale": "LOINC is the vocabulary for *what is being measured* — lab tests, vital sign types, document types. The LOINC code identifies the test (e.g., `2951-2` for sodium in serum or plasma), regardless of what the local lab calls it. The actual numeric value goes in a separate field with UCUM units. Note: LOINC identifies the test, not the result value — the most common LOINC mistake is conflating the two. SNOMED would be wrong here because SNOMED is for clinical findings, not for what test was performed."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "rxnorm",
+      "prompt": "Which vocabulary is the U.S. standard for medication coding, used by ePrescribing, drug-drug interaction checking, and medication reconciliation, and is freely available from the National Library of Medicine?",
+      "options": [
+        "First DataBank",
+        "RxNorm",
+        "SNOMED CT (medication concepts)",
+        "NDC (National Drug Code)"
+      ],
+      "correct": 1,
+      "rationale": "RxNorm is the U.S. standard medication vocabulary, free, NLM-maintained, and the lingua franca for medication interoperability. Vendor dictionaries (First DataBank, Multum, Medi-Span) map *to* RxNorm. SNOMED has medication concepts but at the substance level, not the prescribable-clinical-drug level. NDC identifies a specific manufacturer's package — too granular for clinical reasoning, used primarily for billing and inventory. For ePrescribing and CDS, the right level is RxNorm clinical drug (ingredient + strength + dose form)."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "icd-10-cm",
+      "prompt": "Which code set is used for billing inpatient procedures in U.S. hospitals?",
+      "options": [
+        "CPT",
+        "ICD-10-CM",
+        "ICD-10-PCS",
+        "HCPCS Level II"
+      ],
+      "correct": 2,
+      "rationale": "ICD-10-PCS is the U.S. inpatient procedure coding system, used by hospitals for procedures performed during inpatient stays. CPT is for outpatient procedures and physician services across all settings. ICD-10-CM (note the CM, not PCS) is for diagnoses, not procedures. HCPCS Level II is for items and services beyond CPT (DME, ambulance, etc.). The most common confusion is mixing up ICD-10-CM (diagnoses) and ICD-10-PCS (inpatient procedures); they share a name but not a design and serve different purposes."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "cpt",
+      "prompt": "Which procedure code set is owned and maintained by the American Medical Association as a proprietary standard?",
+      "options": [
+        "ICD-10-PCS",
+        "CPT",
+        "SNOMED CT",
+        "LOINC"
+      ],
+      "correct": 1,
+      "rationale": "CPT is owned by the AMA and licensed for use. This is one of the most-debated facts in U.S. health IT — the country's primary procedure coding standard is owned by a private association — and it is exactly the kind of factual question the boards test. ICD-10-PCS is owned by CMS. SNOMED CT is owned by SNOMED International (free in the U.S. via the NLM license). LOINC is freely available from Regenstrief."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "drg-msdrg",
+      "prompt": "A hospital coder asks a physician to clarify whether a patient's pneumonia was 'simple' or 'complex' because the documentation is ambiguous. The clarification could change the patient's MS-DRG assignment and the hospital's payment for the stay. Which clinical informatics function is this coder performing?",
+      "options": [
+        "Clinical decision support",
+        "Clinical documentation improvement (CDI)",
+        "Information blocking review",
+        "Patient matching"
+      ],
+      "correct": 1,
+      "rationale": "Clinical documentation improvement (CDI) is the function whose job is to ensure that documentation in the EHR supports the DRG the hospital believes it has earned. CDI specialists query physicians to clarify ambiguous documentation that affects coding. CDI is the most visible part of the clinical-billing seam and is the work the U.S. health system does to translate between clinical and billing vocabularies. Whether CDI is sensible or administrative bloat is contested; the boards test whether you can identify it by name and explain its function."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "ucum",
+      "prompt": "A FHIR Observation resource for serum creatinine includes the LOINC code, the numeric value, and a units string. Which vocabulary should provide the units string to ensure unambiguous interpretation by any receiving system?",
+      "options": [
+        "SNOMED CT qualifier values",
+        "UCUM",
+        "Vendor-specific local strings",
+        "ISO units"
+      ],
+      "correct": 1,
+      "rationale": "UCUM (Unified Code for Units of Measure) is the units standard adopted by FHIR, HL7, and LOINC. It provides stable, unambiguous, machine-parseable strings for every unit (`mg/dL`, `umol/L`, `mEq/L`, etc.). Local strings produce errors that range from annoying to fatal — the canonical example is creatinine, where `mg/dL` and `umol/L` differ by a factor of ~88 and the same numeric value can be normal or catastrophically abnormal depending on which is meant. UCUM is case-sensitive and uses square brackets for special units."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "fhir",
+      "prompt": "In two or three sentences, explain why a vendor's claim that 'our EHR is FHIR-compliant' is not, by itself, a sufficient guarantee that a third-party app will be able to interoperate with the EHR. Name at least two specific things still required.",
+      "expectedKeywords": ["implementation guide", "US Core", "profile", "vocabulary"],
+      "rationale": "A complete answer should observe that plain FHIR is deliberately permissive — fields are mostly optional, code systems can vary, and there is no single canonical shape for any resource. Real interoperability requires additional commitments: conforming to an implementation guide (US Core in the U.S.), binding fields to specific vocabularies (LOINC, SNOMED, RxNorm, UCUM), making required fields actually required, and exposing the right resources for the use case. SMART on FHIR is also commonly required for app launch and authorization. 'FHIR compliant' is the start of the conversation, not the end."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "snomed-ct",
+      "prompt": "A registry team is choosing between using ICD-10-CM and SNOMED CT to identify patients with diabetes for a quality improvement project. Identify one advantage and one disadvantage of each approach. Three to four sentences total.",
+      "expectedKeywords": ["ICD", "SNOMED", "billing", "granularity", "claims"],
+      "rationale": "A complete answer recognizes that ICD-10-CM is universal across hospitals (because every claim has it), trivially available from the claims database, and matches the way most CMS measure denominators are historically defined — but it is lower-granularity, dependent on what the coder assigned, and can miss patients whose diabetes is documented but not coded on a given encounter. SNOMED is more clinically expressive, supports hierarchical case-finding (the hierarchy automatically captures all subtypes), and reflects the clinical record more accurately — but it depends on consistent problem-list hygiene, may not match the payer's denominator, and is harder to use for cross-institution comparisons. The right answer for most quality projects is to run both and reconcile, treating the gap as itself a quality signal."
+    }
+  ]
+}

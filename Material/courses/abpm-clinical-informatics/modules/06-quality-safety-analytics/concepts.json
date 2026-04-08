@@ -1,0 +1,225 @@
+{
+  "moduleId": "06-quality-safety-analytics",
+  "concepts": [
+    {
+      "id": "clinical-quality-measure",
+      "label": "Clinical Quality Measure",
+      "summary": "A precisely specified arithmetic operation on a defined population over a defined time window that produces a number used as a stand-in for quality. Defined by numerator, denominator, exclusions, exceptions, and measurement period. The English description is the brochure; the value sets are the contract."
+    },
+    {
+      "id": "numerator-denominator",
+      "label": "Numerator and Denominator",
+      "summary": "Denominator: the population the measure applies to. Numerator: the subset of the denominator who received the rewarded action or experienced the tracked outcome. The measure score is numerator divided by denominator after exclusions and exceptions are handled per the spec."
+    },
+    {
+      "id": "measure-exclusions-exceptions",
+      "label": "Exclusions vs Exceptions",
+      "summary": "Exclusions remove the patient from the denominator entirely (the patient was never eligible). Exceptions keep the patient in the denominator but pull them out of the failing count when there is a documented clinical reason (refusal, contraindication, system reason). Distinct concepts; the boards test the disambiguation."
+    },
+    {
+      "id": "process-vs-outcome-measure",
+      "label": "Process vs Outcome Measures",
+      "summary": "A process measure asks whether a recommended action was taken (aspirin within 24 hours of MI). An outcome measure asks what happened to the patient (mortality, readmission, complications). Process measures are easier to compute and attribute; outcome measures are intellectually superior but harder to interpret without risk adjustment."
+    },
+    {
+      "id": "balancing-measure",
+      "label": "Balancing Measure",
+      "summary": "A measure that tracks whether an intervention to improve one measure has degraded something else. The C. difficile rate alongside sepsis bundle compliance. The presence of balancing measures on a dashboard is a marker of analytic maturity."
+    },
+    {
+      "id": "donabedian",
+      "label": "Donabedian Structure-Process-Outcome",
+      "summary": "Avedis Donabedian's 1966 framework. Structure = what the system is (staffing, capability, certification). Process = what the system does (the recommended action). Outcome = what happens to the patient. The links are leaky and require evidence to assert. Required board recall."
+    },
+    {
+      "id": "ecqm",
+      "label": "Electronic Clinical Quality Measure (eCQM)",
+      "summary": "A quality measure whose specification is written in a form an EHR can compute automatically without manual chart abstraction. Written in CQL (Clinical Quality Language), the same HL7 language used for CDS Knowledge Artifacts. CMS publishes eCQM specs annually for federal reporting programs."
+    },
+    {
+      "id": "clinical-registry",
+      "label": "Clinical Registry",
+      "summary": "A purpose-built database that identifies and tracks every patient with a specific condition, exposure, intervention, or device. Defined by case-finding logic, structured data elements, and a defined operational or analytic purpose. Examples: diabetes registry, cancer registry, device registry."
+    },
+    {
+      "id": "data-warehouse",
+      "label": "Data Warehouse",
+      "summary": "A general-purpose analytical store fed periodically from operational sources via ETL/ELT, dimensionally modeled (often Kimball star schema), designed to answer questions across many patients, encounters, and domains. Pays for generality with freshness lag."
+    },
+    {
+      "id": "data-mart",
+      "label": "Data Mart",
+      "summary": "A subset of the warehouse focused on a specific subject area or audience, modeled to answer that audience's questions, physically separated for performance and access control. Derived from the warehouse, not parallel to it."
+    },
+    {
+      "id": "data-lake",
+      "label": "Data Lake",
+      "summary": "A large schema-on-read store of raw data — structured, semi-structured, unstructured — kept in native format and parsed only when queried. Trades the warehouse's curation for flexibility. Without governance, becomes a 'data swamp.' Lakehouse architectures combine lake storage with warehouse-style modeled layers."
+    },
+    {
+      "id": "clinical-data-repository",
+      "label": "Clinical Data Repository (CDR)",
+      "summary": "The operational store the EHR reads and writes during clinical care. Normalized for transactional integrity, optimized for low-latency single-patient lookups. Not designed for population queries; that is what warehouses, registries, and marts exist for. (Reused from Module 3.)"
+    },
+    {
+      "id": "data-governance",
+      "label": "Data Governance",
+      "summary": "The discipline of deciding who decides what data goes in, what comes out, who can read it, and how definitions are maintained. Without governance, registries decay and warehouses accumulate conflicting definitions. Governance is the question institutions most often skip."
+    },
+    {
+      "id": "fitness-for-use",
+      "label": "Fitness-for-Use",
+      "summary": "The discipline of asking, for any data element, what its capture process was and what biases that process introduces. Most clinical data was captured for billing or documentation, not for analytics. Race captured by registration clerks is fit for one purpose and not another. The boards test the term."
+    },
+    {
+      "id": "etl-vs-elt",
+      "label": "ETL vs ELT",
+      "summary": "ETL: extract data, transform it, load it into the warehouse in modeled form. ELT: extract data, load it raw, transform on demand inside the warehouse. ELT is more common in modern lakehouse architectures with cheap storage and powerful query engines."
+    },
+    {
+      "id": "quality-dashboard",
+      "label": "Quality Dashboard",
+      "summary": "A visual display of quality measures, designed for a specific audience and a specific decision. Three audience types — executive, operational, frontline — with different freshness, granularity, and design needs. Most dashboards in routine use fail because they were built for one audience and rolled out to others."
+    },
+    {
+      "id": "dashboard-audience",
+      "label": "Dashboard Audience Taxonomy",
+      "summary": "Executive (C-suite, monthly, institutional, strategic decisions). Operational (managers, daily/weekly, unit-level, problem identification). Frontline (clinicians, real-time, patient-level, immediate action). The same measure should usually be presented in three different ways for the three audiences."
+    },
+    {
+      "id": "data-density",
+      "label": "Tufte Data-Ink Ratio",
+      "summary": "Edward Tufte's principle that every pixel of a graphic should be doing data-display work; decorative ink is friction. Avoid chart-junk. Use small multiples. Show variation honestly. A tool, not a creed — dogmatic Tuftism that produces unreadable executive dashboards is its own failure."
+    },
+    {
+      "id": "vanity-metrics",
+      "label": "Vanity Metrics",
+      "summary": "Numbers that go up over time and feel good but do not predict any outcome anyone cares about. Number of CDS rules deployed. Orders signed in under 60 seconds. A Sittig-Singh dimension-8 failure dressed up as success."
+    },
+    {
+      "id": "denominator-drift",
+      "label": "Denominator Drift",
+      "summary": "The denominator changes over time without anyone noticing, and the trend in the ratio is partly real and partly an artifact of the changing denominator. The single most common analytic failure in operational quality measurement. Defense: chart numerator and denominator separately."
+    },
+    {
+      "id": "dashboard-freshness",
+      "label": "Dashboard Freshness",
+      "summary": "The recency of the data displayed. Dashboards should always show an 'as of' timestamp so the viewer knows what state the data is in. Stale data without a freshness marker invites the viewer to act on stale information."
+    },
+    {
+      "id": "run-charts",
+      "label": "Run Charts and SPC Charts",
+      "summary": "Time-series charts that show variation honestly with explicit upper and lower control limits, allowing the viewer to separate signal from noise. The standard antidote to dashboards that show single numbers without context."
+    },
+    {
+      "id": "regression-to-mean",
+      "label": "Regression to the Mean",
+      "summary": "When a measurement is partly signal and partly noise, an extreme value is more likely from a moment of large noise than from sustained extreme signal. Re-measure and the value moves toward the mean. Defense: a control group. The trap behind 'targeted intervention worked' claims."
+    },
+    {
+      "id": "simpsons-paradox",
+      "label": "Simpson's Paradox",
+      "summary": "A trend that appears within several groups can disappear or reverse when the groups are pooled. The pooled comparison reflects the case mix rather than the within-group effect. Defense: stratification or a regression model that adjusts for the stratification variable. Board favorite."
+    },
+    {
+      "id": "selection-bias",
+      "label": "Selection Bias",
+      "summary": "The patients in the analysis are not a random sample of the population the conclusions apply to, and the selection mechanism is correlated with the outcome. Many forms: volunteer bias, healthy-user bias, healthy-adherer bias. Defense: randomization or careful adjustment."
+    },
+    {
+      "id": "immortal-time-bias",
+      "label": "Immortal-Time Bias",
+      "summary": "A study compares 'received' versus 'did not receive' an intervention with a time-window definition that gives the 'received' group a guaranteed survival advantage — the period during which they had to be alive to receive the intervention. Classic in cardiac rehab and transplant studies. Defense: start the clock at exposure, or use time-varying covariates."
+    },
+    {
+      "id": "confounding-by-indication",
+      "label": "Confounding by Indication",
+      "summary": "In observational data, patients receive treatments because they are sick. Comparing treated to untreated without adjustment makes the treated group look worse, because the indication for treatment was severity. Classic example: long-term oxygen in COPD. Defense: randomization, propensity matching, instrumental variables."
+    },
+    {
+      "id": "base-rate-neglect",
+      "label": "Base-Rate Neglect",
+      "summary": "Interpreting a positive test as if it told you the probability of disease, when actually that probability depends on the prevalence. Sets up the low-prevalence trap. Defense: compute the predictive values, not just sensitivity and specificity."
+    },
+    {
+      "id": "multiple-comparisons",
+      "label": "Multiple Comparisons Inflation",
+      "summary": "Running many statistical tests at α = 0.05 with no adjustment guarantees false-positive 'significant' results by chance. Defense: pre-specify the analyses, or correct (Bonferroni for small numbers, FDR for large numbers). The trap behind 'we sliced the data and found something interesting.'"
+    },
+    {
+      "id": "sensitivity-specificity",
+      "label": "Sensitivity and Specificity",
+      "summary": "Sensitivity = P(positive | disease). Specificity = P(negative | no disease). Properties of the test that do not depend on prevalence. Necessary but not sufficient — they tell you what the test does, not what a positive result means clinically."
+    },
+    {
+      "id": "ppv-npv",
+      "label": "PPV and NPV",
+      "summary": "Positive predictive value = P(disease | positive). Negative predictive value = P(no disease | negative). Both depend on prevalence. The reason a 99% accurate test produces a 9% PPV at 0.1% prevalence."
+    },
+    {
+      "id": "low-prevalence-trap",
+      "label": "Low-Prevalence Trap",
+      "summary": "At low prevalence, even a highly accurate screening test produces a positive predictive value that is counterintuitively low because false positives swamp true positives. The dominant fact about screening at low base rates and the reason CDS rules with low true-positive base rates produce alert streams clinicians experience as false."
+    },
+    {
+      "id": "population-health",
+      "label": "Population Health Management",
+      "summary": "The operational discipline of taking responsibility for outcomes across a defined population, not just for patients who happen to show up. Built on risk stratification, case identification, and panel management. Most institutions have the analytics and lack the operational discipline."
+    },
+    {
+      "id": "risk-stratification",
+      "label": "Risk Stratification",
+      "summary": "Dividing a population into tiers by predicted need or bad outcome — the Kaiser pyramid (high-risk, rising-risk, low-risk). Done with simple rules, published scores (LACE, ACG), or custom predictive models. A working classifier is necessary but not sufficient for outcome change."
+    },
+    {
+      "id": "case-identification",
+      "label": "Case Identification",
+      "summary": "The process of finding the specific patients in the high-risk tier who should receive a specific intervention. Overlaps with the registry concept — a registry is one form of case identification."
+    },
+    {
+      "id": "panel-management",
+      "label": "Panel Management",
+      "summary": "Day-to-day work of acting on case identification — closing care gaps, sending outreach, coordinating across teams, tracking who has been touched. The operational layer where most population health programs actually fail."
+    },
+    {
+      "id": "public-health-informatics",
+      "label": "Public Health Informatics",
+      "summary": "Application of informatics to populations defined by public health authorities (local, state, federal, global). Bidirectional flows: institutions report cases and exposures; public health pushes guidance and signals back. (Reused from Module 1.)"
+    },
+    {
+      "id": "syndromic-surveillance",
+      "label": "Syndromic Surveillance",
+      "summary": "Near-real-time monitoring of aggregated clinical activity (chief complaints, ICD codes, demographics) from EDs and hospitals to public health for early signal detection. CDC's BioSense / National Syndromic Surveillance Program (NSSP). Aggregated, not case-by-case."
+    },
+    {
+      "id": "electronic-case-reporting",
+      "label": "Electronic Case Reporting (eCR)",
+      "summary": "Automated case-by-case reporting of individual reportable conditions from the EHR to public health using a standardized trigger code list (RCTC). Sent as an eICR message (CDA or FHIR) through routing services like AIMS Platform. Replaces fax-based case reporting."
+    },
+    {
+      "id": "reportable-conditions",
+      "label": "Reportable Conditions",
+      "summary": "Diseases and exposures that institutions are legally required to report to public health authorities. State-level legal requirement (lists vary by state) with federal aggregation through CDC's nationally notifiable conditions list. TB, syphilis, gonorrhea, HIV, measles, pertussis, foodborne illnesses, certain cancers."
+    },
+    {
+      "id": "immunization-information-systems",
+      "label": "Immunization Information Systems (IIS)",
+      "summary": "State-level databases that aggregate immunization records across providers so any provider can see a patient's full vaccination history regardless of where doses were given. State-operated, bidirectional, formerly known as immunization registries. Closest thing in U.S. healthcare to a true longitudinal record across providers."
+    },
+    {
+      "id": "fhir-public-health",
+      "label": "FHIR-Based Public Health Reporting",
+      "summary": "The Cures-Act-era and post-COVID push to standardize public health reporting on the same FHIR API surface used for clinical data exchange. CDC's Data Modernization Initiative drives the transition. eCR moving from CDA to FHIR; IIS moving from HL7 v2 to FHIR APIs."
+    },
+    {
+      "id": "cqi-and-cql",
+      "label": "Clinical Quality Language (CQL)",
+      "summary": "HL7 language for expressing both decision logic (CDS Knowledge Artifacts) and quality measure logic (eCQMs). Designed as a single language so the same engineering discipline and the same value sets serve both. (Reused from Module 4.)"
+    },
+    {
+      "id": "sittig-singh",
+      "label": "Sittig-Singh",
+      "summary": "Dean Sittig and Hardeep Singh, authors of the eight-dimension sociotechnical model and the SAFER Guides. Referenced in this module for dimension 8 (system measurement and monitoring), the dimension that distinguishes mature informatics programs. (Reused from Module 5.)"
+    }
+  ]
+}

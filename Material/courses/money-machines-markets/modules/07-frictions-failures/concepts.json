@@ -1,0 +1,229 @@
+{
+  "moduleId": "07-frictions-failures",
+  "concepts": [
+    {
+      "id": "bezzle",
+      "name": "The bezzle",
+      "definition": "Galbraith's term for the temporary paper surplus that exists when embezzled wealth is gone but the victim does not yet know it is gone. Expands in bull markets, contracts in bear markets.",
+      "appearsInLessons": ["01-fraud-and-the-bezzle"]
+    },
+    {
+      "id": "rehypothecation",
+      "name": "Rehypothecation",
+      "definition": "Pledging the same collateral to multiple counterparties, or lending out customer-deposited assets. Looks like diversification on the asset side; is actually concentrated counterparty risk.",
+      "appearsInLessons": ["01-fraud-and-the-bezzle"]
+    },
+    {
+      "id": "proof-of-reserves",
+      "name": "Proof-of-reserves",
+      "definition": "A cryptographic attestation that a custodian holds a specified set of assets on-chain. A real improvement over no attestation; not a proof of solvency, because it says nothing about liabilities.",
+      "appearsInLessons": ["01-fraud-and-the-bezzle"]
+    },
+    {
+      "id": "reflexivity",
+      "name": "Reflexivity",
+      "definition": "A feedback loop in which the price of an asset and the solvency of an entity holding it are coupled, so a price drop and a solvency event become the same event.",
+      "appearsInLessons": ["01-fraud-and-the-bezzle"]
+    },
+    {
+      "id": "counterparty-risk",
+      "name": "Counterparty risk",
+      "definition": "The risk that the entity on the other side of a position fails to deliver. In crypto, often hidden behind layers of wrapped assets and undisclosed lending.",
+      "appearsInLessons": ["01-fraud-and-the-bezzle"]
+    },
+    {
+      "id": "model-collapse",
+      "name": "Model collapse",
+      "definition": "A degenerative process in which a generative model trained repeatedly on its own outputs loses information about the tails of the original data distribution. Real in pure self-loops; not what curated frontier pipelines actually do.",
+      "appearsInLessons": ["02-model-collapse"]
+    },
+    {
+      "id": "synthetic-data",
+      "name": "Synthetic data",
+      "definition": "Training data produced by another model rather than collected from humans. Curated synthetic data is used at scale by frontier labs in 2026; the long-run effects of heavy synthetic mixes are an open question.",
+      "appearsInLessons": ["02-model-collapse"]
+    },
+    {
+      "id": "distribution-shift",
+      "name": "Distribution shift",
+      "definition": "The world changes after a model is trained, so the inference distribution no longer matches the training distribution. Distinct from model collapse.",
+      "appearsInLessons": ["02-model-collapse"]
+    },
+    {
+      "id": "data-attribution",
+      "name": "Data attribution",
+      "definition": "The (mostly unsolved) problem of tracing a model's behavior back to specific training examples. Matters for copyright, privacy, and curation quality.",
+      "appearsInLessons": ["02-model-collapse"]
+    },
+    {
+      "id": "mode-coverage",
+      "name": "Mode coverage",
+      "definition": "Whether a generative model's outputs span the full diversity of the underlying distribution or only its high-probability center. Lost in collapse.",
+      "appearsInLessons": ["02-model-collapse"]
+    },
+    {
+      "id": "regulatory-capture",
+      "name": "Regulatory capture",
+      "definition": "Stigler's term for the structural drift in which the agency policing an industry is shaped by, staffed from, and intellectually aligned with that industry. Not the same as corruption; usually emerges from information asymmetry and incentive alignment.",
+      "appearsInLessons": ["03-regulatory-capture"]
+    },
+    {
+      "id": "moat-by-compliance",
+      "name": "Moat-by-compliance",
+      "definition": "A regulation that disproportionately burdens small entrants because incumbents already have compliance teams. The mechanism by which capture entrenches incumbents without bribery.",
+      "appearsInLessons": ["03-regulatory-capture"]
+    },
+    {
+      "id": "safety-washing",
+      "name": "Safety-washing",
+      "definition": "Using the language of safety to advocate for rules whose primary effect is competitive — a moat dressed as a concern. Not all safety language is washing; the hard part is telling them apart.",
+      "appearsInLessons": ["03-regulatory-capture"]
+    },
+    {
+      "id": "revolving-door",
+      "name": "Revolving door",
+      "definition": "Movement of personnel between regulatory agencies and the industries they regulate. One mechanism of capture, but not the only or even the most important one.",
+      "appearsInLessons": ["03-regulatory-capture"]
+    },
+    {
+      "id": "rent-seeking",
+      "name": "Rent-seeking",
+      "definition": "Capturing value through political or regulatory advantage rather than by producing it. The structural form of regulatory capture from the incumbent's side.",
+      "appearsInLessons": ["03-regulatory-capture"]
+    },
+    {
+      "id": "contextual-integrity",
+      "name": "Contextual integrity",
+      "definition": "Helen Nissenbaum's framing of privacy as norms of information flow attached to specific contexts. Privacy violations include recontextualization, not just unauthorized access.",
+      "appearsInLessons": ["04-privacy-and-perfect-memory"]
+    },
+    {
+      "id": "right-to-be-forgotten",
+      "name": "Right to be forgotten",
+      "definition": "A legal right (most developed in the EU) to have personal information removed from databases and search indexes. Designed for databases; awkward to apply to trained models.",
+      "appearsInLessons": ["04-privacy-and-perfect-memory"]
+    },
+    {
+      "id": "chain-analysis",
+      "name": "Chain analysis",
+      "definition": "The practice of clustering on-chain addresses and linking them to real-world identities. Sold to law enforcement, tax authorities, and private firms. The reason crypto pseudonymity is not anonymity.",
+      "appearsInLessons": ["04-privacy-and-perfect-memory"]
+    },
+    {
+      "id": "training-corpus-leakage",
+      "name": "Training corpus leakage",
+      "definition": "Verbatim or near-verbatim regurgitation by a trained model of text from its training data, including private or deleted content. Documented in frontier models.",
+      "appearsInLessons": ["04-privacy-and-perfect-memory"]
+    },
+    {
+      "id": "zero-knowledge",
+      "name": "Zero-knowledge proofs",
+      "definition": "Cryptographic proofs that let you demonstrate a claim is true without revealing the underlying data. The most promising technical answer to digital privacy and the most underrated cryptographic primitive in the privacy debate.",
+      "appearsInLessons": ["04-privacy-and-perfect-memory"]
+    },
+    {
+      "id": "energy-mix",
+      "name": "Energy mix",
+      "definition": "The breakdown of generation sources (coal, gas, hydro, wind, solar, nuclear) supplying a given load. Bitcoin's mix is meaningfully different from the average data center's because of mining's location-flexibility.",
+      "appearsInLessons": ["05-energy-and-moral-arithmetic"]
+    },
+    {
+      "id": "stranded-energy",
+      "name": "Stranded energy",
+      "definition": "Generation that exists in a place or at a time where it cannot be easily delivered to demand — flared gas, curtailed wind, off-peak hydro. Bitcoin mining can monetize some of it; this is a real, partial defense of the energy footprint.",
+      "appearsInLessons": ["05-energy-and-moral-arithmetic"]
+    },
+    {
+      "id": "marginal-emissions",
+      "name": "Marginal emissions",
+      "definition": "The carbon intensity of the *new* electricity generation that meets a new load, rather than the average mix of the existing grid. Usually higher than average, because new load is met by ramping up dispatchable (often dirty) generation.",
+      "appearsInLessons": ["05-energy-and-moral-arithmetic"]
+    },
+    {
+      "id": "whataboutism",
+      "name": "Whataboutism",
+      "definition": "The rhetorical move of defending a thing by pointing at the costs of another thing. Common in energy debates and almost always a defection from the actual question.",
+      "appearsInLessons": ["05-energy-and-moral-arithmetic"]
+    },
+    {
+      "id": "opportunity-cost",
+      "name": "Opportunity cost",
+      "definition": "The value of the next-best use of a resource that you forgo by using it for something else. The right unit for evaluating energy footprints is opportunity cost, not absolute use.",
+      "appearsInLessons": ["05-energy-and-moral-arithmetic"]
+    },
+    {
+      "id": "calibration",
+      "name": "Calibration",
+      "definition": "The match between your stated confidence and your actual hit rate. A well-calibrated forecaster who says '80% likely' is right ~80% of the time. Most loud voices in this domain are not calibrated; they are confident.",
+      "appearsInLessons": ["06-what-we-dont-know"]
+    },
+    {
+      "id": "epistemic-humility",
+      "name": "Epistemic humility",
+      "definition": "The discipline of holding uncertainty as uncertainty rather than collapsing it to a side. Hard because it reads as weakness in social settings that reward confidence.",
+      "appearsInLessons": ["06-what-we-dont-know"]
+    },
+    {
+      "id": "knightian-uncertainty",
+      "name": "Knightian uncertainty",
+      "definition": "Frank Knight's distinction between risk (known probability distribution) and uncertainty (no usable distribution). Knightian questions cannot be resolved by reading more.",
+      "appearsInLessons": ["06-what-we-dont-know"]
+    },
+    {
+      "id": "base-rate",
+      "name": "Base rate",
+      "definition": "The historical frequency of an event of a given kind. Predictions made without reference to base rates are usually wrong in predictable directions.",
+      "appearsInLessons": ["06-what-we-dont-know"]
+    },
+    {
+      "id": "unknown-unknown",
+      "name": "Unknown unknown",
+      "definition": "A category of risk you have not even named. The most consequential category in a fast-moving domain, and the hardest to study.",
+      "appearsInLessons": ["06-what-we-dont-know"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "proof-of-reserves",
+      "wrongBelief": "If an exchange publishes proof-of-reserves, my deposits are safe.",
+      "correctView": "Proof-of-reserves shows assets, not solvency. An exchange with verifiable assets and undisclosed liabilities is still insolvent. The honest version is proof-of-solvency, which is much harder and rare in practice.",
+      "watchFor": "Students who treat any cryptographic attestation as a full safety guarantee. The right next question is always 'and the liabilities?'"
+    },
+    {
+      "id": "misc-2",
+      "concept": "model-collapse",
+      "wrongBelief": "Frontier models are about to collapse because they're running out of human data and will start training on each other.",
+      "correctView": "The strict self-loop scenario in the original collapse papers is not what frontier labs do — they curate, mix human and synthetic data, and filter heavily. Collapse in the strict sense is unlikely under current pipelines; quality drift over many synthetic-heavy generations is a genuinely open question with no good public data.",
+      "watchFor": "Students quoting the small-scale collapse experiments as if they were forecasts for GPT-7. The mechanism is real; the extrapolation is not justified."
+    },
+    {
+      "id": "misc-3",
+      "concept": "regulatory-capture",
+      "wrongBelief": "Regulatory capture means corrupt regulators taking bribes from the industry.",
+      "correctView": "Capture is mostly structural, not corrupt. Honest regulators, drowning in industry-supplied information and short on independent expertise, end up writing rules that favor incumbents without anyone choosing it. Compliance becomes a moat. The tell is incumbents publicly supporting rules small competitors say will kill them.",
+      "watchFor": "Students who only see capture when there is a smoking gun. Most capture has no gun — the mechanism is the alignment of expertise, incentives, and language."
+    },
+    {
+      "id": "misc-4",
+      "concept": "contextual-integrity",
+      "wrongBelief": "If something is technically public, reading it cannot violate privacy.",
+      "correctView": "Privacy is not access control. Information shared in one context (a niche forum, a support group, a medical visit) carries norms of flow. Recontextualization across those norms is a real harm even when no fence was breached. The 'public means fair game' view is a 1996 framework being applied to a 2026 world.",
+      "watchFor": "Students who can only see privacy violations as hacks or breaches. Ask them to explain why the boss-reads-employee's-fishing-forum case feels wrong even though nothing was technically restricted."
+    },
+    {
+      "id": "misc-5",
+      "concept": "marginal-emissions",
+      "wrongBelief": "Bitcoin/AI runs on renewables, so its climate impact is fine.",
+      "correctView": "New load is rarely met from renewables, even in jurisdictions whose average mix is clean — it's met by whatever can be ramped up. Marginal emissions from new demand are typically much higher than the average grid mix. This cuts against rhetorical defenses of *both* technologies.",
+      "watchFor": "Students who quote a renewable percentage without specifying whether it's average or marginal. The number is almost always average, and the distinction matters."
+    },
+    {
+      "id": "misc-6",
+      "concept": "knightian-uncertainty",
+      "wrongBelief": "If I read more, I will eventually know the answer to questions like 'will Bitcoin survive 2140?'",
+      "correctView": "Some questions are not resolvable by reading because the data is genuinely insufficient — there is no precedent, the underlying processes have never run before. The right move is to hold the uncertainty, not to substitute confident guesses for missing data.",
+      "watchFor": "Students who treat Knightian questions as if more research would settle them. The discipline is to notice when you have hit the edge of what can be known and stop pretending."
+    }
+  ]
+}

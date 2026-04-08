@@ -1,0 +1,209 @@
+{
+  "id": "mg-04-clinical-decision-support",
+  "moduleId": "04-clinical-decision-support",
+  "title": "Module 4 Mastery Gate — Clinical Decision Support",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on CDS modalities, the Five Rights, alert fatigue, knowledge representation history, and the modern FHIR/CDS Hooks/CQL stack. The Five Rights questions reward you for naming which Right was violated; the alert fatigue questions reward structural answers over per-alert tweaks.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "cds-definition",
+      "prompt": "Which of the following is the BEST description of clinical decision support, consistent with the Osheroff definition the field uses?",
+      "options": [
+        "Pop-up alerts that warn physicians about medication errors.",
+        "Software that replaces clinical judgment with algorithmic recommendations.",
+        "Knowledge and person-specific information, intelligently filtered or presented at appropriate times, delivered to clinicians, staff, patients, or others to enhance health and health care.",
+        "The artificial intelligence layer of an EHR."
+      ],
+      "correct": 2,
+      "rationale": "The Osheroff definition is the anchor the field uses and the boards expect. The load-bearing pieces are 'knowledge and person-specific information' (the combination is what distinguishes CDS from a textbook), 'intelligently filtered' (filtering is part of the work), 'at appropriate times' (timing is design), and 'clinicians, staff, patients, and other individuals' (CDS is not just for physicians). Option A is too narrow (alerts are one modality among many). Option B describes execution CDS, which is rare and not the general definition. Option D conflates CDS with AI."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "active-vs-passive-cds",
+      "prompt": "An infobutton next to a medication name in the EHR opens an external drug reference when the user clicks it. Which type of CDS is this?",
+      "options": [
+        "Active, interruptive CDS",
+        "Active, non-interruptive CDS",
+        "Passive CDS",
+        "Execution CDS"
+      ],
+      "correct": 2,
+      "rationale": "An infobutton is passive CDS — it waits to be invoked rather than pushing information to the user. The HL7 Infobutton standard governs how the link is constructed so the external resource opens to the right page for the patient's context. Active CDS pushes information without being asked; passive CDS waits to be asked. Both are legitimate and the right choice depends on the use case."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "cds-modalities",
+      "prompt": "A diabetes registry that flags patients overdue for HbA1c testing and presents the list to the care team during a weekly huddle is BEST classified as which kind of CDS?",
+      "options": [
+        "It is not CDS — CDS is only point-of-care alerts.",
+        "Population-level CDS using a registry/dashboard modality, delivering a recommendation to the care team about specific patients.",
+        "Execution CDS, because it produces an automatic action.",
+        "Diagnostic decision support, because it identifies cases."
+      ],
+      "correct": 1,
+      "rationale": "The Osheroff definition explicitly includes population-level interventions. A registry that flags overdue patients delivers knowledge (the screening guideline) plus person-specific information (which patients are overdue) to the right person (the care team) at an appropriate time (the huddle). It is CDS — just not interruptive point-of-care CDS. The boards reward you for knowing the breadth of the definition. Option A is the most common wrong assumption about CDS in real-world conversations."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "cds-five-rights",
+      "prompt": "An alert fires for an admitting physician who is reconciling the patient's outpatient medication list, warning about a potential drug-drug interaction with a medication the patient may receive during the inpatient stay. The interaction is real and the warning is technically correct. The admitting physician overrides the alert because the interacting inpatient medication has not been ordered yet and may not be ordered at all. Which CDS Right is most directly being violated?",
+      "options": [
+        "Right information",
+        "Right person",
+        "Right time / right point in workflow",
+        "Right format"
+      ],
+      "correct": 2,
+      "rationale": "The information is correct and the person is reasonable, but the alert is firing at the wrong workflow point — during medication reconciliation rather than during ordering. The interaction can only be acted on when the inpatient medication is being ordered, which may be by a different physician or may never happen. Moving the alert to the order-sign workflow (when the interacting drug is actually ordered) would let it fire only when the action is possible. The boards reward you for naming the Right precisely; right-time violations are among the most common."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "cds-five-rights",
+      "prompt": "A foot-exam reminder for diabetic patients is implemented as an interruptive alert at chart-open in primary care. Override rate is 94%; foot exam rates have not improved. The CDS committee proposes changing it to a default item in the diabetes follow-up order set and adding a checkbox to the visit note template. This change primarily addresses which CDS Rights?",
+      "options": [
+        "Right information and right person.",
+        "Right format and right time / right point in workflow.",
+        "Right channel only.",
+        "None — the change is cosmetic."
+      ],
+      "correct": 1,
+      "rationale": "Moving the recommendation from an interruptive alert to an order-set default and a documentation template changes both the format (from a forced popup to an embedded option) and the timing/workflow point (from chart-open, when the clinician is not yet thinking about orders, to the order entry and documentation steps, when the action is happening). The same information, the same person, the same channel — different format and different time, different outcome. This is the canonical Five Rights redesign pattern."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "right-person",
+      "prompt": "A medication reconciliation alert that consistently fires for ordering physicians is being overridden 90% of the time. An audit shows that the actions the alert recommends (verifying outpatient regimen, contacting pharmacy, checking the formulary) are typically performed by a clinical pharmacist rather than the physician. What is the most appropriate next step?",
+      "options": [
+        "Make the alert more visually prominent so physicians notice it.",
+        "Add a mandatory free-text override reason.",
+        "Route the alert to the clinical pharmacist instead of the ordering physician.",
+        "Remove the alert entirely."
+      ],
+      "correct": 2,
+      "rationale": "The Right being violated is right-person. The alert is going to the wrong role for the recommended action. Routing it to the clinical pharmacist puts the recommendation in front of the team member who can act on it. Making it more prominent compounds fatigue without changing the underlying mismatch. Mandatory override reasons produce compliance theater. Removing the alert may lose a legitimate recommendation; routing it preserves the value while fixing the mismatch. Boards reward right-person solutions when the audit data points there."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "alert-fatigue",
+      "prompt": "Which of the following is the BEST measure of whether an alert with a high override rate is a problem worth fixing?",
+      "options": [
+        "The raw override rate.",
+        "The alert's volume per shift.",
+        "The appropriate-override rate — whether the overrides reflect clinicians correctly judging the alert not to apply, versus dismissing without thinking.",
+        "The number of clinician complaints about the alert."
+      ],
+      "correct": 2,
+      "rationale": "Override rate by itself is not a quality metric. A 95% override rate may mean the alert is unhelpful (the obvious interpretation) or that the alert is correctly identifying low-frequency edge cases the clinician has correctly judged not to apply (a different interpretation entirely). The right metric is the appropriate-override rate, which requires reading a sample of overrides and classifying them. The audit-driven approach is what the boards reward and what mature CDS programs do."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "alert-fatigue",
+      "prompt": "Which of the following is NOT an effective response to alert fatigue?",
+      "options": [
+        "Tier alerts by severity, with the lowest tier silent and only logged.",
+        "Audit overrides quarterly and tune rules to narrow inappropriate firings.",
+        "Make alerts more visually prominent (bigger fonts, brighter colors, flashing).",
+        "Move some alerts from interruptive to non-interruptive ambient indicators."
+      ],
+      "correct": 2,
+      "rationale": "Visual escalation does not address fatigue — clinicians adapt, the new normal is more visual noise, and the next round of escalation has nowhere to go. The other three options are evidence-supported mitigations. The boards specifically test the wrong-answer choices that look like reasonable per-alert tweaks (more prominence, mandatory reasons, telling clinicians to be careful) and reward you for the structural answers."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "arden-syntax",
+      "prompt": "Arden Syntax encodes clinical rules as discrete units called Medical Logic Modules (MLMs) and was the first major standardized clinical knowledge representation language. Despite this, Arden never became the universal CDS standard. What is the BEST single explanation for the limitation of Arden's portability?",
+      "options": [
+        "The logic syntax was too complex for clinicians to write.",
+        "The 'curly braces problem' — Arden left the binding from data placeholders to local data sources unspecified, so each implementing site had to re-implement the bindings, and the bindings turned out to be the hard part.",
+        "Arden was never adopted as an HL7 standard.",
+        "Arden could not handle dose calculations."
+      ],
+      "correct": 1,
+      "rationale": "The curly-braces problem is the canonical illustration of why knowledge representation is harder than it looks. Arden's logic was portable; its data bindings were not. Two sites running 'the same' MLM might disagree on which data the placeholder pointed to, what units it carried, what time window it used. The lesson — that the integration is the hard part, not the logic — shaped the modern stack. The boards have tested the curly-braces problem by name."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "glif",
+      "prompt": "What was GLIF designed to represent that Arden's MLM model was too narrow to capture?",
+      "options": [
+        "Single drug-drug interaction rules.",
+        "Entire clinical guidelines as multi-step workflow processes with branches, decisions, and temporal flow.",
+        "Patient demographic data.",
+        "Billing and coding logic."
+      ],
+      "correct": 1,
+      "rationale": "GLIF (Guideline Interchange Format) was developed to represent entire clinical guidelines as graph-based workflows — action steps, decision steps, branches, synchronization, temporal flow. Arden's MLM model captured single rules but not multi-step processes. GLIF was joined by other guideline-modeling efforts (GEM, PROforma, EON, Asbru) and none became universal, for largely the same data-binding and vocabulary-instability reasons that limited Arden."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "cds-hooks",
+      "prompt": "A health system configures its EHR to call an external service whenever a clinician opens a patient chart. The service receives a small bundle of FHIR data describing the patient, fetches additional FHIR data as needed, evaluates rules against the data, and returns JSON cards which the EHR renders in the chart. Which standard or pattern is this?",
+      "options": [
+        "Arden Syntax",
+        "CDS Hooks (with FHIR-based context)",
+        "C-CDA document exchange",
+        "HL7 v2 ORU messaging"
+      ],
+      "correct": 1,
+      "rationale": "This is the canonical CDS Hooks pattern: EHR fires a hook (here, `patient-view`) at a workflow event, posts FHIR context to an external CDS service, the service evaluates rules and returns cards, the EHR renders them. CDS Hooks is the modern externalized CDS architecture and is increasingly tested on the boards. It is closely paired with SMART on FHIR for richer interactions but distinct in role."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "hook-events",
+      "prompt": "Which CDS Hooks event would be the right choice to fire interactive drug-drug interaction checks during the moment a clinician is signing a medication order?",
+      "options": [
+        "patient-view",
+        "encounter-start",
+        "order-sign",
+        "encounter-discharge"
+      ],
+      "correct": 2,
+      "rationale": "`order-sign` fires when the user is about to sign one or more orders and is the workflow point where interactive checks like drug-drug interaction, dose range, and allergy make sense. `patient-view` is for chart-level interventions (preventive care reminders, risk scores). `encounter-start` and `encounter-discharge` are for transition-of-care interventions. The boards reward you for matching the hook event to the workflow point."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "cqi-and-cql",
+      "prompt": "Which standard is used to express clinical logic — including modern CDS rules and CMS electronic clinical quality measures (eCQMs) — in a form that can be evaluated against FHIR data?",
+      "options": [
+        "Arden Syntax",
+        "Clinical Quality Language (CQL)",
+        "GLIF",
+        "C-CDA"
+      ],
+      "correct": 1,
+      "rationale": "CQL (Clinical Quality Language) is the HL7 standard for expressing clinical logic over FHIR. It is the language CMS eCQMs are written in and is increasingly the way new portable CDS rules are written. CQL is the modern descendant of the Arden/GLIF lineage but builds on FHIR rather than defining its own data model — the difference that finally makes portable CDS mechanically possible. The boards have started to test CQL by name."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "cds-five-rights",
+      "prompt": "Pick any CDS intervention you have used or can describe (alert, order set, dashboard, infobutton, template). In two or three sentences, identify which Five Right(s) the intervention satisfies well and which it could improve. Be specific about the intervention.",
+      "expectedKeywords": ["right", "information", "person", "format", "channel", "time"],
+      "rationale": "A complete answer names a specific intervention, walks at least two of the Five Rights, and identifies a concrete strength or weakness for each. The point of the question is to make you operationalize the framework as a design lens rather than memorize it as a definition. If your answer reads as 'all five Rights are satisfied' for an intervention you actually use, you probably have not engaged with the framework critically enough — almost every real intervention has at least one Right that could be tightened."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "alert-fatigue",
+      "prompt": "An audit at your hospital shows the average internal medicine resident sees 80+ medication-related alerts per shift with a 92% override rate. Propose THREE structural responses (not per-alert tweaks) you would prioritize, in order, and briefly justify the ordering. Three to four sentences.",
+      "expectedKeywords": ["tiering", "audit", "retirement", "structural", "appropriate-override"],
+      "rationale": "A complete answer prioritizes structural responses: tiering by severity, audit-driven tuning, retirement criteria, channel changes (from interruptive to ambient), routing to non-physician roles. The justification matters — answers that propose 'add a confirmation step' or 'make alerts more prominent' are testing the wrong-answer pattern from the lessons. The boards reward the structural lens and the discipline of audit-before-redesign. Answers that begin with the override audit ('first read the overrides, then decide which alerts are firing inappropriately, then tune or retire') reflect the mature CDS practice the field has converged on."
+    }
+  ]
+}

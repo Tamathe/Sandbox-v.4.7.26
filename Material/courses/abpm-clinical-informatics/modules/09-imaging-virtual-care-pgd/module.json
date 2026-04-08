@@ -1,0 +1,28 @@
+{
+  "id": "09-imaging-virtual-care-pgd",
+  "slug": "imaging-virtual-care-pgd",
+  "order": 9,
+  "title": "Imaging, Virtual Care, and Patient-Generated Data",
+  "summary": "The blueprint areas the original eight modules left thin: enterprise imaging (DICOM, PACS, VNA, IHE), telemedicine and virtual care, remote patient monitoring and patient-generated health data, FHIR Bulk Data and patient-facing APIs, and the FDA SaMD / 21st Century Cures CDS exemption / ONC HTI-1 DSI regulatory stack for AI-enabled clinical software.",
+  "learningOutcomes": [
+    "Read a DICOM workflow at the level of modality worklist, C-STORE, query/retrieve, and explain where the PACS, VNA, and EHR each sit.",
+    "Name the IHE profiles that govern cross-enterprise imaging exchange (XDS-I, PIX, PDQ, ATNA, XUA) and explain what each one does.",
+    "Distinguish telemedicine modalities (synchronous video, store-and-forward, RPM, e-consult) and the regulatory constraints that apply to each (DEA Ryan Haight, state licensure, parity laws).",
+    "Explain how FHIR Bulk Data ($export) differs from per-patient FHIR API access and which use cases require which.",
+    "Apply the four 21st Century Cures Act criteria for the CDS-not-a-device exemption and identify when an AI-enabled tool is regulated as FDA SaMD.",
+    "Describe the ONC HTI-1 DSI requirements (2024) for predictive decision support intervention transparency."
+  ],
+  "prerequisites": ["02-clinical-data-standards", "03-ehr-and-his-architecture", "07-privacy-security-policy"],
+  "estimatedHours": 7,
+  "lessons": [
+    "01-imaging-informatics-dicom-pacs-vna",
+    "02-telemedicine-and-virtual-care",
+    "03-rpm-wearables-and-pghd",
+    "04-fhir-bulk-data-and-patient-facing-apis",
+    "05-digital-therapeutics-fda-samd-cures-cds-exemption"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

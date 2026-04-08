@@ -1,0 +1,265 @@
+{
+  "moduleId": "07-privacy-security-policy",
+  "concepts": [
+    {
+      "id": "hipaa-privacy-rule",
+      "label": "HIPAA Privacy Rule",
+      "summary": "Federal regulation (HHS, finalized 2000) governing what covered entities and business associates can do with PHI. Defines permitted uses and disclosures, patient rights, and the minimum necessary standard. Built on top of HIPAA 1996 by HHS rulemaking."
+    },
+    {
+      "id": "hipaa-security-rule",
+      "label": "HIPAA Security Rule",
+      "summary": "Federal regulation (HHS, finalized 2003) governing how covered entities and business associates must protect electronic PHI. Three safeguard categories: administrative, physical, technical. Distinguishes required from addressable specifications."
+    },
+    {
+      "id": "covered-entity",
+      "label": "Covered Entity",
+      "summary": "One of three categories under HIPAA: a health plan, a healthcare clearinghouse, or a healthcare provider that transmits health information electronically in standard transactions. The category to which HIPAA's obligations apply directly."
+    },
+    {
+      "id": "business-associate",
+      "label": "Business Associate",
+      "summary": "A person or organization that performs functions or activities on behalf of, or provides services to, a covered entity that involve the use or disclosure of PHI. Governed by a business associate agreement (BAA). After HITECH, business associates have direct HIPAA liability to HHS."
+    },
+    {
+      "id": "phi-eighteen-identifiers",
+      "label": "The 18 HIPAA Identifiers",
+      "summary": "The list HHS published as part of the Privacy Rule's Safe Harbor de-identification standard: names, geographic subdivisions, dates, phone, fax, email, SSN, MRN, plan numbers, account numbers, license numbers, vehicle IDs, device IDs, URLs, IP addresses, biometrics, photos, and any other unique identifying characteristic."
+    },
+    {
+      "id": "minimum-necessary",
+      "label": "Minimum Necessary Standard",
+      "summary": "The Privacy Rule standard that uses, disclosures, and requests of PHI must be limited to the minimum amount needed for the intended purpose. Does NOT apply to disclosures for treatment, to the patient, pursuant to authorization, required by law, or to HHS for compliance."
+    },
+    {
+      "id": "tpo-treatment-payment-operations",
+      "label": "TPO — Treatment, Payment, Operations",
+      "summary": "The three categories of permitted uses and disclosures under HIPAA that do not require patient authorization. Treatment: provision/coordination of care. Payment: billing and reimbursement activities. Healthcare operations: quality, training, accreditation, business planning, similar functions."
+    },
+    {
+      "id": "administrative-safeguards",
+      "label": "Administrative Safeguards",
+      "summary": "Security Rule category covering people, policies, and processes: security management, workforce security, access management, training, incident procedures, contingency planning, BAAs, and evaluation. The largest of the three safeguard categories."
+    },
+    {
+      "id": "physical-safeguards",
+      "label": "Physical Safeguards",
+      "summary": "Security Rule category covering physical measures protecting electronic systems and the buildings/equipment from hazards and intrusion. Facility access controls, workstation use, workstation security, device and media controls."
+    },
+    {
+      "id": "technical-safeguards",
+      "label": "Technical Safeguards",
+      "summary": "Security Rule category covering technology controls: access control (unique user ID, emergency access, automatic logoff, encryption/decryption), audit controls, integrity, person/entity authentication, transmission security."
+    },
+    {
+      "id": "required-vs-addressable",
+      "label": "Required vs Addressable Specifications",
+      "summary": "Security Rule distinction. Required = must implement. Addressable = must assess whether the specification is reasonable and appropriate, and either implement, implement an equivalent alternative, or document why neither is reasonable. Addressable is not optional."
+    },
+    {
+      "id": "phi-handling",
+      "label": "PHI Handling Policy",
+      "summary": "Course-level policy gating discussions and assignments. Cases must be abstracted before posting. (Reused from Module 1.)"
+    },
+    {
+      "id": "hitech-act",
+      "label": "HITECH Act",
+      "summary": "Health Information Technology for Economic and Clinical Health Act, enacted February 2009 as part of the American Recovery and Reinvestment Act. Established Meaningful Use AND strengthened HIPAA with breach notification, business associate direct liability, the CMP tier structure, and the encryption safe harbor. (Reused from Module 1.)"
+    },
+    {
+      "id": "hitech-breach-notification",
+      "label": "Breach Notification Rule",
+      "summary": "HITECH-created rule (2009, amended 2013) requiring covered entities to notify affected individuals, HHS, and (for breaches of 500+) prominent media when an impermissible use or disclosure of PHI occurs. The 2013 Omnibus Rule reversed the burden: an impermissible use is presumed a breach unless the covered entity demonstrates a low probability of compromise."
+    },
+    {
+      "id": "breach-definition",
+      "label": "Breach Four-Factor Risk Assessment",
+      "summary": "Post-2013 standard for whether an impermissible use or disclosure is a reportable breach. Four factors: nature/extent of PHI; the unauthorized person; whether the PHI was actually acquired or viewed; mitigation. The covered entity must document the analysis."
+    },
+    {
+      "id": "notification-timing",
+      "label": "Breach Notification Timing",
+      "summary": "Affected individuals: without unreasonable delay, no later than 60 calendar days from discovery, by first-class mail or agreed electronic notice. HHS: 60 days for 500+ breaches (contemporaneous with individual notice); annual batch for <500 breaches. Prominent media: 60 days for 500+ breaches affecting residents of a state."
+    },
+    {
+      "id": "five-hundred-record-threshold",
+      "label": "500-Record Threshold",
+      "summary": "Inflection point in breach notification. Breaches affecting 500 or more individuals trigger contemporaneous HHS notification, prominent media notification, and listing on the HHS public breach reporting website (the Wall of Shame). Smaller breaches are batched annually."
+    },
+    {
+      "id": "wall-of-shame",
+      "label": "HIPAA Wall of Shame",
+      "summary": "Informal name for the HHS Office for Civil Rights public breach reporting website. Lists all breaches affecting 500 or more individuals; searchable and persistent. Reputational consequences are part of why the 500-threshold is the inflection point in institutional response."
+    },
+    {
+      "id": "cmp-tiers",
+      "label": "Civil Monetary Penalty Tiers",
+      "summary": "HITECH four-tier penalty structure. Tier 1: did not know and could not reasonably have known. Tier 2: reasonable cause, not willful neglect. Tier 3: willful neglect, corrected within 30 days. Tier 4: willful neglect, not corrected. Dollar amounts adjusted annually; the boards test the tier structure, not the amounts."
+    },
+    {
+      "id": "business-associate-direct-liability",
+      "label": "Business Associate Direct Liability",
+      "summary": "HITECH change. Pre-HITECH, business associates were liable only through breach of BAA contract. Post-HITECH (and after the 2013 Omnibus Rule), business associates have direct HIPAA liability to HHS and can be assessed civil monetary penalties on the same scale as covered entities. Subcontractors of business associates also covered."
+    },
+    {
+      "id": "encryption-safe-harbor",
+      "label": "Encryption Safe Harbor",
+      "summary": "HITECH provision that PHI encrypted in accordance with HHS guidance is not 'unsecured PHI' and is therefore exempt from breach notification. The regulatory mechanism that drove encryption from 'addressable' to a near-universal practice."
+    },
+    {
+      "id": "meaningful-use",
+      "label": "Meaningful Use",
+      "summary": "The HITECH-created financial incentive program (CMS) that paid eligible providers and hospitals to adopt and meaningfully use certified EHRs. Three stages (2011–2017+), succeeded by Promoting Interoperability. The lever that drove EHR adoption from a minority of U.S. providers in 2008 to near-universal by 2015. (Reused from Module 1.)"
+    },
+    {
+      "id": "cures-act",
+      "label": "21st Century Cures Act",
+      "summary": "Federal law enacted December 2016. Title IV established the information blocking rule, the certified EHR FHIR API requirements, and the authorization for TEFCA. ONC's implementing rules finalized 2020 with staged enforcement from April 2021. The biggest change in U.S. health information policy since HITECH."
+    },
+    {
+      "id": "cures-act-history",
+      "label": "Cures Act History and Trajectory",
+      "summary": "The structural inversion of HIPAA's default. Reads as a single trajectory with HIPAA (1996), HITECH (2009), and Cures (2016) progressively expanding patient access from paper-on-request to mandatory electronic access to default-yes-with-exceptions."
+    },
+    {
+      "id": "information-blocking",
+      "label": "Information Blocking",
+      "summary": "ONC regulatory definition: a practice by an actor (provider, certified health IT developer, HIN, HIE) that, except as required by law or covered by an exception, is likely to interfere with, prevent, or materially discourage access, exchange, or use of electronic health information. The default is access; refusal requires naming an exception."
+    },
+    {
+      "id": "eight-exceptions",
+      "label": "The Eight Information Blocking Exceptions",
+      "summary": "Five 'not fulfilling': Preventing Harm, Privacy, Security, Infeasibility, Health IT Performance. Three 'procedures': Content and Manner, Fees, Licensing. Required board recall. The boards test the names verbatim."
+    },
+    {
+      "id": "preventing-harm-exception",
+      "label": "Preventing Harm Exception",
+      "summary": "Exception for practices reasonable and necessary to prevent harm to a patient or another person. Requires reasonable belief that the practice will substantially reduce a risk of harm and meets specific conditions in the rule. Narrower than clinicians often think."
+    },
+    {
+      "id": "privacy-exception",
+      "label": "Privacy Exception",
+      "summary": "Exception for practices required to protect privacy under specific listed circumstances — state-law consent requirements, patient-requested restrictions, federal/state law prohibitions. The bridge between information blocking and HIPAA: HIPAA-prohibited disclosures are not information blocking."
+    },
+    {
+      "id": "security-exception",
+      "label": "Security Exception",
+      "summary": "Exception for practices directly related to safeguarding the confidentiality, integrity, and availability of EHI, tailored to the specific security risk, implemented in a consistent and non-discriminatory manner."
+    },
+    {
+      "id": "infeasibility-exception",
+      "label": "Infeasibility Exception",
+      "summary": "Exception for practices in response to a request the actor cannot fulfill because of an uncontrollable event, a segmentation problem, or documented infeasibility under the circumstances. Requires written explanation to the requestor within 10 business days."
+    },
+    {
+      "id": "health-it-performance-exception",
+      "label": "Health IT Performance Exception",
+      "summary": "Exception for practices reasonable and necessary to maintain or improve health IT performance — maintenance, patches, performance issues. Limited to the time reasonably necessary, applied consistently and non-discriminatorily."
+    },
+    {
+      "id": "content-and-manner-exception",
+      "label": "Content and Manner Exception",
+      "summary": "Procedural exception. An actor may limit the content of its response or the manner in which it fulfills a request under specified conditions and following the rule's order of precedence. Permits providing a CCDA when the requested form cannot reasonably be provided."
+    },
+    {
+      "id": "fees-exception",
+      "label": "Fees Exception",
+      "summary": "Procedural exception. An actor may charge fees for fulfilling EHI requests under specified conditions — based on objective and verifiable criteria, reasonably related to costs, not based on competitor status. Does NOT permit charging individuals for access to their own EHI through patient-facing means."
+    },
+    {
+      "id": "licensing-exception",
+      "label": "Licensing Exception",
+      "summary": "Procedural exception. An actor may license interoperability elements (APIs, value sets, terminology) under reasonable and non-discriminatory terms. May charge royalties under specified conditions but may not use licensing to entrench market position."
+    },
+    {
+      "id": "tefca",
+      "label": "TEFCA",
+      "summary": "Trusted Exchange Framework and Common Agreement. The federal framework for nationwide health information exchange via Qualified Health Information Networks (QHINs). Authorized by the Cures Act. (Reused from Module 3.)"
+    },
+    {
+      "id": "fhir-api-requirement",
+      "label": "FHIR API Certification Requirements",
+      "summary": "Cures Act-driven ONC certification requirements that certified EHRs support standardized FHIR APIs (patient access, provider access, bulk data). The technical surface through which the information blocking rule's 'must facilitate access' obligation is operationalized. Cross-reference Module 2 lesson 4."
+    },
+    {
+      "id": "four-As",
+      "label": "The Four A's",
+      "summary": "Authentication (verifying identity), Authorization (determining what an authenticated user is allowed to do), Audit (recording who did what when), Accounting (the discipline of being able to account for all access and use). The vocabulary the boards test directly."
+    },
+    {
+      "id": "authentication",
+      "label": "Authentication",
+      "summary": "The process of verifying that a person or system is who they claim to be. Username/password is the basic factor; multi-factor adds a second factor (something you have, something you are, something you know)."
+    },
+    {
+      "id": "authorization",
+      "label": "Authorization",
+      "summary": "The process of determining what an authenticated user is allowed to do. Separate from authentication. The Privacy Rule's minimum necessary standard is an authorization-side concept."
+    },
+    {
+      "id": "audit",
+      "label": "Audit",
+      "summary": "The process of recording who did what, when, on what record, and from where. Useful only if the logging is comprehensive, the logs are tamper-resistant, and someone actually reviews them."
+    },
+    {
+      "id": "accounting",
+      "label": "Accounting",
+      "summary": "Two related meanings. (1) HIPAA-specific patient right to receive a list of disclosures of their PHI made over a defined period. (2) Information-security discipline of being able to account for all access, use, and transmission of protected data."
+    },
+    {
+      "id": "rbac",
+      "label": "Role-Based Access Control",
+      "summary": "The dominant authorization model in healthcare information systems. Users are assigned to roles (nurse, attending, pharmacist), roles are granted permissions on resources. Revoking access is a matter of removing a role. Susceptible to 'role explosion' when over-elaborated."
+    },
+    {
+      "id": "abac",
+      "label": "Attribute-Based Access Control",
+      "summary": "Authorization model where access decisions are made based on attributes of the user, resource, and environment. More flexible than RBAC and harder to write/audit. Layered on top of RBAC for break-the-glass, after-hours, and sensitive-record handling."
+    },
+    {
+      "id": "mfa",
+      "label": "Multi-Factor Authentication",
+      "summary": "Authentication that requires two or more factors from different categories: something you know (password, PIN), something you have (token, phone), something you are (biometric). The post-2020 standard for any access that matters."
+    },
+    {
+      "id": "encryption-at-rest",
+      "label": "Encryption at Rest",
+      "summary": "Encryption of stored data — disk, tape, USB, database, cloud storage. Threat model is theft or loss of the storage medium. The cheapest control with the highest expected value, and the trigger for the breach notification safe harbor."
+    },
+    {
+      "id": "encryption-in-transit",
+      "label": "Encryption in Transit",
+      "summary": "Encryption of data moving across networks. Dominant standard is TLS (Transport Layer Security) 1.2 or later. Required by the Security Rule's transmission security specification for ePHI traversing open networks."
+    },
+    {
+      "id": "ransomware",
+      "label": "Ransomware",
+      "summary": "Attack pattern in which an attacker gains access, deploys malware that encrypts the institution's data, and demands payment for the decryption key. Modern 'double extortion' adds data exfiltration and a publication threat. Healthcare is uniquely targeted because hospitals cannot tolerate extended downtime."
+    },
+    {
+      "id": "change-healthcare-2024",
+      "label": "Change Healthcare 2024",
+      "summary": "February 2024 ransomware attack on Change Healthcare (Optum/UnitedHealth Group subsidiary), one of the largest claims processing intermediaries in U.S. healthcare. Disrupted nationwide claims processing for weeks; one of the largest healthcare data breaches in history. Routine reference for systemic risk of infrastructure concentration."
+    },
+    {
+      "id": "downtime-planning",
+      "label": "Downtime Planning",
+      "summary": "Paper backup procedures, downtime training and drills, recovery protocols, downtime clinical content packets stocked on units. In the ransomware era, the realistic worst case is multi-week downtime, not multi-hour. Cross-reference Module 5 SAFER High Priority Practices Guide."
+    },
+    {
+      "id": "defense-in-depth",
+      "label": "Defense in Depth",
+      "summary": "Security posture composed of overlapping controls in different categories so that failure of any single control does not produce a successful breach. The right question is never 'is this control in place' but 'what is the layered set of controls that survives a single failure.'"
+    },
+    {
+      "id": "incident-response",
+      "label": "Incident Response (NIST 800-61)",
+      "summary": "Standard four-phase structure: (1) Preparation; (2) Detection and Analysis; (3) Containment, Eradication, and Recovery; (4) Post-Incident Activity. A capability, not a document — the institutions that respond well are the ones that have rehearsed."
+    },
+    {
+      "id": "safer-guides",
+      "label": "SAFER Guides",
+      "summary": "Voluntary self-assessment guides from ONC, developed by Sittig, Singh, and colleagues. Cross-referenced here for the High Priority Practices Guide's downtime planning recommendations. (Reused from Module 5.)"
+    }
+  ]
+}

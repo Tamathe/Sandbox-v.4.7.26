@@ -1,0 +1,26 @@
+{
+  "id": "07-privacy-security-policy",
+  "slug": "privacy-security-policy",
+  "order": 7,
+  "title": "Privacy, Security, and Policy",
+  "summary": "HIPAA Privacy and Security Rules, HITECH, the 21st Century Cures Act, the ONC information blocking rule, and the security control families the boards expect you to know cold.",
+  "learningOutcomes": [
+    "State the categories of HIPAA Privacy Rule protections and Security Rule safeguards (administrative, physical, technical).",
+    "Explain HITECH's additions on top of HIPAA, especially breach notification.",
+    "List the eight information-blocking exceptions under the 21st Century Cures Act and apply them to a scenario.",
+    "Distinguish authentication, authorization, audit, and accounting in the context of an EHR.",
+    "Read a breach scenario and identify which rule was violated and what the response should be."
+  ],
+  "prerequisites": ["03-ehr-and-his-architecture"],
+  "estimatedHours": 5,
+  "lessons": [
+    "01-hipaa-privacy-and-security-rules",
+    "02-hitech-and-breach-notification",
+    "03-cures-act-information-blocking",
+    "04-security-controls-and-cyber-incidents"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "concepts": "concepts.json"
+}

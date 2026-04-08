@@ -1,0 +1,156 @@
+{
+  "moduleId": "01-what-is-money",
+  "concepts": [
+    {
+      "id": "commodity-money",
+      "name": "Commodity money",
+      "definition": "Money whose value derives, at least partially, from the underlying commodity (gold, silver, salt, cattle).",
+      "appearsInLessons": ["01-history-of-money"]
+    },
+    {
+      "id": "representative-money",
+      "name": "Representative money",
+      "definition": "A claim (paper, token, database entry) on an underlying commodity held in reserve by an issuer.",
+      "appearsInLessons": ["01-history-of-money"]
+    },
+    {
+      "id": "fiat",
+      "name": "Fiat money",
+      "definition": "Money whose value derives from social agreement and government decree, with no underlying commodity backing.",
+      "appearsInLessons": ["01-history-of-money", "03-fiat-and-credit", "05-hard-money"]
+    },
+    {
+      "id": "moneyness",
+      "name": "Moneyness",
+      "definition": "The degree to which an object performs the three functions of money. A spectrum, not a binary.",
+      "appearsInLessons": ["01-history-of-money", "02-three-functions"]
+    },
+    {
+      "id": "monetary-premium",
+      "name": "Monetary premium",
+      "definition": "The portion of an asset's price that exists because the asset is being used as a store of value, beyond its underlying utility.",
+      "appearsInLessons": ["01-history-of-money", "05-hard-money"]
+    },
+    {
+      "id": "medium-of-exchange",
+      "name": "Medium of exchange",
+      "definition": "The function of money that lets you settle a transaction with someone who doesn't owe you anything.",
+      "appearsInLessons": ["02-three-functions"]
+    },
+    {
+      "id": "store-of-value",
+      "name": "Store of value",
+      "definition": "The function of money that lets you hold purchasing power across time.",
+      "appearsInLessons": ["02-three-functions", "05-hard-money"]
+    },
+    {
+      "id": "unit-of-account",
+      "name": "Unit of account",
+      "definition": "The function of money in which prices are quoted and value is compared.",
+      "appearsInLessons": ["02-three-functions"]
+    },
+    {
+      "id": "gresham",
+      "name": "Gresham's Law",
+      "definition": "When two currencies circulate at a forced exchange rate, people spend the bad one and hoard the good one.",
+      "appearsInLessons": ["02-three-functions"]
+    },
+    {
+      "id": "thiers-law",
+      "name": "Thiers's Law",
+      "definition": "The inverse of Gresham. When people are free to choose, they migrate toward the better money.",
+      "appearsInLessons": ["02-three-functions", "05-hard-money"]
+    },
+    {
+      "id": "fractional-reserve",
+      "name": "Fractional reserve banking",
+      "definition": "A banking system in which banks hold only a fraction of deposits as reserves and lend out the rest. The textbook 'multiplier' description is misleading; modern banks create deposits when they make loans.",
+      "appearsInLessons": ["03-fiat-and-credit"]
+    },
+    {
+      "id": "money-creation",
+      "name": "Money creation by lending",
+      "definition": "The fact that commercial banks create new money in the form of bank deposits when they extend new loans.",
+      "appearsInLessons": ["03-fiat-and-credit"]
+    },
+    {
+      "id": "m0-m1-m2",
+      "name": "M0 / M1 / M2",
+      "definition": "Money supply aggregates. M0 is base money (cash + reserves). M1 adds checkable deposits. M2 adds savings and near-cash.",
+      "appearsInLessons": ["03-fiat-and-credit"]
+    },
+    {
+      "id": "inflation",
+      "name": "Inflation",
+      "definition": "A sustained rise in the general price level. The 'general' is doing a lot of work — the number depends on which prices you measure and how you weight them.",
+      "appearsInLessons": ["04-inflation-as-policy"]
+    },
+    {
+      "id": "cantillon-effect",
+      "name": "Cantillon effect",
+      "definition": "The observation that newly created money does not enter the economy uniformly; whoever receives it first benefits at the expense of those who receive it later.",
+      "appearsInLessons": ["04-inflation-as-policy"]
+    },
+    {
+      "id": "stock-to-flow",
+      "name": "Stock-to-flow ratio",
+      "definition": "Existing supply divided by annual new supply. Higher means harder. Gold is ~60, Bitcoin is currently ~110, the dollar is in the low teens.",
+      "appearsInLessons": ["05-hard-money"]
+    },
+    {
+      "id": "hard-money",
+      "name": "Hard money",
+      "definition": "Money whose supply is hard to expand. A property of supply, not of price or value.",
+      "appearsInLessons": ["05-hard-money"]
+    },
+    {
+      "id": "seigniorage",
+      "name": "Seigniorage",
+      "definition": "The profit a government makes by issuing money, especially the silent profit from debasing existing money supply.",
+      "appearsInLessons": ["05-hard-money"]
+    },
+    {
+      "id": "schelling-point",
+      "name": "Schelling point",
+      "definition": "A solution that everyone gravitates toward without communicating, because everyone expects everyone else to gravitate toward it. Critical to the 'what do people migrate to' question in monetary collapses.",
+      "appearsInLessons": ["05-hard-money"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "money-creation",
+      "wrongBelief": "When you take out a loan, the bank lends you money it has on deposit from other customers.",
+      "correctView": "The bank creates new money as a balance-sheet entry simultaneously with the loan. The 'banks lend out deposits' model is taught in textbooks but is not how modern banking actually works.",
+      "watchFor": "Students who keep saying 'where does the money come from' as if it must come from somewhere existing. The answer is: it didn't exist a moment ago. That's the unsettling part."
+    },
+    {
+      "id": "misc-2",
+      "concept": "hard-money",
+      "wrongBelief": "Hard money is good money and soft money is bad money.",
+      "correctView": "Hardness is a property of supply, not a verdict on quality. Hard money has costs (no crisis flexibility), soft money has costs (debasement risk). The trade-off is real and which side you want depends on what failure mode worries you more.",
+      "watchFor": "Students adopting the maximalist framing wholesale or rejecting it wholesale. Either is a sign they haven't actually wrestled with the trade-off."
+    },
+    {
+      "id": "misc-3",
+      "concept": "inflation",
+      "wrongBelief": "Inflation is just 'too much money chasing too few goods' and is always the central bank's fault.",
+      "correctView": "Inflation has demand-pull, cost-push, and monetary components, often at the same time. They call for different responses. Mistaking one for another causes recession without solving the inflation. The link between base money and consumer prices runs through bank lending and is not mechanical.",
+      "watchFor": "Students who reach for a single-cause explanation for any inflation event. Always ask: which mechanism, in this case?"
+    },
+    {
+      "id": "misc-4",
+      "concept": "three-functions",
+      "wrongBelief": "Money is one thing that does one job. If something doesn't do all three functions perfectly, it isn't really money.",
+      "correctView": "The three functions can and frequently do live in different objects. Asking 'is X money?' is a less useful question than 'which of money's functions does X do well, for whom, and under what conditions?'",
+      "watchFor": "Students arguing about whether Bitcoin 'is money.' Reframe the question."
+    },
+    {
+      "id": "misc-5",
+      "concept": "fiat",
+      "wrongBelief": "Fiat money is worthless because it isn't backed by anything.",
+      "correctView": "Fiat is backed by social agreement, legal tender laws, tax obligations denominated in it, and the productive capacity of the economy that uses it. That backing is real, even if it's less tangible than gold. The fact that fiat can be debased by policy is a separate issue from the claim that it's 'worthless,' which it manifestly isn't until and unless the social arrangement collapses.",
+      "watchFor": "Maximalists. Soften their framing with the question: 'what would fiat being worthless actually look like in practice, and is that what is currently happening?'"
+    }
+  ]
+}

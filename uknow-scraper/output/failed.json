@@ -1,0 +1,10 @@
+[
+  {
+    "file": "uk-happenings__king-library-press-carves-out-schedule-wood-engraving-events.json",
+    "error": "Unexpected token '\u0000', \"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\"... is not valid JSON"
+  },
+  {
+    "file": "uk-happenings__uk-faculty-discuss-effective-student-instruction.json",
+    "error": "Unexpected token '\u0000', \"\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\"... is not valid JSON"
+  }
+]

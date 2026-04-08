@@ -1,0 +1,37 @@
+{
+  "id": "voice-defense",
+  "title": "Voice Defense Rubric",
+  "description": "For AI voice-session capstones where the student defends a position against a skeptical interlocutor. The model plays the skeptic; the rubric scores the student.",
+  "criteria": [
+    {
+      "name": "Holds the claim under pressure",
+      "weight": 0.35,
+      "levels": [
+        { "score": 1, "descriptor": "Abandons the claim at the first push-back, or repeats it more loudly without new content." },
+        { "score": 2, "descriptor": "Defends the claim but only by retreating to vaguer versions of it." },
+        { "score": 3, "descriptor": "Defends the claim by adding evidence and refining what is and is not being asserted." },
+        { "score": 4, "descriptor": "Defends the claim, narrows it where the skeptic was right to push, and the narrowed version is sharper than the original." }
+      ]
+    },
+    {
+      "name": "Updates honestly when wrong",
+      "weight": 0.35,
+      "levels": [
+        { "score": 1, "descriptor": "Never concedes, even when the skeptic is plainly correct." },
+        { "score": 2, "descriptor": "Concedes only when cornered, and grudgingly." },
+        { "score": 3, "descriptor": "Concedes a specific point and explains what about the claim now changes." },
+        { "score": 4, "descriptor": "Concedes a specific point, explains what changes, AND identifies what would have caught the error earlier." }
+      ]
+    },
+    {
+      "name": "Uses the vocabulary of the module correctly",
+      "weight": 0.30,
+      "levels": [
+        { "score": 1, "descriptor": "Avoids the module's key terms or uses them wrong." },
+        { "score": 2, "descriptor": "Uses the terms but as labels, not as load-bearing pieces of the argument." },
+        { "score": 3, "descriptor": "Uses the terms correctly and they are doing real work in the argument." },
+        { "score": 4, "descriptor": "Uses the terms correctly, defines them in passing for an imagined listener, and connects them to terms from earlier modules." }
+      ]
+    }
+  ]
+}

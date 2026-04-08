@@ -1,0 +1,140 @@
+{
+  "moduleId": "01-foundations-of-informatics",
+  "concepts": [
+    {
+      "id": "clinical-informatics-definition",
+      "label": "Clinical Informatics — Definition",
+      "summary": "The application of informatics and IT to deliver healthcare services and to support and enhance clinical care. Anchored in the AMIA core competencies."
+    },
+    {
+      "id": "amia-core-competencies",
+      "label": "AMIA Core Competencies",
+      "summary": "The four practice domains the field has agreed on: fundamentals; clinical decision making and care process improvement; health information systems; leadership and managing change. Tracks the ABPM exam outline."
+    },
+    {
+      "id": "bioinformatics-vs-clinical",
+      "label": "Bioinformatics vs Clinical Informatics",
+      "summary": "Bioinformatics: molecular/cellular unit of analysis, bench scientists as customers. Clinical informatics: patient encounter as unit, clinicians as customers. Disambiguate boundary cases by primary unit of analysis."
+    },
+    {
+      "id": "public-health-informatics",
+      "label": "Public Health Informatics",
+      "summary": "Population-level informatics: surveillance, registries, vital statistics, outbreak detection. Customer is the health department, not the bedside clinician."
+    },
+    {
+      "id": "consumer-health-informatics",
+      "label": "Consumer Health Informatics",
+      "summary": "Person-level informatics outside the clinical encounter: patient portals, wearables, PHRs, symptom checkers. Customer is the patient/caregiver."
+    },
+    {
+      "id": "sociotechnical-system",
+      "label": "Sociotechnical System",
+      "summary": "A system whose behavior is determined jointly by technology and the humans, processes, organizations, and incentives wrapped around it. The unit of analysis for a clinical informaticist is always the system-in-context."
+    },
+    {
+      "id": "dikw-hierarchy",
+      "label": "DIKW Hierarchy",
+      "summary": "Data → Information → Knowledge → Wisdom. Each level adds context or synthesis. Useful as a teaching device; misleading if taken as an architecture diagram, since wisdom is produced by humans, not pipelines."
+    },
+    {
+      "id": "data-vs-information",
+      "label": "Data vs Information",
+      "summary": "Data is uninterpreted measurement. Information is data plus the context (who/what/when/where/units) that makes it interpretable. The data-to-information seam is what standards like LOINC, UCUM, and FHIR exist to enable."
+    },
+    {
+      "id": "knowledge-representation",
+      "label": "Knowledge Representation",
+      "summary": "The problem of getting general clinical knowledge (rules, guidelines, relationships) into a form a computer can apply to a specific patient. The entire subject of Module 4."
+    },
+    {
+      "id": "structured-vs-unstructured-data",
+      "label": "Structured vs Unstructured Data",
+      "summary": "Structured: codified into discrete, queryable fields with standard vocabularies. Unstructured: free text, scanned documents, images. NLP attempts to bridge — always lossy because the writer was not writing for the parser."
+    },
+    {
+      "id": "context-of-interpretation",
+      "label": "Context of Interpretation",
+      "summary": "The metadata and clinical situation required to interpret data correctly. The same number can mean different things for the same patient on different days."
+    },
+    {
+      "id": "early-his-systems",
+      "label": "Early HIS Systems",
+      "summary": "Memorize the four-way mapping: COSTAR-MGH-outpatient; Technicon-Lockheed-ElCamino-firstHIS; HELP-Warner-Intermountain-CDS; VistA-VA-hardhats. Plus Regenstrief-IndianaUniversity-LOINC-INPC."
+    },
+    {
+      "id": "vista-history",
+      "label": "VistA",
+      "summary": "The Department of Veterans Affairs' clinician-built EHR, developed by the underground 'hardhats' group beginning in the 1980s. Long the largest non-commercial EHR deployment in the world. Now being replaced at the VA by commercial Cerner."
+    },
+    {
+      "id": "regenstrief-medical-record",
+      "label": "Regenstrief Medical Record",
+      "summary": "Started 1972 at Indiana University under Clement McDonald. The institutional ancestor of structured clinical data, LOINC, and the Indiana Network for Patient Care."
+    },
+    {
+      "id": "help-system",
+      "label": "HELP System",
+      "summary": "Health Evaluation through Logical Processing. Developed at LDS Hospital under Homer Warner. The first major system to integrate CDS into routine workflow. Lineage runs to modern Intermountain Healthcare."
+    },
+    {
+      "id": "meaningful-use",
+      "label": "Meaningful Use",
+      "summary": "The Medicare/Medicaid EHR incentive program created by HITECH (2009), administered by CMS, with EHR certification by ONC. Three stages. Drove U.S. hospital basic-EHR adoption from ~10% (2008) to >90% (2017). Transitioned to Promoting Interoperability under MIPS."
+    },
+    {
+      "id": "hitech-act",
+      "label": "HITECH Act",
+      "summary": "Health Information Technology for Economic and Clinical Health, part of the 2009 ARRA stimulus. Created Meaningful Use, expanded HIPAA breach notification, and reshaped the U.S. health IT landscape."
+    },
+    {
+      "id": "cures-act-history",
+      "label": "21st Century Cures Act (history)",
+      "summary": "Passed 2016. Among many other things, introduced the information blocking rule with eight specific exceptions. Operationalized by ONC; took full effect 2022. Detailed in Module 7."
+    },
+    {
+      "id": "friedmans-fundamental-theorem",
+      "label": "Friedman's Fundamental Theorem",
+      "summary": "(Person + Information Resource) > Person. The unit of evaluation is the partnership in context, not the resource in isolation. The single most-cited and most-violated principle in the field."
+    },
+    {
+      "id": "human-plus-system",
+      "label": "Human-plus-System Evaluation",
+      "summary": "Friedman's framing applied: evaluate the human-plus-system partnership against the unassisted human, in the actual setting, on a metric that matters. Most published evaluations of clinical AI fail this test."
+    },
+    {
+      "id": "augmentation-vs-automation",
+      "label": "Augmentation vs Automation",
+      "summary": "Augmentation keeps the human in the loop and is governed by Friedman's theorem. Automation removes the human and is governed by a different and harder set of evaluations — safety, liability, regulation."
+    },
+    {
+      "id": "intervention-evaluation",
+      "label": "Intervention Evaluation Checklist",
+      "summary": "Six questions: who is the person? what is the baseline? what is the assisted version? is it better on a metric that matters? does the comparison hold in the real setting? is the gain worth the cost?"
+    },
+    {
+      "id": "informatics-vs-it",
+      "label": "Informatics vs IT",
+      "summary": "Clinical IT delivers and operates the technology layer. Clinical informatics makes the technology actually deliver clinical value in a sociotechnical system. Test ownership by asking what changes for the patient when the problem is solved."
+    },
+    {
+      "id": "clinical-it-roles",
+      "label": "Clinical IT Roles",
+      "summary": "Servers, networks, identity, backup, DR, vendor management, security operations, deployment, ticket triage, hardware refresh, help desk. Real, hard, important, and not clinical informatics."
+    },
+    {
+      "id": "cmio-role",
+      "label": "CMIO Role",
+      "summary": "Chief Medical Information Officer. Physician leader of the clinical informatics function. Reporting line (CMO vs CIO vs CEO) determines what is structurally easy and hard."
+    },
+    {
+      "id": "governance-structure",
+      "label": "Governance Structure",
+      "summary": "How decisions about clinical informatics get made. Clarity of decision rights matters more than the exact org chart."
+    },
+    {
+      "id": "reporting-relationships",
+      "label": "Reporting Relationships",
+      "summary": "Trade-offs of CMIO reporting to CIO (operational closeness, risk of IT framing) vs CMO (clinical grounding, technical isolation) vs dual/peer (more complexity, more autonomy)."
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "moduleId": "09-imaging-virtual-care-pgd",
+  "concepts": [
+    {
+      "id": "dicom-standard",
+      "label": "DICOM",
+      "summary": "Digital Imaging and Communications in Medicine. The image-and-metadata standard that has owned medical imaging since 1993. Defines both a file format (the DICOM object, with its embedded metadata header) and a network protocol (DIMSE services over TCP/IP). Every modality, every PACS, every viewer speaks DICOM."
+    },
+    {
+      "id": "dicom-information-object",
+      "label": "DICOM Information Object",
+      "summary": "A DICOM file is not just pixels. It is a structured object whose header carries patient identifiers, study identifiers, series identifiers, modality, acquisition parameters, and a UID hierarchy (Study UID → Series UID → Instance UID) that uniquely identifies the image across the universe."
+    },
+    {
+      "id": "dimse-services",
+      "label": "DIMSE Services (C-STORE, C-FIND, C-MOVE, C-GET)",
+      "summary": "The DICOM message services. C-STORE pushes an image. C-FIND queries for studies. C-MOVE asks a remote node to send images to a third party. C-GET asks the remote node to send images to the requester. Modalities push with C-STORE; viewers pull with C-FIND/C-MOVE."
+    },
+    {
+      "id": "dicom-modality-worklist",
+      "label": "DICOM Modality Worklist (MWL)",
+      "summary": "The query a modality (CT, MRI, ultrasound) makes to the RIS or EHR to retrieve the day's scheduled exams with patient demographics already populated. Eliminates retyping at the modality console and is the single most important interoperability win in imaging."
+    },
+    {
+      "id": "pacs",
+      "label": "PACS",
+      "summary": "Picture Archiving and Communication System. The departmental system that stores, retrieves, and serves diagnostic images to radiology workstations. Historically vendor-proprietary, with images locked into the PACS database."
+    },
+    {
+      "id": "ris",
+      "label": "RIS",
+      "summary": "Radiology Information System. The departmental order, scheduling, reporting, and billing system for radiology. Sits next to the PACS — RIS handles the workflow and report; PACS handles the pixels. Many modern EHRs have absorbed the RIS function."
+    },
+    {
+      "id": "vna",
+      "label": "Vendor-Neutral Archive (VNA)",
+      "summary": "An imaging archive that stores DICOM (and increasingly non-DICOM) objects in a standards-based way independent of the originating PACS, so images can be migrated, viewed, and shared across departments and vendors without re-acquiring or re-encoding. The architectural answer to PACS lock-in."
+    },
+    {
+      "id": "enterprise-imaging",
+      "label": "Enterprise Imaging",
+      "summary": "The discipline of governing all imaging across an enterprise — radiology, cardiology, dermatology, ophthalmology, endoscopy, pathology, point-of-care ultrasound — under a unified strategy with shared archives (typically a VNA), shared viewers, and shared identity, instead of department-by-department silos."
+    },
+    {
+      "id": "ihe-profiles",
+      "label": "IHE Profiles",
+      "summary": "Integrating the Healthcare Enterprise publishes implementation profiles that constrain HL7, DICOM, and web standards into specific, testable interoperability use cases. Profiles are the operational glue between abstract standards and working integrations."
+    },
+    {
+      "id": "ihe-xds-i",
+      "label": "IHE XDS-I.b",
+      "summary": "Cross-Enterprise Document Sharing for Imaging. The IHE profile that lets one organization publish imaging studies to a registry/repository and another organization discover and retrieve them. The closest thing to a real cross-enterprise imaging exchange standard."
+    },
+    {
+      "id": "ihe-pix-pdq",
+      "label": "IHE PIX and PDQ",
+      "summary": "Patient Identifier Cross-Reference (PIX) reconciles MRNs across institutions. Patient Demographics Query (PDQ) lets a system look up a patient by demographic search. Both sit on top of HL7 v2 or v3 messaging and are how cross-institution identity is solved in IHE deployments."
+    },
+    {
+      "id": "ihe-atna",
+      "label": "IHE ATNA",
+      "summary": "Audit Trail and Node Authentication. The IHE profile that requires every node in a connected system to authenticate with TLS and to write audit events for PHI access in a standardized log format. The HIPAA Security Rule's audit-control requirement, operationalized."
+    },
+    {
+      "id": "ihe-xua",
+      "label": "IHE XUA",
+      "summary": "Cross-Enterprise User Assertion. Carries user identity assertions across organizational boundaries (typically as SAML tokens) so that audit logs in the receiving system can attribute access to a real human at the sending organization."
+    },
+    {
+      "id": "telemedicine-modalities",
+      "label": "Telemedicine Modalities",
+      "summary": "The four canonical telemedicine modalities: synchronous video (real-time two-way audio/video), store-and-forward (asynchronous transmission of clinical information for later specialist review), remote patient monitoring (asynchronous physiologic data from home devices), and e-consult (clinician-to-clinician asynchronous specialist consultation, no patient encounter)."
+    },
+    {
+      "id": "store-and-forward",
+      "label": "Store-and-Forward Telemedicine",
+      "summary": "Asynchronous transmission of clinical information — typically images, video, ECG traces, or structured questionnaires — from a patient or referring clinician to a specialist who reviews and replies on their own schedule. Teledermatology, teleradiology, telepathology, and diabetic retinopathy screening are the canonical examples. Unlocks specialist capacity in ways synchronous video cannot."
+    },
+    {
+      "id": "ryan-haight-act",
+      "label": "Ryan Haight Online Pharmacy Consumer Protection Act",
+      "summary": "The 2008 federal statute that historically required at least one in-person evaluation by a DEA-registered prescriber before any controlled substance could be prescribed via telemedicine. The COVID PHE waived the in-person requirement; DEA has since proposed and partially finalized a permanent regulatory framework, with buprenorphine for OUD treated more permissively. The named statute the boards reuse for any telemedicine controlled-substance question."
+    },
+    {
+      "id": "imlc-licensure-compact",
+      "label": "Interstate Medical Licensure Compact (IMLC)",
+      "summary": "A multi-state compact (~40 states) that creates an expedited pathway for physicians with a full unrestricted license in their state of principal license to obtain licenses in other compact states. Does NOT create a single national license. Parallel compacts exist for nursing (NLC), psychology (PSYPACT), and physical therapy. The structural workaround for the state-by-state physician licensure problem in U.S. telemedicine."
+    },
+    {
+      "id": "telehealth-parity",
+      "label": "Telehealth Parity Laws",
+      "summary": "State and federal laws requiring payers to cover and/or pay for telehealth services at parity with in-person services. Coverage parity (the service must be a covered benefit if delivered via telehealth) and payment parity (the rate must equal the in-person rate) are distinct — a state can mandate one without the other, and the absence of payment parity often determines whether a telemedicine program is financially sustainable."
+    },
+    {
+      "id": "originating-site",
+      "label": "Originating Site (Medicare Telehealth)",
+      "summary": "The historical Medicare requirement that a beneficiary must be physically located at a qualified site (rural health clinic, hospital, physician office in a Health Professional Shortage Area) to receive Medicare-covered telehealth, effectively excluding the home and most urban areas. The COVID PHE waived the originating site restrictions and allowed the home; subsequent legislation has extended those waivers."
+    },
+    {
+      "id": "rpm-cpt-family",
+      "label": "Remote Patient Monitoring CPT Family (99453/99454/99457/99458)",
+      "summary": "The CPT code family CMS uses to pay for RPM. 99453 is one-time setup and patient education; 99454 is monthly device supply and data transmission, conditional on at least 16 days of readings in the 30-day period; 99457 is the first 20 minutes/month of clinical staff management time and requires an interactive patient communication; 99458 is each additional 20 minutes. Recognize the family and the 16-day threshold; the boards do not test the four-digit codes themselves."
+    },
+    {
+      "id": "pghd-definition",
+      "label": "Patient-Generated Health Data (PGHD)",
+      "summary": "An ONC-defined term for health-related data created, recorded, or gathered by or from patients (or family/caregivers) to help address a health concern. Includes RPM device streams, patient-reported outcomes, smartphone-collected activity and sleep data, and patient-entered structured or free-text information. Distinct from clinically-collected data in that the chain of custody runs through the patient, not a clinician."
+    },
+    {
+      "id": "pghd-provenance",
+      "label": "PGHD Provenance and Attestation",
+      "summary": "The two governing problems of PGHD: provenance (where a data point came from — clinic vs. home, calibrated vs. uncalibrated device, known vs. unknown technique) and attestation (whether the patient took the reading themselves, correctly, on themselves rather than a relative). FHIR carries device and performer references for this purpose; whether the EHR surfaces them is a separate question. PGHD is a data trust problem, not a data volume problem."
+    },
+    {
+      "id": "fda-general-wellness",
+      "label": "FDA General Wellness Policy",
+      "summary": "FDA's 2016 guidance that products intended for general wellness — promoting healthy lifestyle, weight management, fitness, sleep — that present a low risk to user safety are not regulated as medical devices. A step counter is general wellness; a continuous glucose monitor that informs insulin dosing is a regulated medical device. Intended use and risk together determine regulatory status. The line the boards test for any wearable or consumer-device stem."
+    },
+    {
+      "id": "wado-rs",
+      "label": "DICOMweb (WADO-RS, QIDO-RS, STOW-RS)",
+      "summary": "The web-services version of DICOM. WADO-RS retrieves images over HTTP. QIDO-RS queries. STOW-RS stores. The bridge that lets browser-based viewers and modern apps consume imaging without speaking the legacy DIMSE protocol."
+    },
+    {
+      "id": "umls-metathesaurus",
+      "label": "UMLS Metathesaurus",
+      "summary": "The Unified Medical Language System Metathesaurus is the National Library of Medicine's meta-vocabulary: a unifying database that maps concepts across more than 200 source vocabularies (SNOMED, LOINC, RxNorm, ICD-10, MeSH, and many more). The same clinical idea — say, 'myocardial infarction' — gets one stable Concept Unique Identifier (CUI) regardless of which source vocabulary expressed it."
+    },
+    {
+      "id": "umls-cui",
+      "label": "UMLS Concept Unique Identifier (CUI)",
+      "summary": "The stable identifier UMLS assigns to a clinical concept across all source vocabularies. CUIs let an application normalize codes from different systems to a shared concept space. Format: C followed by seven digits (e.g., C0027051 for myocardial infarction)."
+    },
+    {
+      "id": "umls-semantic-network",
+      "label": "UMLS Semantic Network",
+      "summary": "A typed graph of about 130 semantic types (Disease or Syndrome, Pharmacologic Substance, Sign or Symptom, Body Part, etc.) and the relationships between them (treats, causes, location_of, etc.). Sits above the Metathesaurus and lets applications reason about what kind of thing a concept is."
+    },
+    {
+      "id": "umls-specialist-lexicon",
+      "label": "SPECIALIST Lexicon",
+      "summary": "The third UMLS knowledge source: a large English biomedical lexicon used for natural-language processing of clinical text. Powers stemming, lemmatization, and morphological analysis in tools like cTAKES and MetaMap."
+    },
+    {
+      "id": "umls-license",
+      "label": "UMLS License",
+      "summary": "UMLS is free for U.S. users under a National Library of Medicine license, but the license imposes use restrictions because some source vocabularies inside UMLS (e.g., CPT) are themselves proprietary. The boards expect you to know that 'free under UMLS' is not the same as 'free of all licensing constraints.'"
+    },
+    {
+      "id": "ctakes-metamap",
+      "label": "cTAKES and MetaMap",
+      "summary": "Open-source NLP pipelines that map free-text clinical narrative to UMLS concepts. cTAKES is from the Mayo Clinic and integrates with Apache UIMA. MetaMap is from the NLM. Both are the canonical board-named tools when a stem describes 'extracting structured concepts from a clinical note.'"
+    },
+    {
+      "id": "fee-for-service",
+      "label": "Fee-for-Service (FFS)",
+      "summary": "The traditional U.S. payment model: providers are paid for each service rendered. Aligns provider incentives with volume, not outcomes. Most board questions about why a given informatics intervention 'failed to gain traction' are really questions about FFS misalignment."
+    },
+    {
+      "id": "value-based-care",
+      "label": "Value-Based Care (VBC)",
+      "summary": "Payment models that tie reimbursement to quality, outcomes, total cost of care, or population health, rather than to volume of services. Includes pay-for-performance, bundled payments, shared savings, capitation, and global budgets. The political and financial driver for most modern clinical informatics work."
+    },
+    {
+      "id": "aco",
+      "label": "Accountable Care Organization (ACO)",
+      "summary": "A group of providers that takes joint financial accountability for the cost and quality of care for a defined patient population. Medicare Shared Savings Program (MSSP) ACOs are the largest U.S. example. ACO economics make population health analytics, registries, and care management informatics financially relevant in a way FFS does not."
+    },
+    {
+      "id": "macra",
+      "label": "MACRA",
+      "summary": "Medicare Access and CHIP Reauthorization Act of 2015. Repealed the SGR formula and consolidated Medicare physician payment adjustments into the Quality Payment Program (QPP). Replaced Meaningful Use Stage 3 for clinicians with the Promoting Interoperability category of MIPS."
+    },
+    {
+      "id": "qpp-mips-apm",
+      "label": "QPP, MIPS, and APMs",
+      "summary": "The Quality Payment Program offers two tracks for Medicare clinician payment adjustment under MACRA: MIPS (Merit-based Incentive Payment System), which scores clinicians on Quality, Cost, Improvement Activities, and Promoting Interoperability; and Advanced APMs, which exempt clinicians who take sufficient downside risk in qualifying alternative payment models."
+    },
+    {
+      "id": "promoting-interoperability",
+      "label": "Promoting Interoperability (PI)",
+      "summary": "The MIPS performance category (and the parallel CMS hospital program) that replaced 'Meaningful Use' in 2018. PI scores measures like e-prescribing, health information exchange, provider-to-patient exchange, and public health reporting. The boards still occasionally refer to this content area as 'Meaningful Use,' but the current name is Promoting Interoperability."
+    },
+    {
+      "id": "meaningful-use-history",
+      "label": "Meaningful Use → Promoting Interoperability",
+      "summary": "Meaningful Use was the HITECH-era CMS program (Stages 1, 2, 3) that paid hospitals and clinicians to adopt and use certified EHRs in increasingly substantive ways. It was renamed Promoting Interoperability in 2018 when the program shifted from adoption to interoperability and patient access. The history is required board knowledge."
+    },
+    {
+      "id": "hospital-vbp",
+      "label": "Hospital Value-Based Purchasing",
+      "summary": "The CMS program that adjusts inpatient prospective payment system payments based on hospital quality measures (clinical outcomes, patient experience, safety, efficiency). Reads quality data the hospital reports through its EHR and registries. The financial pressure that funds most hospital quality informatics work."
+    },
+    {
+      "id": "hospital-readmissions-reduction",
+      "label": "Hospital Readmissions Reduction Program (HRRP)",
+      "summary": "The CMS program that penalizes hospitals with excess 30-day risk-adjusted readmissions for selected conditions. Created the financial case for transitions-of-care informatics, post-discharge follow-up, and event notification services like ADT-based subscription feeds."
+    },
+    {
+      "id": "bundled-payments",
+      "label": "Bundled Payments",
+      "summary": "A payment model in which a single payment covers all services associated with an episode of care (e.g., a hip replacement and 90 days of post-acute care), rather than paying for each service. Forces care coordination and creates demand for episode-level analytics."
+    },
+    {
+      "id": "capitation",
+      "label": "Capitation",
+      "summary": "A payment model in which a provider or organization receives a fixed per-member-per-month payment to provide all needed care for an attributed population, regardless of utilization. The most aggressive form of provider risk-bearing and the strongest economic engine for population health informatics."
+    },
+    {
+      "id": "ffs-vs-vbc-incentive-misalignment",
+      "label": "FFS vs VBC Incentive Misalignment",
+      "summary": "Many informatics interventions that 'should work' fail because the underlying payment model rewards the opposite behavior. A duplicate-test alert saves money for whoever pays for the test, not for the hospital that orders it under FFS. Always ask who pays and who saves."
+    }
+  ]
+}

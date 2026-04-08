@@ -1,0 +1,31 @@
+{
+  "id": "06-macro",
+  "slug": "macro",
+  "order": 6,
+  "title": "Macro: The Economy These Technologies Are Crashing Into",
+  "summary": "Step back from the tech and look at the terrain it is reshaping. Sovereign debt and fiscal dominance, energy as the actual base layer, labor markets when cognition is cheap, scaling laws and capital concentration, the three-way fight between CBDCs and stablecoins and Bitcoin, and the demographic squeeze that conditions all of it. This is where the threads of the course come together.",
+  "learningOutcomes": [
+    "Describe the long arc of sovereign debt-to-GDP and explain what 'fiscal dominance' is and when it kicks in.",
+    "Explain why energy — not money, not labor, not information — is the actual base layer of any economy, and what that implies.",
+    "Describe what happens to labor markets when cognition becomes a cheap input, and distinguish the substitution case from the complementarity case.",
+    "Explain how AI scaling laws produce winner-take-most dynamics in capital, and evaluate the proposed responses honestly.",
+    "Compare CBDCs, dollar stablecoins, and Bitcoin as three rival visions of digital money, and say what each gets right and wrong.",
+    "Connect demographic decline to productivity growth and explain why automation is both a substitute for missing workers and a competitor to surviving ones."
+  ],
+  "prerequisites": ["01-what-is-money"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-sovereign-debt-and-fiat",
+    "02-energy-as-base-layer",
+    "03-labor-when-cognition-is-cheap",
+    "04-capital-concentration",
+    "05-cbdc-vs-stablecoin-vs-bitcoin",
+    "06-demographics-and-productivity"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

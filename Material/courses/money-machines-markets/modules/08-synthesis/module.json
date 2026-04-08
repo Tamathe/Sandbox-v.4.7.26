@@ -1,0 +1,39 @@
+{
+  "id": "08-synthesis",
+  "slug": "synthesis",
+  "order": 8,
+  "title": "Synthesis: A Personal Thesis",
+  "summary": "The course exists to produce one thing: a view you can defend. Build a framework, learn to position-size your beliefs, design a sane information diet, sketch three plausible futures, and decide what you owe the people you teach. The module's deliverable is a thesis outline that scaffolds the final 1,500-word personal thesis.",
+  "learningOutcomes": [
+    "Build a framework (a set of questions) for weighing competing narratives without joining a tribe.",
+    "Apply Tetlock-style calibration and position sizing to ideas, not just portfolios.",
+    "Design a small, deliberate information diet that produces small, slow updates instead of whiplash.",
+    "Sketch three plausible 10-year futures with rough probabilities, leading indicators, and a residual for surprise.",
+    "Articulate what you owe the people you teach and identify your own most likely failure mode in transmitting uncertain knowledge.",
+    "Produce a thesis outline (claim, three sized sub-claims, steel-man, falsifiers) that scaffolds the final project."
+  ],
+  "prerequisites": [
+    "01-what-is-money",
+    "02-bitcoin-from-scratch",
+    "03-blockchains-beyond-bitcoin",
+    "04-machines-arrive",
+    "05-ai-meets-crypto",
+    "06-macro",
+    "07-frictions-failures"
+  ],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-building-a-framework",
+    "02-position-sizing-in-ideas",
+    "03-information-diet",
+    "04-three-futures",
+    "05-what-you-owe-the-people-you-teach"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json",
+  "capstone": "The final 1,500-word personal thesis. See final-project/brief.md. The module's own assignment.md is the pre-writing scaffold for that capstone, not a duplicate of it."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "03-blockchains-beyond-bitcoin",
+  "slug": "blockchains-beyond-bitcoin",
+  "order": 3,
+  "title": "Blockchains Beyond Bitcoin",
+  "summary": "What happens when you generalize the Bitcoin idea, and what is gained and lost in the process. Ethereum and the world-computer thesis, smart contracts and how they detonate, proof-of-stake on dimensions that actually matter, stablecoins as the use case that won, rollups and modularity, and the difference between honest decentralization and theater.",
+  "learningOutcomes": [
+    "Explain the world-computer thesis and why Ethereum became a world settlement layer instead.",
+    "Describe how smart contracts work, what they do well, and the failure modes that recur even when the code is correct.",
+    "Compare proof-of-work and proof-of-stake on cost-to-attack, recovery, security budget, liveness/safety, and plutocracy — without slogans.",
+    "Compare USDT, USDC, and DAI honestly on backing, censorship surface, and historical failure.",
+    "Explain rollups, data availability, and the modular thesis in plain language and identify what is real versus marketing in 2026.",
+    "Apply the Nakamoto coefficient to real chains and defend a personal line between honest decentralization and theater."
+  ],
+  "prerequisites": ["02-bitcoin-from-scratch"],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-world-computer-thesis",
+    "02-smart-contracts",
+    "03-proof-of-stake",
+    "04-stablecoins",
+    "05-rollups-and-modularity",
+    "06-real-vs-theatrical-decentralization"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

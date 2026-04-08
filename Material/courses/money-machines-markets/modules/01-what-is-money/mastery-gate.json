@@ -1,0 +1,139 @@
+{
+  "id": "mg-01-what-is-money",
+  "moduleId": "01-what-is-money",
+  "title": "Module 1 Mastery Gate — What Is Money, Really?",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Ten questions. The point is the explanations, not the score. Read every rationale, even on questions you got right. Retake until passing — there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "moneyness",
+      "prompt": "Which of the following is the best one-sentence definition of 'moneyness' as used in the lesson?",
+      "options": [
+        "The total dollar value of a thing.",
+        "The degree to which something performs the three functions of money, on a spectrum.",
+        "Whether a thing is legal tender in a given country.",
+        "Whether a central bank has approved it."
+      ],
+      "correct": 1,
+      "rationale": "Moneyness is a spectrum, not a binary. A house is somewhat money-like (store of value), a frequent-flyer mile is money-like in a tiny domain, a Treasury bond is extremely money-like for institutions but not for consumers. Legal tender status and central bank approval are separate questions — they affect moneyness but don't define it."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "three-functions",
+      "prompt": "Which of these is NOT one of the three classical functions of money?",
+      "options": [
+        "Medium of exchange",
+        "Store of value",
+        "Hedge against political risk",
+        "Unit of account"
+      ],
+      "correct": 2,
+      "rationale": "The three functions are medium of exchange, store of value, and unit of account. Hedging against political risk is sometimes a *consequence* of certain monies (gold, foreign currency, Bitcoin in some contexts) but is not one of the classical functions. The trick here is that people who want money to do that *fourth* thing often forget that it isn't part of the standard definition."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "fiat-and-credit",
+      "prompt": "When a commercial bank approves a $300,000 mortgage, where does the $300,000 come from?",
+      "options": [
+        "From other depositors' accounts at the same bank.",
+        "From the central bank, which transfers reserves to the commercial bank.",
+        "It is created by the bank as a new entry on its books at the moment of the loan.",
+        "From the Treasury, which prints physical cash and ships it to the bank."
+      ],
+      "correct": 2,
+      "rationale": "This is the single most counter-intuitive fact in the lesson and the one that almost everyone gets wrong on first hearing. Modern banks create money by lending — the loan and the deposit appear simultaneously as offsetting entries. The Bank of England's 2014 paper made this explicit. The 'banks lend out deposits' model taught in textbooks is incorrect as a description of how the system actually works."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "m0-m1-m2",
+      "prompt": "Which money supply measure is the smallest, and what does it consist of?",
+      "options": [
+        "M0, which includes only physical cash and central bank reserves.",
+        "M1, which includes physical cash plus all checking and savings deposits.",
+        "M2, which includes everything you can spend immediately.",
+        "M0, which includes physical cash and the value of all government bonds."
+      ],
+      "correct": 0,
+      "rationale": "M0 (the monetary base) is the narrowest and consists of physical cash in circulation plus commercial bank reserves held at the central bank. It is the only money the central bank creates directly. M1 adds checkable deposits, M2 adds savings and near-cash. The point of knowing these definitions is that 'the Fed prints money' usually refers to expanding M0, but the size of M2 depends overwhelmingly on commercial bank lending behavior, which the Fed influences but does not directly control."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "stock-to-flow",
+      "prompt": "Two assets, A and B, both have the same total existing stock. A produces 1% new supply per year; B produces 6% new supply per year. Which is the harder money, and why?",
+      "options": [
+        "B, because more supply means more liquidity.",
+        "A, because lower flow relative to stock means it is harder to dilute existing holders.",
+        "They are equally hard, because the stocks are equal.",
+        "Cannot be determined without knowing the price."
+      ],
+      "correct": 1,
+      "rationale": "Hardness is a property of supply, not of price. Stock-to-flow ratio measures how hard new supply is to add relative to what exists. A has a stock-to-flow of 100; B has a stock-to-flow of about 17. A is harder. Note: 'harder' does not automatically mean 'better' — that is the trap the maximalists fall into. Hardness is a property; whether it is a desirable property depends on what you want money to do."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "thiers-law",
+      "prompt": "In Argentina today, citizens are not legally forced to use any particular currency for savings. Many of them voluntarily convert pesos to dollar-pegged stablecoins as soon as they are paid. Which monetary 'law' is best illustrated by this behavior?",
+      "options": [
+        "Gresham's Law — bad money drives out good.",
+        "Thiers's Law — when people can choose, good money drives out bad.",
+        "Say's Law — supply creates its own demand.",
+        "Goodhart's Law — when a measure becomes a target, it ceases to be a good measure."
+      ],
+      "correct": 1,
+      "rationale": "Gresham's Law applies when the exchange rate is *forced* — people hoard the good money because they are required to accept the bad at par. Thiers's Law (the inverse) applies when people are *free to choose* — they migrate toward the better money. Argentina is a classic Thiers's Law case. The two laws look like opposites but they are about different conditions: forced parity versus free choice. Knowing which condition applies tells you which law to expect."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "inflation",
+      "prompt": "Why is the link between expanding the monetary base (M0) and consumer-price inflation NOT one-to-one in modern economies?",
+      "options": [
+        "Because the central bank secretly prevents inflation through unspecified mechanisms.",
+        "Because base money expansion only causes inflation if commercial banks lend it out into the broader economy, which they may or may not do.",
+        "Because CPI is measured incorrectly.",
+        "Because gold absorbs the excess money."
+      ],
+      "correct": 1,
+      "rationale": "After 2008, the Fed expanded M0 dramatically through QE, and many economists predicted hyperinflation. It didn't come for over a decade because most of the new base money sat as bank reserves rather than being lent into the broader economy. The 2020 round was different because stimulus payments bypassed banks and went directly to households, and inflation followed within ~18 months. The lesson: the link between base money and inflation runs *through* the banking system's willingness and ability to lend, and through the velocity of money in the broader economy. It is real but not mechanical."
+    },
+    {
+      "id": "q8",
+      "type": "short",
+      "concept": "cantillon-effect",
+      "prompt": "In your own words, explain why a 2% annual inflation target can be described as a 'silent transfer' from one group to another. Who gains and who loses, and why?",
+      "expectedKeywords": ["debtor", "creditor", "savings", "purchasing power"],
+      "rationale": "There is no single right answer, but a complete answer should observe that inflation favors debtors over creditors (you owe in dollars that are getting cheaper), and that the largest debtor in most economies is the government itself, so a small steady positive inflation rate quietly transfers value from holders of currency and bonds (creditors) to holders of debt (debtors, including the state). The 'silent' part matters because no legislator has to vote for it. This isn't a conspiracy — it's an incentive structure — but pretending the choice of target is neutral is wrong."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "hard-money",
+      "prompt": "Which of these is the strongest critique of hard money as a basis for an economy?",
+      "options": [
+        "Hard money is impossible to produce because all natural resources can be mined.",
+        "Hard money makes monetary policy impossible to use as a counter-cyclical tool, leaving governments without a response to financial crises.",
+        "Hard money is illegal in most jurisdictions.",
+        "Hard money has never existed in human history."
+      ],
+      "correct": 1,
+      "rationale": "The serious critique of hard money is that it strips out the ability to expand credit in response to crisis. The 2008 financial crisis would have been much worse without aggressive central bank action. The 2020 pandemic shutdown would have caused mass bankruptcies. A pure rule-based money has no answer. The hard-money side has an answer ('the system shouldn't be that fragile in the first place'), but that answer requires accepting real costs that fall on real people. The honest version of the debate is between flexibility-with-discretion-creep and predictability-with-crisis-brittleness. Anyone who tells you only one side has costs is not being honest."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "bitcoin-claims",
+      "prompt": "The lesson distinguishes three claims a Bitcoin maximalist makes: (1) hardness is a desirable property, (2) the current system is too soft, and (3) Bitcoin specifically is the right migration target. Which of these three do you find most plausible, which least, and why? Two or three sentences.",
+      "expectedKeywords": ["hardness", "Bitcoin", "alternative"],
+      "rationale": "There is no right answer here. The point of the question is to make you separate claims people usually conflate. Most reasonable critics of Bitcoin actually grant (1) and (2) at least partially and disagree with (3). Most reasonable critics of fiat grant the trade-offs and disagree about whether the current calibration is wrong. If you found yourself defending all three or attacking all three together, you may not have separated them yet. Try the question again tomorrow."
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "id": "mg-09-imaging-virtual-care-pgd",
+  "moduleId": "09-imaging-virtual-care-pgd",
+  "title": "Module 9 Mastery Gate — Imaging, Virtual Care, and PGHD",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Sprint-11 expanded gate covering enterprise imaging (q1–q10), telemedicine (q11–q15), and RPM/PGHD (q16–q20). Lessons 4–5 (FHIR Bulk Data, SaMD/HTI-1) and their items are added in Sprint 12. Read every rationale.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "dicom-modality-worklist",
+      "prompt": "A new MRI scanner is brought online and the technologists complain that they have to retype the patient name, MRN, accession number, and exam description at the modality console for every study. Three weeks later the radiology PACS administrator reports a spike in studies that cannot be auto-routed to the right radiologist worklist because of typos and mismatched patient identifiers. Which DICOM service was almost certainly never wired up?",
+      "options": [
+        "C-STORE",
+        "C-FIND",
+        "DICOM Modality Worklist (MWL)",
+        "Storage Commitment"
+      ],
+      "correct": 2,
+      "rationale": "DICOM Modality Worklist is the query the modality makes to the RIS or EHR to retrieve the day's scheduled exams with patient demographics already populated. When MWL is missing, technologists retype, and retyping is the single largest source of patient-identification errors and downstream routing failures in imaging. C-STORE pushes the acquired image to the PACS — useful but unrelated to the demographic-typing problem. C-FIND is a query for studies already stored. Storage Commitment is the handshake by which the modality confirms the PACS has accepted long-term custody of the image. The 'technologists are retyping' stem is the canonical MWL question."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "vna",
+      "prompt": "A health system that has grown by acquisition now operates four PACS from three vendors across radiology, cardiology, and a recently acquired outpatient imaging center. Clinicians want a single longitudinal view of every image for every patient regardless of where it was acquired, and the CIO wants to be able to replace any one PACS without an image-migration project. Which architectural component most directly addresses both needs?",
+      "options": [
+        "A larger PACS from the dominant vendor",
+        "A vendor-neutral archive (VNA) sitting behind the existing PACS systems",
+        "An additional integration engine instance",
+        "Migrating all images to the EHR's blob storage"
+      ],
+      "correct": 1,
+      "rationale": "A VNA stores DICOM (and increasingly non-DICOM) imaging objects in a standards-based way independent of any one PACS, with a unified patient/study index across departments. Clinicians get the longitudinal view through a universal viewer that pulls from the VNA; the CIO gains the ability to swap a PACS without re-acquiring or re-migrating the underlying images, because the source of truth is the VNA, not the PACS database. A bigger single-vendor PACS reproduces the lock-in. An integration engine moves messages, not images. Putting images in EHR blob storage abandons DICOM metadata, breaks viewers, and is not a real architecture."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "ihe-xds-i",
+      "prompt": "Two competing health systems in the same metropolitan area want to share imaging studies so that an emergency department at one system can retrieve a recent CT performed at the other without phoning the film library. They want a vendor-neutral, profile-defined approach with a registry/repository pattern they can also extend to documents later. Which IHE profile family fits the requirement?",
+      "options": [
+        "PIX/PDQ",
+        "ATNA",
+        "XDS-I.b (with XDS for documents)",
+        "XUA"
+      ],
+      "correct": 2,
+      "rationale": "Cross-Enterprise Document Sharing for Imaging (XDS-I.b) is the IHE profile for exactly this use case — publishing imaging studies into a registry/repository so that other organizations can discover and retrieve them across enterprise boundaries. It pairs naturally with the document-side XDS profile when the same infrastructure is reused for clinical documents. PIX/PDQ solves identity reconciliation, ATNA solves audit and node authentication, and XUA carries user identity assertions — all are necessary supporting profiles in a real deployment, but none is the answer to 'how do we share imaging studies cross-enterprise.' The boards want you to know XDS-I by name."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "ihe-pix-pdq",
+      "prompt": "In the same cross-enterprise imaging deployment, the two health systems realize they assign their own MRNs to patients and that the same person may be MRN 12345 at one system and MRN 98765 at the other. Which IHE profile is designed to reconcile these identifiers across the participating systems?",
+      "options": [
+        "PIX (Patient Identifier Cross-Reference)",
+        "ATNA (Audit Trail and Node Authentication)",
+        "XUA (Cross-Enterprise User Assertion)",
+        "XDS-I.b"
+      ],
+      "correct": 0,
+      "rationale": "PIX is the IHE profile that maintains a cross-reference between MRN spaces across institutions, returning the set of identifiers that all refer to the same person. PDQ is the related demographic-search profile. ATNA addresses audit and node TLS authentication — necessary for HIPAA compliance but unrelated to identity reconciliation. XUA carries the *user's* identity (e.g., the requesting clinician), not the patient's. XDS-I.b governs the imaging exchange itself but assumes identity has already been resolved. Reading the stem carefully — 'reconcile identifiers' — uniquely points to PIX."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "ihe-atna",
+      "prompt": "A HIPAA Security Rule audit at a hospital with a deployed IHE infrastructure flags a single weakness: although TLS is enabled between nodes, audit events for PHI access are scattered across each application's local log files in inconsistent formats. Which IHE profile would, if fully implemented, most directly address this finding?",
+      "options": [
+        "PIX",
+        "ATNA",
+        "XDS-I.b",
+        "PDQ"
+      ],
+      "correct": 1,
+      "rationale": "ATNA (Audit Trail and Node Authentication) does two things: it requires TLS between nodes (already in place here) and it requires every node to emit standardized audit events to a central audit record repository in a defined format (RFC 3881 / DICOM Supplement 95 syslog audit messages). The finding in the stem is precisely the second half of ATNA. PIX, PDQ, and XDS-I.b are unrelated to audit logging. The boards reward you for knowing that ATNA is two things, not one, and that the audit half is often the part organizations forget."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "dimse-services",
+      "prompt": "A radiologist's home reading workstation needs to retrieve a CT study from the hospital PACS. The workstation issues a query to find the study, then asks the PACS to send the study directly back to the workstation itself. Which two DIMSE services has the workstation used, in order?",
+      "options": [
+        "C-STORE then C-FIND",
+        "C-FIND then C-MOVE",
+        "C-FIND then C-GET",
+        "C-MOVE then C-STORE"
+      ],
+      "correct": 2,
+      "rationale": "C-FIND queries the PACS for matching studies and returns metadata. C-GET asks the PACS to return the actual image objects to the *requesting* node over the same association — appropriate when the requester wants the images itself. C-MOVE is similar but instructs the PACS to send the images to a *third* node (named in the request), which is the more common pattern in classical PACS-to-workstation workflows. The stem specifies 'directly back to the workstation itself,' which is the C-GET pattern. C-STORE is the push direction — modality to PACS — and is not used to *retrieve*. The boards expect you to be able to walk through the four DIMSE services and pick the right one for a described workflow."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "wado-rs",
+      "prompt": "A vendor proposes a browser-based zero-footprint imaging viewer that runs on tablets used at the bedside. The viewer must retrieve DICOM studies from the existing PACS but cannot speak the legacy DIMSE TCP protocol. Which standard set should the viewer use to communicate with the PACS?",
+      "options": [
+        "DICOMweb (WADO-RS, QIDO-RS, STOW-RS)",
+        "HL7 v2 ORU messages",
+        "FHIR ImagingStudy resources only",
+        "Vendor-proprietary REST API"
+      ],
+      "correct": 0,
+      "rationale": "DICOMweb is the web-services version of DICOM, designed exactly for this case: HTTP-based retrieval (WADO-RS), query (QIDO-RS), and storage (STOW-RS) of DICOM objects, consumable from a browser without DIMSE. HL7 v2 ORU carries result reports, not images. FHIR ImagingStudy is a metadata reference resource that points to images but does not transport pixels — it complements DICOMweb rather than replacing it. A vendor-proprietary REST API would solve the immediate problem but creates lock-in and is the wrong board answer when a standards-based option exists."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "enterprise-imaging",
+      "prompt": "A new CMIO surveys the organization and finds that radiology images live in a PACS, cardiology images in a separate cardiology PACS, dermatology and ophthalmology images in departmental databases the EHR cannot read, point-of-care ultrasound images on the SD cards in the probes themselves, and pathology slides in a research server. The CMIO proposes an 'enterprise imaging' strategy. Which of the following BEST captures what enterprise imaging actually requires?",
+      "options": [
+        "Replacing every departmental system with a single PACS from one vendor",
+        "Shared identity, a common imaging archive (typically a VNA), a universal viewer, and governed image-acquisition workflows for non-DICOM modalities such as photography",
+        "Migrating all images into the EHR database",
+        "Forcing every department to install DICOM modalities"
+      ],
+      "correct": 1,
+      "rationale": "Enterprise imaging is a discipline, not a product. Its components are shared identity (so the same patient resolves the same way across radiology, cardiology, derm, and pathology), a unified archive (the VNA pattern) so images are not stranded in departmental silos, a universal viewer so clinicians have one interface, and governed acquisition workflows for the long tail of non-DICOM imaging (smartphone wound photography, endoscopy, point-of-care ultrasound). Single-vendor PACS replacement reproduces lock-in at enterprise scale. Putting images in the EHR database abandons DICOM metadata and viewers. Forcing DICOM on every device is unrealistic; the real answer is to bring non-DICOM into governed workflows, not to force the world to be radiology."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "dicom-information-object",
+      "prompt": "A research team requests a 'de-identified' DICOM study and receives a file with the patient name removed. A privacy officer reviewing the file flags it as still containing identifying information. Which DICOM characteristic most likely explains the privacy officer's concern?",
+      "options": [
+        "DICOM files cannot be de-identified.",
+        "The DICOM header contains many additional identifier-bearing tags (accession number, study date, institution, device serial, referring physician, patient ID, study and series UIDs) and may also contain pixel-burned text overlays — removing 'patient name' alone is insufficient.",
+        "The pixel data itself is intrinsically identifying.",
+        "The DICOM file uses the patient name as a primary key and cannot function without it."
+      ],
+      "correct": 1,
+      "rationale": "A DICOM object is a structured container with dozens of metadata tags that can carry identifiers — accession number, study date, institution name and address, device manufacturer and serial number, referring physician name, patient ID, and the UID hierarchy. In addition, ultrasound, fluoroscopy, and many other modalities can burn patient identifiers directly into the pixel data as text overlays. Real DICOM de-identification follows DICOM Supplement 142 (PS 3.15 Annex E), which defines profiles for which tags must be removed, replaced, or hashed, and may also require pixel-region blackout. Removing the patient name is the beginning of the work, not the end. The boards test whether you understand that DICOM 'de-identification' is structurally harder than removing one field."
+    },
+    {
+      "id": "q10",
+      "type": "short",
+      "concept": "vna",
+      "prompt": "In three or four sentences, explain why a vendor-neutral archive (VNA) is the architectural answer to PACS vendor lock-in, and name one risk the VNA pattern does NOT solve.",
+      "expectedKeywords": ["VNA", "PACS", "lock-in", "DICOM", "viewer", "migration"],
+      "rationale": "A complete answer should observe that historically a PACS stored images in a vendor-proprietary database such that replacing the PACS required a multi-month image-migration project, often with metadata loss, which gave the incumbent vendor enormous renewal leverage. A VNA stores DICOM objects in a standards-based archive (DICOM-conformant storage with preserved metadata) that is independent of any one PACS, so the PACS becomes a viewer/workflow layer over a shared archive and can be replaced without moving the underlying images. The risk a VNA does NOT solve is universal viewer parity (different viewers render and tool studies differently), cross-enterprise sharing (which still requires IHE XDS-I or similar), or identity reconciliation across departments (still a PIX-style problem), or governance of non-DICOM imaging acquisition. Credit any one of these as the named unsolved risk."
+    }
+  ]
+}

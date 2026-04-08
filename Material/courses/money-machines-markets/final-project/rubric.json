@@ -1,0 +1,28 @@
+{
+  "id": "final-project-rubric",
+  "title": "Final Project Rubric",
+  "extends": "written-thesis",
+  "description": "The final thesis is graded against the standard Written Thesis Rubric, plus the additional criteria below specific to a capstone-length, course-spanning work.",
+  "additionalCriteria": [
+    {
+      "name": "Cross-module synthesis",
+      "weight": 0.20,
+      "levels": [
+        { "score": 1, "descriptor": "Draws on one module only. Could have been written before the course." },
+        { "score": 2, "descriptor": "Draws on two or three modules but treats them as separate domains." },
+        { "score": 3, "descriptor": "Draws on at least four modules and shows the connections between them." },
+        { "score": 4, "descriptor": "Draws on at least four modules and produces an insight none of those modules contained on its own." }
+      ]
+    },
+    {
+      "name": "Falsifiability of the thesis",
+      "weight": 0.15,
+      "levels": [
+        { "score": 1, "descriptor": "Thesis is unfalsifiable. No specific observation could refute it." },
+        { "score": 2, "descriptor": "Thesis is technically falsifiable but the conditions are vague." },
+        { "score": 3, "descriptor": "Thesis comes with three specific, observable, dated mind-change conditions." },
+        { "score": 4, "descriptor": "Three specific conditions AND the writer signals which one they think is most likely to occur." }
+      ]
+    }
+  ]
+}

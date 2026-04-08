@@ -1,0 +1,211 @@
+{
+  "moduleId": "08-synthesis",
+  "concepts": [
+    {
+      "id": "framework-vs-worldview",
+      "name": "Framework vs worldview",
+      "definition": "A worldview is a set of answers; a framework is a set of questions. Frameworks pivot in response to evidence; worldviews flip when the tribe flips.",
+      "appearsInLessons": ["01-building-a-framework"]
+    },
+    {
+      "id": "tribal-epistemics",
+      "name": "Tribal epistemics",
+      "definition": "The default human strategy of outsourcing belief to a high-status in-group in exchange for social validation and reduced uncertainty. Cheap, fast, and corrosive to calibration.",
+      "appearsInLessons": ["01-building-a-framework", "05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "four-question-filter",
+      "name": "The four-question filter",
+      "definition": "A claim-evaluation routine: (1) what is the claim, exactly; (2) who would have to be wrong; (3) what would falsify it; (4) how confident am I, on a 0–100 scale.",
+      "appearsInLessons": ["01-building-a-framework"]
+    },
+    {
+      "id": "steel-manning",
+      "name": "Steel-manning",
+      "definition": "Restating an opponent's position in its strongest possible form before responding to it. A debugging tool, not a courtesy. The version of the other side that, if right, would cost you the most.",
+      "appearsInLessons": ["01-building-a-framework"]
+    },
+    {
+      "id": "narrative-capture",
+      "name": "Narrative capture",
+      "definition": "The slow process by which a person's beliefs migrate to match those of their social environment, without them noticing that any updating happened.",
+      "appearsInLessons": ["01-building-a-framework", "03-information-diet"]
+    },
+    {
+      "id": "calibration",
+      "name": "Calibration",
+      "definition": "The match between the confidence you express and the rate at which you turn out to be right. A 70% forecaster should be right ~70% of the time across many forecasts.",
+      "appearsInLessons": ["02-position-sizing-in-ideas"]
+    },
+    {
+      "id": "brier-score",
+      "name": "Brier score",
+      "definition": "A scoring rule for probabilistic forecasts that rewards being right and being calibrated about how right you were. The basis of the Tetlock superforecaster work.",
+      "appearsInLessons": ["02-position-sizing-in-ideas"]
+    },
+    {
+      "id": "superforecasters",
+      "name": "Superforecasters",
+      "definition": "Tetlock's term for the small group of forecasters who consistently outperform on probabilistic prediction. Their edge is practice (incremental updating, comfort with intermediate confidences, public tracking) rather than IQ.",
+      "appearsInLessons": ["02-position-sizing-in-ideas"]
+    },
+    {
+      "id": "probabilistic-belief",
+      "name": "Probabilistic belief",
+      "definition": "Holding a claim at an explicit confidence between 0 and 100 rather than as a binary, and being willing to update the number incrementally as evidence arrives.",
+      "appearsInLessons": ["02-position-sizing-in-ideas"]
+    },
+    {
+      "id": "epistemic-position-sizing",
+      "name": "Epistemic position sizing",
+      "definition": "Allocating your conviction proportional to evidence and refusing to put 100% of your epistemic weight on any single claim about the future. Borrowed from portfolio risk management.",
+      "appearsInLessons": ["02-position-sizing-in-ideas"]
+    },
+    {
+      "id": "false-humility",
+      "name": "False humility",
+      "definition": "The failure mode of hedging every claim to 50% as a way of avoiding commitment. Cowardice with vocabulary. Brier-scored as harshly as overconfidence.",
+      "appearsInLessons": ["02-position-sizing-in-ideas", "05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "information-diet",
+      "name": "Information diet",
+      "definition": "A deliberately structured stack of sources read at deliberate cadences, designed to leave you better calibrated over time. Not the same as a reading list.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "source-tiering",
+      "name": "Source tiering",
+      "definition": "Ranking sources by track record (specific dated predictions checked against outcomes) rather than by how validating they feel.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "primary-source",
+      "name": "Primary source",
+      "definition": "The original document (FOMC statement, Bitcoin BIP, system card, BIS quarterly) before it has been filtered through commentary. Drier and slower; almost always higher signal.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "update-whiplash",
+      "name": "Update whiplash",
+      "definition": "Swinging beliefs by large amounts in short periods in response to whichever piece of commentary was most recently encountered. A sign of an information diet that is too fast and too emotionally charged.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "contrarian-blindness",
+      "name": "Contrarian blindness",
+      "definition": "The failure to read sources whose conclusions you reject but whose reasoning you cannot easily dismiss. The most expensive blind spot, because the people whose reasoning is good and whose conclusion is opposed to yours are the ones most likely to cost you if they turn out to be right.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "mute-list",
+      "name": "Mute list",
+      "definition": "An explicit list of sources whose update behavior makes you worse-calibrated and whose content you have decided to stop consuming. Reassessed quarterly. As important as the read list.",
+      "appearsInLessons": ["03-information-diet"]
+    },
+    {
+      "id": "scenario-planning",
+      "name": "Scenario planning",
+      "definition": "Sketching three or so plausible futures with rough probabilities and leading indicators. A tool for legibility and decision-making, not prediction.",
+      "appearsInLessons": ["04-three-futures"]
+    },
+    {
+      "id": "leading-indicator",
+      "name": "Leading indicator",
+      "definition": "An observable, dated signal whose movement should cause you to reweight scenario probabilities. The point of naming it in advance is that it is much easier to update when the signal is named before it arrives.",
+      "appearsInLessons": ["04-three-futures"]
+    },
+    {
+      "id": "residual-uncertainty",
+      "name": "Residual uncertainty",
+      "definition": "The deliberate share of probability assigned to 'none of the above' in a scenario set. A scenario set that sums to exactly 100% is hiding overconfidence in its own completeness.",
+      "appearsInLessons": ["04-three-futures"]
+    },
+    {
+      "id": "convergent-vs-divergent-futures",
+      "name": "Convergent vs divergent futures",
+      "definition": "Whether the next decade will produce a single dominant story (concentration), a multipolar mess (fracturing), or a structural rewiring of money (hardening). The three scenarios in lesson 4 are sketches of each.",
+      "appearsInLessons": ["04-three-futures"]
+    },
+    {
+      "id": "decision-under-uncertainty",
+      "name": "Decision under uncertainty",
+      "definition": "Acting on a weighted average of your scenarios rather than the one you find most ideologically attractive. The point of scenario thinking is to force the weighted average to be visible.",
+      "appearsInLessons": ["04-three-futures"]
+    },
+    {
+      "id": "asymmetric-influence",
+      "name": "Asymmetric influence",
+      "definition": "The fact that when you teach someone, you are not a peer in that moment — they weight your statements more heavily and remember your tone more than your hedges.",
+      "appearsInLessons": ["05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "epistemic-trust-debt",
+      "name": "Epistemic trust debt",
+      "definition": "The invisible cost incurred every time you express more confidence than you actually hold. The debt comes due when the future falsifies the prediction and the listener has no framework for updating.",
+      "appearsInLessons": ["05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "calibrated-persuasion",
+      "name": "Calibrated persuasion",
+      "definition": "Communicating your actual best estimate, your actual confidence, what would change your mind, and what you would do — without rounding the number up to satisfy the room.",
+      "appearsInLessons": ["05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "evangelism-cost",
+      "name": "Evangelism cost",
+      "definition": "The damage done to a listener when the goal of the conversation slides from explaining a position to recruiting them into a tribe. The test: would you be equally happy if they understood your view but did not adopt it?",
+      "appearsInLessons": ["05-what-you-owe-the-people-you-teach"]
+    },
+    {
+      "id": "the-recommend-test",
+      "name": "The recommend test",
+      "definition": "Before giving a specific recommendation about money, jobs, or technology: if the worst plausible scenario plays out, can you look the person in the eye in five years and explain why you gave the advice?",
+      "appearsInLessons": ["05-what-you-owe-the-people-you-teach"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "framework-vs-worldview",
+      "wrongBelief": "If you don't have a clear position, you haven't done the work. Smart people have strong opinions.",
+      "correctView": "Smart people have strong opinions about *which questions are the right ones to ask*. Their opinions about the answers are usually held at intermediate confidence and updated incrementally. Confusing rhetorical force with epistemic content is the most common mistake in this domain.",
+      "watchFor": "Students who arrive in module 8 with a complete worldview ready to defend. Almost without exception they have collected a tribe rather than built a framework, and the rest of the module will bounce off them unless they notice."
+    },
+    {
+      "id": "misc-2",
+      "concept": "calibration",
+      "wrongBelief": "Saying '70%' is just a fancier way of saying 'probably.' The number is meaningless.",
+      "correctView": "The number is the entire point. Probabilities are checkable: across many 70% forecasts, you should be right roughly 70% of the time. A person who only ever says 'probably' cannot be scored, and a belief system that cannot be scored cannot be improved.",
+      "watchFor": "Students who write down numbers but secretly treat them as ornaments rather than commitments. The fix is to make them bet — fake stakes are fine — and watch which numbers they walk back."
+    },
+    {
+      "id": "misc-3",
+      "concept": "false-humility",
+      "wrongBelief": "Refusing to commit to a position is intellectually humble.",
+      "correctView": "Real humility is committing to a calibrated number and being willing to be wrong out loud. Refusing to commit is a way of not being on the hook. The Brier score punishes the 50%-on-everything forecaster as harshly as the 95%-on-everything forecaster. Both are failing to engage with evidence.",
+      "watchFor": "Students whose every answer is 'well, who really knows.' Push them: name a number, any number, and defend it. They will resist. Resistance is the diagnosis."
+    },
+    {
+      "id": "misc-4",
+      "concept": "information-diet",
+      "wrongBelief": "Reading more sources gives you a better model of what is going on.",
+      "correctView": "Reading more sources at the wrong cadence makes you more anxious and worse calibrated. The goal is fewer, deeper, slower, with primary sources upstream and a deliberate mute list. Volume is almost always counter-productive.",
+      "watchFor": "Students who treat their browser history as evidence of effort. Ask them what they updated on this month based on something they read. Most cannot answer."
+    },
+    {
+      "id": "misc-5",
+      "concept": "scenario-planning",
+      "wrongBelief": "Putting numbers on scenarios is fake precision. Nobody can really know.",
+      "correctView": "The point of the numbers is not precision, it is legibility. Writing 'Scenario B = 45%' makes your model visible to you, so you can update it when evidence arrives and notice when you have drifted. Vague scenarios cannot be updated; numbered ones can.",
+      "watchFor": "Students who refuse to assign numbers and call this humility. It isn't humility; it is a way of making sure their model can never be checked. Re-read the calibration lesson with them."
+    },
+    {
+      "id": "misc-6",
+      "concept": "evangelism-cost",
+      "wrongBelief": "If I really believe X, the kindest thing I can do for the people I teach is to convince them of X.",
+      "correctView": "Your job is more clear thinkers in the world, not more members of your team. The kind thing is to give them the framework, your honest confidence, and what would change your mind — and let them decide. If you find yourself wanting them to adopt your conclusion specifically, you have crossed from teaching into recruiting.",
+      "watchFor": "Students who, after the course, are most excited about explaining the course's conclusions to other people. Gently redirect them toward explaining the course's *questions* instead."
+    }
+  ]
+}

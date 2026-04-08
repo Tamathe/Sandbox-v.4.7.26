@@ -1,0 +1,209 @@
+{
+  "id": "mg-01-foundations-of-informatics",
+  "moduleId": "01-foundations-of-informatics",
+  "title": "Module 1 Mastery Gate — Foundations of Clinical Informatics",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions, mix of multiple choice and short answer. Read every rationale, even on questions you got right — the wrong-answer explanations are where the studying actually happens. Retake until passing; there is no penalty.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "clinical-informatics-definition",
+      "prompt": "A geneticist is using a pipeline to predict whether a novel BRCA1 missense variant is likely to be pathogenic, in order to inform a patient's surgical decision. The pipeline involves variant calling, in silico prediction, and database lookups. Which informatics subfield is this work primarily in?",
+      "options": [
+        "Clinical informatics, because the result will inform care for a specific patient.",
+        "Bioinformatics, because the unit of analysis is a molecular sequence and the methods are sequence-based.",
+        "Public health informatics, because BRCA mutations have population implications.",
+        "Consumer health informatics, because the patient will eventually receive the result."
+      ],
+      "correct": 1,
+      "rationale": "The trick here is that the result eventually touches a patient — so 'clinical informatics' looks tempting — but the *primary unit of analysis* is a molecular sequence and the *methods* are sequence-based. That makes it bioinformatics. The boards lean on 'primary unit of analysis' to disambiguate boundary cases. The clinical informatics work would begin if you were designing how the bioinformatics result is delivered into the EHR and into the surgeon's decision-making workflow — but that is a separate piece of work from the variant interpretation itself. Public health informatics would apply at the population/screening-program level. Consumer health informatics would apply to a patient-facing portal where the patient self-orders the test."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "clinical-informatics-definition",
+      "prompt": "Which of the following is the BEST one-sentence definition of clinical informatics, consistent with the AMIA core competencies?",
+      "options": [
+        "The branch of information technology that supports healthcare delivery.",
+        "The application of informatics and information technology to deliver healthcare services and to support and enhance clinical care.",
+        "The science of building electronic health records.",
+        "The use of computers to replace clinical decision making."
+      ],
+      "correct": 1,
+      "rationale": "The AMIA-anchored definition is the application of informatics and IT to deliver and support clinical care. The wrong options each miss something load-bearing: option A reduces it to IT, which is the most common error and the one the boards specifically test against. Option C is too narrow — EHR construction is one slice. Option D is a misframing the field explicitly rejects (Friedman's theorem is about partnership, not replacement)."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "public-health-informatics",
+      "prompt": "An emergency department implements a system that scans chief complaints in real time and alerts the local health department when an unusual cluster of gastrointestinal symptoms appears. Which informatics subfield is this primarily?",
+      "options": [
+        "Clinical informatics — it operates inside the EHR.",
+        "Bioinformatics — it processes biological data.",
+        "Public health informatics — the unit of analysis is a population and the customer is the health department.",
+        "Consumer health informatics — patients are involved."
+      ],
+      "correct": 2,
+      "rationale": "The unit of analysis is the population (the cluster), the customer is the health department, and the purpose is surveillance. This is the canonical example of syndromic surveillance, which is squarely public health informatics. The fact that the data source is an EHR doesn't change the discipline — the boards will repeatedly test whether you classify by *purpose and unit of analysis* rather than by *data source*."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "dikw-hierarchy",
+      "prompt": "A flowsheet displays a patient's serum sodium values from the past five days as a line graph, with the lab name, units, and timestamps labeled. Which level of the DIKW hierarchy is this display primarily operating at?",
+      "options": [
+        "Data — it is just numbers on a screen.",
+        "Information — the numbers have context (patient, time, units, lab name) but no synthesis or rule.",
+        "Knowledge — the trend implies a clinical rule.",
+        "Wisdom — it shows what to do for this patient."
+      ],
+      "correct": 1,
+      "rationale": "The display delivers information: data (the numbers) plus context (units, time, patient, lab name). It does not encode a rule (knowledge) — that would require, for example, a flag saying 'downtrend, consider hyponatremia workup.' And it certainly does not deliver wisdom, which would require knowing this specific patient's full context and goals of care. The reason this distinction matters: the system has chosen to leave the knowledge work to the human, which may be the right choice or may be a missed opportunity, but you cannot evaluate that until you correctly classify what level the system is operating at."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "dikw-hierarchy",
+      "prompt": "Which of the following is the MOST defensible critique of the DIKW pyramid as a model of clinical informatics?",
+      "options": [
+        "It is too detailed for board exam purposes.",
+        "It implies that wisdom is the *output* of an informatics system, when in practice wisdom is produced by humans in context and the system's role is to deliver knowledge to the human.",
+        "It does not include genomic data.",
+        "It was invented after Meaningful Use and is therefore historically out of order."
+      ],
+      "correct": 1,
+      "rationale": "The substantive critique of DIKW — and the one informaticists actually argue about — is exactly that it implies wisdom emerges from the pipeline, when in fact wisdom belongs to the human and the system's job is to deliver knowledge into the right hands at the right time. The pyramid is still useful as a teaching device but stops being useful if taken literally as an architecture diagram. The other options are surface complaints, not the real disagreement."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "early-his-systems",
+      "prompt": "Which historical clinical information system is most associated with the integration of clinical decision support into routine workflow, and gave rise to what is now Intermountain Healthcare's informatics tradition?",
+      "options": [
+        "COSTAR",
+        "Technicon (Lockheed)",
+        "HELP",
+        "VistA"
+      ],
+      "correct": 2,
+      "rationale": "HELP (Health Evaluation through Logical Processing) was developed at LDS Hospital in Salt Lake City under Homer Warner and is the system most associated with integrated CDS. Its institutional descendant is Intermountain Healthcare, which remains an outsized contributor to the field. COSTAR was the early outpatient EHR from MGH. Technicon was the first true HIS at El Camino. VistA was the VA's clinician-built system. The boards test these by name, so memorize the four-way mapping: COSTAR-MGH-outpatient, Technicon-Lockheed-ElCamino-firstHIS, HELP-Warner-Intermountain-CDS, VistA-VA-hardhats."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "early-his-systems",
+      "prompt": "Which institution is associated with the Regenstrief Medical Record System, the LOINC terminology, and the Indiana Network for Patient Care?",
+      "options": [
+        "Mass General Hospital and Harvard Medical School.",
+        "LDS Hospital and the University of Utah.",
+        "Indiana University and the Regenstrief Institute.",
+        "The Department of Veterans Affairs."
+      ],
+      "correct": 2,
+      "rationale": "Indiana University and the Regenstrief Institute are the common thread. Clement McDonald led the Regenstrief Medical Record System work; the same group developed LOINC; and the Indiana Network for Patient Care grew out of the same institutional commitment to structured clinical data and exchange. The other options are the homes of the *other* major systems and you should be able to map each correctly: COSTAR/MGH, HELP/LDS-Utah, VistA/VA."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "meaningful-use",
+      "prompt": "Meaningful Use was authorized under which legislation, administered by which agency, and which agency handled the certification of EHR products?",
+      "options": [
+        "HIPAA; HHS; FDA.",
+        "HITECH (within ARRA); CMS; ONC.",
+        "21st Century Cures Act; ONC; CMS.",
+        "Affordable Care Act; CMS; AHRQ."
+      ],
+      "correct": 1,
+      "rationale": "HITECH, passed as part of the 2009 ARRA stimulus, created Meaningful Use. CMS administered the incentive payments; ONC handled EHR certification. This is the kind of factual question the boards love — there is no shortcut to memorization, but the structure (legislation → payer → certifier) is consistent and worth drilling. The 21st Century Cures Act came later (2016) and is associated with information blocking, not Meaningful Use."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "meaningful-use",
+      "prompt": "Roughly what happened to U.S. hospital basic-EHR adoption between 2008 and 2017, the period spanning Meaningful Use Stages 1 through 3?",
+      "options": [
+        "It declined slightly as hospitals returned to paper for safety reasons.",
+        "It rose from roughly 10% to over 90%.",
+        "It rose from roughly 50% to roughly 70%.",
+        "It remained essentially flat."
+      ],
+      "correct": 1,
+      "rationale": "Basic EHR adoption in U.S. hospitals went from roughly 10% in 2008 to over 90% by 2017 — a near-universal jump driven primarily by Meaningful Use incentive payments and the looming penalty phase. This is the single most important quantitative outcome of HITECH and the boards expect you to know the order of magnitude. Note that 'basic EHR' is a defined term (a specific set of functions); the rates are different for fully-certified or comprehensive EHRs."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "friedmans-fundamental-theorem",
+      "prompt": "A vendor claims their CDS module 'detects 92% of pulmonary embolism cases on the basis of vital signs and labs.' By Friedman's Fundamental Theorem, which of the following is the MOST appropriate next question?",
+      "options": [
+        "How fast is the algorithm?",
+        "What percentage do clinicians detect without the system, and what percentage do clinicians plus the system detect together, in the actual workflow?",
+        "What is the cost per license?",
+        "Has it been FDA-approved?"
+      ],
+      "correct": 1,
+      "rationale": "Friedman's Fundamental Theorem says (Person + Information Resource) > Person. The unit of evaluation is the *partnership in context*, not the system in isolation. The vendor metric (92%) is a statement about the system; the theorem-relevant question is whether the human + system partnership beats the human alone, in the actual setting. The other questions are reasonable but secondary; the comparison question is the one the theorem tells you to ask first. Note: a CDS that 'catches' 92% may be no better than a clinician who already catches 91%, especially if the system also generates false positives that fatigue the clinician."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "friedmans-fundamental-theorem",
+      "prompt": "Which of the following describes a violation of Friedman's Fundamental Theorem rather than an application of it?",
+      "options": [
+        "A clinician using a drug-interaction checker catches more interactions than the same clinician without it.",
+        "A retrospective study finds an algorithm has higher sensitivity than radiologists alone, and the algorithm is deployed to replace the second-read radiologist without measuring radiologist+algorithm performance.",
+        "A new alerting rule is evaluated by comparing clinician outcomes with and without the alert, in the same workflow.",
+        "An order set is judged on whether physicians using it order fewer unnecessary labs."
+      ],
+      "correct": 1,
+      "rationale": "Option B replaces the human and compares the system to the human, rather than evaluating the human + system partnership. That is exactly the move Friedman's theorem warns against. The other three options each correctly evaluate the partnership: A and C are direct theorem applications; D evaluates the partnership through a downstream behavioral metric. The deeper point: the theorem is most often violated by replacing one half of the partnership with the system and measuring the system alone."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "informatics-vs-it",
+      "prompt": "The interface between the EHR and the laboratory information system has been silently dropping certain microbiology results for three weeks before anyone noticed. Which framing best describes the ownership of this incident?",
+      "options": [
+        "Pure clinical IT — it's an interface problem.",
+        "Pure clinical informatics — it affected clinical care.",
+        "Joint — clinical IT owns the integration engine and message logs; clinical informatics owns which results matter, who is impacted, what recovery looks like, and what monitoring should have caught it.",
+        "Vendor problem — neither IT nor informatics owns it until the vendor responds."
+      ],
+      "correct": 2,
+      "rationale": "This is a joint incident and the ability to articulate the joint structure is one of the things that distinguishes a clinical informaticist from either a pure IT manager or a pure clinician. IT owns the technical pipe. Informatics owns the clinical implications, the impact assessment, the recovery design, and the monitoring gap. The vendor may need to be involved but is not the owner. A mature organization runs this incident with both disciplines coordinated; an immature one runs it with the IT team fixing the pipe in silence and the informatics team learning about it from a clinician complaint."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "informatics-vs-it",
+      "prompt": "Which reporting structure for a CMIO is MOST associated with the risk that informatics gets framed as a sub-discipline of IT?",
+      "options": [
+        "CMIO reports to the CMO.",
+        "CMIO reports to the CIO.",
+        "CMIO reports to the CEO directly.",
+        "CMIO reports to the COO."
+      ],
+      "correct": 1,
+      "rationale": "Reporting to the CIO has real benefits — operational closeness to technology, influence over IT priorities — but the structural risk is that the informatics function is judged by IT metrics and framed as a clinical-translation layer for IT decisions. Reporting to the CMO has the opposite risks (technical isolation). The boards will sometimes give you a stem about a reorganization; the right move is not to declare one structure 'correct' but to articulate what each makes easy and hard. The deepest answer is that *clarity* matters more than the exact structure."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "friedmans-fundamental-theorem",
+      "prompt": "In your own words, state Friedman's Fundamental Theorem and explain ONE common way it is violated in practice. Two or three sentences.",
+      "expectedKeywords": ["person", "partnership", "unassisted", "comparison"],
+      "rationale": "A complete answer states the theorem (a person plus an information resource is better than that same person unassisted) and identifies a real violation: most commonly, evaluating the resource in isolation rather than evaluating the partnership; or replacing the human and then measuring the system alone; or measuring the resource in a setting different from the actual workflow. The point of asking you to write this is that you cannot fake recall of this theorem on the boards — the exam item writers will give you a stem and ask you to apply the theorem, not to recognize its name."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "dikw-hierarchy",
+      "prompt": "Pick a feature of any EHR you've used (an alert, an order set, a results display, a documentation template) and identify which level of the DIKW hierarchy it primarily operates at. Then identify ONE level adjacent to it where the design choice could be reconsidered. Three to four sentences.",
+      "expectedKeywords": ["data", "information", "knowledge", "wisdom"],
+      "rationale": "There is no single right answer. A complete answer names the feature, places it on the hierarchy with reasoning, and proposes a specific adjacent design move (e.g., 'this flowsheet operates at the information level; it could be moved toward the knowledge level by flagging trends'). The point of the question is to make you operationalize DIKW as a design lens rather than memorizing it as a definition. If you found yourself unable to pick a level, re-read lesson 2 and try again."
+    }
+  ]
+}

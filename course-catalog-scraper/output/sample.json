@@ -1,0 +1,134 @@
+[
+  {
+    "coid": "195266",
+    "prefix": "A&S",
+    "number": "104",
+    "courseCode": "A&S 104",
+    "title": "Basic Instruction in Less Commonly Taught Languages II: (Subtitle Required)",
+    "creditHours": "3 - 5",
+    "description": "A continuation of A&S 103. Students may not repeat this course under the same subtitle.",
+    "prerequisites": "A&S 103",
+    "attributes": [],
+    "repeatability": ""
+  },
+  {
+    "coid": "197574",
+    "prefix": "A&S",
+    "number": "140",
+    "courseCode": "A&S 140",
+    "title": "Focus: Connect and Recover",
+    "creditHours": "2",
+    "description": "This course is designed to assist students in preparation for the continuing academic rigors of coursework in the College of Arts and Sciences majors. Through lectures, discussions, exercises, and out-of- class assignments, A&S 140: FOCUS: Connect and Recover will enable students to actively develop and maintain skill sets and study habits based on current educational practices and research linked to increased degree completion. Thematic activities will focus on personal and professional development; goal-setting; taking action; developing relationships with students, professors, and advisors; skill development; time management; and discovering and learning how to use college and university based support resources.",
+    "prerequisites": "Permission of Instructor",
+    "attributes": [
+      "Distance Learning Approved"
+    ],
+    "repeatability": ""
+  },
+  {
+    "coid": "197578",
+    "prefix": "A&S",
+    "number": "141",
+    "courseCode": "A&S 141",
+    "title": "Aspire: Academically Sound Preparation for Involved Research Education",
+    "creditHours": "3",
+    "description": "This course is designed to introduce students to the College of Arts and Sciences, with a focus on academic success strategies that can be used throughout their college careers. Through guest lectures, discussions, and in-class exercises, A&S 141 will enable students to actively develop and maintain skill sets and information relevant to their major and planned career path while also emphasizing the interdisciplinary nature of college learning.",
+    "prerequisites": "A&S Major",
+    "attributes": [],
+    "repeatability": ""
+  },
+  {
+    "coid": "197747",
+    "prefix": "A&S",
+    "number": "160",
+    "courseCode": "A&S 160",
+    "title": "Leadership and Professional Development: (Subtitle Required)",
+    "creditHours": "1",
+    "description": "-",
+    "prerequisites": "Acceptance into A&S Ambassador Program, A&S Mentor Program, A&S leadership program, or consent of instructor",
+    "attributes": [],
+    "repeatability": "Repeatable to a maximum of 8This course is designed to assist students in developing the tools they need to be successful in their student leadership positions in the College of Arts & Sciences."
+  },
+  {
+    "coid": "198397",
+    "prefix": "A&S",
+    "number": "161",
+    "courseCode": "A&S 161",
+    "title": "International Village, Then and Now",
+    "creditHours": "3",
+    "description": "This course will explore the formation and transformation of the ‘international village,’ defined as a network of connections and communications, as well as tensions and conflicts, that has stretched across continents and countries over the past 100+ years. We will accomplish this task by examining a number of specific phenomena or events of global significance, such as war, new media, pandemics, Olympic games, popular culture, the United Nations, religion, political economy (with emphasis on environmental issues), and technology (with emphasis on issues concerning AI and biomedical engineering). In the process, we will also explore specific forms the international village has taken on the UK campus by conducting life history interviews among classmates.",
+    "prerequisites": "Enrollment in the International Village Living and Learning Program",
+    "attributes": [
+      "Meets UK Core Global Dynamics"
+    ],
+    "repeatability": ""
+  },
+  {
+    "coid": "195282",
+    "prefix": "A&S",
+    "number": "203",
+    "courseCode": "A&S 203",
+    "title": "Intermediate Instruction in Less Commonly Taught Languages I: (Subtitle Required)",
+    "creditHours": "3 - 5",
+    "description": "-",
+    "prerequisites": "A&S 104 in the same language or permission of instructor",
+    "attributes": [],
+    "repeatability": "Repeatable to a maximum of 5This course provides intermediate instruction in a less commonly taught language."
+  },
+  {
+    "coid": "194259",
+    "prefix": "A&S",
+    "number": "300",
+    "courseCode": "A&S 300",
+    "title": "Special Course: (Subtitle Required)",
+    "creditHours": "1 - 6",
+    "description": "-",
+    "prerequisites": "Distance Learning Approved",
+    "attributes": [
+      "Distance Learning Approved"
+    ],
+    "repeatability": "Repeatable to a maximum of 12Interdisciplinary, topical or experimental courses to be approved by the Dean of the College of Arts and Sciences."
+  },
+  {
+    "coid": "197439",
+    "prefix": "A&S",
+    "number": "306",
+    "courseCode": "A&S 306",
+    "title": "Spirit Chemistry",
+    "creditHours": "3",
+    "description": "In this course, students will explore the production of distilled spirits. The production of distilled spirits involves three basic steps: selection and processing of a carbohydrate (starch or sugar), fermentation of the carbohydrate to produce ethanol and distillation of the ethanol. In these processes, substances are produced and concentrated in the ethanol that create the unique flavors and fragrances associated with the individual spirit. Seven distilled spirits (moonshine, vodka, gin, rum, tequila, bourbon and scotch) will be discussed in detail.",
+    "prerequisites": "Credit hours sufficient to be considered a junior or permission of the instructor. All students must be a minimum of 21 years of age prior to registering for the course",
+    "attributes": [
+      "Crosslisted with: CHE 306 Distance Learning Approved"
+    ],
+    "repeatability": ""
+  },
+  {
+    "coid": "196542",
+    "prefix": "A&S",
+    "number": "350",
+    "courseCode": "A&S 350",
+    "title": "Personal Strengths and Your Career Development",
+    "creditHours": "3",
+    "description": "This course is designed to introduce students to the fundamentals of planning and organizing career development strategies. Emphasis is placed on identification of individual goals, assessment of talents/strengths and values, exploration of career options, analysis of the job market, effective use of employment search tools (e.g., resumes, cover letters, and interviewing), and management of career pathways. Stresses the value of the arts and sciences degree in the labor market and develops job search skills that will be useful throughout life. (Lecture, 3 hours)",
+    "prerequisites": "Junior or senior status",
+    "attributes": [
+      "Distance Learning Approved"
+    ],
+    "repeatability": ""
+  },
+  {
+    "coid": "198031",
+    "prefix": "A&S",
+    "number": "420",
+    "courseCode": "A&S 420",
+    "title": "Advanced Writing and Research for the Social Sciences",
+    "creditHours": "3",
+    "description": "This course will provide students with an opportunity to gain research experience drawing on the methods used in the social sciences. Students will be exposed to the process of research and writing used by social scientists. Student will identify and evaluate previous research, identify a topic of interest for research, conduct a literature review and create a research proposal for an original research project.",
+    "prerequisites": "Bachelor of Liberal Studies major, or permission of instructor",
+    "attributes": [
+      "Distance Learning ApprovedMeets Graduate Composition and Communication Requirement"
+    ],
+    "repeatability": ""
+  }
+]

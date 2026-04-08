@@ -1,0 +1,31 @@
+{
+  "id": "04-machines-arrive",
+  "slug": "machines-arrive",
+  "order": 4,
+  "title": "The Machines Arrive: A Working Model of Modern AI",
+  "summary": "A grounded view of what AI is in 2026, free of both hype and dismissal. From symbolic AI to transformers, training and the cost curve, agents, the compute supply chain, and what models cannot do.",
+  "learningOutcomes": [
+    "Sketch the path from symbolic AI to deep learning to transformers.",
+    "Explain what a large language model actually is in terms of weights, tokens, and context.",
+    "Describe training, fine-tuning, and RLHF and what each costs.",
+    "Explain what changes when models can take actions, not just produce text.",
+    "Describe the chip-power-water-geopolitics supply chain that constrains AI.",
+    "Identify three things current models cannot do and explain why."
+  ],
+  "prerequisites": [],
+  "estimatedHours": 6,
+  "lessons": [
+    "01-from-symbolic-to-transformers",
+    "02-what-an-llm-actually-is",
+    "03-training-and-the-cost-curve",
+    "04-agents",
+    "05-the-compute-supply-chain",
+    "06-what-models-cannot-do"
+  ],
+  "masteryGate": "mastery-gate.json",
+  "assignment": "assignment.md",
+  "discussions": "discussion-prompts.md",
+  "studyGroup": "study-group-brief.md",
+  "voiceSession": "voice-session.json",
+  "concepts": "concepts.json"
+}

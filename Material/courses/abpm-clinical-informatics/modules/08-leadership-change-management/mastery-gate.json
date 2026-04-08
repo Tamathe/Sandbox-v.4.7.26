@@ -1,0 +1,209 @@
+{
+  "id": "mg-08-leadership-change-management",
+  "moduleId": "08-leadership-change-management",
+  "title": "Module 8 Mastery Gate — Leadership and Change Management",
+  "passingScore": 0.8,
+  "attemptsAllowed": 0,
+  "shuffleQuestions": true,
+  "instructions": "Fifteen questions on project management frameworks, governance and decision rights, ROI analysis, change management frameworks (Kotter, ADKAR, Lewin), and informatics ethics. The change-management questions reward you for mapping a scenario to the right framework. Memorize Kotter's 8 steps, the 5 ADKAR letters, and Lewin's 3 stages cold.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "concept": "pmbok",
+      "prompt": "An informatics project is failing primarily because vendor invoices have grown 40% beyond the original contract scope and the project manager has not been tracking the variance against the contract baseline. Which PMBOK knowledge area did the project most fail at?",
+      "options": [
+        "Scope management",
+        "Procurement management (with cost management as a contributing answer)",
+        "Communications management",
+        "Risk management"
+      ],
+      "correct": 1,
+      "rationale": "The primary failure is in procurement management — vendor contract administration, change control on contracted work, and tracking of vendor deliverables against the contracted scope. Cost management is a contributing failure because the variance was not detected. Scope management is related but is upstream of the contract; the question is about variance to the contract that is already in place. Communications and risk are not the primary failure here. The boards test the ten knowledge areas with stems of this form — read the failure described and pick the knowledge area that most directly maps to the gap."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "concept": "scrum-kanban",
+      "prompt": "Which of the following BEST distinguishes Scrum from Kanban as agile frameworks?",
+      "options": [
+        "Scrum is for software; Kanban is for physical work.",
+        "Scrum organizes work into fixed-length sprints with sprint planning, daily standups, and retrospectives; Kanban emphasizes continuous flow with explicit work-in-progress (WIP) limits on each column of the board. Scrum is appropriate when work divides into sprint-shaped chunks; Kanban is appropriate for operational support and unpredictable arrival of work items.",
+        "Scrum requires a product owner; Kanban does not have any roles.",
+        "Scrum is older than Kanban."
+      ],
+      "correct": 1,
+      "rationale": "Scrum is time-boxed (sprints) with defined ceremonies (planning, daily standup, review, retrospective) and roles (product owner, scrum master, team). Kanban is flow-based with WIP limits as the central discipline. The right choice depends on the kind of work: Scrum for project-shaped iterative development, Kanban for operational support, incident response, content maintenance, and unpredictable arrival. The boards test the Scrum-vs-Kanban disambiguation directly with this question form. The other options are wrong on the facts."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "concept": "standish-failure-rates",
+      "prompt": "The Standish Group's CHAOS Reports have consistently found, across multiple decades, that approximately what percentage of large IT projects succeed (delivered on time, on budget, and with full functionality)?",
+      "options": [
+        "About 90%",
+        "About 60%",
+        "About 30%",
+        "About 5%"
+      ],
+      "correct": 2,
+      "rationale": "The Standish numbers have shifted over the years and the methodology has been criticized, but the order of magnitude has held: roughly 30% success, 50% 'challenged' (delivered but late, over budget, or with reduced scope), and 20% outright failure for large IT projects. Healthcare IT is at or below the average. The boards do not test the exact percentages but expect you to know that the failure rate is high, that the dominant failure modes are scope and stakeholder problems rather than technical incompetence, and that 'we will run this project well' is not a defense against the base rate."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "concept": "raci-matrix",
+      "prompt": "In a RACI matrix for a CDS rule approval process, which statement BEST captures the difference between Responsible (R) and Accountable (A)?",
+      "options": [
+        "Responsible and Accountable are synonyms.",
+        "R does the work; A owns the outcome. Multiple people can be R; exactly one person is A. The single 'A' is the throat to choke if the decision goes wrong.",
+        "Responsible is the manager; Accountable is the worker.",
+        "R is for committees; A is for individuals."
+      ],
+      "correct": 1,
+      "rationale": "Responsible = does the work to make the decision happen (multiple Rs are normal). Accountable = owns the outcome (exactly one A per decision). The discipline of RACI is to force the institution to name a single A, which surfaces disagreements that have been hiding under collective ownership. The most common error is to confuse R and A. Memorize: R does the work, A owns the outcome. The boards test the four letters and reward you for the discipline of insisting on a single A."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "concept": "decision-rights",
+      "prompt": "An academic medical center has reorganized its informatics governance structure three times in five years and continues to struggle with slow, confused decision-making about CDS rule deployment. The new CIO is proposing a fourth reorganization. Which response BEST reflects this module's framing?",
+      "options": [
+        "Support the reorganization — the previous structures were obviously wrong and a new one is needed.",
+        "The institution is exhibiting the 'reorganization fallacy.' Decision rights matter more than the org chart, and the right move is to write down the recurring decision classes (CDS approval, content retirement, vendor exception requests) with a RACI for each, inside whatever org chart currently exists. Reorganizations are expensive, distracting, and produce a new set of decision-rights problems that the institution then needs to solve.",
+        "Recommend hiring a Chief Decision Officer to oversee all informatics decisions.",
+        "Wait until the next CMIO arrives before doing anything."
+      ],
+      "correct": 1,
+      "rationale": "The reorganization fallacy is the belief that the next reorg will fix decision-making problems. It almost never does. The CMIOs who reorganize annually are usually the ones who have not done the harder work of writing down decision rights inside whatever org chart they currently have. The boards reward the disposition that decision rights matter more than the org chart and that the right intervention is the unglamorous writing of RACIs, not another reorg. Hiring more chiefs and waiting are both forms of avoidance."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "concept": "cmio-role",
+      "prompt": "Which of the following is the most accurate statement about CMIO reporting relationships in 2025?",
+      "options": [
+        "All CMIOs report to the CIO.",
+        "All CMIOs report to the CMO.",
+        "The dominant patterns are reporting to the CIO, reporting to the CMO, dual-reporting to both, or being a peer of the CIO. None is universally right; each has trade-offs, and the right choice depends on the institution. Most large academic medical centers are moving toward dual reporting or CMIO-as-peer-of-CIO.",
+        "The CMIO role no longer exists at most large hospitals — it has been merged with the CHIO role."
+      ],
+      "correct": 2,
+      "rationale": "The reporting line is institution-dependent and there is no universal right answer. CMIO-to-CIO puts the role inside the technology org (closer to the build team, distance from the medical staff). CMIO-to-CMO puts it inside the medical org (clinical credibility, distance from build). Dual reporting integrates both with the cost of accountability ambiguity. CMIO-as-peer-of-CIO is the most senior version. The boards test the trade-offs, not a single 'right' answer. The CMIO role is alive and growing, not being merged out of existence."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "concept": "hard-vs-soft-benefits",
+      "prompt": "An ROI proposal for a new patient portal claims the following benefits. Which one is BEST classified as a hard benefit (one that can be defended on a financial statement)?",
+      "options": [
+        "Improved patient satisfaction scores",
+        "Improved clinician engagement with patients",
+        "Reduction of $180K per year in transcription costs that were going to a vendor for paper-form data entry, with a documented invoice trail",
+        "Reduced cognitive load on registration clerks"
+      ],
+      "correct": 2,
+      "rationale": "The transcription cost reduction is a hard benefit — real dollars that are currently being paid to a vendor and that the institution will stop paying. It is auditable and shows up on the financial statement. The other three are real and valuable but are soft benefits — they cannot be defended as line items in a finance committee. The boards test the hard-vs-soft distinction directly. The right ROI case includes both, identifies which is which, and does not try to dress soft benefits up as hard ones to inflate the headline number."
+    },
+    {
+      "id": "q8",
+      "type": "mcq",
+      "concept": "tco-revisited",
+      "prompt": "A CMIO is preparing an ROI case for a new CDS tool with a $200K license fee. Which of the following BEST captures the right denominator for the ROI calculation?",
+      "options": [
+        "$200K — the line-item license cost.",
+        "The full TCO over the appropriate time horizon, including license, implementation labor, training, integration, ongoing maintenance, content maintenance, vendor support, internal optimization labor, and eventual decommissioning. A realistic five-year TCO is typically several times the line-item license cost.",
+        "$200K plus a 10% contingency.",
+        "The license cost plus the implementation cost only."
+      ],
+      "correct": 1,
+      "rationale": "The full TCO is the right denominator. The line-item license cost is typically a small fraction of the realistic five-year cost of an informatics intervention. Putting only the license cost in the denominator is the most common dishonest move in informatics ROI cases — it inflates the headline ROI number by underweighting the cost side. Cross-reference Module 3 lesson 5 for TCO. The boards test this disposition by rewarding answers that name the full TCO over the realistic horizon."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "concept": "kotter-8-steps",
+      "prompt": "Which of the following is NOT one of Kotter's 8 steps for leading change?",
+      "options": [
+        "Establish a sense of urgency",
+        "Form a powerful guiding coalition",
+        "Implement a pilot-and-control randomized trial",
+        "Anchor new approaches in the culture"
+      ],
+      "correct": 2,
+      "rationale": "Kotter's 8 steps: (1) establish a sense of urgency; (2) form a powerful guiding coalition; (3) develop a vision and strategy; (4) communicate the change vision; (5) empower broad-based action; (6) generate short-term wins; (7) consolidate gains and produce more change; (8) anchor new approaches in the culture. 'Implement a pilot-and-control randomized trial' is not one of them — Kotter's framework is observational and operational, not experimental. The boards test the 8 steps directly with this question form. Memorize the order and the names."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "concept": "adkar",
+      "prompt": "A new EHR documentation template has been deployed. Clinicians have been trained, understand why the template is being used, and want to use it in principle. Two months in, the template's adoption rate is at 23% because the workflow to access the template requires four extra clicks and the clinicians are busy. In ADKAR terms, where is the change failing?",
+      "options": [
+        "Awareness — clinicians do not know about the change.",
+        "Desire — clinicians do not want the change.",
+        "Knowledge — clinicians do not know how to use the template.",
+        "Ability — clinicians know what to do but cannot do it because the workflow does not let them. The fix is workflow redesign, not more training."
+      ],
+      "correct": 3,
+      "rationale": "The stem describes Awareness, Desire, and Knowledge as adequate (clinicians know about it, want it, and know how to use it). The failure is at the Ability stage — the gap between knowing what to do and being able to do it under operational conditions. The fix is workflow redesign (reduce the four extra clicks), not more training. The most common error is to misread an Ability problem as a Knowledge problem and respond with more training. Module 5's workflow lens reappears here. The boards test ADKAR by mapping described failures to the specific stage."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "concept": "lewin-three-stages",
+      "prompt": "A health system implements a new sepsis protocol with strong initial enthusiasm, sees compliance climb to 85% by month three, then watches compliance drift back to 40% by month nine as attention shifts to other initiatives. In Lewin's three-stage model, which stage did the implementation most clearly fail at?",
+      "options": [
+        "Unfreeze",
+        "Change",
+        "Refreeze",
+        "All three equally"
+      ],
+      "correct": 2,
+      "rationale": "Lewin's three stages are unfreeze (disturb the status quo), change (transition), and refreeze (stabilize and institutionalize the new state). The unfreeze and change stages were successful — the institution achieved 85% compliance. The failure was at refreeze: the new behavior was not stabilized through structural support, performance management, ongoing reinforcement, or cultural anchoring, and it decayed back toward the old state. Most failed change efforts fail at refreeze, when leadership declares victory and moves on. The boards reward the disposition that refreeze is the most commonly skipped stage."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "concept": "informatics-ethics",
+      "prompt": "A CMIO is overseeing an AI-driven CDS tool that, six months after deployment, shows a 94% appropriate-override rate, 12th-percentile clinician satisfaction, and two near-miss events linked to clinicians dismissing alerts that turned out to be true positives. Leadership is reluctant to retract because of public commitment and embarrassment. What is the ethically correct action under this module's framing?",
+      "options": [
+        "Continue the deployment because leadership has decided.",
+        "Quietly reduce the alert sensitivity so the override rate looks better, without telling leadership about the near-misses.",
+        "Write a memo to leadership recommending immediate retraction or a 90-day intensive redesign with predefined go/no-go criteria, citing patient welfare, the colleague-experience data, and the obligation to tell leadership the truth even when inconvenient. If leadership overrides the recommendation, document the override in writing.",
+        "Resign immediately to avoid moral complicity."
+      ],
+      "correct": 2,
+      "rationale": "The three dual-loyalty obligations from this lesson all converge on the same action. (1) Patient welfare first — the two near-misses are foreseeable harms and the pattern is consistent with a tool degrading clinician judgment. (2) Professional obligations to colleagues — the satisfaction and override data are real and demand response. (3) Tell the truth to leadership — the embarrassment of retraction is small compared to the cost of continued deployment. The right move is the honest written recommendation with documentation if overridden. Continuing silently is the abdication. Quietly tuning is the dishonest move that destroys long-term credibility. Resigning is theatrical and abandons the obligation."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "concept": "friedmans-fundamental-theorem",
+      "prompt": "Friedman's fundamental theorem of biomedical informatics, introduced in Module 1 and revisited in Module 8, has a corollary the boards reward you for stating. Which statement BEST captures the corollary?",
+      "options": [
+        "Every informatics intervention should be preserved indefinitely once deployed.",
+        "If the person with the information resource performs WORSE than the same person without it, the informaticist is obligated to retract or redesign the resource. The discipline of measuring against the counterfactual, and the willingness to retract when the counterfactual wins, is the closing ethical move of the field.",
+        "Information resources are always neutral and never harmful.",
+        "Friedman's theorem only applies to CDS rules."
+      ],
+      "correct": 1,
+      "rationale": "The Friedman corollary closes the loop between Module 1 (the theorem) and Module 8 (the ethics). Most informatics projects do not have a built-in retreat — once deployed, interventions tend to be deployed indefinitely, and institutional culture is biased toward continuation because retraction feels like admitting failure. The corollary says: the failure is not in the retraction; the failure is in the continuation of an intervention that has not delivered. The boards reward the disposition that interventions must be measured against the counterfactual and retracted when they have not helped."
+    },
+    {
+      "id": "q14",
+      "type": "short",
+      "concept": "kotter-8-steps",
+      "prompt": "Name Kotter's 8 steps for leading change, in order. Brief phrases are fine.",
+      "expectedKeywords": ["urgency", "coalition", "vision", "communicate", "empower", "short-term wins", "consolidate", "anchor"],
+      "rationale": "(1) Establish a sense of urgency; (2) Form a powerful guiding coalition; (3) Develop a vision and strategy; (4) Communicate the change vision; (5) Empower broad-based action (remove obstacles); (6) Generate short-term wins; (7) Consolidate gains and produce more change; (8) Anchor new approaches in the culture. Memorize them in order. The boards test the 8 steps with both 'name them' and 'which is NOT one of them' question forms, and they expect the order."
+    },
+    {
+      "id": "q15",
+      "type": "short",
+      "concept": "informatics-ethics",
+      "prompt": "In two or three sentences, articulate the three dual-loyalty obligations of an informaticist who is also a clinician. Identify which one is the trump card and why.",
+      "expectedKeywords": ["patient welfare", "colleagues", "leadership", "truth", "trump"],
+      "rationale": "The three obligations: (1) patient welfare first — when an institutional decision creates a foreseeable risk to patients, the informaticist's clinical credential carries an obligation to surface and oppose the decision through legitimate channels; (2) professional obligations to colleagues — the informaticist's interventions land on other clinicians, and the obligation is to design with respect for their work, cognitive load, and autonomy; (3) tell the truth to leadership — the obligation to give honest assessments, including the uncomfortable parts, even when leadership prefers to hear something else. Patient welfare is the trump card because the clinical credential carries an obligation that does not lapse when the informaticist takes on an institutional role."
+    }
+  ]
+}

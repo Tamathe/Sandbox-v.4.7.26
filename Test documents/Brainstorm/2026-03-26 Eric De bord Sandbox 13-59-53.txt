@@ -1,0 +1,484 @@
+00:00:00:00 - 00:00:16:16
+Unknown
+I won't waste any of your time. Because I know that, your time is very valuable. I can't give you a link. Which I was hoping to be able to just, like, let you play with it. But for whatever reason, my field is. Aaron. Sorry. Oh, no worries, no worries. You feel. Just tell me what you're doing.
+
+00:00:16:16 - 00:00:43:10
+Unknown
+And maybe more importantly, what tools you're using. I'm very curious about that. Yeah, yeah, yeah, yeah. I am using Claude. Oh. Okay. Fair. Let me. Oh, by the way, Claude is in M365 going forward. Did you know that, opus 4.6 Sonet something at this point? Okay. Opus is in Azure, foundry, though. You do know that, right?
+
+00:00:43:14 - 00:01:05:20
+Unknown
+I yeah, I've been trying to get into Azure Foundry for a while as you and I both know. Yeah. So feel confident that this same model will be there. Okay. Sounds awesome. So, so essentially what I'm trying to solve for is we went to DC and watched all of the things, from you know, copilot studio and Foundry and we're like, wow, you see a lot of cool stuff there.
+
+00:01:05:22 - 00:01:22:03
+Unknown
+And I don't know if a lot of our students or faculty are going to kind of get into it. Just because it it looks pretty intimidating. And also, one of the other things that we were, talking about is the sandbox, you know, how do we, like, share all of these tools with each other?
+
+00:01:22:05 - 00:01:43:26
+Unknown
+And so this started with, can we just have a place where people from the university can all share tools? Are you okay? If I were to transcribe this? Yes. I don't know. Do you know we have an NDA, you and I, but, yeah. Okay. Yeah. I mean, Microsoft and UK do. Okay. Yeah. Yeah, yeah, 100%.
+
+00:01:44:00 - 00:01:59:17
+Unknown
+I don't know how any of it. If you're uncomfortable, it's okay. Don't worry about it. I'm just going to try to memorize. Yeah, exactly. No, I, I am totally fine with it. You know, all things. I just want to make sure that I'm following all the rules. Well, let's not. We don't have to record it. Yeah, I don't.
+
+00:01:59:20 - 00:02:18:03
+Unknown
+Yeah, why? That's okay. Because I don't know. Well, we're going to keep this between us for now, I hear. So that's that's perfectly fine with me. Totally. So, to make a long story short, I broke the hub. This was supposed to be the marketplace. But I broke it this morning while I was trying to make it look different.
+
+00:02:18:05 - 00:02:35:00
+Unknown
+And so I had had, like, about a dozen different tools. It's all the tools that you already know about, you know, like a chemistry molecule thing. Like a physics simulator, and then a whole bunch of, like, low power tools. But this is this is essentially what it what the kind of the, the heart of it is.
+
+00:02:35:03 - 00:02:55:15
+Unknown
+Is it is. I'm trying to figure out a way to get people to build tools for themselves. And so this is I'm in the educator, role. And let's say that I wanted a mock. Right. Let's, give me a. Yeah, please let me. I need to ask a foundational question. Yeah. This is a website that you built using, opus.
+
+00:02:55:22 - 00:03:24:11
+Unknown
+Yes. Provide coding. Yeah. Yeah. Okay. I just want to make sure I understand if you understand where. I wasn't for sure. Yeah, yeah. Yeah, yeah. Okay, then. And then. So that kind of help, get you an idea of of, like, what are the things that we need? But the short story is, so, like, so let's say that we wanted a, a mock trial with O.J. Simpson, where you, question what it, the thing is.
+
+00:03:24:12 - 00:03:45:21
+Unknown
+Okay. So. So once you have your idea, then it essentially walks you through the process. I mean, it is not very different from, hey, just, like, just working with, an LLC. But what it's going to do is, is, give you first, like, it's going to add a whole bunch of, things based on what you said.
+
+00:03:45:22 - 00:04:02:12
+Unknown
+Right? Like if you wanted to talk with Abraham Lincoln or whatever the thing is, then it's going to load up a bunch of stuff about Abraham Lincoln. And so the first thing that it does is what you're learning. And so I want to do a cross-examination technique, cross-examine. And, and then it'll kind of like, run you through it.
+
+00:04:02:18 - 00:04:20:16
+Unknown
+And then as you make changes to whatever learning tool it is, then it's going to update the little preview here so you can see, you know, this is kind of like the preface for what it's all about. And then down here at the bottom, it's starting to give you ideas of, all right, you're going to practice cross-examination.
+
+00:04:20:16 - 00:04:42:23
+Unknown
+You're going to learn to introduce, and then once you're comfortable with what your, your educational tool is, then you just hit the build the tool, and then it'll launch you into effectively, the tool itself. And then so, you can have now a conversation with being in whatever, you know, whatever the tool is. And so great.
+
+00:04:42:23 - 00:05:07:22
+Unknown
+That's a large language model tool. Now I can assign it to my tech 100 course. And then now it lives in tech 100. And then. So this is a single lesson plan for a course, correct? Yes. And, and and, you know, maybe it is my experience with OJ Simpson or maybe it's an assessment, you know, and maybe the assessment is different from a multiple choice question, but instead it's a conversation to, you know, whatever.
+
+00:05:07:22 - 00:05:31:12
+Unknown
+However the future of assessments are going to look. And then so, from a course perspective, what you can do is you can take your syllabus, and we can actually do that real quick. If I make a new course and I'm just going to say, Eric, and this is tech, and I'm going to say blah, blah, blah, and if I create this course, it breaks.
+
+00:05:31:12 - 00:05:57:26
+Unknown
+Good, good for me. I have to go back and fix that. Let me go back to my course itself. Okay. So once are in. Oh, yeah. Okay. Well, now it worked. I don't know why that didn't work. You essentially upload a syllabus. And so I'm going to open up my, I'm going to try to get to my file real quick.
+
+00:05:57:28 - 00:06:17:23
+Unknown
+I definitely set this up. Well, brainstorm for like, two seconds. That's not syllabi. Okay. So now I have a syllabus, a mock syllabus that I created. And, what I do is I upload it and it's going to pass the syllabus. What it's going to do is it's going to pull out, you know, like all of your grades and stuff.
+
+00:06:17:23 - 00:06:33:04
+Unknown
+And I'll just show you this will roll for a little bit. But we'll just go back and then I'll show you. So this was tech 100, so I took tech 100 and dumped it in. And so it pulls all of your different policies. About your grading scale, what does it mean for academic integrity in my course?
+
+00:06:33:07 - 00:06:57:05
+Unknown
+And then it lays out over the top, essentially a course map. And so, you know, it's however many weeks in this case, it's five weeks. These are all of the different assignments and all of your lecture materials are all there. But let's say that I am an educator and I want to create a tool for one of my courses, but I don't really know what I is capable of.
+
+00:06:57:08 - 00:07:21:03
+Unknown
+Then I'll hit suggest tools. And so module four is all about hallucinations. And so what this thing is doing right now is it's going into my course material and understanding what my learning objectives are for the course. In this case it is can you identify a hallucination? And so what it'll do is it'll go from the course material and recommend a couple of different tools.
+
+00:07:21:03 - 00:07:42:10
+Unknown
+So, like a, a chat bot. That's a fact checking coach. This is a debate about how do you how are you confident about hallucinations. And then this one is is part the fabrication. And so present students with an AI generated response containing plaintiff hallucinations. And so if I build this tool then it auto populates that tool building thing that I mentioned or that I showed you earlier.
+
+00:07:42:10 - 00:08:08:16
+Unknown
+And so it automatically kind of like preloaded with that. And then starts the process of building the thing. And so the idea is to give faculty who don't have much AI experience still the opportunity to push AI tools into their course. And then so what happens if you have something more fancy than just a large language model chatbot conversation?
+
+00:08:08:19 - 00:08:44:10
+Unknown
+And so that's where you go down to the playground. And so in the playground, it's a similar thing, except now it's it's so like, let's say I wanted to build build me a chemistry molecule, visualization tool, or chlorinated molecule. Okay. I should put that in. Okay. So we'll we'll call it college, and I'll say and specifically you said a chlorinated molecule.
+
+00:08:44:12 - 00:09:14:17
+Unknown
+Okay. So, and so great. So then it is essentially going to now instead of just like large language model based, it's actually going to try to code what you think it is. But during the whole time I could come back here and interrupt it and say, you know what? I, what I want it to do is to do these things or whatever the thing is, and like, it's giving me some options of, of options that I could go back and forth with it.
+
+00:09:14:20 - 00:09:33:09
+Unknown
+But let's let it run, let it run, and then eventually it'll pop up here. And then so then the question becomes, okay, well, I just built this tool. Maybe it's good for my learning. Maybe it's good for my teaching. My students. How do I share it? You know, how do I take this tool? Do I just, like, embedded into canvas where everybody clicks on a link?
+
+00:09:33:11 - 00:09:54:19
+Unknown
+If it is through canvas and you click on a link, what what does it link to? You know, like, does it link to like who's who's servicing that. Right. Like, is it is it what is the platform that it lives on. And the idea was how do we solve that problem? Like how do we get the analytic data back out?
+
+00:09:54:20 - 00:10:18:22
+Unknown
+How do we share all of these tools with each other? I promise eventually this thing will stop. Maybe we did. Too complicated of this. So familiar because I've done some dive coding in my own using similar tools. Like Replit. If you're familiar with roughly the same interface, 100%, help me understand, how do you see this as being situated with a tool like canvas?
+
+00:10:18:25 - 00:10:37:22
+Unknown
+So yes. So this is so give me just a second to, to be like, okay, so now this is something about said molecules like it exists here. I don't know what it does. You know, we can we can go in and, like, change some things and then we can deploy it differently or whatever the thing is.
+
+00:10:37:22 - 00:11:03:00
+Unknown
+But but this is essentially the thing. And then so, so then your question of, okay, well, how does this, this work with canvas? So taking a step back in order for your courses to, like, be as smooth and functional as possible. So that I can see, you know, all of my assignments and, I can actually integrate my learning tools into my course.
+
+00:11:03:00 - 00:11:23:25
+Unknown
+I'm going to have to upload all of my course material anyway. And so then I started thinking about what does canvas bring to the party and canvas brings. A place where you can store all of your course material, and then also have things like a grading, and, and then a way to interface with your registrar, etc., etc..
+
+00:11:24:00 - 00:11:49:25
+Unknown
+And so then the question becomes, what if you build an operating system for your university where you have all of your legacy tools and platforms all in a single place? In like so I think about, you know, we have AI tools now that can ingest all of your training material for, let's say, your financial aid. And we will build, like, a financial aid advisor or whatever the thing is.
+
+00:11:49:26 - 00:12:15:15
+Unknown
+But what if instead you just had an operating system where all of that was was built into it? And so, like, let's say I have ADHD and need help with courses. And so, what if you had a universal chatbot that wasn't a financial aid assistant or, and I have parking problems. And okay, so I'm in I'm in the educator perspective.
+
+00:12:15:15 - 00:12:49:23
+Unknown
+Hang on. Sorry. My student has ADHD and needs help. So instead. Sorry. I love that. So, so essentially what this will do is this will look through, what we have on offer. And then I just tried this one earlier. And so this will give you kind of access to some things for, but what does the university have?
+
+00:12:49:25 - 00:13:07:05
+Unknown
+There we go. Okay, so now it's giving me these are the university resources, right. And so, like, this is our disability resource center. This is our career center. You can send them here. If you the first thing that it was giving me was, like, help with the courses themselves. And so if you wanted, like a study skills coach, you can click on that.
+
+00:13:07:05 - 00:13:33:04
+Unknown
+And then you could develop some study skills. Or the crammer is my favorite. So this one is if you just have like one hour, 20 minutes before your exam. Then you choose what your course is and what your exam is, and then it uses that as a knowledge base and build you a little thing. So going back to kind of the home page, so the question becomes, all right, so all of our data lives in silos, right.
+
+00:13:33:04 - 00:13:56:04
+Unknown
+Like I think about in my life. I'll open outlook in my calendar. And then I'll open, canvas, and then I'll open what we use to, like schedule courses, like actual, like rooms. And then I'll open up VPN involved, which is how you actually, like, push out events. And so you have all of these different things on different sites.
+
+00:13:56:06 - 00:14:26:24
+Unknown
+And so what if instead you had it all in one spot? And so like, it'll ingest, through, you know, 365 like Azure Graph in my mind. It'll ingest like, your emails and it's like, oh, okay. Dean Robinson need your thing. Let's, let's ask Sandy to draft a reply for me. And then Sandy kind of lives on the side and is plugged into everything it has, all of the institutional knowledge as well as all of your personal knowledge and also all of your canvas stuff.
+
+00:14:26:26 - 00:14:45:21
+Unknown
+Is like, okay, so, here is a draft that it wrote. Thank you for the heads up. I'll follow up and then you could either edit it or you can approve it. If you approve it, then, then one maybe it could send your email automatically to, maybe it could just put a draft in your outlook.
+
+00:14:45:23 - 00:15:03:21
+Unknown
+And then it'll look through all of the ones from, from the day. And if you have in this case, this person had 15 emails, and then it'll flag like it was one urgent email and it'll put it at the top. And then the rest are like student emails, etc.. It's got a schedule on the side. And then sometimes you're go ahead.
+
+00:15:03:24 - 00:15:34:24
+Unknown
+I'm just thinking this is obviously an ambitious, holistic tool that you're describing. Right. And I'm trying to create an operating system like a place where everything ends up where we once and for all. We keep talking about these legacy systems that we need to update. But if we update every individual legacy system with AI tools, then we still have the same problem of either everything will slowly become AI powered, but we're still fragmented and fractured across all these different sites.
+
+00:15:34:27 - 00:16:03:15
+Unknown
+What if we took all of our university knowledge base, put it all in one spot and in and deployed a tool just like directly on that? And so it is loaded up with all of the university stuff. But then also could be a place where all of your things come into one. So like your tasks, these would be AI generated based on your emails, based on your team's conversations, based on the things that are going on in your course.
+
+00:16:03:18 - 00:16:25:10
+Unknown
+You know, could it, could this be a place where your students ask you a questions, you respond to questions, you respond to their degree audits and their holds. You help. It's basically your administrative assistant that puts everything in front of you that needs action all the time. Exactly. Yes. And yeah, plugged into the university information, plugged into your students information and all of your course material.
+
+00:16:25:14 - 00:16:43:29
+Unknown
+And so, like as I am writing letters of recommendation, I can just resume a draft. And then if, like, you know, my little thing can help me either pull it up in word or if I just want, like, really quick stuff and then also, like, all of my student information is here and, I can't see it because I don't actually have a draft written for that person.
+
+00:16:44:02 - 00:17:08:02
+Unknown
+And so two question about canvas. So I'm going to flip over now to the, the student, view. I think canvas I have you so this is good. I was going to say this is the academic side of innovation that I'm seeing here. Yes. Okay. Yeah. Canvas, canvas. I've used it extensively. Yes, I it's a $4.3 billion company and I think it's terrible.
+
+00:17:08:05 - 00:17:27:03
+Unknown
+I think we can I think we can. It's better than blackboard is better than blackboard which was also terrible. But so in my mind, you know, I think that we have an opportunity to not continue to use canvas. If you have everything in one spot. So for as a student, I can see all of my course content here.
+
+00:17:27:05 - 00:17:48:17
+Unknown
+I if I wanted to, the way that I'm thinking of a messaging system is when you're, enrolled in a course that it creates, you know, like a, like a group message, or you can message your faculty member, and then all of that would be, kind of built through the same system, so you don't have to then, you know, go out and then message them through whatever other system it is.
+
+00:17:48:23 - 00:18:05:24
+Unknown
+This can generate study guides for you based on where you are in your material. You can keep track of the things that you've learned, all of your topics, and then like also keep track of which things you actually read, which things you need to read. Because now everything is digital, right? Nobody's really using textbooks. Everything is online.
+
+00:18:05:26 - 00:18:28:14
+Unknown
+Then you can say, yeah, click, click, click. I studied those things. I'm ready to go. Or you can flag things for your study guide, things that you actually want to go back in and study. And then the hub is, is where everyone who has built anything, all ends up. And so like if you build some kind of whatever the thing is a moot court, something or the other, then you can share it with other people.
+
+00:18:28:16 - 00:18:52:00
+Unknown
+And if you build something even more sophisticated that doesn't, that can't actually be built into the platform, like something that has multiple files worth of, code. Then you can, essentially publish it onto the platform, such then you have your thing here and it's just externally packaged, and then it links to whatever your, your toolbox.
+
+00:18:52:02 - 00:19:14:05
+Unknown
+But then that would give us the opportunity to also then bring pipe the, that data back into, into the platform. And then from an administrative perspective, like, we would have all of our policies. So like if you have any administrative regulations and you need to see what your policies are, all of your policies are here.
+
+00:19:14:07 - 00:19:31:24
+Unknown
+But not just here. They're also AI powered from your dashboard. And so you can just ask about, hey, there's a thing somebody wanted to know about a policy, about whatever the thing is. Which policy do I need? And then it'll point you to whichever policy is relevant. Same thing. So, like the registrar. I'm just going to pull that up.
+
+00:19:31:26 - 00:19:55:11
+Unknown
+Let me ask you a question. Yeah. Is this something that you've shown to to Ian and Keith and Adam? Is this where this whole. Yes. That's where all of this has come from? Yeah, I showed it to Ian. This is where the chief of staff idea has come from. Yes. Because that seems like the MVP for something like this.
+
+00:19:55:14 - 00:20:25:24
+Unknown
+The minimum viable product. Because it seems to be the first step in going this direction. Because I talked to Adam about this at length last week after Ian told us all about it. Yeah. And we were talking about what the chief of staff meant to him and where it would live. And we talked about the my UK website is sort of the starting point where we surface information that's relevant for the user without them having to ask for it, which is the key part.
+
+00:20:25:24 - 00:20:47:28
+Unknown
+That's essentially what you're showing here. And he came up with all these ideas of how it would expand over time, which is essentially kind of this. Yeah. So I think maybe he shared some of what he learned from you. Well, I would say that the chief of staff idea came from a conversation we had the day after on the 11th, the day after we had that meeting.
+
+00:20:48:02 - 00:21:03:27
+Unknown
+So the provost, the EVP, we all sat down in a room and was talking about what is our, pie in the sky? Like, if we could do 2 or 3, projects, what would it be? And one of them was chief of staff. Truly, this was supposed to be how do you solve the problem of the sandbox?
+
+00:21:03:27 - 00:21:19:15
+Unknown
+And then what I realized was I was just adding another legacy, computer system. Right? Like I was adding another log in. I was adding another place. And so what if you just boiled the ocean and put it all in the same spot, right. Like I'm going to share. Yeah, I told you, I think I'm getting it. Yeah.
+
+00:21:19:15 - 00:21:42:14
+Unknown
+I'm going to share one insight that I might be helpful. This idea of a sandbox. Yeah. That term is so overloaded that especially for information technology people, it's hard to comprehend where you're going because the sandbox for it is all about playing and figure things out and test it and QA it, and then bring it into a production environment over time.
+
+00:21:42:17 - 00:22:04:14
+Unknown
+So it's so difficult to get away from the idea of a sandbox as defined for, you know, 30 years. That was probably one of the most challenging things. What you just showed me doesn't appear to be a sandbox at all. To me, it appears to be like a full blown product just because the term sandbox so overloaded in in technology space.
+
+00:22:04:17 - 00:22:29:28
+Unknown
+Yeah. So I guess what I'm seeing, what you're showing me. First of all, it's very ambitious, I love it. I think it's all possible. It makes sense. I think it sounds like the chief of staff is step one. Would you disagree or would you agree? So I we left that meeting. So the chief of staff idea, I have not talked to Adam since then.
+
+00:22:30:00 - 00:22:48:07
+Unknown
+And so I didn't know he was. He was pursuing the chief of staff. This this was when we were there. We were like, hey, I think we should have a platform where we share tools with each other. And I came up with a, you know, a version of this. And then as I've been building it out, kind of added on all of the things to turn it into an operating system.
+
+00:22:48:09 - 00:23:05:13
+Unknown
+Yeah. The idea is that you can sit down and do all of your work from one spot. You don't have to go to my UK. You don't have to go to, you know, can this you can just go in and get it all done. Yeah. Totally get. So I love it. I get that. I get it. It makes sense.
+
+00:23:05:16 - 00:23:28:09
+Unknown
+Yeah. I think it probably is the reality in several years. The other side of the equation that I'm thinking about is from an operations perspective is how has it supported. Yeah. How do we make sure it does what it's supposed to do every time the same way? Yeah. You see where I'm going here? Yep. How does it exactly?
+
+00:23:28:09 - 00:23:53:24
+Unknown
+Security connection to data. The same thing happens every time. It's not, you know, it's deterministic, to some degree. Obviously there are areas where it doesn't need to be, but the general overall operation is to be deterministic. I would think maybe I'm not thinking correctly. Yeah, yeah. And I think, I think I've got in my opinion, Stephen Staff is starting down that path.
+
+00:23:53:24 - 00:24:13:09
+Unknown
+And if you continue to iterate and build on it over time, I think you could end up with what you have. I mean, it makes complete sense to me that I just am in the mindset of how do you operationalize it? Because I know this is what the IT team is going to be thinking, okay. And not that they they obviously matter.
+
+00:24:13:12 - 00:24:38:29
+Unknown
+The business matters more. But you have to convince them. And I think the way to convince that it team is iterate have a release MVP, the chief of a staff fold in the lesson creations fold in. You know, release release, release. I love that. So it's chunked it chunked in a way that they can deal with it because you know it.
+
+00:24:39:01 - 00:25:08:13
+Unknown
+People are engineering type and they're afraid of what will break and what can't be supported. And more importantly, they're afraid of cyber security issues. So I think for you, the the way I would think about it is how do I implement this modular early over time to not only address information technologies, OCD concerns, which are, in my opinion, valid totally, but also the most difficult part is the change management.
+
+00:25:08:14 - 00:25:36:15
+Unknown
+How do you teach your students and your staff to adopt this over time? Because rip and replace would probably be very challenging operationally, people would probably fall apart and become really scary. But if you iterate with modules, I love it. Honestly, it's very futuristic thinking you basically forgot about everything you know today and thought what would this look like?
+
+00:25:36:18 - 00:26:00:03
+Unknown
+Do it. Relying on my tools. Exactly. Yeah. If you had an intelligence layered sitting over all of your workflow, how would you access it? Yeah. And to some degree, that data probably exists. So, you know, the tooling to make the data in one place is in place at UK. It's called fabric. It's called Azure Databricks. It's one lake.
+
+00:26:00:06 - 00:26:28:06
+Unknown
+So the the way how do we get data in that single spot from all these tools eventually. So that becomes the living place. Okay. Right. So let's say that you decide in three years canvas is gone. How do you get the data that used to be canvas or the necessary parts of it, in a place where you can draw upon it for this, like, and maybe this hack, I think this happens in SAP, actually the linkage of the students with the courses, those sorts of things.
+
+00:26:28:09 - 00:26:56:29
+Unknown
+Right. And the grades, that's easy to get into. Something like a data lake. But I appreciate the demo. This is mind opening. And let me tell you something that I've been playing around with the idea of in a very different space. I've thought for, I hate to say it, decades, about a tool called the Family Vault, and the family vault is how we maintain a history of our family.
+
+00:26:57:02 - 00:27:28:23
+Unknown
+Yeah. Lived experiences. Photos and not Facebook. Yep. I don't want that. Not public. And I had this idea when the for Facebook ever got popular. Honestly, I was just too lazy to make it happen. But I've been vibe coding a little bit on this idea. Like how do I create a vault where I have social groups that are more like family and not advertising, and I have social groups that are maybe my schoolmates, but it's the intention is not sharing what I'm doing today.
+
+00:27:28:24 - 00:27:48:29
+Unknown
+It's more of like capturing the essence of the entity over time. In the fullness of time before. So my grandmother died a couple of years ago, and she and I were very, very close. And the year leading up to her death, I recorded every conversation I had with her and would ask her to, like, tell me the story of whatever.
+
+00:27:49:01 - 00:28:11:21
+Unknown
+And I have now, you know, just files and files and files. My plan is to do with my mother and father. And this would be the family vault, right? Exactly. Yeah. And, and even a scary twist to it is capturing their voice. Yeah. What you did. Because I'll tell you something. Had me. I had a camcorder back in the 90s, and I videoed lots of things.
+
+00:28:11:21 - 00:28:32:05
+Unknown
+And the funny thing is, when you have a camcorder, you typically video the children, which is a big mistake. It's not the only thing you should be doing. I found a video like five years ago that I took of my grandmother back in the 90s. Yeah. And I was flabbergasted when I heard her laugh again. Yeah. I had totally forgotten about it.
+
+00:28:32:12 - 00:28:56:24
+Unknown
+Yeah. So I think that's sort of driven. It, but it's sort of the same idea just applied in a different space. Yeah. Yeah. You know, it's all in front of you. It's recorded. I mean, it's quite different, but you get the idea is that there's this repository of data. Yeah. That I can draw upon. So I'm curious why you focus on the academic side versus not the health care side.
+
+00:28:56:27 - 00:29:15:22
+Unknown
+The I will be honest with you. So I haven't actually talked to anyone here about this yet. I just got offered a job by the state, to essentially go and build this thing that I keep telling everybody about. Like, I think we need to change the way that we practice medicine. We need a digital healthcare infrastructure.
+
+00:29:15:25 - 00:29:36:18
+Unknown
+The, they said we think that, too. Can you help us build it? And so, that was this morning, which is like. Yeah, yeah. When you were like, are you related to me? Like, I am great. And so maybe, maybe that's what it is, you know? Okay. Oh, I'm very curious about that. So that's it.
+
+00:29:36:20 - 00:30:00:28
+Unknown
+Path to some kind of political position in the future? I don't think so. I like I don't think I would ever do that. It is more of a path to, You know, I keep saying that AI is going to revolutionize healthcare, and that we need to set up the foundation in that, the 35 hospitals in Kentucky that are under threat of closure, don't have the infrastructure, don't have the money to invest in AI, which means that there are physicians there, patients.
+
+00:30:00:28 - 00:30:17:17
+Unknown
+Their administrators don't get to participate in AI. And so what if we built that once one place, provide AI as a service, provide it all across the state? Yeah, I mean, you're on the right track for sure, right? Is there anything I could do to help? How can I help you? Yes. Sorry. I know we're running out of time.
+
+00:30:17:20 - 00:30:43:11
+Unknown
+So I have built this thing in the background. Have been saying. Expecting to get access to Azure. When I think about, all of the problems involved with migrating to Azure, what are the things that I should be thinking of? Like, just so you know, what's next week? We're going to go to Deloitte. So I talked to Ian about this project a couple of weeks ago.
+
+00:30:43:14 - 00:31:00:19
+Unknown
+When it was in its infancy, before it was as built out as it is now. And he was like, yeah, great. Let's go to Deloitte. And then show them your demo, and then see what they can build for us. And that was when it was just a sandbox. Go ahead. Why not present that to Nagato?
+
+00:31:00:21 - 00:31:25:11
+Unknown
+I don't know. I don't know why they chose Deloitte. I don't know. Well, because you got Nagato already paid for, is what I'm thinking, right? Exactly right. I don't know, I don't know if he was because this was something. In addition, those. Those funds were already earmarked. I don't know. That's fascinating, because it seems like two different directions at the same time.
+
+00:31:25:14 - 00:31:48:03
+Unknown
+I also don't know if I'm supposed to be telling you this. So I won't. It's secret. Yeah. I won't say anything. Yeah. So I'm just curious. Yeah. I don't know. Okay, but I, I it makes me fear they've lost confidence in the pass on the Nagano side. I don't know if it's if it's the confidence in the Goro.
+
+00:31:48:04 - 00:32:09:29
+Unknown
+I don't know if it is wanting to, diversify, you know, and having instead of putting all the eggs in one basket, I don't know if it's because all of those funds have already been earmarked, and now we're adding this thing at the last minute and. Yeah, and they had already had plans for it. And so if you pull from an, a different pool of money, is it going to be less politically fraught?
+
+00:32:10:03 - 00:32:32:01
+Unknown
+Yeah. I have no idea. Okay. Well I won't I'm glad we didn't record it first of all. And I won't bring it up, but let me know how I can help you. I will speak to the Grand idea of at all, though, if you want me to. Please. I would love to hear that from a technical perspective. Like I am an E.R. doctor and an educator, and I don't know how to migrate, how to protect this thing.
+
+00:32:32:01 - 00:32:46:06
+Unknown
+All of the things that you're like, it's going to lose their mind over these things. Like, I want to hear all this, but what I really the only thing that I need to figure out is how it an open source model be presented in Azure in a way that you're interacting with it there. That's essentially it. Forgive me.
+
+00:32:46:06 - 00:33:10:28
+Unknown
+I built it with this, but I don't think you actually need open. I think on it it's fine. Like that goes well I mean just generally that too. But we have these models in Azure. You are interacting with that model through a. Net web interface that Claude has given you. Yeah. That's different than the Azure interface. So my question is how do we get the same interface that you have using the models in Azure.
+
+00:33:11:01 - 00:33:34:13
+Unknown
+Right. Because in Azure you get like I'm what you show me there is more than me. All of them. It's also an interface. Right. That you use, you know, the little chat side session where you said create this and this and this. Yeah. That's a that's different. So I'm going to find that out. Okay. That and forgive me if you were to explain Azure to a toddler.
+
+00:33:34:20 - 00:33:37:16
+Unknown
+How would you explain.
+
+00:33:37:18 - 00:34:00:11
+Unknown
+Do you mean Azure Foundry, Microsoft Foundry or Arthur overall? I don't know, I think I think Azure overall because, I having not had access to it, I don't quite know what is chaos or everything. Yeah. It's the world's computer is what it is. And so if I'm hearing that, if I have this code base, I can't just put it on the platform and then the code base, you could.
+
+00:34:00:12 - 00:34:22:18
+Unknown
+Yeah. Code base you could. But your development platform there is a little bit different. The interface for your development is a chat interface that I, I know it can be done. I need to understand how. Yeah. For example, let me tell you what I mean. You know the chat GT interface? Yeah. If you go to chat TV's website, you get this interface with all the little chat sessions, etc., right?
+
+00:34:22:18 - 00:34:52:21
+Unknown
+And it remembers all your chats. Well, I have a partner that has built that exact same experience using open AI's models in Azure, running that whole interface in Azure but customized to the customer. So it had UCS logos, it would be assigned to different developers. So it's the application point in addition to all the AI models running in Azure being accessed when you chat, whereas when you go to detached Features website, there's an app.
+
+00:34:52:24 - 00:35:14:00
+Unknown
+And when you chat your chat APIs that are running out of open eyes environment. This is all running inside the secure environment of Azure, also branded for you. Okay. So the same idea is how do I make something look like Claude in Azure using Quad's models I guess is what I'm saying. Gotcha. Let me, if you don't mind, to just share one more time.
+
+00:35:14:04 - 00:35:35:29
+Unknown
+So, this is not actually like Claude. So, this was this is the full website? Yes. Correct. So, like, it used to look like this. Like this was an older version. And so, like, so, you know, so this is the application. This is the app, correct? Yes. So if you go using Claude. Yeah. Yeah. Yeah, yeah, yeah.
+
+00:35:36:01 - 00:35:54:28
+Unknown
+Okay. And how is that code base stored. Is it in. It's on. Get is it in. It is on GitHub. Yeah. Okay. Okay. Oh, that'd be easy to do that. Okay. We just need to figure out how to convert it to app services in Azure. It's an app service. What you're referring to here is an app service. Okay.
+
+00:35:55:00 - 00:36:17:13
+Unknown
+The actual runtime, like that local web server you have that's an app service in Azure. That call makes calls to Azure APIs instead of the cloud APIs. That's essentially all it is. Okay, so that's easy. Is that represented in what type of is it dotnet. Is it what is it. Yeah.
+
+00:36:17:15 - 00:36:41:20
+Unknown
+Nope. Java. Yeah. Yeah. Okay. That's easy. That's very easy. If you would like to port that to Azure, that'd be pretty easy to do. Okay. And, you know, I would love for you to talk to Andy Madeira. The sky. Oh, yeah. I guess you can't. Who are you allowed to talk to about this? Oh, I mean, because you're talking about Deloitte.
+
+00:36:41:22 - 00:37:05:25
+Unknown
+Yeah. So right now I'm only really showing this to Ian, and now you. The. Okay, the plan with Deloitte is we go there on the first, and. Okay, essentially we're going to show them this thing. But, I mean, Ian still doesn't know what this thing does. He thinks it's a study tool. But I think it's it's more of an operating system.
+
+00:37:05:28 - 00:37:25:00
+Unknown
+Yeah. You're building an OS that is. Needs to be heavily linked with data that currently lives in systems, but that maybe long term can be abstracted and live alone. Correct. That's what I'm saying.
+
+00:37:25:02 - 00:37:28:19
+Unknown
+What am I thinking right now? Is.
+
+00:37:28:22 - 00:37:51:25
+Unknown
+This needs to be an Azure. This is where you have free services and free help. I am. So help me work. Help me work on that. If, I mean, maybe there's a misunderstanding. I don't know. I mean, you guys have $6 million in credits for this kind of stuff. I know when we were in that meeting with the leadership,
+
+00:37:51:27 - 00:38:17:19
+Unknown
+And I was like, I would love to have access to Azure. This was two weeks ago. Okay. Azure. Like the the the computational stuff. Adam was like, all of that's been earmarked already. So. Okay. Yeah. So I guess the thing I'll share with you and you take this where you want to, because I, of course, it's your business and your case business, but Nagara could probably do this transition of what you just did into Azure in a very short time.
+
+00:38:17:21 - 00:38:40:25
+Unknown
+Perhaps you've also got multiple dedicated engineers from Microsoft to help with these things. Yeah. And that's just table stakes for these people. Yeah. What you've just shown me is a much like a picture is worth a thousand words. A demo is worth a million, right? Yeah. You basically just showed me your vision that I didn't quite understand before.
+
+00:38:40:27 - 00:39:13:02
+Unknown
+Yeah, because I keep going. That needs to get in front of Nagato. Yeah. And say this is what we want to build. How do we do that over time? Iteratively? Yeah. Well, they're planning to work on the Chief of staff with us. Yeah. So you take that where you want. Let me know how I can help you. If you want me to get you connected to people like Andy Bandeira, who is a dedicated cloud solution architect in the AI space from Microsoft.
+
+00:39:13:02 - 00:39:43:06
+Unknown
+That's not in the Goro. Okay. Sabetha is another dedicated Eddie, engineer for Microsoft for UK. Her primary area is data. Okay. Everything you showing me is going to eventually be data. How would we build a one like that? Could enable this and help me understand that overall major project. I think that's what they could bring visual and bring a vision of how you make this happen with app development and data.
+
+00:39:43:08 - 00:40:01:05
+Unknown
+Yeah. I have big ideas. I used to be a program manager. I like global deployment projects back in the day. Yeah. And that's why I bring in this iterative thing. And that's why I bring in the change management, which is even more difficult in the tech. And those things you need to be thinking about. Right. But okay. I'm done.
+
+00:40:01:07 - 00:40:20:05
+Unknown
+No. This is I'm here to help you all of this up. Yeah. I want all of that firehose so we can have a private exclusive meeting with them at some point in the future just to get their opinion. Yeah. Not the opinion of Goro, what have you. What is the opinion of Microsoft? We've got people to do that for you.
+
+00:40:20:07 - 00:40:36:01
+Unknown
+And I've dedicated. I'll have you scheduled a call, but I understand it's kind of sensitive, so you just let me know. Yeah. I am not going to lie, I've not been playing in the university level for very long, but there is somebody, like, weird. Like, you can't say that here. You can't tell that this person like it's killing me.
+
+00:40:36:03 - 00:40:53:27
+Unknown
+Oh, right. Right. I'm the same as you. Let's just get this out in the open and solve it. Right. But forget it. Forget about worrying about how people feel about it. That's just because it's not. This is for the greater good. Yeah. Let's just go. You know. Awesome. You got. You got kingdoms and fiefdoms, though, and you need their support.
+
+00:40:53:27 - 00:41:12:21
+Unknown
+That's the secrecy. Yeah. Let's get it back to Poli before they can say no. That's right. So I think Ian and Adam have been working on getting the Azure access. After you and I talked, and so hopefully I can just get into Azure and and try to start poking around and see what I can do.
+
+00:41:12:23 - 00:41:48:13
+Unknown
+The, Yeah. You need help? Yeah. I know. Because another description of Azure speaking. Just a foundry. Okay. It's the Legos. Foundry is the Legos. Clod is a prebuilt Lego model. So you've taken something. Someone's assembled and you're iterating on it, whereas Azure just provides all that as a box of Legos that you can assemble in any way you want.
+
+00:41:48:16 - 00:42:04:22
+Unknown
+But as I mentioned, we can build a cloud looking model in Azure and have it all running in Azure. Yeah. And again, like, I wouldn't call this clod like, I mean, it's just, you know, it's just the interface. No. The tool you use to build it. Right, right, right. Yeah. That's what I mean. It's after you have it developed.
+
+00:42:04:23 - 00:42:20:07
+Unknown
+Okay. This is a good point. After you have a developed that's easy to port as an app service and app. Yeah. Yeah. I mean, I don't need, like, the only reason I'm using cloud as opposed to anything else is because I'm paying for it on my own. Yeah. Give me. Because you have access to it. I get it.
+
+00:42:20:08 - 00:42:44:03
+Unknown
+Totally. That's why I, I mean, I, I did some pipe coding for tools that are available at Microsoft that people don't realize. I've. I got it because it made my life easier as the job I'm trying to do. Yeah. That's awesome. So I get it. Let me know how we can help you. Okay. You know, a little bit more about it, but certainly that same that code base can be deployed in Azure in an app service.
+
+00:42:44:03 - 00:43:08:13
+Unknown
+That's what you're looking for. And on the back end it would connect to clod opus models or other models. I guess it won't matter. It just needs a large language model deployment. Right? If you don't mind. So. So there's like three 65g. Is that a thing? Yeah. Azure graph. 365 graph. It's your emails that your calls that your chats and it's all that data accessible with a model.
+
+00:43:08:15 - 00:43:30:12
+Unknown
+Okay. So who did I talk to last week and what were my follow ups? That reads the graph of all of your data, the meetings you've been to, the chats you've had, all that. And that's how it sources all that data. It's all stored out with your access assigned to it. Can I get access to that? You have it only for you.
+
+00:43:30:15 - 00:43:49:22
+Unknown
+Awesome. Meaning all the content that you have shared and recorded. It's all available. How do I get? Do you not have? Do you not have M3 65 yet? I haven't 365. How do I get access to 365 graphs so that I can plug it into this? It's in there. It's next. Oh, you mean API programmatically access to it?
+
+00:43:49:23 - 00:44:14:07
+Unknown
+Not. Not the default interface. You know how to use it for yourself. Correct. Okay. I can find out. Okay. Yeah. Be awesome. It should be very easy. That's a good question I find out. Let me get that back to you. Awesome. So you essentially want to plug into the Microsoft Graph as another option to answer questions. Correct. Yeah.
+
+00:44:14:10 - 00:44:32:25
+Unknown
+I guess you need to find out what has been presented as an API. Yeah. That'd be awesome. Okay. I would like to I am going to need you to sign off on me accessing it. And so it's going to take months and months. But yeah. I don't know how that's presented as an API. I find that that's a good thing.
+
+00:44:32:28 - 00:44:44:27
+Unknown
+I probably know I've forgotten. Totally. Okay. All right. This has been great. I appreciate you taking the time to share with me and the team. Yeah. Okay. We'll follow up. Okay. Have a good afternoon, sir. Thank you. All right. Thank you.
+

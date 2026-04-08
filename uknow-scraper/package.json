@@ -1,0 +1,14 @@
+{
+  "name": "uknow-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scrape.mjs",
+    "ingest": "node ingest.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "openai": "^6.32.0",
+    "pg": "^8.20.0"
+  }
+}

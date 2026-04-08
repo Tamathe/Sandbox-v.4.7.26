@@ -1,0 +1,253 @@
+{
+  "moduleId": "03-blockchains-beyond-bitcoin",
+  "concepts": [
+    {
+      "id": "world-computer-thesis",
+      "name": "World computer thesis",
+      "definition": "Vitalik Buterin's original framing of Ethereum as a globally replicated state machine that runs arbitrary code, not just a ledger that tracks balances. Quietly retired in favor of a 'world settlement layer' framing as gas costs forced execution onto layer 2.",
+      "appearsInLessons": ["01-world-computer-thesis"]
+    },
+    {
+      "id": "turing-completeness",
+      "name": "Turing-completeness",
+      "definition": "The property of a computational system that lets it express any computable function. Ethereum's EVM is Turing-complete (within gas limits); Bitcoin's script language is intentionally not.",
+      "appearsInLessons": ["01-world-computer-thesis", "02-smart-contracts"]
+    },
+    {
+      "id": "gas",
+      "name": "Gas",
+      "definition": "The unit Ethereum uses to price computation. Each operation costs a fixed amount of gas; the user pays a market-driven price per unit of gas in ETH. Forces users to internalize the cost of the work they ask validators to do.",
+      "appearsInLessons": ["01-world-computer-thesis", "02-smart-contracts"]
+    },
+    {
+      "id": "settlement-layer",
+      "name": "Settlement layer",
+      "definition": "A chain whose primary job is to be the place where final, high-value state changes are recorded and disputes are resolved, rather than where ordinary execution happens. Ethereum mainnet has effectively become this for the rollup ecosystem.",
+      "appearsInLessons": ["01-world-computer-thesis", "05-rollups-and-modularity"]
+    },
+    {
+      "id": "generalized-blockchain",
+      "name": "Generalized blockchain",
+      "definition": "A blockchain that supports arbitrary state transitions defined by user-deployed code, as opposed to a special-purpose chain that only tracks one kind of asset.",
+      "appearsInLessons": ["01-world-computer-thesis"]
+    },
+    {
+      "id": "smart-contract",
+      "name": "Smart contract",
+      "definition": "A piece of code deployed to a blockchain that runs deterministically when called and whose state changes are recorded on the chain. Neither smart nor a contract; closer to a vending machine.",
+      "appearsInLessons": ["02-smart-contracts"]
+    },
+    {
+      "id": "reentrancy",
+      "name": "Reentrancy",
+      "definition": "A class of smart-contract bug in which a called contract calls back into the caller before the caller has finished updating its own state, allowing the attacker to repeat an action that should only have been allowed once. The 2016 DAO hack is the canonical example.",
+      "appearsInLessons": ["02-smart-contracts"]
+    },
+    {
+      "id": "oracle-problem",
+      "name": "Oracle problem",
+      "definition": "The fact that smart contracts can only see data that lives on-chain, so any contract that depends on real-world data (a price, a temperature, a soccer score) inherits the trust assumptions of whatever oracle posts that data. Trust does not disappear; it is transferred to the oracle layer.",
+      "appearsInLessons": ["02-smart-contracts"]
+    },
+    {
+      "id": "immutability-trade",
+      "name": "Immutability trade-off",
+      "definition": "The trade-off between making smart contracts unchangeable (more credible, no upgrade attack surface) and making them upgradeable (fixable when bugs are found, but requires trusting an upgrade key). Almost all production contracts have chosen some form of upgradeability and traded credibility for safety.",
+      "appearsInLessons": ["02-smart-contracts"]
+    },
+    {
+      "id": "the-dao",
+      "name": "The DAO (2016)",
+      "definition": "An early Ethereum-based investment fund that was drained by a reentrancy attack a few weeks after raising ~$150M. Ethereum hard-forked to reverse the theft, splitting off Ethereum Classic. Both the rollback and the refusal to roll back are defensible; the precedent is load-bearing for what came after.",
+      "appearsInLessons": ["02-smart-contracts"]
+    },
+    {
+      "id": "proof-of-work",
+      "name": "Proof of work",
+      "definition": "A consensus mechanism in which adding the next block requires spending physical energy on a computation. Security comes from the cost of acquiring enough hardware and energy to outpace honest participants.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "proof-of-stake",
+      "name": "Proof of stake",
+      "definition": "A consensus mechanism in which validators lock up the chain's native token as a deposit and lose some or all of it if they sign conflicting or invalid blocks. Security comes from the protocol's ability to slash a misbehaving validator's stake.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "security-budget",
+      "name": "Security budget",
+      "definition": "The amount the protocol pays per unit time to validators or miners to defend the chain. Bitcoin's budget comes from new issuance plus fees and is on a known halving schedule; PoS chains can adjust their budget as a parameter.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "long-range-attack",
+      "name": "Long-range attack",
+      "definition": "A class of attack on PoS chains in which a former validator who has unstaked signs an alternative history of the chain from when they were active. Defended against by 'weak subjectivity' — new nodes bootstrap from a recent trusted checkpoint, not from genesis.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "slashing",
+      "name": "Slashing",
+      "definition": "The protocol-level confiscation of a misbehaving validator's stake in a PoS system. Distinct from any social or legal penalty; happens automatically when the protocol detects (or is told about) misbehavior.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "liveness-vs-safety",
+      "name": "Liveness vs safety",
+      "definition": "A fundamental trade-off in distributed systems: under bad network conditions, you can guarantee that the system keeps making progress (liveness) or that it never finalizes a wrong state (safety), but not both. Bitcoin prioritizes liveness; Ethereum's PoS prioritizes safety.",
+      "appearsInLessons": ["03-proof-of-stake"]
+    },
+    {
+      "id": "stablecoin",
+      "name": "Stablecoin",
+      "definition": "A token issued on a blockchain that is designed to trade at a constant ratio to an external reference, almost always one US dollar. The largest category of real economic activity in crypto by transaction volume.",
+      "appearsInLessons": ["04-stablecoins"]
+    },
+    {
+      "id": "fiat-backed",
+      "name": "Fiat-backed stablecoin",
+      "definition": "A stablecoin in which each token is backed by a corresponding dollar (or dollar-equivalent asset like a Treasury bill) held by an issuer. USDT and USDC are the canonical examples. Trust is in the issuer's solvency and honesty, not in the protocol.",
+      "appearsInLessons": ["04-stablecoins"]
+    },
+    {
+      "id": "crypto-collateralized",
+      "name": "Crypto-collateralized stablecoin",
+      "definition": "A stablecoin backed by an over-collateralized basket of on-chain assets, with automatic liquidation defending the peg. DAI is the canonical example, though it has migrated toward partial real-world-asset backing in practice.",
+      "appearsInLessons": ["04-stablecoins"]
+    },
+    {
+      "id": "peg-mechanism",
+      "name": "Peg mechanism",
+      "definition": "The mechanism by which a stablecoin maintains its target price. Can be redemption against a reserve, arbitrage against collateral, mint/burn loops (algorithmic, mostly broken), or some combination.",
+      "appearsInLessons": ["04-stablecoins"]
+    },
+    {
+      "id": "censorship-surface",
+      "name": "Censorship surface",
+      "definition": "The set of entities that can prevent your transactions from being processed or freeze your assets. For a stablecoin, this is at minimum the issuer (who can blacklist addresses) and potentially the regulator who can compel the issuer.",
+      "appearsInLessons": ["04-stablecoins", "06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "depeg",
+      "name": "Depeg",
+      "definition": "A sustained or significant deviation of a stablecoin's market price from its target. The cause matters more than the magnitude — a bank-run depeg, a reserve-shortfall depeg, and a market-liquidity depeg are different problems with different cures.",
+      "appearsInLessons": ["04-stablecoins"]
+    },
+    {
+      "id": "rollup",
+      "name": "Rollup",
+      "definition": "A layer-2 chain that batches transactions, executes them off the main chain, and posts a compressed summary plus a proof of correctness back to the main chain. Inherits security from the main chain in proportion to how strong the proof is and how available the data is.",
+      "appearsInLessons": ["05-rollups-and-modularity"]
+    },
+    {
+      "id": "optimistic-rollup",
+      "name": "Optimistic rollup",
+      "definition": "A rollup that posts batched transactions to the main chain and assumes correctness by default. Anyone can submit a fraud proof during a challenge window to roll back an invalid state. Arbitrum, Optimism, and Base are the canonical examples.",
+      "appearsInLessons": ["05-rollups-and-modularity"]
+    },
+    {
+      "id": "zk-rollup",
+      "name": "ZK rollup",
+      "definition": "A rollup that posts batched transactions along with a zero-knowledge proof of correct execution. The main chain verifies the proof immediately; no fraud window is needed. zkSync, Starknet, Polygon zkEVM, Linea, and Scroll are canonical examples.",
+      "appearsInLessons": ["05-rollups-and-modularity"]
+    },
+    {
+      "id": "data-availability",
+      "name": "Data availability",
+      "definition": "The property that the data needed to verify a chain's state is published somewhere that anyone can download. Without data availability, even a valid proof is not enough to make a rollup secure, because nobody can independently check what happened.",
+      "appearsInLessons": ["05-rollups-and-modularity"]
+    },
+    {
+      "id": "modular-thesis",
+      "name": "Modular thesis",
+      "definition": "The view that a blockchain's four jobs — execution, settlement, consensus, and data availability — should be separated into specialized layers, with each job handled by the chain best suited to it. Opposed to the 'monolithic' view that integration produces simpler trust models.",
+      "appearsInLessons": ["05-rollups-and-modularity"]
+    },
+    {
+      "id": "sequencer",
+      "name": "Sequencer",
+      "definition": "The component of a rollup that orders incoming transactions and produces batches to post to the main chain. Almost all production rollups in 2026 run a single sequencer, which is the largest practical centralization point in the L2 ecosystem.",
+      "appearsInLessons": ["05-rollups-and-modularity", "06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "nakamoto-coefficient",
+      "name": "Nakamoto coefficient",
+      "definition": "The minimum number of independent entities you would need to compromise or get to collude in order to break some critical property of a system. Higher is better. Introduced by Balaji Srinivasan in 2017 as a usable proxy for decentralization.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "validator-concentration",
+      "name": "Validator concentration",
+      "definition": "The degree to which a small number of validators or validator-controlling entities (including liquid staking pools) hold a disproportionate share of stake or voting weight. The single largest unresolved decentralization issue for Ethereum (via Lido) in 2026.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "governance-capture",
+      "name": "Governance capture",
+      "definition": "The state in which a protocol's on-chain or off-chain governance process is effectively controlled by a small group, regardless of how the formal voting structure is described. Recognizable by low voter turnout, low quorum, and a near-zero rate of failed proposals.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "upgrade-key",
+      "name": "Upgrade key",
+      "definition": "A key (usually held by a multisig or DAO) that can change the code of a deployed contract or rollup. Held 'temporarily' by almost every production protocol, often with no specific date or condition for removal.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "admin-multisig",
+      "name": "Admin multisig",
+      "definition": "A multi-signature wallet, typically m-of-n, that holds upgrade keys and other privileged powers over a protocol. The most common form of decentralization theater: 'no single person can change anything' is true while still being centralized in every sense that matters.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    },
+    {
+      "id": "liquid-staking",
+      "name": "Liquid staking",
+      "definition": "A protocol that lets users stake tokens (e.g., ETH) while receiving a tradeable receipt token in return, so they can use the staked value in DeFi without unstaking. Lido is the dominant example. The systemic risk is that staking concentrates in a few large LST protocols.",
+      "appearsInLessons": ["06-real-vs-theatrical-decentralization"]
+    }
+  ],
+  "commonMisconceptions": [
+    {
+      "id": "misc-1",
+      "concept": "smart-contract",
+      "wrongBelief": "Smart contracts are 'trustless' because the code runs on a blockchain.",
+      "correctView": "Smart contracts are trust-minimized for the parts of their behavior that are fully expressed on-chain. As soon as they depend on off-chain data (oracles), upgrade keys, or governance, the trust returns through those channels. The honest framing is 'trust-minimized in ways you can audit,' not 'trustless.'",
+      "watchFor": "Students who use the word 'trustless' as a magic word. Ask them to name where the trust actually lives in a specific protocol they use. There is always an answer."
+    },
+    {
+      "id": "misc-2",
+      "concept": "proof-of-stake",
+      "wrongBelief": "Proof-of-stake is just proof-of-work without the energy waste, so it is strictly better.",
+      "correctView": "PoS and PoW differ on at least six dimensions (cost-to-attack, recovery, security budget over time, liveness/safety, long-range attacks, plutocracy). On some dimensions PoS wins; on others PoW wins. Which one is appropriate depends on whether the chain is trying to be a monetary base layer or an application substrate. Energy is one input to one dimension, not the whole comparison.",
+      "watchFor": "Students who reach for the energy slogan in either direction. Ask them to name a dimension other than energy where one is better than the other. If they cannot, they are reading a slogan, not the system."
+    },
+    {
+      "id": "misc-3",
+      "concept": "stablecoin",
+      "wrongBelief": "All stablecoins are basically the same thing — they all hold a dollar in a bank somewhere and let you transfer it.",
+      "correctView": "USDT, USDC, and DAI differ on backing model, censorship surface, regulatory exposure, and historical depeg behavior. The 'best' stablecoin depends on what you are optimizing for: USDT for emerging-market access, USDC for compliance, DAI for minimum censorship surface. The 2023 USDC depeg via Silicon Valley Bank should have ended the assumption that 'regulated' equals 'stable.'",
+      "watchFor": "Students who treat all dollar stablecoins as fungible. Ask them which one they would have wanted to hold during the March 2023 banking week. Their answer reveals which trade-off they actually care about."
+    },
+    {
+      "id": "misc-4",
+      "concept": "rollup",
+      "wrongBelief": "An L2 rollup is 'secured by Ethereum,' so using one is essentially the same as using Ethereum.",
+      "correctView": "A rollup inherits Ethereum's security only for the parts of its behavior that Ethereum can verify, which currently does not include the sequencer's ordering choices, the upgrade keys held by the rollup's multisig, or many of the bridge contracts. Most production rollups in 2026 are 'secured by Ethereum in the limit and by a multisig in the present.' That is a real distinction, not a quibble.",
+      "watchFor": "Students who repeat 'secured by Ethereum' as a slogan. Ask them what specific bad action by the rollup team Ethereum's security would prevent today. Most actions are not yet on that list."
+    },
+    {
+      "id": "misc-5",
+      "concept": "nakamoto-coefficient",
+      "wrongBelief": "Decentralization is a marketing claim and there is no objective way to measure it.",
+      "correctView": "The Nakamoto coefficient gives a clean (if not complete) measurement: the minimum number of entities you would need to compromise to break the system. It is unflattering to most chains in production, which is exactly why most chains in production prefer to talk about decentralization in vibes terms rather than numbers. The metric is imperfect but not arbitrary, and the gap between it and the marketing is the most useful single indicator in the space.",
+      "watchFor": "Students who want decentralization to be a feeling rather than a number. Push back: ask them to compute (or estimate) the Nakamoto coefficient for two chains they care about and compare. The exercise is humbling."
+    },
+    {
+      "id": "misc-6",
+      "concept": "the-dao",
+      "wrongBelief": "The DAO hack proves smart contracts cannot be trusted.",
+      "correctView": "The DAO hack proves that *complex* smart contracts written before reentrancy was widely understood could not be trusted to handle edge cases the authors did not anticipate. Reentrancy is now a well-understood class of bug and is routinely caught by audits and analyzers. The deeper lesson is that the *attack surface* of a smart contract includes every other contract that interacts with it, and that surface is unbounded, which is a different and more permanent problem than any specific bug.",
+      "watchFor": "Students using The DAO as a reason to dismiss the entire category. Reframe: what does The DAO tell us about which kinds of contracts are robust and which are fragile? The answer points toward simple, narrowly-scoped financial primitives."
+    }
+  ]
+}
